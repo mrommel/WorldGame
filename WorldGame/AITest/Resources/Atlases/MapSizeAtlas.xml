@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Atlas>
+    <Name>Maps</Name>
+    <TextureName>MapSizeTiles.png</TextureName>
+    <Rows>2</Rows>
+    <Columns>4</Columns>
+    <Tiles>
+        <Item>
+            <Name>Duel</Name>
+            <Index>0</Index>
+        </Item>
+        <Item>
+            <Name>Tiny</Name>
+            <Index>1</Index>
+        </Item>
+        <Item>
+            <Name>Small</Name>
+            <Index>2</Index>
+        </Item>
+        <Item>
+            <Name>Standard</Name>
+            <Index>3</Index>
+        </Item>
+        <Item>
+            <Name>Large</Name>
+            <Index>4</Index>
+        </Item>
+        <Item>
+            <Name>Huge</Name>
+            <Index>5</Index>
+        </Item>
+    </Tiles>
+</Atlas>

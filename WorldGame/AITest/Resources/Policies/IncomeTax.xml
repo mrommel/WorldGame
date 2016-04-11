@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Policy>
+    <Identifier>POLICY_INCOMETAX</Identifier>
+    <Name>Income Tax</Name>
+    <Description>One of the most popular ways to raise money for government is a direct tax on peoples earnings, deducted at source by their employer. Income tax is generally a progressive tax (the wealthy pay more as a fraction of their income than the poor) and for this reason it is popular with socialists and the low paid.</Description>
+    <ImageName>IncomeTax.png</ImageName>
+    <Ministry>MINISTRY_FINANCE</Ministry>
+    <States>
+        <State>
+            <Name>NO TAX</Name>
+            <Description>NO TAX</Description>
+            <Value>0</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>NOMINAL</Name>
+            <Description></Description>
+            <Value>0.01</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>VERY LOW</Name>
+            <Description></Description>
+            <Value>0.03</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>VERY FAIR</Name>
+            <Description>todo</Description>
+            <Value>0.05</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>FAIR</Name>
+            <Description>todo</Description>
+            <Value>0.1</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>REASONABLE</Name>
+            <Description>todo</Description>
+            <Value>0.15</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>AVERAGE</Name>
+            <Description>todo</Description>
+            <Value>0.2</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>HIGH</Name>
+            <Description>todo</Description>
+            <Value>0.25</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>VERY HIGH</Name>
+            <Description>todo</Description>
+            <Value>0.3</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>UNFAIR</Name>
+            <Description>todo</Description>
+            <Value>0.35</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>PUNITIVE</Name>
+            <Description>todo</Description>
+            <Value>0.4</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>SCANDALOUS</Name>
+            <Description>todo</Description>
+            <Value>0.45</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>OUTRAGEOUS</Name>
+            <Description>todo</Description>
+            <Value>0.5</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>PUNISHING</Name>
+            <Description>todo</Description>
+            <Value>0.55</Value>
+            <Requirements />
+            <Actions />
+        </State>
+    </States>
+</Policy>

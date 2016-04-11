@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Policy>
+    <Identifier>POLICY_GOVERNMENT</Identifier>
+    <Name>Government</Name>
+    <Description>Type of Government</Description>
+    <ImageName>Government.png</ImageName>
+    <Ministry>MINISTRY_CHANCELLERY</Ministry>
+    <States>
+        <State>
+            <Name>None</Name>
+            <Description></Description>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>Despotism</Name>
+            <Description>Seize the power alone!</Description>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>Oligarchy</Name>
+            <Description>Oligarchy is a form of government in which a small segment of society has all of the power. Power might be held by a specific family or tribe, or people of a certain religion or from a special caste. Some city-states in ancient Greece were oligarchies, where all power was in the hands of a few elite families. Apartheid South Africa would be a modern oligarchy, the white minority holding all of the power. Pre-9-11 Iraq too was an oligarchy, with power concentrated in the hands of members of Saddam Hussein's family and tribe.</Description>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>Monarchy</Name>
+            <Description>Monarchy is a form of government where power is vested in an individual. Often, but not always, power passes to the monarch's heir upon the current ruler's death. (There are some elected monarchies, but not many.) Monarchy is similar to despotism, but with one important difference: the monarch rules within the state's laws, while a despot is above all law. It is of course quite possible for a monarch to be a despot - but it is also possible for a monarch to be part of a political process which allows the people a good deal of freedom. Great Britain would be an example of the latter.</Description>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>Republic</Name>
+            <Description>A republic is a form of government in which people or the representatives of the people have ultimate power rather than the power being vested in a monarch or despot. The people or their representatives may elect a leader, but that leader's power derives from the consent of the people. Some classical cultures have had some form of republicanism, notably several Greek city-states and Rome (for part of its history), but for most of world history the monarchy was the most common form of government.
+                The republic reappeared on the world stage in the 18th century, when the United States divorced itself from the British monarchy and set itself up as a republic. As they gained independence from the Old World most of the new nations in Central and South America were formed as republics (Mexico toyed with a monarchy for a while but this didn't survive for long).
+                In the 20th century most of the European governments became republics after one or the other of the World Wars, as did many Asian nations. Many parts of Africa have since followed suit as they have shed their colonial masters. Today, most nations of the world follow (or at least profess to follow) some form of republicanism.</Description>
+            <Requirements />
+            POLICY_PARLIAMENT
+            <Actions />
+        </State>
+    </States>
+</Policy>

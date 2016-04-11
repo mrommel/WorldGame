@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Policy>
+    <Identifier>POLICY_LEGALISM</Identifier>
+    <Name>Legalism</Name>
+    <Description>Legalism is a policy in which the relationship between the ruler and his or her subjects are laid out in a series of laws, which both sides must adhere to strictly. If the law is fair and is properly enforced, the people will be content and the ruler's position will be secure. While this may seem to cover most governments that follow the rule of law, legalism almost achieved the status of a state religion in China during the Warring State Period.</Description>
+    <ImageName>Legalism.png</ImageName>
+    <Ministry>MINISTRY_JUSTICE</Ministry>
+    <States>
+        <State>
+            <Name>No</Name>
+            <Description>No trials at all</Description>
+            <Value>0</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>land lord trials (thing)</Name>
+            <Description>todo</Description>
+            <Value>0.75</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>regional courts (when universities exist)</Name>
+            <Description>todo</Description>
+            <Value>0.8</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>independent courts (when universities exist and parliament)</Name>
+            <Description>todo</Description>
+            <Value>1</Value>
+            <Requirements />
+            <Actions />
+        </State>
+    </States>
+</Policy>

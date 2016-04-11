@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="MiRo.SimHexWorld.Engine.UI.TextureAtlas">
+    <Name>UnitActions</Name>
+    <TextureName>UnitActionTiles</TextureName>
+    <Rows>8</Rows>
+    <Columns>8</Columns>
+    <Tiles>
+      <Item>
+        <Name>Idle</Name>
+        <Index>4</Index>
+      </Item>
+      <Item>
+        <Name>Move</Name>
+        <Index>9</Index>
+      </Item>
+      <Item>
+        <Name>BuildFarm</Name>
+        <Index>21</Index>
+      </Item>
+      <Item>
+        <Name>BuildRoad</Name>
+        <Index>24</Index>
+      </Item>
+      <Item>
+        <Name>Found</Name>
+        <Index>52</Index>
+      </Item>
+    </Tiles>
+  </Asset>
+</XnaContent>

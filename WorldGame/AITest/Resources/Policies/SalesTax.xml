@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Policy>
+    <Identifier>POLICY_SALESTAX</Identifier>
+    <Name>Sales Tax</Name>
+    <Description>Sales tax is the classic 'regressive' tax, which means it does not take into account the ability to pay. Critics argue that this affects the poor disproportionately and thus increases equality, but supporters of sales tax would argue that by its very nature sales tax is almost impossible to evade, which is fairer to everyone. Businesses can be opposed to the administrative burden of the tax.</Description>
+    <ImageName>SalesTax.png</ImageName>
+    <Ministry>MINISTRY_FINANCE</Ministry>
+    <States>
+        <State>
+            <Name>NO TAX</Name>
+            <Description>NO TAX</Description>
+            <Value>0</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>NOMINAL</Name>
+            <Description></Description>
+            <Value>0.01</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>VERY LOW</Name>
+            <Description></Description>
+            <Value>0.03</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>VERY FAIR</Name>
+            <Description>todo</Description>
+            <Value>0.05</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>FAIR</Name>
+            <Description>todo</Description>
+            <Value>0.1</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>REASONABLE</Name>
+            <Description>todo</Description>
+            <Value>0.15</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>AVERAGE</Name>
+            <Description>todo</Description>
+            <Value>0.2</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>HIGH</Name>
+            <Description>todo</Description>
+            <Value>0.25</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>VERY HIGH</Name>
+            <Description>todo</Description>
+            <Value>0.3</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>UNFAIR</Name>
+            <Description>todo</Description>
+            <Value>0.35</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>PUNITIVE</Name>
+            <Description>todo</Description>
+            <Value>0.4</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>SCANDALOUS</Name>
+            <Description>todo</Description>
+            <Value>0.45</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>OUTRAGEOUS</Name>
+            <Description>todo</Description>
+            <Value>0.5</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>PUNISHING</Name>
+            <Description>todo</Description>
+            <Value>0.55</Value>
+            <Requirements />
+            <Actions />
+        </State>
+    </States>
+</Policy>

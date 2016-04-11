@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Policy>
+    <Identifier>POLICY_INHERITANCETAX</Identifier>
+    <Name>Inheritance Tax</Name>
+    <Description></Description>
+    <ImageName>InheritanceTax.png</ImageName>
+    <Ministry>MINISTRY_FINANCE</Ministry>
+    <States>
+        <State>
+            <Name>0%</Name>
+            <Description>NO TAX</Description>
+            <Value>0</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>1%</Name>
+            <Description></Description>
+            <Value>0.01</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>3%</Name>
+            <Description></Description>
+            <Value>0.03</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>5%</Name>
+            <Description>todo</Description>
+            <Value>0.05</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>10%</Name>
+            <Description>todo</Description>
+            <Value>0.1</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>25%</Name>
+            <Description>todo</Description>
+            <Value>0.25</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>50%</Name>
+            <Description>todo</Description>
+            <Value>0.5</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>75%</Name>
+            <Description>todo</Description>
+            <Value>0.75</Value>
+            <Requirements />
+            <Actions />
+        </State>
+    </States>
+</Policy>

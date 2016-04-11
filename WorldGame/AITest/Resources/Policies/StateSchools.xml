@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Policy>
+    <Identifier>POLICY_STATESCHOOLS</Identifier>
+    <Name>State Schools</Name>
+    <Description>Providing free education for all ensures high levels of literacy and can be beneficial to the economy, especially those parts of the economy requiring a skilled workforce. The flipside of this is that state education can be a huge expense for the government, and those wealthy individuals not making use of state schools can resent subsidising them</Description>
+    <ImageName>StateSchools.png</ImageName>
+    <Ministry>MINISTRY_HOMEDEPARTMENT</Ministry>
+    <States>
+        <State>
+            <Name>NONE</Name>
+            <Description>todo</Description>
+            <Value>0</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>LOW</Name>
+            <Description></Description>
+            <Value>0.2</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>MEDIUM</Name>
+            <Description></Description>
+            <Value>0.5</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>HIGH</Name>
+            <Description>todo</Description>
+            <Value>0.75</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>MAXIMUM</Name>
+            <Description>todo</Description>
+            <Value>1.0</Value>
+            <Requirements />
+            <Actions />
+        </State>
+    </States>
+</Policy>

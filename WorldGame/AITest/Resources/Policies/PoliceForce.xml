@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Policy>
+    <Identifier>POLICY_POLICEFORCE</Identifier>
+    <Name>Police Force</Name>
+    <Description>Every governments needs to employ a police force to ensure order is kept and the laws are obeyed, but its a matter of debate exactly how much should be spent on the police. Some favor a large force with police on every street corner, other countries prefer a more low-key and tolerant approach.</Description>
+    <ImageName>PoliceForce.png</ImageName>
+    <Ministry>MINISTRY_HOMEDEPARTMENT</Ministry>
+    <States>
+        <State>
+            <Name>NONE</Name>
+            <Description>todo</Description>
+            <Value>0</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>LOW</Name>
+            <Description></Description>
+            <Value>0.2</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>MEDIUM</Name>
+            <Description></Description>
+            <Value>0.5</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>HIGH</Name>
+            <Description>todo</Description>
+            <Value>0.75</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>MAXIMUM</Name>
+            <Description>todo</Description>
+            <Value>1.0</Value>
+            <Requirements />
+            <Actions />
+        </State>
+    </States>
+</Policy>

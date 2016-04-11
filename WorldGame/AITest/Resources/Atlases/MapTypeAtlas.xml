@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Atlas>
+    <Name>Maps</Name>
+    <TextureName>MapTypeTiles.png</TextureName>
+    <Rows>4</Rows>
+    <Columns>8</Columns>
+    <Tiles>
+        <Item>
+            <Name>MapPangea</Name>
+            <Index>0</Index>
+        </Item>
+        <Item>
+            <Name>MapContinents</Name>
+            <Index>1</Index>
+        </Item>
+        <!--  -->
+        <Item>
+            <Name>MapBipolar</Name>
+            <Index>14</Index>
+        </Item>
+    </Tiles>
+</Atlas>

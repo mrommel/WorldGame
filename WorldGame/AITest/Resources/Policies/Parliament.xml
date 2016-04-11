@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Policy>
+    <Identifier>POLICY_PARLIAMENT</Identifier>
+    <Name>Parliament</Name>
+    <Description>less rebellious, more happiness (middle income), taxes de/increase only when mid income are in good mood</Description>
+    <ImageName>Parliament.png</ImageName>
+    <Ministry>MINISTRY_CHANCELLERY</Ministry>
+    <States>
+        <State>
+            <Name>Yes</Name>
+            <Description></Description>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>No</Name>
+            <Description></Description>
+            <Requirements />
+            <Actions />
+        </State>
+    </States>
+</Policy>

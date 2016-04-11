@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Policy>
+    <Identifier>POLICY_NATIONALSERVICE</Identifier>
+    <Name>National Service</Name>
+    <Description>Compulsory military service for all citizens, teaching them the basics of how to defend this country from attack. Has the benefit of allowing us to have a smaller regular army, but there are concerns about forcing people to bear arms against their will.</Description>
+    <ImageName>NationalService.png</ImageName>
+    <Ministry>MINISTRY_HOMEDEPARTMENT</Ministry>
+    <States>
+        <State>
+            <Name></Name>
+            <Description>NO TRAINING</Description>
+            <Value>0</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name></Name>
+            <Description>BASIC TRAINING</Description>
+            <Value>0.4</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>3 MONTHS SERVICE</Name>
+            <Description>todo</Description>
+            <Value>0.55</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>6 MONTHS SERVICE</Name>
+            <Description>todo</Description>
+            <Value>0.7</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>1 YEARS SERVICE</Name>
+            <Description>todo</Description>
+            <Value>0.85</Value>
+            <Requirements />
+            <Actions />
+        </State>
+        <State>
+            <Name>PERIODIC SERVICE</Name>
+            <Description>todo</Description>
+            <Value>1</Value>
+            <Requirements />
+            <Actions />
+        </State>
+    </States>
+</Policy>

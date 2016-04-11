@@ -27,7 +27,7 @@
 - (void)random;
 - (void)smoothen;
 
-- (float)valueAtX:(int)x andY:(int)y;
+- (float)valueAtX:(NSInteger)x andY:(NSInteger)y;
 
 - (float)minValue;
 - (float)maxValue;

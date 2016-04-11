@@ -13,6 +13,6 @@
 @property (atomic) NSInteger identifier;
 @property (nonatomic) NSString *name;
 
-- (instancetype)initWithIdentifier:(int)identifier andName:(NSString *)name;
+- (instancetype)initWithIdentifier:(NSInteger)identifier andName:(NSString *)name;
 
 @end

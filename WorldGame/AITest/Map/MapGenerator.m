@@ -13,15 +13,15 @@
 #import "Continent.h"
 #import "HeightMap.h"
 
-const static int kMaximalContinents = 256;
-const static int kNotAnalizedContinent = -1;
-const static int kNoContinent = -2;
+const static NSInteger kMaximalContinents = 256;
+const static NSInteger kNotAnalizedContinent = -1;
+const static NSInteger kNoContinent = -2;
 
-const static int kNoRivers = -1;
-const static int kNumberOfRivers = 7;
-const static int kNoLakes = -1;
-const static int kNumberOfLakes = 7;
-const static int kNumberOfIslands = 10;
+const static NSInteger kNoRivers = -1;
+const static NSInteger kNumberOfRivers = 7;
+const static NSInteger kNoLakes = -1;
+const static NSInteger kNumberOfLakes = 7;
+const static NSInteger kNumberOfIslands = 10;
 
 // Heightspartions
 #define kDeepSea        2*16- 0
@@ -446,7 +446,7 @@ typedef enum Climate {
         progress(100);
 }
 
-- (void)generateRivers:(int)numberOfRivers
+- (void)generateRivers:(NSInteger)numberOfRivers
 {
     for(int count=0;count<numberOfRivers;) {
         if ([self tryToMakeRiverAtX:rand()%(int)self.map.width andY:rand()%(int)self.map.height]) {
@@ -478,8 +478,8 @@ typedef enum Climate {
     
     while (!riverReachedOcean && !riverReachedLake) {
         
-        NSLog(@"Current Cursor position: (%d,%d) at corner: %@", currentPointWithCorner.x, currentPointWithCorner.y, CornerString(currentPointWithCorner.corner));
-        NSLog(@"Make River at: (%d,%d) in Flow:%@", currentPointWithCorner.x, currentPointWithCorner.y, FlowDirectionString(currentFlow));
+        NSLog(@"Current Cursor position: (%ld,%ld) at corner: %@", (long)currentPointWithCorner.x, (long)currentPointWithCorner.y, CornerString(currentPointWithCorner.corner));
+        NSLog(@"Make River at: (%ld,%ld) in Flow:%@", (long)currentPointWithCorner.x, (long)currentPointWithCorner.y, FlowDirectionString(currentFlow));
         [self.map setRiver:YES atX:currentPointWithCorner.x andY:currentPointWithCorner.y];
         riverLength++;
         
@@ -524,7 +524,7 @@ typedef enum Climate {
     return [self heightAtCorner:hexPointWithCorner.corner ofX:hexPointWithCorner.x andY:hexPointWithCorner.y];
 }
 
-- (float)heightAtCorner:(HexPointCorner)corner ofX:(int)x andY:(int)y
+- (float)heightAtCorner:(HexPointCorner)corner ofX:(NSInteger)x andY:(NSInteger)y
 {
     MapPoint *current = [[MapPoint alloc] initWithX:x andY:y];
     MapPoint *pt1 = nil;
@@ -597,7 +597,7 @@ typedef enum Climate {
     return sum / count;
 }
 
-- (void)generateLakes:(int)numberOfLakes
+- (void)generateLakes:(NSInteger)numberOfLakes
 {
     /*
      for(count=0;count<rNumOfLakes;)
@@ -741,10 +741,10 @@ typedef enum Climate {
 
 - (Climate)climateForLatitude:(int)latitude
 {
-    int borderPolar = self.map.height * latitudePolar / 200;
-    int borderSubPolar = self.map.height * latitudeSubPolar / 200;
-    int borderTemperated = self.map.height * latitudeGemaessigt / 200;
-    int borderSubTropic = self.map.height * latitudeSubTropic / 200;
+    NSInteger borderPolar = self.map.height * latitudePolar / 200;
+    NSInteger borderSubPolar = self.map.height * latitudeSubPolar / 200;
+    NSInteger borderTemperated = self.map.height * latitudeGemaessigt / 200;
+    NSInteger borderSubTropic = self.map.height * latitudeSubTropic / 200;
     
     if ((latitude < borderPolar) || (latitude > (self.map.height-borderPolar))) {
         return cPolar;
@@ -1091,7 +1091,7 @@ typedef enum Climate {
     return [self isOceanAtX:h.x andY:h.y];
 }
 
-- (BOOL)isOceanAtX:(int)x andY:(int)y
+- (BOOL)isOceanAtX:(NSInteger)x andY:(NSInteger)y
 {
     if (![self.map isValidAtX:x andY:y]) {
         return NO;
@@ -1100,7 +1100,7 @@ typedef enum Climate {
     return [self.tmpMap intAtX:x andY:y] < pGlacier;
 }
 
-- (BOOL)isHillOrMountainAtX:(int)x andY:(int)y
+- (BOOL)isHillOrMountainAtX:(NSInteger)x andY:(NSInteger)y
 {
     if (![self.map isValidAtX:x andY:y]) {
         return NO;

@@ -56,7 +56,7 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
 
 @implementation Map
 
-- (instancetype)initWithWidth:(int)width andHeight:(int)height
+- (instancetype)initWithWidth:(NSInteger)width andHeight:(NSInteger)height
 {
     self = [super init];
     
@@ -206,17 +206,17 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
 #pragma mark -
 #pragma mark terrain functions
 
-- (MapTerrain)terrainAtX:(int)x andY:(int)y
+- (MapTerrain)terrainAtX:(NSInteger)x andY:(NSInteger)y
 {
     return [self tileAtX:x andY:y].terrain;
 }
 
-- (void)setTerrain:(MapTerrain)terrain atX:(int)x andY:(int)y
+- (void)setTerrain:(MapTerrain)terrain atX:(NSInteger)x andY:(NSInteger)y
 {
     [self tileAtX:x andY:y].terrain = terrain;
 }
 
-- (BOOL)isOceanAtX:(int)x andY:(int)y
+- (BOOL)isOceanAtX:(NSInteger)x andY:(NSInteger)y
 {
     return [[self tileAtX:x andY:y] isOcean];
 }
@@ -224,12 +224,12 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
 #pragma mark -
 #pragma mark feature functions
 
-- (void)addFeature:(MapFeature)feature atX:(int)x andY:(int)y
+- (void)addFeature:(MapFeature)feature atX:(NSInteger)x andY:(NSInteger)y
 {
     [[self tileAtX:x andY:y] addFeature:feature];
 }
 
-- (BOOL)hasFeature:(MapFeature)feature atX:(int)x andY:(int)y
+- (BOOL)hasFeature:(MapFeature)feature atX:(NSInteger)x andY:(NSInteger)y
 {
     return [[self tileAtX:x andY:y] hasFeature:feature];
 }
@@ -237,12 +237,12 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
 #pragma mark -
 #pragma mark river functions
 
-- (void)setRiver:(BOOL)hasRiver atX:(int)x andY:(int)y
+- (void)setRiver:(BOOL)hasRiver atX:(NSInteger)x andY:(NSInteger)y
 {
     [[self tileAtX:x andY:y] setRiver:hasRiver];
 }
 
-- (BOOL)hasRiverAtX:(int)x andY:(int)y
+- (BOOL)hasRiverAtX:(NSInteger)x andY:(NSInteger)y
 {
     return [[self tileAtX:x andY:y] hasRiver];
 }
@@ -250,7 +250,7 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
 #pragma mark -
 #pragma mark continent functions
 
-- (Continent *)continentByIdentifier:(int)identifier
+- (Continent *)continentByIdentifier:(NSInteger)identifier
 {
     for (Continent *continent in self.continents) {
         if (continent.identifier == identifier) {

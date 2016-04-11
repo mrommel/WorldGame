@@ -99,7 +99,7 @@
     [self.heights smoothenFloat];
 }
 
-- (float)valueAtX:(int)x andY:(int)y
+- (float)valueAtX:(NSInteger)x andY:(NSInteger)y
 {
     return [[self.heights objectAtX:x andY:y] floatValue];
 }

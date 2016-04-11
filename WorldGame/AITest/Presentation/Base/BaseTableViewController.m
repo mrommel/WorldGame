@@ -49,6 +49,7 @@
     
     self.view.backgroundColor = COLOR_MIRO_BLACK;
     self.tableView.backgroundColor = COLOR_MIRO_BLACK;
+    self.tableView.separatorColor = [UIColor clearColor];
 }
 
 #pragma mark - Table view data source

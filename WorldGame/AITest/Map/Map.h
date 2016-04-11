@@ -36,8 +36,8 @@ typedef NS_ENUM(NSInteger, MapSize) {
 
 @property (atomic) MapType mapType;
 @property (atomic) MapSize mapSize;
-@property (atomic) int numRivers;
-@property (atomic) int numLakes;
+@property (atomic) NSInteger numRivers;
+@property (atomic) NSInteger numLakes;
 
 - (instancetype)initWithMapType:(MapType)mapType andSize:(MapSize)size;
 
@@ -56,7 +56,7 @@ typedef void (^MapGenerateProgress)(int);
 @property (atomic) NSMutableArray *startPositions;
 
 // constructors
-- (instancetype)initWithWidth:(int)width andHeight:(int)height;
+- (instancetype)initWithWidth:(NSInteger)width andHeight:(NSInteger)height;
 - (instancetype)initWithMapSize:(MapSize)mapSize;
 
 // plot functions
@@ -65,20 +65,20 @@ typedef void (^MapGenerateProgress)(int);
 - (Plot *)tileAtX:(NSInteger)x andY:(NSInteger)y;
 
 // terrain functions
-- (MapTerrain)terrainAtX:(int)x andY:(int)y;
-- (void)setTerrain:(MapTerrain)terrain atX:(int)x andY:(int)y;
-- (BOOL)isOceanAtX:(int)x andY:(int)y;
+- (MapTerrain)terrainAtX:(NSInteger)x andY:(NSInteger)y;
+- (void)setTerrain:(MapTerrain)terrain atX:(NSInteger)x andY:(NSInteger)y;
+- (BOOL)isOceanAtX:(NSInteger)x andY:(NSInteger)y;
 
 // feature functions
-- (void)addFeature:(MapFeature)feature atX:(int)x andY:(int)y;
-- (BOOL)hasFeature:(MapFeature)feature atX:(int)x andY:(int)y;
+- (void)addFeature:(MapFeature)feature atX:(NSInteger)x andY:(NSInteger)y;
+- (BOOL)hasFeature:(MapFeature)feature atX:(NSInteger)x andY:(NSInteger)y;
 
 // river functions
-- (void)setRiver:(BOOL)hasRiver atX:(int)x andY:(int)y;
-- (BOOL)hasRiverAtX:(int)x andY:(int)y;
+- (void)setRiver:(BOOL)hasRiver atX:(NSInteger)x andY:(NSInteger)y;
+- (BOOL)hasRiverAtX:(NSInteger)x andY:(NSInteger)y;
 
 // continent functions
-- (Continent *)continentByIdentifier:(int)identifier;
+- (Continent *)continentByIdentifier:(NSInteger)identifier;
 - (void)addContinent:(Continent *)continent;
 
 // map generators

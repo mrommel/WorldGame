@@ -13,7 +13,7 @@ static NSString* const ContinentDataNameKey = @"Continent.Name";
 
 @implementation Continent
 
-- (instancetype)initWithIdentifier:(int)identifier andName:(NSString *)name
+- (instancetype)initWithIdentifier:(NSInteger)identifier andName:(NSString *)name
 {
     self = [super init];
     

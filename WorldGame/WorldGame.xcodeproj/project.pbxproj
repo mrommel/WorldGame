@@ -19,9 +19,9 @@
 			<key>lastKnownFileType</key>
 			<string>text.xcconfig</string>
 			<key>name</key>
-			<string>Pods-AITest.debug.xcconfig</string>
+			<string>Pods-WorldGame.debug.xcconfig</string>
 			<key>path</key>
-			<string>../Pods/Target Support Files/Pods-AITest/Pods-AITest.debug.xcconfig</string>
+			<string>../Pods/Target Support Files/Pods-WorldGame/Pods-WorldGame.debug.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -6734,9 +6734,9 @@ fi
 			<key>lastKnownFileType</key>
 			<string>text.xcconfig</string>
 			<key>name</key>
-			<string>Pods-AITest.release.xcconfig</string>
+			<string>Pods-WorldGame.release.xcconfig</string>
 			<key>path</key>
-			<string>../Pods/Target Support Files/Pods-AITest/Pods-AITest.release.xcconfig</string>
+			<string>../Pods/Target Support Files/Pods-WorldGame/Pods-WorldGame.release.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

@@ -50,35 +50,21 @@
     self.view.backgroundColor = COLOR_MIRO_BLACK;
     self.tableView.backgroundColor = COLOR_MIRO_BLACK;
     self.tableView.separatorColor = [UIColor clearColor];
+    
+    // header
+    UIImage *headerImage = [UIImage imageNamed:@"menu-header.png"];
+    UIImageView *headerView = [[UIImageView alloc] initWithImage:headerImage];
+    headerView.frame = CGRectMake(0, 0, DEVICE_WIDTH, 100);
+    self.tableView.tableHeaderView = headerView;
+    
+    // footer
+    UIImage *footerImage = [UIImage imageNamed:@"menu-footer.png"];
+    UIImageView *footerView = [[UIImageView alloc] initWithImage:footerImage];
+    footerView.frame = CGRectMake(0, 0, DEVICE_WIDTH, 70);
+    self.tableView.tableFooterView = footerView;
 }
 
 #pragma mark - Table view data source
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 100;
-}
-
-- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    UIImage *myImage = [UIImage imageNamed:@"menu-header.png"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:myImage];
-    imageView.frame = CGRectMake(0, 0, 320, 100);
-    return imageView;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 70;
-}
-
-- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    UIImage *myImage = [UIImage imageNamed:@"menu-footer.png"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:myImage];
-    imageView.frame = CGRectMake(0, 0, 320, 70);
-    return imageView;
-}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

@@ -15,6 +15,7 @@
 #define COLOR_WHITE                         [UIColor colorWithWhite:255/255.0 alpha:1.0f]
 #define COLOR_WHITE_A85                     [UIColor colorWithWhite:255/255.0 alpha:.85f]
 
+#define COLOR_MIRO_WHITE                    [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0f]
 #define COLOR_MIRO_BLACK                    [UIColor colorWithRed:55/255.0 green:65/255.0 blue:70/255.0 alpha:1.0f]
 #define COLOR_MIRO_SAND                     [UIColor colorWithRed:233/255.0 green:223/255.0 blue:182/255.0 alpha:1.0f]
 
@@ -36,6 +37,7 @@
 #define BU7     84
 #define BU8     96
 #define BU9     108
+#define BU10     120
 
 #define DEVICE_WIDTH    ([[UIScreen mainScreen] bounds].size.width)
 #define DEVICE_HEIGHT    ([[UIScreen mainScreen] bounds].size.height)

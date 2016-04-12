@@ -11,10 +11,14 @@
 #import "UIConstants.h"
 #import "Game.h"
 #import "GamePersistance.h"
+#import "OverlayView.h"
+#import "GameViewController.h"
 
 @interface LoadGameViewController ()
 
 @property (nonatomic) NSMutableArray *games;
+
+@property (nonatomic) OverlayView *overlay;
 
 @end
 
@@ -49,9 +53,13 @@
     return [[TableViewContent alloc] initWithTitle:game.name
                                        andSubtitle:[NSString stringWithFormat:@"date: %@", game.date]
                                          andAction:^(NSIndexPath *indexPath) {
-                                                     /*GameViewController *viewcontroller = [[GameViewController alloc] init];
-                                                     viewcontroller.options = [[MapOptions alloc] initWithMapType:MapTypeDefault andSize:MapSizeDefault];
-                                                     [self.navigationController pushViewController:viewcontroller animated:YES];*/
+                                             [GameProvider sharedInstance].game = game;
+                                             /*self.overlay = [[OverlayView alloc] initWithFrame:CGRectZero];
+                                             [self.overlay showProgressOnView:[[[UIApplication sharedApplication] delegate] window] title:@"load" info:@"" withDelegate:nil];
+                                             [self.overlay startProgressAnimation];*/
+                                             
+                                                     GameViewController *viewcontroller = [[GameViewController alloc] init];
+                                                     [self.navigationController pushViewController:viewcontroller animated:YES];
                                                 }];
     
 }

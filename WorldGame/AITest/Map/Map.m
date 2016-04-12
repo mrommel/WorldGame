@@ -135,7 +135,7 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
         for (int x = 0; x < self.width; x++) {
             for (int y = 0; y < self.height; y++) {
                 Plot *plot = [decoder decodeObjectForKey:[NSString stringWithFormat:MapDataTileKey, x, y]];
-                [self.tiles setObject:plot atX:y andY:y];
+                [self.tiles setObject:plot atX:x andY:y];
             }
         }
     }

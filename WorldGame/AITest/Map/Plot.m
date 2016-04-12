@@ -166,14 +166,12 @@ static MapDataProvider *shared = nil;
 
 @interface Plot()
 
-@property (atomic, setter=setStartingPlot:) BOOL startingPlot;
-@property (atomic) BOOL river;
+@property (atomic) BOOL _startingPlot;
+@property (atomic) BOOL _river;
 
 @end
 
 @implementation Plot
-
-@synthesize startingPlot;
 
 - (instancetype)initWithX:(int)nx andY:(int)ny andTerrain:(MapTerrain)nterrain
 {
@@ -231,7 +229,7 @@ static MapDataProvider *shared = nil;
         
         self.inhabitants = [decoder decodeFloatForKey:PlotDataInhabitantsKey];
         self.owner = nil;
-        self.startingPlot = [decoder decodeBoolForKey:PlotDataStartingPlotKey];
+        self._startingPlot = [decoder decodeBoolForKey:PlotDataStartingPlotKey];
         self.revealed = [[BitArray alloc] initWithSize:8];
         self.network = [[RelationsNetwork alloc] init];
     }
@@ -250,7 +248,7 @@ static MapDataProvider *shared = nil;
     }
     
     [encoder encodeFloat:self.inhabitants forKey:PlotDataInhabitantsKey];
-    [encoder encodeBool:self.startingPlot forKey:PlotDataStartingPlotKey];
+    [encoder encodeBool:self._startingPlot forKey:PlotDataStartingPlotKey];
 }
 
 #pragma mark -
@@ -279,12 +277,12 @@ static MapDataProvider *shared = nil;
 
 - (void)setRiver:(BOOL)hasRiver
 {
-    self.river = hasRiver;
+    self._river = hasRiver;
 }
 
-- (BOOL)isRiver
+- (BOOL)hasRiver
 {
-    return self.river;
+    return self._river;
 }
 
 #pragma mark -
@@ -326,12 +324,12 @@ static MapDataProvider *shared = nil;
 
 - (BOOL)isStartingPlot
 {
-    return self.startingPlot;
+    return self._startingPlot;
 }
 
 - (void)setStartingPlot:(BOOL)bNewValue
 {
-    startingPlot = bNewValue;
+    self._startingPlot = bNewValue;
 }
 
 #define kGrowth         0.05f // means 5% growth

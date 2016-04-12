@@ -90,7 +90,20 @@ static CGFloat const kZoomFactorNew = 0.3f;
     [self addGestureRecognizer:[[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)]];
 }
 
+#pragma mark - setters
+
+- (void)moveToX:(NSInteger)x andY:(NSInteger)y
+{
+    self.translation = CGPointMake(x, y);
+    
+    // schedule
+    [self setNeedsDisplay];
+}
+
 #pragma mark - drawing methods
+
+#define XFROMHEX(i, j, scale)   (i * kHexagonWidth * 3 / 4 * scale)
+#define YFROMHEX(i, j, scale)   (j * kHexagonHeight * scale + (ODD(i) ? kHexagonHeight * scale / 2 : 0))
 
 - (void)drawRect:(CGRect)rect
 {
@@ -105,8 +118,8 @@ static CGFloat const kZoomFactorNew = 0.3f;
     // draw terrain
     for (int i = 0; i < [GameProvider sharedInstance].game.map.width; i++) {
         for (int j = 0; j < [GameProvider sharedInstance].game.map.height; j++) {
-            x = self.bounds.origin.x + i * kHexagonWidth * 3 / 4 * self.scale + self.translation.x;
-            y = self.bounds.origin.y + j * kHexagonHeight * self.scale + (ODD(i) ? kHexagonHeight * self.scale / 2 : 0) + self.translation.y;
+            x = self.bounds.origin.x + XFROMHEX(i, j, self.scale) + self.translation.x;
+            y = self.bounds.origin.y + YFROMHEX(i, j, self.scale) + self.translation.y;
             tile = [[GameProvider sharedInstance].game.map tileAtX:i andY:j];
             
             [self drawHexagon:ctx atX:x andY:y forTile:tile];
@@ -122,8 +135,8 @@ static CGFloat const kZoomFactorNew = 0.3f;
     }
     
     // draw cursor
-    x = self.bounds.origin.x + self.focus.x * kHexagonWidth * self.scale * 3 / 4 + self.translation.x;
-    y = self.bounds.origin.y + self.focus.y * kHexagonHeight * self.scale + (ODD(self.focus.x) ? kHexagonHeight * self.scale / 2 : 0) + self.translation.y;
+    x = self.bounds.origin.x + XFROMHEX(self.focus.x, self.focus.y, self.scale) + self.translation.x;
+    y = self.bounds.origin.y + YFROMHEX(self.focus.x, self.focus.y, self.scale) + self.translation.y;
     [self drawHexagonCursor:ctx atX:x andY:y];
 }
 
@@ -197,17 +210,19 @@ static CGFloat const kZoomFactorNew = 0.3f;
 
 - (void)drawText:(CGContextRef)ctx withText:(NSString *)text atPoint:(CGPoint)point
 {
+    UIFont *font = [UIFont fontWithName:@"Tele-GroteskNor" size:21];
+    
     CGContextSaveGState(ctx);
     // Set an inverse matrix to draw the text
-    CGContextSetTextMatrix (ctx, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
+    CGContextSetTextMatrix(ctx, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
     CTTextAlignment alignment = kCTCenterTextAlignment;
     CTParagraphStyleSetting settings[] = {
         {kCTParagraphStyleSpecifierAlignment, sizeof(alignment), &alignment}
     };
     CTParagraphStyleRef paragraphStyle = CTParagraphStyleCreate(settings, sizeof(settings) / sizeof(settings[0]));
     // Create an attributed string
-    CFStringRef keys[] = { kCTParagraphStyleAttributeName, kCTForegroundColorAttributeName }; //kCTFontAttributeName ,
-    CFTypeRef values[] = { paragraphStyle, [UIColor blackColor].CGColor };
+    CFStringRef keys[] = { kCTParagraphStyleAttributeName, kCTForegroundColorAttributeName, kCTFontAttributeName };
+    CFTypeRef values[] = { paragraphStyle, [UIColor blackColor].CGColor, CTFontCreateWithName((CFStringRef)font.fontName, font.pointSize * self.scale, NULL) };
     CFDictionaryRef attr = CFDictionaryCreate(NULL, (const void **)&keys, (const void **)&values,
                                               sizeof(keys) / sizeof(keys[0]), &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
     CFAttributedStringRef attrString = CFAttributedStringCreate(NULL, (CFStringRef)text, attr);

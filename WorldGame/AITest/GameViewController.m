@@ -25,6 +25,7 @@
 @property (nonatomic) MapView *mapView;
 @property (nonatomic) UILabel *turnLabel;
 @property (nonatomic) UIButton *turnButton;
+@property (nonatomic) UIButton *centerButton;
 @property (nonatomic) OverlayView *overlay;
 
 // objects
@@ -83,6 +84,12 @@
     
     [self.view addSubview:bottomView];
     
+    self.centerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.centerButton addTarget:self action:@selector(centerClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.centerButton setImage:[UIImage imageNamed:@"center.png"] forState:UIControlStateNormal];
+    self.centerButton.frame = CGRectMake(DEVICE_WIDTH - BU4, BU8, BU3, BU3);
+    [self.view addSubview:self.centerButton];
+    
     UIBarButtonItem *flipButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                                   target:self
                                                                   action:@selector(showActions:)];
@@ -125,6 +132,12 @@
     self.turnLabel.text = [NSString stringWithFormat:@"Players: %lu / current: %d", (unsigned long)[GameProvider sharedInstance].game.players.count, [GameProvider sharedInstance].game.currentTurn];
 }
 
+- (void)centerClicked:(id)sender
+{
+    NSLog(@"center");
+    [self.mapView moveToX:0 andY:0];
+}
+
 - (void)backButtonPressed
 {
     SCLAlertViewBuilder *builder = [SCLAlertViewBuilder new];
@@ -135,15 +148,18 @@
         .subTitle(@"Do you want to quit the game?")
         .duration(0);
     
-    [builder.alertView addButton:@"Continue" actionBlock:^(void) {
+    [builder.alertView addButton:@"Continue"
+                     actionBlock:^(void) {
         NSLog(@"Continue");
         [self.navigationController popToRootViewControllerAnimated:YES];
     }];
-    [builder.alertView addButton:@"Save" actionBlock:^(void) {
+    [builder.alertView addButton:@"Save"
+                     actionBlock:^(void) {
         NSLog(@"Save");
         [self saveGame];
     }];
-    [builder.alertView addButton:@"Quit Game" actionBlock:^(void) {
+    [builder.alertView addButton:@"Quit Game"
+                     actionBlock:^(void) {
         NSLog(@"Game exited");
         [GameProvider sharedInstance].game = nil;
         [self.navigationController popToRootViewControllerAnimated:YES];
@@ -165,7 +181,11 @@
         [self.navigationController popToRootViewControllerAnimated:YES];
     }];
     
-    [alert showEdit:self title:@"Game name" subTitle:@"What should be the name of the game?" closeButtonTitle:@"Cancel" duration:0.0f];
+    [alert showEdit:self
+              title:@"Game name"
+           subTitle:@"What should be the name of the game?"
+   closeButtonTitle:@"Cancel"
+           duration:0.0f];
 }
 
 - (void)showActions:(id)sender

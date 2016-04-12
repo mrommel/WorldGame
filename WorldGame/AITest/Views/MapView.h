@@ -12,8 +12,8 @@
 
 @protocol MapViewDelegate
 
--(void)focusChanged:(MapPoint *)newFocus;
--(void)longPressChanged:(MapPoint *)newFocus;
+- (void)focusChanged:(MapPoint *)newFocus;
+- (void)longPressChanged:(MapPoint *)newFocus;
 
 @end
 
@@ -28,5 +28,7 @@
 
 - (id)initWithFrame:(CGRect)frame;
 - (id)initWithCoder:(NSCoder *)aDecoder;
+
+- (void)moveToX:(NSInteger)x andY:(NSInteger)y;
 
 @end

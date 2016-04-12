@@ -50,18 +50,17 @@
 {
     Game *game = [self.games objectAtIndex:indexPath.row];
     
-    return [[TableViewContent alloc] initWithTitle:game.name
-                                       andSubtitle:[NSString stringWithFormat:@"date: %@", game.date]
-                                         andAction:^(NSIndexPath *indexPath) {
-                                             [GameProvider sharedInstance].game = game;
-                                             /*self.overlay = [[OverlayView alloc] initWithFrame:CGRectZero];
-                                             [self.overlay showProgressOnView:[[[UIApplication sharedApplication] delegate] window] title:@"load" info:@"" withDelegate:nil];
-                                             [self.overlay startProgressAnimation];*/
-                                             
-                                                     GameViewController *viewcontroller = [[GameViewController alloc] init];
-                                                     [self.navigationController pushViewController:viewcontroller animated:YES];
-                                                }];
+    ActionBlock loadGame = ^(NSIndexPath *indexPath) {
+        Game *game = [self.games objectAtIndex:indexPath.row];
+        [GameProvider sharedInstance].game = game;
+        
+        GameViewController *viewcontroller = [[GameViewController alloc] init];
+        [self.navigationController pushViewController:viewcontroller animated:YES];
+    };
     
+    return [[TableViewContent alloc] initWithTitle:game.name
+                                       andSubtitle:[NSString stringWithFormat:@"Saved: %@", game.date]
+                                         andAction:loadGame];
 }
 
 @end

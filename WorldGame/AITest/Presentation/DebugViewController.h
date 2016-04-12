@@ -6,8 +6,8 @@
 //  Copyright © 2016 Michael Rommel. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
 
-@interface DebugViewController : UIViewController
+@interface DebugViewController : BaseTableViewController
 
 @end

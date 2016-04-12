@@ -290,6 +290,12 @@
 		1A5C23031C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */; };
 		1A5C23041C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */; };
 		1A5C23051C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */; };
+		1A7232B01CBD64B600D8AAC8 /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232AF1CBD64B600D8AAC8 /* center.png */; };
+		1A7232B11CBD64B600D8AAC8 /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232AF1CBD64B600D8AAC8 /* center.png */; };
+		1A7232B21CBD64B600D8AAC8 /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232AF1CBD64B600D8AAC8 /* center.png */; };
+		1A7232B51CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */; };
+		1A7232B61CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */; };
+		1A7232B71CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */; };
 		1A8D66C11CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
 		1A8D66C21CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
 		1A8D66C31CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
@@ -540,6 +546,8 @@
 		1A5C22FD1C9C42E7007F324C /* UIImage+Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Sprite.m"; path = "Util/UIImage+Sprite.m"; sourceTree = "<group>"; };
 		1A5C23011C9DEEE8007F324C /* UINavigationController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+BackButtonHandler.h"; path = "Util/UINavigationController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+BackButtonHandler.m"; path = "Util/UINavigationController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		1A7232AF1CBD64B600D8AAC8 /* center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = center.png; sourceTree = "<group>"; };
+		1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tele-GroteskNor.ttf"; path = "Resources/Fonts/Tele-GroteskNor.ttf"; sourceTree = "<group>"; };
 		1A8D66BF1CA1306000284BB8 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewController.h; path = Presentation/Base/BaseTableViewController.h; sourceTree = "<group>"; };
 		1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewController.m; path = Presentation/Base/BaseTableViewController.m; sourceTree = "<group>"; };
 		1AAEB5981CB7C6EF00DA478B /* GamePersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePersistance.h; path = Game/GamePersistance.h; sourceTree = "<group>"; };
@@ -665,6 +673,7 @@
 				1A3C3A4B1C84F27F004009DA /* icon_spinning_circle@2x.png */,
 				1A3C3A4C1C84F27F004009DA /* icon_spinning_circle@2x~ipad.png */,
 				1A3C3A4D1C84F280004009DA /* icon_spinning_circle~ipad.png */,
+				1A7232AF1CBD64B600D8AAC8 /* center.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -900,6 +909,14 @@
 			name = Atlases;
 			sourceTree = "<group>";
 		};
+		1A7232B31CBD8EFA00D8AAC8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		1A8D66BE1CA1303300284BB8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -912,6 +929,7 @@
 		1AEE80BE1C77350B0028ACFF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A7232B31CBD8EFA00D8AAC8 /* Fonts */,
 				1A5C22B61C9C163E007F324C /* Atlases */,
 				1A3C3A201C805F57004009DA /* Images */,
 				1AEE80BF1C7735530028ACFF /* Terrains */,
@@ -1110,6 +1128,7 @@
 				1A0FF2901CA08F5800F64050 /* Forest.png in Resources */,
 				1A3C3A511C84F280004009DA /* icon_spinning_circle@2x.png in Resources */,
 				1A5701091CB2FDDD00F346D9 /* PoliceForce.png in Resources */,
+				1A7232B51CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */,
 				1A5C22E61C9C164F007F324C /* notificationwar.png in Resources */,
 				1A0FF27E1CA0617900F64050 /* Plains.png in Resources */,
 				1A5C22EF1C9C164F007F324C /* TerrainAtlas.xml in Resources */,
@@ -1129,6 +1148,7 @@
 				1A35A9CE1CAE8B170094F773 /* Parliament.png in Resources */,
 				1A5701191CB302AC00F346D9 /* SalesTax.png in Resources */,
 				1A5C22E01C9C164F007F324C /* ImprovementTiles.png in Resources */,
+				1A7232B01CBD64B600D8AAC8 /* center.png in Resources */,
 				1A5C22F11C9C164F007F324C /* UnitActionAtlas.xml in Resources */,
 				1AEE80D71C7735960028ACFF /* Shore.xml in Resources */,
 				1A5C22E71C9C164F007F324C /* PolicyAtlas.xml in Resources */,
@@ -1179,6 +1199,7 @@
 				1AEE80CF1C7735960028ACFF /* Grassland.xml in Resources */,
 				1AEE80DB1C7735960028ACFF /* Snow.xml in Resources */,
 				1A5700F21CB2F2D900F346D9 /* NationalService.png in Resources */,
+				1A7232B61CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */,
 				1A3C3A4F1C84F280004009DA /* icon_spinning_circle.png in Resources */,
 				1A35A9EE1CAEF4BD0094F773 /* Legalism.xml in Resources */,
 				1A0FF29D1CA0965500F64050 /* menu-item.png in Resources */,
@@ -1191,6 +1212,7 @@
 				1A0FF27F1CA0617900F64050 /* Plains.png in Resources */,
 				1A5700F51CB2F2D900F346D9 /* NationalService.xml in Resources */,
 				1A3C3A581C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */,
+				1A7232B11CBD64B600D8AAC8 /* center.png in Resources */,
 				1A3C3A231C805F7D004009DA /* king.png in Resources */,
 				1AEE80CC1C7735960028ACFF /* Desert.xml in Resources */,
 				1A5700FD1CB2FAE100F346D9 /* InheritanceTax.xml in Resources */,
@@ -1234,6 +1256,7 @@
 				1AEE80D01C7735960028ACFF /* Grassland.xml in Resources */,
 				1AEE80DC1C7735960028ACFF /* Snow.xml in Resources */,
 				1A5700F31CB2F2D900F346D9 /* NationalService.png in Resources */,
+				1A7232B71CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */,
 				1A3C3A501C84F280004009DA /* icon_spinning_circle.png in Resources */,
 				1A35A9EF1CAEF4BD0094F773 /* Legalism.xml in Resources */,
 				1A0FF29E1CA0965500F64050 /* menu-item.png in Resources */,
@@ -1246,6 +1269,7 @@
 				1A0FF2801CA0617900F64050 /* Plains.png in Resources */,
 				1A5700F61CB2F2D900F346D9 /* NationalService.xml in Resources */,
 				1A3C3A591C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */,
+				1A7232B21CBD64B600D8AAC8 /* center.png in Resources */,
 				1A3C3A241C805F7D004009DA /* king.png in Resources */,
 				1AEE80CD1C7735960028ACFF /* Desert.xml in Resources */,
 				1A5700FE1CB2FAE100F346D9 /* InheritanceTax.xml in Resources */,

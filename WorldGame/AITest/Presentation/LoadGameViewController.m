@@ -60,6 +60,7 @@
     
     return [[TableViewContent alloc] initWithTitle:game.name
                                        andSubtitle:[NSString stringWithFormat:@"Saved: %@", game.date]
+                                          andImage:game.map.thumbnail
                                          andAction:loadGame];
 }
 

@@ -59,6 +59,8 @@ typedef void (^MapGenerateProgress)(int);
 - (instancetype)initWithWidth:(NSInteger)width andHeight:(NSInteger)height;
 - (instancetype)initWithMapSize:(MapSize)mapSize;
 
+- (UIImage *)thumbnail;
+
 // plot functions
 - (BOOL)isValidAt:(MapPoint *)point;
 - (BOOL)isValidAtX:(NSInteger)x andY:(NSInteger)y;

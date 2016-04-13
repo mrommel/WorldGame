@@ -33,7 +33,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-    return 5;
+    return 6;
 }
 
 - (TableViewContent *)contentAtIndexPath:(NSIndexPath *)indexPath
@@ -57,12 +57,17 @@
             break;
         case 3:
             return [[TableViewContent alloc] initWithTitle:@"add center button to map"
-                                               andSubtitle:@"progress"
+                                               andSubtitle:@"done"
                                                  andAction:nil];
             break;
         case 4:
             return [[TableViewContent alloc] initWithTitle:@"Map/Game thumbnail for map preview"
-                                               andSubtitle:@"open"
+                                               andSubtitle:@"done"
+                                                 andAction:nil];
+            break;
+        case 6:
+            return [[TableViewContent alloc] initWithTitle:@"Save game when enter background (autosave)"
+                                               andSubtitle:@"done"
                                                  andAction:nil];
             break;
     }

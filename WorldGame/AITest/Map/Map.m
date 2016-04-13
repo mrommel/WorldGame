@@ -51,6 +51,7 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
 
 @property (nonatomic) Array2D *tiles;
 @property (nonatomic) NSMutableArray *continents;
+@property (nonatomic) UIImage *thumbnailImage;
 
 @end
 
@@ -66,6 +67,7 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
         self.startPositions = [[NSMutableArray alloc] init];
         self.continents = [[NSMutableArray alloc] init];
         self.tiles = [[Array2D alloc] initWithSize:CGSizeMake(width, height)];
+        self.thumbnailImage = nil;
         
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
@@ -138,6 +140,8 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
                 [self.tiles setObject:plot atX:x andY:y];
             }
         }
+        
+        self.thumbnailImage = nil;
     }
     
     return self;
@@ -164,6 +168,43 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
             [encoder encodeObject:plot forKey:[NSString stringWithFormat:MapDataTileKey, x, y]];
         }
     }
+}
+
+- (UIImage *)thumbnail
+{
+    if (self.thumbnailImage == nil) {
+        UIColor *green = [UIColor greenColor];
+        UIColor *blue = [UIColor blueColor];
+        UIColor *black = [UIColor blackColor];
+        
+        CGSize newSize = CGSizeMake(self.width * 2, self.height * 2 +1);
+        UIGraphicsBeginImageContext(newSize);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        CGContextSetFillColorWithColor(context, [black CGColor]);
+        CGContextFillRect(context, CGRectMake(0, 0, self.width * 2 - 1, self.height * 2));
+        
+        for (int y = 0; y < self.height; ++y) {
+            for (int x = 0; x < self.width; ++x) {
+            
+                Plot *item = [self.tiles objectAtX:x andY:y];
+                if ([item isOcean]) {
+                    CGContextSetFillColorWithColor(context, [blue CGColor]);
+                } else {
+                    CGContextSetFillColorWithColor(context, [green CGColor]);
+                }
+
+                CGContextFillRect(context, CGRectMake(x * 2, y * 2 + (x % 2 == 0 ? 1 : 0), 2, 2));
+            }
+        }
+        
+        UIImage *finalImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        self.thumbnailImage = finalImage;
+    }
+    
+    return self.thumbnailImage;
 }
 
 - (void)generateMapWithOptions:(MapOptions *)options withProgress:(MapGenerateProgress)progress

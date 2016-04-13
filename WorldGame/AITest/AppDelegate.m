@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+#import "UILabel+Custom.h"
 #import "MainMenuViewController.h"
 #include <time.h>
 #include <stdlib.h>
@@ -27,6 +28,8 @@
     srand((unsigned int)time(NULL));
     
     [PolicyInfoProvider sharedInstance];
+    
+    [[UILabel appearance] setSubstituteFontName:@"Tele-GroteskNor"];
     
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

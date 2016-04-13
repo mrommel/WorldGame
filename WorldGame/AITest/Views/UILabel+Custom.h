@@ -12,6 +12,6 @@
 
 @interface UILabel (Custom)
 
-
+- (void)setSubstituteFontName:(NSString *)name UI_APPEARANCE_SELECTOR;
 
 @end

@@ -215,7 +215,7 @@ static CGFloat const kZoomFactorNew = 0.3f;
     CGContextSaveGState(ctx);
     // Set an inverse matrix to draw the text
     CGContextSetTextMatrix(ctx, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
-    CTTextAlignment alignment = kCTCenterTextAlignment;
+    CTTextAlignment alignment = kCTTextAlignmentCenter;
     CTParagraphStyleSetting settings[] = {
         {kCTParagraphStyleSpecifierAlignment, sizeof(alignment), &alignment}
     };

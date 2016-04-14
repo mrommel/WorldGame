@@ -232,7 +232,6 @@
 		1A57011E1CB302AC00F346D9 /* SalesTax.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1A5701181CB302AC00F346D9 /* SalesTax.xml */; };
 		1A57E7811C71C3F200B3890E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7801C71C3F200B3890E /* main.m */; };
 		1A57E7841C71C3F200B3890E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7831C71C3F200B3890E /* AppDelegate.m */; };
-		1A57E78D1C71C3F200B3890E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E78C1C71C3F200B3890E /* GameViewController.m */; };
 		1A57E7921C71C3F200B3890E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A57E7911C71C3F200B3890E /* Assets.xcassets */; };
 		1A57E7951C71C3F200B3890E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A57E7931C71C3F200B3890E /* LaunchScreen.storyboard */; };
 		1A57E7A01C71C3F200B3890E /* AITestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E79F1C71C3F200B3890E /* AITestTests.m */; };
@@ -290,12 +289,21 @@
 		1A5C23031C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */; };
 		1A5C23041C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */; };
 		1A5C23051C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */; };
-		1A7232B01CBD64B600D8AAC8 /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232AF1CBD64B600D8AAC8 /* center.png */; };
-		1A7232B11CBD64B600D8AAC8 /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232AF1CBD64B600D8AAC8 /* center.png */; };
-		1A7232B21CBD64B600D8AAC8 /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232AF1CBD64B600D8AAC8 /* center.png */; };
 		1A7232B51CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */; };
 		1A7232B61CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */; };
 		1A7232B71CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */; };
+		1A84BB3B1CBFB5DF00CE7EDC /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A84BB381CBFB5DF00CE7EDC /* cancel.png */; };
+		1A84BB3C1CBFB5DF00CE7EDC /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A84BB381CBFB5DF00CE7EDC /* cancel.png */; };
+		1A84BB3D1CBFB5DF00CE7EDC /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A84BB381CBFB5DF00CE7EDC /* cancel.png */; };
+		1A84BB3E1CBFB5DF00CE7EDC /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A84BB391CBFB5DF00CE7EDC /* center.png */; };
+		1A84BB3F1CBFB5DF00CE7EDC /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A84BB391CBFB5DF00CE7EDC /* center.png */; };
+		1A84BB401CBFB5DF00CE7EDC /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A84BB391CBFB5DF00CE7EDC /* center.png */; };
+		1A84BB411CBFB5DF00CE7EDC /* okay.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A84BB3A1CBFB5DF00CE7EDC /* okay.png */; };
+		1A84BB421CBFB5DF00CE7EDC /* okay.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A84BB3A1CBFB5DF00CE7EDC /* okay.png */; };
+		1A84BB431CBFB5DF00CE7EDC /* okay.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A84BB3A1CBFB5DF00CE7EDC /* okay.png */; };
+		1A84BB461CBFB60800CE7EDC /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A84BB451CBFB60800CE7EDC /* GameViewController.m */; };
+		1A84BB471CBFB60800CE7EDC /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A84BB451CBFB60800CE7EDC /* GameViewController.m */; };
+		1A84BB481CBFB60800CE7EDC /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A84BB451CBFB60800CE7EDC /* GameViewController.m */; };
 		1A8D66C11CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
 		1A8D66C21CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
 		1A8D66C31CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
@@ -481,8 +489,6 @@
 		1A57E7801C71C3F200B3890E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A57E7821C71C3F200B3890E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A57E7831C71C3F200B3890E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1A57E78B1C71C3F200B3890E /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		1A57E78C1C71C3F200B3890E /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		1A57E7911C71C3F200B3890E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A57E7941C71C3F200B3890E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A57E7961C71C3F200B3890E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -546,8 +552,12 @@
 		1A5C22FD1C9C42E7007F324C /* UIImage+Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Sprite.m"; path = "Util/UIImage+Sprite.m"; sourceTree = "<group>"; };
 		1A5C23011C9DEEE8007F324C /* UINavigationController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+BackButtonHandler.h"; path = "Util/UINavigationController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+BackButtonHandler.m"; path = "Util/UINavigationController+BackButtonHandler.m"; sourceTree = "<group>"; };
-		1A7232AF1CBD64B600D8AAC8 /* center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = center.png; sourceTree = "<group>"; };
 		1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tele-GroteskNor.ttf"; path = "Resources/Fonts/Tele-GroteskNor.ttf"; sourceTree = "<group>"; };
+		1A84BB381CBFB5DF00CE7EDC /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cancel.png; path = Resources/Images/cancel.png; sourceTree = "<group>"; };
+		1A84BB391CBFB5DF00CE7EDC /* center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = center.png; path = Resources/Images/center.png; sourceTree = "<group>"; };
+		1A84BB3A1CBFB5DF00CE7EDC /* okay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = okay.png; path = Resources/Images/okay.png; sourceTree = "<group>"; };
+		1A84BB441CBFB60800CE7EDC /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameViewController.h; path = Presentation/GameViewController.h; sourceTree = "<group>"; };
+		1A84BB451CBFB60800CE7EDC /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameViewController.m; path = Presentation/GameViewController.m; sourceTree = "<group>"; };
 		1A8D66BF1CA1306000284BB8 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewController.h; path = Presentation/Base/BaseTableViewController.h; sourceTree = "<group>"; };
 		1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewController.m; path = Presentation/Base/BaseTableViewController.m; sourceTree = "<group>"; };
 		1AAEB5981CB7C6EF00DA478B /* GamePersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePersistance.h; path = Game/GamePersistance.h; sourceTree = "<group>"; };
@@ -673,7 +683,9 @@
 				1A3C3A4B1C84F27F004009DA /* icon_spinning_circle@2x.png */,
 				1A3C3A4C1C84F27F004009DA /* icon_spinning_circle@2x~ipad.png */,
 				1A3C3A4D1C84F280004009DA /* icon_spinning_circle~ipad.png */,
-				1A7232AF1CBD64B600D8AAC8 /* center.png */,
+				1A84BB381CBFB5DF00CE7EDC /* cancel.png */,
+				1A84BB391CBFB5DF00CE7EDC /* center.png */,
+				1A84BB3A1CBFB5DF00CE7EDC /* okay.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -852,10 +864,10 @@
 				1A5C22B41C9B40A3007F324C /* SelectMapTypeTableViewController.m */,
 				1A35A9A81CA1E9050094F773 /* SelectMapSizeTableViewController.h */,
 				1A35A9A91CA1E9050094F773 /* SelectMapSizeTableViewController.m */,
+				1A84BB441CBFB60800CE7EDC /* GameViewController.h */,
+				1A84BB451CBFB60800CE7EDC /* GameViewController.m */,
 				1A58E36F1CBBB41A00AE7140 /* LoadGameViewController.h */,
 				1A58E3701CBBB41A00AE7140 /* LoadGameViewController.m */,
-				1A57E78B1C71C3F200B3890E /* GameViewController.h */,
-				1A57E78C1C71C3F200B3890E /* GameViewController.m */,
 				1A2EA39E1C8B860300633417 /* MinistryTableViewController.h */,
 				1A2EA39F1C8B860300633417 /* MinistryTableViewController.m */,
 				1A2EA3C11C8CD17A00633417 /* PolicyViewController.h */,
@@ -1107,6 +1119,7 @@
 				1AEE80CB1C7735960028ACFF /* Desert.xml in Resources */,
 				1A35A9ED1CAEF4BD0094F773 /* Legalism.xml in Resources */,
 				1A0FF29C1CA0965500F64050 /* menu-item.png in Resources */,
+				1A84BB3E1CBFB5DF00CE7EDC /* center.png in Resources */,
 				1A5C22EB1C9C164F007F324C /* TechBranchAtlas.xml in Resources */,
 				1A3C3A361C84EBFB004009DA /* OverlayView.xib in Resources */,
 				1A0FF26F1CA05E6200F64050 /* Grassland.png in Resources */,
@@ -1148,7 +1161,6 @@
 				1A35A9CE1CAE8B170094F773 /* Parliament.png in Resources */,
 				1A5701191CB302AC00F346D9 /* SalesTax.png in Resources */,
 				1A5C22E01C9C164F007F324C /* ImprovementTiles.png in Resources */,
-				1A7232B01CBD64B600D8AAC8 /* center.png in Resources */,
 				1A5C22F11C9C164F007F324C /* UnitActionAtlas.xml in Resources */,
 				1AEE80D71C7735960028ACFF /* Shore.xml in Resources */,
 				1A5C22E71C9C164F007F324C /* PolicyAtlas.xml in Resources */,
@@ -1156,6 +1168,7 @@
 				1A5C22F61C9C164F007F324C /* YieldTiles.png in Resources */,
 				1A5701111CB2FE6B00F346D9 /* IncomeTax.png in Resources */,
 				1A57E7951C71C3F200B3890E /* LaunchScreen.storyboard in Resources */,
+				1A84BB3B1CBFB5DF00CE7EDC /* cancel.png in Resources */,
 				1A3C3A4E1C84F280004009DA /* icon_spinning_circle.png in Resources */,
 				1A35A9E51CAEF21A0094F773 /* Feudalism.xml in Resources */,
 				1A5C22E91C9C164F007F324C /* RessourceAtlas.xml in Resources */,
@@ -1182,6 +1195,7 @@
 				1A5C22DE1C9C164F007F324C /* FeatureTiles.png in Resources */,
 				1A35A9A21CA1E7720094F773 /* MapSizeAtlas.xml in Resources */,
 				1AEE80D11C7735960028ACFF /* Ocean.xml in Resources */,
+				1A84BB411CBFB5DF00CE7EDC /* okay.png in Resources */,
 				1A5C22E21C9C164F007F324C /* LeaderTiles.png in Resources */,
 				1AEE80CE1C7735960028ACFF /* Grassland.xml in Resources */,
 				1A5C22F31C9C164F007F324C /* UnitAtlas.xml in Resources */,
@@ -1212,13 +1226,14 @@
 				1A0FF27F1CA0617900F64050 /* Plains.png in Resources */,
 				1A5700F51CB2F2D900F346D9 /* NationalService.xml in Resources */,
 				1A3C3A581C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */,
-				1A7232B11CBD64B600D8AAC8 /* center.png in Resources */,
 				1A3C3A231C805F7D004009DA /* king.png in Resources */,
 				1AEE80CC1C7735960028ACFF /* Desert.xml in Resources */,
 				1A5700FD1CB2FAE100F346D9 /* InheritanceTax.xml in Resources */,
 				1A35A9E31CAEF21A0094F773 /* Feudalism.png in Resources */,
 				1A5701021CB2FC8600F346D9 /* StateSchools.png in Resources */,
 				1A5701051CB2FC8600F346D9 /* StateSchools.xml in Resources */,
+				1A84BB421CBFB5DF00CE7EDC /* okay.png in Resources */,
+				1A84BB3C1CBFB5DF00CE7EDC /* cancel.png in Resources */,
 				1A3C3A551C84F280004009DA /* icon_spinning_circle@2x~ipad.png in Resources */,
 				1A57010D1CB2FDDD00F346D9 /* PoliceForce.xml in Resources */,
 				1A0FF2851CA0617900F64050 /* Snow.png in Resources */,
@@ -1232,6 +1247,7 @@
 				1A57011D1CB302AC00F346D9 /* SalesTax.xml in Resources */,
 				1AEE80D51C7735960028ACFF /* Plains.xml in Resources */,
 				1A35A9CF1CAE8B170094F773 /* Parliament.png in Resources */,
+				1A84BB3F1CBFB5DF00CE7EDC /* center.png in Resources */,
 				1A0FF2791CA0617900F64050 /* Desert.png in Resources */,
 				1A3C3A371C84EBFB004009DA /* OverlayView.xib in Resources */,
 				1AEE80D81C7735960028ACFF /* Shore.xml in Resources */,
@@ -1269,13 +1285,14 @@
 				1A0FF2801CA0617900F64050 /* Plains.png in Resources */,
 				1A5700F61CB2F2D900F346D9 /* NationalService.xml in Resources */,
 				1A3C3A591C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */,
-				1A7232B21CBD64B600D8AAC8 /* center.png in Resources */,
 				1A3C3A241C805F7D004009DA /* king.png in Resources */,
 				1AEE80CD1C7735960028ACFF /* Desert.xml in Resources */,
 				1A5700FE1CB2FAE100F346D9 /* InheritanceTax.xml in Resources */,
 				1A35A9E41CAEF21A0094F773 /* Feudalism.png in Resources */,
 				1A5701031CB2FC8600F346D9 /* StateSchools.png in Resources */,
 				1A5701061CB2FC8600F346D9 /* StateSchools.xml in Resources */,
+				1A84BB431CBFB5DF00CE7EDC /* okay.png in Resources */,
+				1A84BB3D1CBFB5DF00CE7EDC /* cancel.png in Resources */,
 				1A3C3A561C84F280004009DA /* icon_spinning_circle@2x~ipad.png in Resources */,
 				1A57010E1CB2FDDD00F346D9 /* PoliceForce.xml in Resources */,
 				1A0FF2861CA0617900F64050 /* Snow.png in Resources */,
@@ -1289,6 +1306,7 @@
 				1A57011E1CB302AC00F346D9 /* SalesTax.xml in Resources */,
 				1AEE80D61C7735960028ACFF /* Plains.xml in Resources */,
 				1A35A9D01CAE8B170094F773 /* Parliament.png in Resources */,
+				1A84BB401CBFB5DF00CE7EDC /* center.png in Resources */,
 				1A0FF27A1CA0617900F64050 /* Desert.png in Resources */,
 				1A3C3A381C84EBFB004009DA /* OverlayView.xib in Resources */,
 				1AEE80D91C7735960028ACFF /* Shore.xml in Resources */,
@@ -1361,7 +1379,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A57E7E81C74ABB300B3890E /* MainMenuViewController.m in Sources */,
-				1A57E78D1C71C3F200B3890E /* GameViewController.m in Sources */,
 				1A3C3A3D1C84ED9A004009DA /* UILabel+Custom.m in Sources */,
 				1A3C3A181C7F931E004009DA /* Yield.m in Sources */,
 				1AEE80BB1C7733F70028ACFF /* XMLReader.m in Sources */,
@@ -1381,6 +1398,7 @@
 				1A57E7BE1C71C83700B3890E /* Map.m in Sources */,
 				1A3C3A1D1C7F9DD7004009DA /* Area.m in Sources */,
 				1A57E7841C71C3F200B3890E /* AppDelegate.m in Sources */,
+				1A84BB461CBFB60800CE7EDC /* GameViewController.m in Sources */,
 				1A57E7811C71C3F200B3890E /* main.m in Sources */,
 				1A2EA3921C89877C00633417 /* RelationsNetwork.m in Sources */,
 				1A3C3A2D1C80FCEA004009DA /* Simulation.m in Sources */,
@@ -1460,6 +1478,7 @@
 				1A2EA3981C89B95C00633417 /* GroupType.m in Sources */,
 				1AEE80EE1C7BB20B0028ACFF /* Player.m in Sources */,
 				1A57E7E01C74700D00B3890E /* MapPoint.m in Sources */,
+				1A84BB471CBFB60800CE7EDC /* GameViewController.m in Sources */,
 				1A2EA3A11C8B860300633417 /* MinistryTableViewController.m in Sources */,
 				1A2EA4041C994FB700633417 /* Continent.m in Sources */,
 				1A2EA3E31C92D5A900633417 /* DebugViewController.m in Sources */,
@@ -1511,6 +1530,7 @@
 				1A2EA3991C89B95C00633417 /* GroupType.m in Sources */,
 				1AEE80EF1C7BB20B0028ACFF /* Player.m in Sources */,
 				1A57E7E11C74700D00B3890E /* MapPoint.m in Sources */,
+				1A84BB481CBFB60800CE7EDC /* GameViewController.m in Sources */,
 				1A2EA3A21C8B860300633417 /* MinistryTableViewController.m in Sources */,
 				1A2EA4051C994FB700633417 /* Continent.m in Sources */,
 				1A2EA3E41C92D5A900633417 /* DebugViewController.m in Sources */,

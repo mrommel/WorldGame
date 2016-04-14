@@ -31,9 +31,14 @@
     [self.tableView reloadData];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-    return 6;
+    return 8;
 }
 
 - (TableViewContent *)contentAtIndexPath:(NSIndexPath *)indexPath
@@ -51,7 +56,7 @@
                                                  andAction:nil];
             break;
         case 2:
-            return [[TableViewContent alloc] initWithTitle:@"enable AI calculation"
+            return [[TableViewContent alloc] initWithTitle:@"attach AI calculation"
                                                andSubtitle:@"open"
                                                  andAction:nil];
             break;
@@ -65,9 +70,19 @@
                                                andSubtitle:@"done"
                                                  andAction:nil];
             break;
-        case 6:
+        case 5:
             return [[TableViewContent alloc] initWithTitle:@"Save game when enter background (autosave)"
                                                andSubtitle:@"done"
+                                                 andAction:nil];
+            break;
+        case 6:
+            return [[TableViewContent alloc] initWithTitle:@"Delete autosave games (keep 10)"
+                                               andSubtitle:@"open"
+                                                 andAction:nil];
+            break;
+        case 7:
+            return [[TableViewContent alloc] initWithTitle:@"Save game when enter background (autosave)"
+                                               andSubtitle:@"open"
                                                  andAction:nil];
             break;
     }

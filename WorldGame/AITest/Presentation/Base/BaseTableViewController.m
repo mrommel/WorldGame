@@ -117,19 +117,25 @@
     {
         case ContentStyleNormal:
             cellBackView.image = [UIImage imageNamed:@"menu-item-normal.png"];
+            cell.textLabel.textColor = [UIColor whiteColor];
+            cell.detailTextLabel.textColor = [UIColor whiteColor];
             break;
         case ContentStyleHighlighted:
             cellBackView.image = [UIImage imageNamed:@"menu-item-highlighted.png"];
+            cell.textLabel.textColor = [UIColor yellowColor];
+            cell.detailTextLabel.textColor = [UIColor yellowColor];
+            break;
+        case ContentStyleDisabled:
+            cellBackView.image = [UIImage imageNamed:@"menu-item-disabled.png"];
+            cell.textLabel.textColor = [UIColor lightGrayColor];
+            cell.detailTextLabel.textColor = [UIColor lightGrayColor];
             break;
     }
     
     cell.backgroundView = cellBackView;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
     cell.textLabel.text = content.title;
-    cell.textLabel.textColor = [UIColor whiteColor];
     cell.detailTextLabel.text = content.subtitle;
-    cell.detailTextLabel.textColor = [UIColor whiteColor];
     cell.imageView.image = content.image;
     
     return cell;

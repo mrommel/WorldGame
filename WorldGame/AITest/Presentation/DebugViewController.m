@@ -48,13 +48,13 @@
         case 0:
             return [[TableViewContent alloc] initWithTitle:@"Load / Save games"
                                                andSubtitle:@"done"
-                                                  andStyle:ContentStyleNormal
+                                                  andStyle:ContentStyleDisabled
                                                  andAction:nil];
             break;
         case 1:
             return [[TableViewContent alloc] initWithTitle:@"Zoom Map"
                                                andSubtitle:@"done"
-                                                  andStyle:ContentStyleNormal
+                                                  andStyle:ContentStyleDisabled
                                                  andAction:nil];
             break;
         case 2:
@@ -66,19 +66,19 @@
         case 3:
             return [[TableViewContent alloc] initWithTitle:@"add center button to map"
                                                andSubtitle:@"done"
-                                                  andStyle:ContentStyleNormal
+                                                  andStyle:ContentStyleDisabled
                                                  andAction:nil];
             break;
         case 4:
             return [[TableViewContent alloc] initWithTitle:@"Map/Game thumbnail for map preview"
                                                andSubtitle:@"done"
-                                                  andStyle:ContentStyleNormal
+                                                  andStyle:ContentStyleDisabled
                                                  andAction:nil];
             break;
         case 5:
             return [[TableViewContent alloc] initWithTitle:@"Save game when enter background (autosave)"
                                                andSubtitle:@"done"
-                                                  andStyle:ContentStyleNormal
+                                                  andStyle:ContentStyleDisabled
                                                  andAction:nil];
             break;
         case 6:

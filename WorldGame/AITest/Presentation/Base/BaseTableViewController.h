@@ -15,7 +15,8 @@ typedef void (^ActionBlock)(NSIndexPath *indexPath);
  */
 typedef NS_ENUM(NSInteger, ContentStyle) {
     ContentStyleNormal,
-    ContentStyleHighlighted
+    ContentStyleHighlighted,
+    ContentStyleDisabled
 };
 
 /*!

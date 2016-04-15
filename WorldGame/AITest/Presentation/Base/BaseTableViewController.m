@@ -19,6 +19,7 @@
     if (self) {
         self.title = title;
         self.subtitle = subtitle;
+        self.style = ContentStyleNormal;
         self.action = action;
     }
     
@@ -32,7 +33,22 @@
     if (self) {
         self.title = title;
         self.subtitle = subtitle;
+        self.style = ContentStyleNormal;
         self.image = image;
+        self.action = action;
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title andSubtitle:(NSString *)subtitle andStyle:(ContentStyle)style andAction:(ActionBlock)action
+{
+    self = [super init];
+    
+    if (self) {
+        self.title = title;
+        self.subtitle = subtitle;
+        self.style = style;
         self.action = action;
     }
     
@@ -49,7 +65,8 @@
     
     self.view.backgroundColor = COLOR_MIRO_BLACK;
     self.tableView.backgroundColor = COLOR_MIRO_BLACK;
-    self.tableView.separatorColor = [UIColor clearColor];
+    //self.tableView.separatorColor = [UIColor clearColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     // header
     UIImage *headerImage = [UIImage imageNamed:@"menu-header.png"];
@@ -85,12 +102,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:className];
     }
     
-    UIImageView *cellBackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
-    cellBackView.backgroundColor = [UIColor clearColor];
-    cellBackView.image = [UIImage imageNamed:@"menu-item.png"];
-    cell.backgroundView = cellBackView;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
     // Configure the cell...
     TableViewContent *content = nil;
     
@@ -99,6 +110,21 @@
     } else {
         content = [[TableViewContent alloc] initWithTitle:@"title" andSubtitle:@"subtitle" andAction:nil];
     }
+    
+    UIImageView *cellBackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+    cellBackView.backgroundColor = [UIColor clearColor];
+    switch (content.style)
+    {
+        case ContentStyleNormal:
+            cellBackView.image = [UIImage imageNamed:@"menu-item-normal.png"];
+            break;
+        case ContentStyleHighlighted:
+            cellBackView.image = [UIImage imageNamed:@"menu-item-highlighted.png"];
+            break;
+    }
+    
+    cell.backgroundView = cellBackView;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     cell.textLabel.text = content.title;
     cell.textLabel.textColor = [UIColor whiteColor];

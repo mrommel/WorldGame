@@ -48,41 +48,49 @@
         case 0:
             return [[TableViewContent alloc] initWithTitle:@"Load / Save games"
                                                andSubtitle:@"done"
+                                                  andStyle:ContentStyleNormal
                                                  andAction:nil];
             break;
         case 1:
             return [[TableViewContent alloc] initWithTitle:@"Zoom Map"
                                                andSubtitle:@"done"
+                                                  andStyle:ContentStyleNormal
                                                  andAction:nil];
             break;
         case 2:
             return [[TableViewContent alloc] initWithTitle:@"attach AI calculation"
                                                andSubtitle:@"open"
+                                                  andStyle:ContentStyleNormal
                                                  andAction:nil];
             break;
         case 3:
             return [[TableViewContent alloc] initWithTitle:@"add center button to map"
                                                andSubtitle:@"done"
+                                                  andStyle:ContentStyleNormal
                                                  andAction:nil];
             break;
         case 4:
             return [[TableViewContent alloc] initWithTitle:@"Map/Game thumbnail for map preview"
                                                andSubtitle:@"done"
+                                                  andStyle:ContentStyleNormal
                                                  andAction:nil];
             break;
         case 5:
             return [[TableViewContent alloc] initWithTitle:@"Save game when enter background (autosave)"
                                                andSubtitle:@"done"
+                                                  andStyle:ContentStyleNormal
                                                  andAction:nil];
             break;
         case 6:
             return [[TableViewContent alloc] initWithTitle:@"Delete autosave games (keep 10)"
                                                andSubtitle:@"open"
+                                                  andStyle:ContentStyleNormal
                                                  andAction:nil];
             break;
         case 7:
-            return [[TableViewContent alloc] initWithTitle:@"Save game when enter background (autosave)"
+            return [[TableViewContent alloc] initWithTitle:@"..."
                                                andSubtitle:@"open"
+                                                  andStyle:ContentStyleNormal
                                                  andAction:nil];
             break;
     }

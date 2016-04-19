@@ -64,4 +64,20 @@
                                          andAction:loadGame];
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //remove the deleted object from your data source.
+        //If your data source is an NSMutableArray, do this
+        Game *game = [self.games objectAtIndex:indexPath.row];
+        [game delete];
+        self.games = [GamePersistance loadGames];
+        [self.tableView reloadData]; // tell table to refresh now
+    }
+}
+
 @end

@@ -35,7 +35,7 @@ typedef void (^GameTurnProgress)(NSString *, int, int);
 
 - (instancetype)initWithPath:(NSString *)gamePath;
 - (void)saveWithName:(NSString *)name;
-- (void)deleteDoc;
+- (void)delete;
 
 - (void)turnWithProgress:(GameTurnProgress)progress;
 

@@ -100,7 +100,7 @@ static NSString* const GameDataPlayerKey = @"Game.Player.%d";
     [encodedData writeToFile:self.gamePath atomically:YES];
 }
 
-- (void)deleteDoc
+- (void)delete
 {
     NSError *error;
     BOOL success = [[NSFileManager defaultManager] removeItemAtPath:self.gamePath error:&error];

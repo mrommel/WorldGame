@@ -30,25 +30,7 @@ static NSString* const PlayerDataCivilizationKey = @"Player.Civilization";
         
         self.policies = [NSMutableArray new];
         
-        // policies
-        [self.policies addObject:[[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_GOVERNMENT"]]];
-        [self.policies addObject:[[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_LEGALISM"]]];
-        [self.policies addObject:[[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_FEUDALISM"]]];
-        [self.policies addObject:[[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_PARLIAMENT"]]];
-        
-        self.inheritanceTax = [[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_INHERITANCETAX"]];
-        [self.policies addObject:self.inheritanceTax];
-        self.incomeTax = [[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_INCOMETAX"]];
-        [self.policies addObject:self.incomeTax];
-        self.salesTax = [[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_SALESTAX"]];
-        [self.policies addObject:self.salesTax];
-        
-        self.policeForce = [[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_POLICEFORCE"]];
-        [self.policies addObject:self.policeForce];
-        self.stateSchools = [[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_STATESCHOOLS"]];
-        [self.policies addObject:self.stateSchools];
-        self.nationalService = [[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_NATIONALSERVICE"]];
-        [self.policies addObject:self.nationalService];
+        [self setupPolicies];
     }
     
     return self;
@@ -66,6 +48,8 @@ static NSString* const PlayerDataCivilizationKey = @"Player.Civilization";
         self.cities = [[NSMutableArray alloc] init];
         
         self.policies = [NSMutableArray new];
+        
+        [self setupPolicies];
     }
     return self;
 }
@@ -75,6 +59,33 @@ static NSString* const PlayerDataCivilizationKey = @"Player.Civilization";
     [encoder encodeFloat:self.position.x forKey:PlayerDataXKey];
     [encoder encodeFloat:self.position.y forKey:PlayerDataYKey];
     [encoder encodeObject:self.civilization forKey:PlayerDataCivilizationKey];
+}
+
+- (void)setupPolicies
+{
+    [self.policies removeAllObjects];
+    
+    // policies
+    [self.policies addObject:[[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_GOVERNMENT"]]];
+    [self.policies addObject:[[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_LEGALISM"]]];
+    [self.policies addObject:[[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_FEUDALISM"]]];
+    [self.policies addObject:[[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_PARLIAMENT"]]];
+    
+    // taxes
+    self.inheritanceTax = [[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_INHERITANCETAX"]];
+    [self.policies addObject:self.inheritanceTax];
+    self.incomeTax = [[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_INCOMETAX"]];
+    [self.policies addObject:self.incomeTax];
+    self.salesTax = [[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_SALESTAX"]];
+    [self.policies addObject:self.salesTax];
+    
+    // policies
+    self.policeForce = [[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_POLICEFORCE"]];
+    [self.policies addObject:self.policeForce];
+    self.stateSchools = [[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_STATESCHOOLS"]];
+    [self.policies addObject:self.stateSchools];
+    self.nationalService = [[Policy alloc] initWithPolicyInfo:[[PolicyInfoProvider sharedInstance] policyInfoForIdentifier:@"POLICY_NATIONALSERVICE"]];
+    [self.policies addObject:self.nationalService];
 }
 
 - (BOOL)isHuman

@@ -68,22 +68,20 @@
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ActionRowBlock deleteBlock = ^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        NSLog(@"Action to perform with delete button!");
-        //remove the deleted object from your data source.
-        //If your data source is an NSMutableArray, do this
         Game *game = [self.games objectAtIndex:indexPath.row];
         [game delete];
-        self.games = [GamePersistance loadGames];
-        [self.tableView reloadData]; // tell table to refresh now
+        [self.games removeObjectAtIndex:indexPath.row];
+        [self.tableView reloadData];
     };
     
-    UITableViewRowAction *button2 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:deleteBlock];
-    button2.backgroundColor = COLOR_MIRO_RED;
+    UITableViewRowAction *btnDelete = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:deleteBlock];
+    btnDelete.backgroundColor = COLOR_MIRO_RED;
     
-    return @[/*button, */button2];
+    return @[btnDelete];
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
     return YES;
 }
 

@@ -55,6 +55,10 @@
 {
     [super viewDidAppear:animated];
     
+    if ([GameProvider sharedInstance].game != nil && [GameProvider sharedInstance].game.name != nil) {
+        self.title = [GameProvider sharedInstance].game.name;
+    }
+    
     if (self.ministriesShown) {
         [self showActions:nil];
     }

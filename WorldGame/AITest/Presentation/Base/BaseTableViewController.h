@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^ActionBlock)(NSIndexPath *indexPath);
+typedef void (^ActionRowBlock)(UITableViewRowAction *action, NSIndexPath *indexPath);
 
 /*!
  type of grand strategy

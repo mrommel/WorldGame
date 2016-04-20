@@ -314,6 +314,9 @@
 		1A8D66C21CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
 		1A8D66C31CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
 		1AAEB59A1CB7C6EF00DA478B /* GamePersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB5991CB7C6EF00DA478B /* GamePersistance.m */; };
+		1AEBDE091CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
+		1AEBDE0A1CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
+		1AEBDE0B1CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
 		1AEE80BB1C7733F70028ACFF /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE80BA1C7733F70028ACFF /* XMLReader.m */; };
 		1AEE80BC1C7733F70028ACFF /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE80BA1C7733F70028ACFF /* XMLReader.m */; };
 		1AEE80BD1C7733F70028ACFF /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE80BA1C7733F70028ACFF /* XMLReader.m */; };
@@ -570,6 +573,8 @@
 		1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewController.m; path = Presentation/Base/BaseTableViewController.m; sourceTree = "<group>"; };
 		1AAEB5981CB7C6EF00DA478B /* GamePersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePersistance.h; path = Game/GamePersistance.h; sourceTree = "<group>"; };
 		1AAEB5991CB7C6EF00DA478B /* GamePersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePersistance.m; path = Game/GamePersistance.m; sourceTree = "<group>"; };
+		1AEBDE071CC7B57E00BE09E8 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateUtils.h; path = Util/DateUtils.h; sourceTree = "<group>"; };
+		1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateUtils.m; path = Util/DateUtils.m; sourceTree = "<group>"; };
 		1AEE80B81C76D8820028ACFF /* UIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIConstants.h; path = Util/UIConstants.h; sourceTree = "<group>"; };
 		1AEE80B91C7733F70028ACFF /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLReader.h; path = Util/XMLReader.h; sourceTree = "<group>"; };
 		1AEE80BA1C7733F70028ACFF /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLReader.m; path = Util/XMLReader.m; sourceTree = "<group>"; };
@@ -840,6 +845,8 @@
 				1A5C22FD1C9C42E7007F324C /* UIImage+Sprite.m */,
 				1A5C23011C9DEEE8007F324C /* UINavigationController+BackButtonHandler.h */,
 				1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */,
+				1AEBDE071CC7B57E00BE09E8 /* DateUtils.h */,
+				1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -1437,6 +1444,7 @@
 				1A3C39FF1C7F2C98004009DA /* Civilization.m in Sources */,
 				1A2EA3971C89B95C00633417 /* GroupType.m in Sources */,
 				1A2EA3E71C92D73200633417 /* AboutViewController.m in Sources */,
+				1AEBDE091CC7B57E00BE09E8 /* DateUtils.m in Sources */,
 				1A2EA3F91C98AFF700633417 /* MapGenerator.m in Sources */,
 				1A5C22F91C9C16D2007F324C /* ImageAtlas.m in Sources */,
 				1A2EA3D31C8F694F00633417 /* Situation.m in Sources */,
@@ -1473,6 +1481,7 @@
 				1A2EA3E81C92D73200633417 /* AboutViewController.m in Sources */,
 				1AEE80E31C78CE6E0028ACFF /* NSDictionary+Extension.m in Sources */,
 				1A5C22FF1C9C42E7007F324C /* UIImage+Sprite.m in Sources */,
+				1AEBDE0A1CC7B57E00BE09E8 /* DateUtils.m in Sources */,
 				1A3C3A331C84EA8C004009DA /* OverlayView.m in Sources */,
 				1AEE80F31C7C5FB40028ACFF /* Unit.m in Sources */,
 				1A2EA3CA1C8E1C5200633417 /* ChartView.m in Sources */,
@@ -1525,6 +1534,7 @@
 				1A2EA3E91C92D73200633417 /* AboutViewController.m in Sources */,
 				1AEE80E41C78CE6E0028ACFF /* NSDictionary+Extension.m in Sources */,
 				1A5C23001C9C42E7007F324C /* UIImage+Sprite.m in Sources */,
+				1AEBDE0B1CC7B57E00BE09E8 /* DateUtils.m in Sources */,
 				1A3C3A341C84EA8C004009DA /* OverlayView.m in Sources */,
 				1AEE80F41C7C5FB40028ACFF /* Unit.m in Sources */,
 				1A2EA3CB1C8E1C5200633417 /* ChartView.m in Sources */,

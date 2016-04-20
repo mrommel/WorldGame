@@ -17,6 +17,7 @@
 
 #define COLOR_MIRO_WHITE                    [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0f]
 #define COLOR_MIRO_BLACK                    [UIColor colorWithRed:55/255.0 green:65/255.0 blue:70/255.0 alpha:1.0f]
+#define COLOR_MIRO_RED                      [UIColor colorWithRed:84/255.0 green:23/255.0 blue:31/255.0 alpha:1.0f]
 #define COLOR_MIRO_SAND                     [UIColor colorWithRed:233/255.0 green:223/255.0 blue:182/255.0 alpha:1.0f]
 
 

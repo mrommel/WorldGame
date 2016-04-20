@@ -13,6 +13,7 @@
 #import "GamePersistance.h"
 #import "OverlayView.h"
 #import "GameViewController.h"
+#import "DateUtils.h"
 
 @interface LoadGameViewController ()
 
@@ -59,25 +60,31 @@
     };
     
     return [[TableViewContent alloc] initWithTitle:game.name
-                                       andSubtitle:[NSString stringWithFormat:@"Saved: %@", game.date]
+                                       andSubtitle:[NSString stringWithFormat:@"Saved: %@", [DateUtils longStringFromDate:game.date]]
                                           andImage:game.map.thumbnail
                                          andAction:loadGame];
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+-(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+    ActionRowBlock deleteBlock = ^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        NSLog(@"Action to perform with delete button!");
         //remove the deleted object from your data source.
         //If your data source is an NSMutableArray, do this
         Game *game = [self.games objectAtIndex:indexPath.row];
         [game delete];
         self.games = [GamePersistance loadGames];
         [self.tableView reloadData]; // tell table to refresh now
-    }
+    };
+    
+    UITableViewRowAction *button2 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:deleteBlock];
+    button2.backgroundColor = COLOR_MIRO_RED;
+    
+    return @[/*button, */button2];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
 }
 
 @end

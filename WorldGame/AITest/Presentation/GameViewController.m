@@ -42,8 +42,6 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
-    self.title = @"Game";
-    
     // Update the user interface for the detail item.
     [self setupUI];
     
@@ -58,6 +56,8 @@
     // if the game has a name, use it
     if ([GameProvider sharedInstance].game != nil && [GameProvider sharedInstance].game.name != nil) {
         self.title = [GameProvider sharedInstance].game.name;
+    } else {
+        self.title = @"Game";
     }
     
     if (self.ministriesShown) {

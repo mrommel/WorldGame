@@ -55,6 +55,7 @@
 {
     [super viewDidAppear:animated];
     
+    // if the game has a name, use it
     if ([GameProvider sharedInstance].game != nil && [GameProvider sharedInstance].game.name != nil) {
         self.title = [GameProvider sharedInstance].game.name;
     }

@@ -15,6 +15,9 @@
 static NSString* const PlayerDataXKey = @"Player.Y";
 static NSString* const PlayerDataYKey = @"Player.X";
 static NSString* const PlayerDataCivilizationKey = @"Player.Civilization";
+static NSString* const PlayerDataIdentifierKey = @"Player.Identifier";
+
+static NSUInteger playerIdentifier = 0;
 
 @implementation Player
 
@@ -23,6 +26,7 @@ static NSString* const PlayerDataCivilizationKey = @"Player.Civilization";
     self = [super init];
     
     if (self) {
+        self.identifier = playerIdentifier++;
         self.position = position;
         self.civilization = civilization;
         self.units = [[NSMutableArray alloc] init];
@@ -40,6 +44,7 @@ static NSString* const PlayerDataCivilizationKey = @"Player.Civilization";
 {
     self = [self init];
     if (self) {
+        self.identifier = [decoder decodeIntegerForKey:PlayerDataIdentifierKey];
         CGFloat x = [decoder decodeFloatForKey:PlayerDataXKey];
         CGFloat y = [decoder decodeFloatForKey:PlayerDataYKey];
         self.position = CGPointMake(x, y);
@@ -56,6 +61,7 @@ static NSString* const PlayerDataCivilizationKey = @"Player.Civilization";
 
 - (void)encodeWithCoder:(NSCoder *)encoder
 {
+    [encoder encodeInteger:self.identifier forKey:PlayerDataIdentifierKey];
     [encoder encodeFloat:self.position.x forKey:PlayerDataXKey];
     [encoder encodeFloat:self.position.y forKey:PlayerDataYKey];
     [encoder encodeObject:self.civilization forKey:PlayerDataCivilizationKey];
@@ -105,7 +111,7 @@ static NSString* const PlayerDataCivilizationKey = @"Player.Civilization";
 
 - (void)settleAtX:(int)x andY:(int)y
 {
-    [[[GameProvider sharedInstance].game.map tileAtX:x andY:y] settleWithPlayer:self];
+    //[[[GameProvider sharedInstance].game.map tileAtX:x andY:y] settleWithPlayer:self];
 }
 
 - (NSMutableArray *)policiesForMinistry:(Ministry)ministry
@@ -194,6 +200,13 @@ static NSString* const PlayerDataCivilizationKey = @"Player.Civilization";
 - (BOOL)isArtificial
 {
     return YES;
+}
+
+- (void)turn
+{
+    [super turn];
+    
+    // think about goal (which?)
 }
 
 @end

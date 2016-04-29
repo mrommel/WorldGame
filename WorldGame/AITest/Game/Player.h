@@ -30,6 +30,8 @@ typedef NS_ENUM(NSInteger, EventType) {
  */
 @interface Player : NSObject<NSCoding>
 
+@property (atomic) NSUInteger identifier;
+
 @property (nonatomic) Civilization *civilization;
 @property (nonatomic) Leader *leader;
 @property (nonatomic) NSMutableArray *units;

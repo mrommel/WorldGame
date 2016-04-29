@@ -15,6 +15,8 @@
 - (instancetype)initFrom:(NSInteger) min to:(NSInteger) max; //min inclusive, max exclusive
 - (instancetype)init;
 
+- (BOOL)isSetAt:(NSInteger)pos;
+
 - (void)set:(NSInteger)pos;
 - (void)setFrom:(NSInteger)from to:(NSInteger)to;  //fromIndex inclusive, toIndex exclusive
 - (void)reset;

@@ -41,6 +41,8 @@ typedef void (^GameTurnProgress)(NSString *, int, int);
 
 - (Player *)humanPlayer;
 
+- (void)logGameState;
+
 @end
 
 /*!

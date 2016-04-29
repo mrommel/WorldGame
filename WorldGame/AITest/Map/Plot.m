@@ -12,6 +12,9 @@
 #import "NSDictionary+Extension.h"
 #import "RelationsNetwork.h"
 #import "NSArray+Util.h"
+#import "Game.h"
+
+#define NO_OWNER -1
 
 static NSString* const PlotDataCoordinateKey = @"Plot.Coordinate";
 static NSString* const PlotDataTerrainKey = @"Plot.Terrain";
@@ -19,7 +22,11 @@ static NSString* const PlotDataTerrainKey = @"Plot.Terrain";
 static NSString* const PlotDataFeaturesKey = @"Plot.Features";
 static NSString* const PlotDataFeatureKey = @"Plot.Feature.%d";
 static NSString* const PlotDataInhabitantsKey = @"Plot.Inhabitants";
+static NSString* const PlotDataOwnerKey = @"Plot.Owner";
 static NSString* const PlotDataStartingPlotKey = @"Plot.StartingPlot";
+
+static NSString* const PlotDataRevealedKey = @"Plot.Revealed";
+static NSString* const PlotDataVisibleKey = @"Plot.Visible";
 
 @interface MapDataProvider()
 
@@ -168,6 +175,8 @@ static MapDataProvider *shared = nil;
 
 @property (atomic) BOOL _startingPlot;
 @property (atomic) BOOL _river;
+@property (nonatomic) BitArray *revealedArray;
+@property (nonatomic) BitArray *visibleArray;
 
 @end
 
@@ -182,9 +191,10 @@ static MapDataProvider *shared = nil;
         self.terrain = nterrain;
         self.features = [[NSMutableArray alloc] init];
         self.inhabitants = 0;
-        self.owner = nil;
+        self.ownerIdentifier = NO_OWNER;
         self.startingPlot = NO;
-        self.revealed = [[BitArray alloc] initWithSize:8];
+        self.revealedArray = [[BitArray alloc] initWithSize:8];
+        self.visibleArray = [[BitArray alloc] initWithSize:8];
         self.network = [[RelationsNetwork alloc] init];
     }
     
@@ -200,9 +210,10 @@ static MapDataProvider *shared = nil;
         self.terrain = nterrain;
         self.features = [[NSMutableArray alloc] init];
         self.inhabitants = 0;
-        self.owner = nil;
+        self.ownerIdentifier = NO_OWNER;
         self.startingPlot = NO;
-        self.revealed = [[BitArray alloc] initWithSize:8];
+        self.revealedArray = [[BitArray alloc] initWithSize:8];
+        self.visibleArray = [[BitArray alloc] initWithSize:8];
         self.network = [[RelationsNetwork alloc] init];
     }
     
@@ -228,9 +239,12 @@ static MapDataProvider *shared = nil;
         }
         
         self.inhabitants = [decoder decodeFloatForKey:PlotDataInhabitantsKey];
-        self.owner = nil;
+        self.ownerIdentifier = [decoder decodeIntegerForKey:PlotDataOwnerKey];
         self._startingPlot = [decoder decodeBoolForKey:PlotDataStartingPlotKey];
-        self.revealed = [[BitArray alloc] initWithSize:8];
+        self.revealedArray = [decoder decodeObjectForKey:PlotDataRevealedKey];
+        self.visibleArray = [decoder decodeObjectForKey:PlotDataVisibleKey];
+        
+        // init the network
         self.network = [[RelationsNetwork alloc] init];
     }
     
@@ -248,7 +262,11 @@ static MapDataProvider *shared = nil;
     }
     
     [encoder encodeFloat:self.inhabitants forKey:PlotDataInhabitantsKey];
+    [encoder encodeInteger:self.ownerIdentifier forKey:PlotDataOwnerKey];
     [encoder encodeBool:self._startingPlot forKey:PlotDataStartingPlotKey];
+    
+    [encoder encodeObject:self.revealedArray forKey:PlotDataRevealedKey];
+    [encoder encodeObject:self.visibleArray forKey:PlotDataVisibleKey];
 }
 
 #pragma mark -
@@ -288,7 +306,37 @@ static MapDataProvider *shared = nil;
 #pragma mark -
 #pragma mark player functions
 
-- (void)settleWithPlayer:(Player *)player
+- (void)setVisible:(BOOL)visible forPlayer:(Player *)player
+{
+    if (visible) {
+        [self.visibleArray set:player.identifier];
+    } else {
+        [self.visibleArray reset:player.identifier];
+    }
+}
+
+- (BOOL)isVisibleForPlayer:(Player *)player
+{
+    return [self.visibleArray isSetAt:player.identifier];
+}
+
+- (void)setRevealed:(BOOL)visible forPlayer:(Player *)player
+{
+    if (visible) {
+        [self.revealedArray set:player.identifier];
+    } else {
+        [self.revealedArray reset:player.identifier];
+    }
+}
+
+- (BOOL)isRevealedForPlayer:(Player *)player
+{
+    return [self.revealedArray isSetAt:player.identifier];
+}
+
+#pragma mark settle functions
+
+/*- (void)settleWithPlayer:(Player *)player
 {
     NSAssert(self.owner == nil, @"There can't be an owner when you settle");
     
@@ -304,7 +352,7 @@ static MapDataProvider *shared = nil;
     }
     
     return NO; // already a different owner
-}
+}*/
 
 - (BOOL)isLandmass
 {
@@ -319,7 +367,7 @@ static MapDataProvider *shared = nil;
 - (void)setOwner:(Player *)owner
 {
     [self.network setPlayer:owner withEvent:EventTypeClaim];
-    _owner = owner;
+    self.ownerIdentifier = owner.identifier;
 }
 
 - (BOOL)isStartingPlot

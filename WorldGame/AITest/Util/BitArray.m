@@ -129,6 +129,14 @@
 
 #pragma mark -
 
+- (BOOL)isSetAt:(NSInteger)pos
+{
+    if (pos >= _size) return NO;
+    NSInteger index = pos/8;
+    NSInteger bit = pos%8;
+    return (_array[index] & (1 << bit)) > 0;
+}
+
 - (void)set:(NSInteger) pos
 {
     if (pos >= _size) return;

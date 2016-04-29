@@ -74,10 +74,11 @@ typedef NS_ENUM(NSInteger, MapFeature) {
 @property (atomic) MapTerrain terrain;
 @property (nonatomic) NSMutableArray *features;
 
-@property (nonatomic, setter=setOwner:) Player *owner;
+//@property (nonatomic, setter=setOwner:) Player *owner;
+@property (atomic) NSInteger ownerIdentifier;
+
 //@property (nonatomic) Area *area;
 @property (nonatomic) Continent *continent;
-@property (nonatomic) BitArray *revealed;
 @property (nonatomic) RelationsNetwork *network;
 
 // simulation values
@@ -98,8 +99,13 @@ typedef NS_ENUM(NSInteger, MapFeature) {
 - (BOOL)hasRiver;
 
 // player functions
-- (void)settleWithPlayer:(Player *)player;
-- (BOOL)claimWithPlayer:(Player *)player;
+- (void)setVisible:(BOOL)visible forPlayer:(Player *)player;
+- (BOOL)isVisibleForPlayer:(Player *)player;
+- (void)setRevealed:(BOOL)revealed forPlayer:(Player *)player;
+- (BOOL)isRevealedForPlayer:(Player *)player;
+
+//- (void)settleWithPlayer:(Player *)player;
+//- (BOOL)claimWithPlayer:(Player *)player;
 
 - (BOOL)isLandmass;
 - (BOOL)isOcean;

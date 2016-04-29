@@ -38,7 +38,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-    return 8;
+    return 9;
 }
 
 - (TableViewContent *)contentAtIndexPath:(NSIndexPath *)indexPath
@@ -88,6 +88,12 @@
                                                  andAction:nil];
             break;
         case 7:
+            return [[TableViewContent alloc] initWithTitle:@"Log game state"
+                                               andSubtitle:@"open"
+                                                  andStyle:ContentStyleNormal
+                                                 andAction:nil];
+            break;
+        case 8:
             return [[TableViewContent alloc] initWithTitle:@"..."
                                                andSubtitle:@"open"
                                                   andStyle:ContentStyleNormal

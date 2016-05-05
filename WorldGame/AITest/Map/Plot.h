@@ -35,6 +35,12 @@ typedef NS_ENUM(NSInteger, MapTerrain) {
 @property (nonatomic) NSString *image;
 @property (nonatomic) NSMutableArray *possibleFeatures;
 
+@property (atomic) NSInteger soil;
+@property (atomic) NSInteger acres;
+
+#warning todo: wine has different acre needs than wheat
+#warning todo: what about fishing?
+
 @end
 
 typedef NS_ENUM(NSInteger, MapFeature) {
@@ -89,6 +95,9 @@ typedef NS_ENUM(NSInteger, MapFeature) {
 
 - (instancetype)initWithX:(int)nx andY:(int)ny andTerrain:(MapTerrain)ntype;
 - (instancetype)initWithCoord:(MapPoint *)ncoord andTerrain:(MapTerrain)ntype;
+
+// terrain functions
+- (MapTerrainData *)terrainData;
 
 // feature functions
 - (void)addFeature:(MapFeature)feature;

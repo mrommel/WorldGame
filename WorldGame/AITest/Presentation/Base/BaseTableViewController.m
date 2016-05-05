@@ -112,7 +112,7 @@
     }
     
     UIImageView *cellBackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
-    cellBackView.backgroundColor = [UIColor clearColor];
+    cellBackView.backgroundColor = COLOR_MIRO_BLACK;
     switch (content.style)
     {
         case ContentStyleNormal:

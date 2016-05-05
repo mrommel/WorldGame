@@ -88,6 +88,8 @@ static MapDataProvider *shared = nil;
     itemData.name = [itemDict objectForPath:@"Terrain|Title|text"];
     itemData.image = [itemDict objectForPath:@"Terrain|ImageName|text"];
     itemData.possibleFeatures = [itemDict mutableArrayForPath:@"Terrain|PossibleFeatures|Item"];
+    itemData.soil = [[itemDict objectForPath:@"Terrain|Soil|text"] integerValue];
+    itemData.acres = [[itemDict objectForPath:@"Terrain|Acres|text"] integerValue];
     return itemData;
 }
 
@@ -170,6 +172,7 @@ static MapDataProvider *shared = nil;
 
 @end
 
+#pragma mark -
 
 @interface Plot()
 
@@ -267,6 +270,14 @@ static MapDataProvider *shared = nil;
     
     [encoder encodeObject:self.revealedArray forKey:PlotDataRevealedKey];
     [encoder encodeObject:self.visibleArray forKey:PlotDataVisibleKey];
+}
+
+#pragma mark -
+#pragma mark terrain functions
+
+- (MapTerrainData *)terrainData
+{
+    return [[MapDataProvider sharedInstance] terrainDataForMapTerrain:self.terrain];
 }
 
 #pragma mark -

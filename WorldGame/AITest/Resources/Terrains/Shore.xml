@@ -3,20 +3,11 @@
     <Name>Shore</Name>
     <Title>Shore</Title>
     <Description>
-        Shore
+        Shore description
     </Description>
     <ImageName>Shore.png</ImageName>
-    <AtlasName>TerrainAtlas</AtlasName>
-    <AtlasIdentifier>Shore</AtlasIdentifier>
-    <TileType>Sand</TileType>
-    <TileHeight>Shore</TileHeight>
-    <Bonus>
-        <Food>1</Food>
-        <Production>0</Production>
-        <Commercial>1</Commercial>
-    </Bonus>
-    <CombatModifiers>1</CombatModifiers>
-    <MovementCost>1</MovementCost>
+    <Soil>0</Soil>
+    <Acres>0</Acres>
     <PossibleFeatures>
         <Item>Ice</Item>
     </PossibleFeatures>
@@ -24,8 +15,6 @@
         <Item>Oil</Item>
     </PossibleRessources>
     <CanFound>false</CanFound>
-    <InfluenceCost>3</InfluenceCost>
-    <BuildModifier>0</BuildModifier>
     <MoveRateTypes>
         <Item>WoodenBoat</Item>
         <Item>Boat</Item>

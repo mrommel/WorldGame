@@ -3,20 +3,11 @@
     <Name>Plains</Name>
     <Title>Plains</Title>
     <Description>
-        Plains
+        Plains description
     </Description>
     <ImageName>Plains.png</ImageName>
-    <AtlasName>TerrainAtlas</AtlasName>
-    <AtlasIdentifier>Plains</AtlasIdentifier>
-    <TileType>Sand</TileType>
-    <TileHeight>Zero</TileHeight>
-    <Bonus>
-        <Food>1</Food>
-        <Production>1</Production>
-        <Commercial>0</Commercial>
-    </Bonus>
-    <CombatModifiers>0.66</CombatModifiers>
-    <MovementCost>1</MovementCost>
+    <Soil>1</Soil>
+    <Acres>100</Acres>
     <PossibleFeatures>
         <Item>Forest</Item>
         <Item>Jungle</Item>
@@ -37,8 +28,6 @@
         <Item>Wine</Item>
     </PossibleRessources>
     <CanFound>true</CanFound>
-    <InfluenceCost>1</InfluenceCost>
-    <BuildModifier>0</BuildModifier>
     <MoveRateTypes>
         <Item>BiPed</Item>
         <Item>Wheeled</Item>

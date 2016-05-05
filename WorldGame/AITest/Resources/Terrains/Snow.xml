@@ -3,20 +3,11 @@
     <Name>Snow</Name>
     <Title>Snow</Title>
     <Description>
-        Snow
+        Snow description
     </Description>
     <ImageName>Snow.png</ImageName>
-    <AtlasName>TerrainAtlas</AtlasName>
-    <AtlasIdentifier>Snow</AtlasIdentifier>
-    <TileType>Snow</TileType>
-    <TileHeight>Zero</TileHeight>
-    <Bonus>
-        <Food>0</Food>
-        <Production>0</Production>
-        <Commercial>0</Commercial>
-    </Bonus>
-    <CombatModifiers>0.66</CombatModifiers>
-    <MovementCost>1</MovementCost>
+    <Soil>0</Soil>
+    <Acres>0</Acres>
     <PossibleFeatures />
     <PossibleRessources>
         <Item>Iron</Item>
@@ -24,8 +15,6 @@
         <Item>Uranium</Item>
     </PossibleRessources>
     <CanFound>false</CanFound>
-    <InfluenceCost>2</InfluenceCost>
-    <BuildModifier>50</BuildModifier>
     <MoveRateTypes>
         <Item>BiPed</Item>
         <Item>Wheeled</Item>

@@ -3,20 +3,11 @@
     <Name>Grassland</Name>
     <Title>Grassland</Title>
     <Description>
-        Grassland
+        Grassland description
     </Description>
     <ImageName>Grassland.png</ImageName>
-    <AtlasName>TerrainAtlas</AtlasName>
-    <AtlasIdentifier>Grassland</AtlasIdentifier>
-    <TileType>Grass</TileType>
-    <TileHeight>Zero</TileHeight>
-    <Bonus>
-        <Food>2</Food>
-        <Production>0</Production>
-        <Commercial>0</Commercial>
-    </Bonus>
-    <CombatModifiers>0.66</CombatModifiers>
-    <MovementCost>1</MovementCost>
+    <Soil>2</Soil>
+    <Acres>100</Acres>
     <PossibleFeatures>
         <Item>Forest</Item>
         <Item>Marsh</Item>
@@ -35,8 +26,6 @@
         <Item>Sheep</Item>
     </PossibleRessources>
     <CanFound>true</CanFound>
-    <InfluenceCost>1</InfluenceCost>
-    <BuildModifier>0</BuildModifier>
     <MoveRateTypes>
         <Item>BiPed</Item>
         <Item>Wheeled</Item>

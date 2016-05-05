@@ -313,6 +313,7 @@
 		1A8D66C11CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
 		1A8D66C21CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
 		1A8D66C31CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
+		1AAE3F4B1CD93AB90016F861 /* PlotEconomy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3F4A1CD93AB90016F861 /* PlotEconomy.m */; };
 		1AAEB59A1CB7C6EF00DA478B /* GamePersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB5991CB7C6EF00DA478B /* GamePersistance.m */; };
 		1AEBDE091CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
 		1AEBDE0A1CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
@@ -353,6 +354,10 @@
 		1AEE80F21C7C5FB40028ACFF /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE80F11C7C5FB40028ACFF /* Unit.m */; };
 		1AEE80F31C7C5FB40028ACFF /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE80F11C7C5FB40028ACFF /* Unit.m */; };
 		1AEE80F41C7C5FB40028ACFF /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE80F11C7C5FB40028ACFF /* Unit.m */; };
+		1AFF700B1CD76EAE009C7203 /* MunicipalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700A1CD76EAE009C7203 /* MunicipalEntity.m */; };
+		1AFF700E1CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
+		1AFF700F1CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
+		1AFF70101CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
 		8CCAD6340BE6FCF63B8F171D /* libPods-WorldGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6A70C686A1E0BDC5DE12E1 /* libPods-WorldGame.a */; };
 /* End PBXBuildFile section */
 
@@ -571,6 +576,8 @@
 		1A84BB4D1CC0FC7E00CE7EDC /* menu-item-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-item-highlighted.png"; path = "Resources/Images/menu-item-highlighted.png"; sourceTree = "<group>"; };
 		1A8D66BF1CA1306000284BB8 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewController.h; path = Presentation/Base/BaseTableViewController.h; sourceTree = "<group>"; };
 		1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewController.m; path = Presentation/Base/BaseTableViewController.m; sourceTree = "<group>"; };
+		1AAE3F491CD93AB90016F861 /* PlotEconomy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlotEconomy.h; path = Map/PlotEconomy.h; sourceTree = "<group>"; };
+		1AAE3F4A1CD93AB90016F861 /* PlotEconomy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlotEconomy.m; path = Map/PlotEconomy.m; sourceTree = "<group>"; };
 		1AAEB5981CB7C6EF00DA478B /* GamePersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePersistance.h; path = Game/GamePersistance.h; sourceTree = "<group>"; };
 		1AAEB5991CB7C6EF00DA478B /* GamePersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePersistance.m; path = Game/GamePersistance.m; sourceTree = "<group>"; };
 		1AEBDE071CC7B57E00BE09E8 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateUtils.h; path = Util/DateUtils.h; sourceTree = "<group>"; };
@@ -593,6 +600,10 @@
 		1AEE80EC1C7BB20B0028ACFF /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Game/Player.m; sourceTree = "<group>"; };
 		1AEE80F01C7C5FB40028ACFF /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unit.h; path = Game/Unit.h; sourceTree = "<group>"; };
 		1AEE80F11C7C5FB40028ACFF /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Unit.m; path = Game/Unit.m; sourceTree = "<group>"; };
+		1AFF70091CD76EAE009C7203 /* MunicipalEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MunicipalEntity.h; path = Map/MunicipalEntity.h; sourceTree = "<group>"; };
+		1AFF700A1CD76EAE009C7203 /* MunicipalEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MunicipalEntity.m; path = Map/MunicipalEntity.m; sourceTree = "<group>"; };
+		1AFF700C1CD76EFB009C7203 /* Economy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Economy.h; path = Map/Economy.h; sourceTree = "<group>"; };
+		1AFF700D1CD76EFB009C7203 /* Economy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Economy.m; path = Map/Economy.m; sourceTree = "<group>"; };
 		2E6A70C686A1E0BDC5DE12E1 /* libPods-WorldGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		807AC7FD8B8DD6A95D7D5509 /* Pods-WorldGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGame.release.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGame/Pods-WorldGame.release.xcconfig"; sourceTree = "<group>"; };
 		DCB729D7369B764E8DAC2248 /* libPods-AITest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AITest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -803,6 +814,8 @@
 				1A3C3A251C80FCB5004009DA /* Simulation */,
 				1A57E7B91C71C45C00B3890E /* Plot.h */,
 				1A57E7BA1C71C45C00B3890E /* Plot.m */,
+				1AAE3F491CD93AB90016F861 /* PlotEconomy.h */,
+				1AAE3F4A1CD93AB90016F861 /* PlotEconomy.m */,
 				1A57E7BC1C71C83700B3890E /* Map.h */,
 				1A57E7BD1C71C83700B3890E /* Map.m */,
 				1A57E7DD1C74700D00B3890E /* MapPoint.h */,
@@ -815,6 +828,10 @@
 				1A2EA3F81C98AFF700633417 /* MapGenerator.m */,
 				1A2EA4011C994FB700633417 /* Continent.h */,
 				1A2EA4021C994FB700633417 /* Continent.m */,
+				1AFF70091CD76EAE009C7203 /* MunicipalEntity.h */,
+				1AFF700A1CD76EAE009C7203 /* MunicipalEntity.m */,
+				1AFF700C1CD76EFB009C7203 /* Economy.h */,
+				1AFF700D1CD76EFB009C7203 /* Economy.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -1427,6 +1444,7 @@
 				1A3C3A2D1C80FCEA004009DA /* Simulation.m in Sources */,
 				1A2EA3C31C8CD17A00633417 /* PolicyViewController.m in Sources */,
 				1A5C23031C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */,
+				1AAE3F4B1CD93AB90016F861 /* PlotEconomy.m in Sources */,
 				1A8D66C11CA1306000284BB8 /* BaseTableViewController.m in Sources */,
 				1A2EA3CE1C8F2BE600633417 /* MapEvaluator.m in Sources */,
 				1A3C3A091C7F3090004009DA /* Flavor.m in Sources */,
@@ -1443,9 +1461,11 @@
 				1A3C3A421C84EDF1004009DA /* UIButton+Custom.m in Sources */,
 				1A3C39FF1C7F2C98004009DA /* Civilization.m in Sources */,
 				1A2EA3971C89B95C00633417 /* GroupType.m in Sources */,
+				1AFF700B1CD76EAE009C7203 /* MunicipalEntity.m in Sources */,
 				1A2EA3E71C92D73200633417 /* AboutViewController.m in Sources */,
 				1AEBDE091CC7B57E00BE09E8 /* DateUtils.m in Sources */,
 				1A2EA3F91C98AFF700633417 /* MapGenerator.m in Sources */,
+				1AFF700E1CD76EFB009C7203 /* Economy.m in Sources */,
 				1A5C22F91C9C16D2007F324C /* ImageAtlas.m in Sources */,
 				1A2EA3D31C8F694F00633417 /* Situation.m in Sources */,
 				1A2EA3EC1C95FD0500633417 /* DebugUtil.m in Sources */,
@@ -1487,6 +1507,7 @@
 				1A2EA3CA1C8E1C5200633417 /* ChartView.m in Sources */,
 				1A35A9B01CA2BD430094F773 /* PolicyInfo.m in Sources */,
 				1A2EA3891C8986AE00633417 /* Group.m in Sources */,
+				1AFF700F1CD76EFB009C7203 /* Economy.m in Sources */,
 				1A3C3A0A1C7F3090004009DA /* Flavor.m in Sources */,
 				1A2EA3CF1C8F2BE600633417 /* MapEvaluator.m in Sources */,
 				1A57E7A01C71C3F200B3890E /* AITestTests.m in Sources */,
@@ -1540,6 +1561,7 @@
 				1A2EA3CB1C8E1C5200633417 /* ChartView.m in Sources */,
 				1A35A9B11CA2BD430094F773 /* PolicyInfo.m in Sources */,
 				1A2EA38A1C8986AE00633417 /* Group.m in Sources */,
+				1AFF70101CD76EFB009C7203 /* Economy.m in Sources */,
 				1A3C3A0B1C7F3090004009DA /* Flavor.m in Sources */,
 				1A2EA3D01C8F2BE600633417 /* MapEvaluator.m in Sources */,
 				1A57E7AB1C71C3F200B3890E /* AITestUITests.m in Sources */,

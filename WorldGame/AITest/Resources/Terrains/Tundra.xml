@@ -3,20 +3,11 @@
     <Name>Tundra</Name>
     <Title>Tundra</Title>
     <Description>
-        Tundra
+        Tundra description
     </Description>
     <ImageName>Tundra.png</ImageName>
-    <AtlasName>TerrainAtlas</AtlasName>
-    <AtlasIdentifier>Tundra</AtlasIdentifier>
-    <TileType>Rock</TileType>
-    <TileHeight>Zero</TileHeight>
-    <Bonus>
-        <Food>1</Food>
-        <Production>0</Production>
-        <Commercial>0</Commercial>
-    </Bonus>
-    <CombatModifiers>0.66</CombatModifiers>
-    <MovementCost>1</MovementCost>
+    <Soil>1</Soil>
+    <Acres>5</Acres>
     <PossibleFeatures>
         <Item>Forest</Item>
         <Item>Rivers</Item>
@@ -34,8 +25,6 @@
         <Item>Furs</Item>
     </PossibleRessources>
     <CanFound>true</CanFound>
-    <InfluenceCost>2</InfluenceCost>
-    <BuildModifier>25</BuildModifier>
     <MoveRateTypes>
         <Item>BiPed</Item>
         <Item>Wheeled</Item>

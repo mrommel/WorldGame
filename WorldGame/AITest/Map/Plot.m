@@ -13,6 +13,7 @@
 #import "RelationsNetwork.h"
 #import "NSArray+Util.h"
 #import "Game.h"
+#import "PlotEconomy.h"
 
 #define NO_OWNER -1
 
@@ -88,7 +89,7 @@ static MapDataProvider *shared = nil;
     itemData.name = [itemDict objectForPath:@"Terrain|Title|text"];
     itemData.image = [itemDict objectForPath:@"Terrain|ImageName|text"];
     itemData.possibleFeatures = [itemDict mutableArrayForPath:@"Terrain|PossibleFeatures|Item"];
-    itemData.soil = [[itemDict objectForPath:@"Terrain|Soil|text"] integerValue];
+    itemData.soil = [[itemDict objectForPath:@"Terrain|Soil|text"] floatValue];
     itemData.acres = [[itemDict objectForPath:@"Terrain|Acres|text"] integerValue];
     return itemData;
 }
@@ -185,11 +186,12 @@ static MapDataProvider *shared = nil;
 
 @implementation Plot
 
-- (instancetype)initWithX:(int)nx andY:(int)ny andTerrain:(MapTerrain)nterrain
+- (instancetype)initWithX:(int)nx andY:(int)ny andTerrain:(MapTerrain)nterrain onMap:(Map *)map
 {
     self = [super init];
     
     if (self) {
+        self.map = map;
         self.coordinate = [[MapPoint alloc] initWithX:nx andY:ny];
         self.terrain = nterrain;
         self.features = [[NSMutableArray alloc] init];
@@ -199,16 +201,20 @@ static MapDataProvider *shared = nil;
         self.revealedArray = [[BitArray alloc] initWithSize:8];
         self.visibleArray = [[BitArray alloc] initWithSize:8];
         self.network = [[RelationsNetwork alloc] init];
+        
+        // economy
+        self.economy = [[PlotEconomy alloc] initWithPlot:self];
     }
     
     return self;
 }
 
-- (instancetype)initWithCoord:(MapPoint *)ncoord andTerrain:(MapTerrain)nterrain
+- (instancetype)initWithCoord:(MapPoint *)ncoord andTerrain:(MapTerrain)nterrain onMap:(Map *)map
 {
     self = [super init];
     
     if (self) {
+        self.map = map;
         self.coordinate = ncoord;
         self.terrain = nterrain;
         self.features = [[NSMutableArray alloc] init];
@@ -218,6 +224,9 @@ static MapDataProvider *shared = nil;
         self.revealedArray = [[BitArray alloc] initWithSize:8];
         self.visibleArray = [[BitArray alloc] initWithSize:8];
         self.network = [[RelationsNetwork alloc] init];
+        
+        // economy
+        self.economy = [[PlotEconomy alloc] initWithPlot:self];
     }
     
     return self;
@@ -249,6 +258,9 @@ static MapDataProvider *shared = nil;
         
         // init the network
         self.network = [[RelationsNetwork alloc] init];
+        
+        // economy
+        self.economy = [[PlotEconomy alloc] initWithPlot:self];
     }
     
     return self;
@@ -312,6 +324,39 @@ static MapDataProvider *shared = nil;
 - (BOOL)hasRiver
 {
     return self._river;
+}
+
+#pragma mark -
+#pragma mark neighboring functions
+
+- (NSArray *)neighbors
+{
+    NSMutableArray *array = [NSMutableArray new];
+    
+    for (NSNumber *direction in HEXDIRECTIONS) {
+        MapPoint *pt = [self.coordinate neighborInDirection:[direction intValue]];
+        
+        if ([self.map isValidAt:pt]) {
+            [array addObject:[self.map tileAtX:pt.x andY:pt.y]];
+        }
+    }
+
+    return array;
+}
+
+- (BOOL)isCoastal
+{
+    if ([self isOcean]) {
+        return NO;
+    }
+    
+    for (Plot *neighbor in [self neighbors]) {
+        if ([neighbor isOcean]) {
+            return YES;
+        }
+    }
+    
+    return NO;
 }
 
 #pragma mark -
@@ -404,6 +449,8 @@ static MapDataProvider *shared = nil;
         self.inhabitants = self.inhabitants * (1.f + kGrowth) + (((int)(arc4random() % 5) - 2));
         self.inhabitants = (self.inhabitants < 0 ? 0 : self.inhabitants);
     
+        [self.economy turn];
+        
         // calculate the population spread
 #warning to do: spread the population
     }

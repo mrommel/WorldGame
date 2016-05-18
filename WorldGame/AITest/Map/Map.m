@@ -71,7 +71,7 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
         
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
-                [self.tiles setObject:[[Plot alloc] initWithX:x andY:y andTerrain:MapTerrainDefault] atX:x andY:y];
+                [self.tiles setObject:[[Plot alloc] initWithX:x andY:y andTerrain:MapTerrainDefault onMap:self] atX:x andY:y];
             }
         }
     }

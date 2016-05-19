@@ -449,6 +449,11 @@ static MapDataProvider *shared = nil;
     return [[GameProvider sharedInstance].game playerForIdentifier:self.ownerIdentifier];
 }
 
+- (BOOL)hasOwner
+{
+    return self.ownerIdentifier != NO_OWNER;
+}
+
 - (BOOL)isStartingPlot
 {
     return self._startingPlot;
@@ -459,12 +464,26 @@ static MapDataProvider *shared = nil;
     self._startingPlot = bNewValue;
 }
 
-//#define kGrowth         0.05f // means 5% growth
-//#define kFluctuation    0.01f // means 1% fluctuation to each neighbor
+- (NSInteger)calculateNatureYield:(YieldType)yieldType forPlayer:(Player *)player
+{
+    MapTerrainData *data = self.terrainData;
+    
+    switch (yieldType) {
+        case YieldTypeFood:
+            return data.soil * data.acres;
+    }
+    
+    return 0;
+}
 
 - (void)turn
 {
-    if (self.ownerIdentifier != NO_OWNER && [self isLandmass]) {
+    // quit when we are on ocean
+    if (![self isLandmass]) {
+        return;
+    }
+    
+    if ([self hasOwner]) {
         //
         [self.network turn];
         
@@ -499,11 +518,38 @@ static MapDataProvider *shared = nil;
         if (self.populationState != PlotPopulationStateNomads) {
             [self.economy turn];
         }
+    } else if (self.inhabitants > 0) {
+        // when the tile is not conquered yet, increase by 1%
+        self.inhabitants = self.inhabitants * 1.01;
         
-        // calculate the population spread
-        // basis: uncertainty, wealth, same culture, same player (oversea)
-#warning to do: spread the population
+        // when we have more than 500 users, notify the game that one of the players should get this tile
+        if (self.inhabitants > 100) {
+            if (self.delegate) {
+                [self.delegate plot:self handlePlayerShouldRequestTileDueToPopulationIncrease:self.inhabitants];
+            }
+        }
     }
+}
+
+/*!
+ calculate the population spread
+ */
+- (CGFloat)possibleMigrants
+{
+    return self.inhabitants * 0.01;
+}
+
+/*!
+ basis: uncertainty, wealth, same culture, same player (oversea)
+ */
+- (CGFloat)migrationWeight
+{
+#warning please tweak here
+    if (self.ownerIdentifier != NO_OWNER) {
+        return [self.network.birthRate valueWithDelay:0];
+    }
+    
+    return 0.01;
 }
 
 @end

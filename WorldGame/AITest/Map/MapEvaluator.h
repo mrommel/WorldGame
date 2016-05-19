@@ -9,10 +9,33 @@
 #import <Foundation/Foundation.h>
 
 @class Map;
+@class Plot;
 
-@interface MapEvaluator : NSObject
+/*!
+ 
+ */
+@interface SiteEvaluator : NSObject
 
-- (instancetype)initWithMap:(Map *)map;
+- (instancetype)init;
+
+/// Retrieve the relative fertility of this plot (alone)
+- (NSInteger)plotFertilityValueForPlot:(Plot *)plot;
+
+@end
+
+/*!
+ 
+ */
+@interface SiteEvaluatorForStart : SiteEvaluator
+
+@end
+
+/*!
+ 
+ */
+@interface StartPositioner : NSObject
+
+- (instancetype)initWithSiteEvaluator:(SiteEvaluatorForStart *)siteEvaluator;
 
 /*- (int)plotFertilityValue(CvPlot *pPlot);
 - (int)bestFoundValueForSpecificYield:(YieldType)yieldType;

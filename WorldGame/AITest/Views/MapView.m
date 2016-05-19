@@ -100,6 +100,11 @@ static CGFloat const kZoomFactorNew = 0.3f;
     [self setNeedsDisplay];
 }
 
+- (void)redrawMap
+{
+    [self setNeedsDisplay];
+}
+
 #pragma mark - drawing methods
 
 #define XFROMHEX(i, j, scale)   (i * kHexagonWidth * 3 / 4 * scale)
@@ -123,6 +128,10 @@ static CGFloat const kZoomFactorNew = 0.3f;
             tile = [[GameProvider sharedInstance].game.map tileAtX:i andY:j];
             
             [self drawHexagon:ctx atX:x andY:y forTile:tile];
+            
+            if ([tile hasOwner]) {
+                [self drawHexagon:ctx atX:x andY:y forPopulationState:tile.populationState andPlayer:tile.owner];
+            }
             
             // draw debug values
             if (self.showDebug) {
@@ -194,6 +203,33 @@ static CGFloat const kZoomFactorNew = 0.3f;
     
     // draw the units / armies
 #warning to do: draw units
+}
+
+- (void)drawHexagon:(CGContextRef)ctx atX:(int)x andY:(int)y forPopulationState:(PlotPopulationState)populationState andPlayer:(Player *)player
+{
+    NSString *populationStateAsset = @"nomads.png";
+    
+    switch (populationState) {
+        case PlotPopulationStateNomads:
+            populationStateAsset = @"nomads.png";
+            break;
+        case PlotPopulationStateVillage:
+            populationStateAsset = @"villages.png";
+            break;
+        case PlotPopulationStateTown:
+            populationStateAsset = @"town.png";
+            break;
+        case PlotPopulationStateCity:
+            populationStateAsset = @"city.png";
+            break;
+        case PlotPopulationStateMetropol:
+            populationStateAsset = @"metropol.png";
+            break;
+    }
+    
+    UIImage *featureImage = [UIImage imageNamed:populationStateAsset];
+    CGRect imageRect = { CGPointMake(x, y), CGSizeMake(kHexagonWidth * self.scale, kHexagonHeight * self.scale) };
+    CGContextDrawImage(ctx, imageRect, featureImage.CGImage);
 }
 
 - (void)drawHexagonCursor:(CGContextRef)ctx atX:(int)x andY:(int)y

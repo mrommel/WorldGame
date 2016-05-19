@@ -194,6 +194,14 @@
 		1A3C3A571C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C3A4D1C84F280004009DA /* icon_spinning_circle~ipad.png */; };
 		1A3C3A581C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C3A4D1C84F280004009DA /* icon_spinning_circle~ipad.png */; };
 		1A3C3A591C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C3A4D1C84F280004009DA /* icon_spinning_circle~ipad.png */; };
+		1A48FCC31CEE310B00CFE558 /* city.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCBE1CEE310B00CFE558 /* city.png */; };
+		1A48FCC41CEE310B00CFE558 /* metropol.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCBF1CEE310B00CFE558 /* metropol.png */; };
+		1A48FCC51CEE310B00CFE558 /* nomads.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCC01CEE310B00CFE558 /* nomads.png */; };
+		1A48FCC61CEE310B00CFE558 /* town.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCC11CEE310B00CFE558 /* town.png */; };
+		1A48FCC71CEE310B00CFE558 /* villages.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCC21CEE310B00CFE558 /* villages.png */; };
+		1A48FCCA1CEE354000CFE558 /* KeyValueMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A48FCC91CEE354000CFE558 /* KeyValueMap.m */; };
+		1A48FCCB1CEE354000CFE558 /* KeyValueMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A48FCC91CEE354000CFE558 /* KeyValueMap.m */; };
+		1A48FCCC1CEE354000CFE558 /* KeyValueMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A48FCC91CEE354000CFE558 /* KeyValueMap.m */; };
 		1A5700F11CB2F2D900F346D9 /* NationalService.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A5700EF1CB2F2D900F346D9 /* NationalService.png */; };
 		1A5700F21CB2F2D900F346D9 /* NationalService.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A5700EF1CB2F2D900F346D9 /* NationalService.png */; };
 		1A5700F31CB2F2D900F346D9 /* NationalService.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A5700EF1CB2F2D900F346D9 /* NationalService.png */; };
@@ -487,6 +495,13 @@
 		1A3C3A4B1C84F27F004009DA /* icon_spinning_circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_spinning_circle@2x.png"; path = "Resources/Images/icon_spinning_circle@2x.png"; sourceTree = "<group>"; };
 		1A3C3A4C1C84F27F004009DA /* icon_spinning_circle@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_spinning_circle@2x~ipad.png"; path = "Resources/Images/icon_spinning_circle@2x~ipad.png"; sourceTree = "<group>"; };
 		1A3C3A4D1C84F280004009DA /* icon_spinning_circle~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_spinning_circle~ipad.png"; path = "Resources/Images/icon_spinning_circle~ipad.png"; sourceTree = "<group>"; };
+		1A48FCBE1CEE310B00CFE558 /* city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = city.png; path = Resources/Cities/city.png; sourceTree = "<group>"; };
+		1A48FCBF1CEE310B00CFE558 /* metropol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = metropol.png; path = Resources/Cities/metropol.png; sourceTree = "<group>"; };
+		1A48FCC01CEE310B00CFE558 /* nomads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nomads.png; path = Resources/Cities/nomads.png; sourceTree = "<group>"; };
+		1A48FCC11CEE310B00CFE558 /* town.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = town.png; path = Resources/Cities/town.png; sourceTree = "<group>"; };
+		1A48FCC21CEE310B00CFE558 /* villages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = villages.png; path = Resources/Cities/villages.png; sourceTree = "<group>"; };
+		1A48FCC81CEE354000CFE558 /* KeyValueMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyValueMap.h; path = Util/KeyValueMap.h; sourceTree = "<group>"; };
+		1A48FCC91CEE354000CFE558 /* KeyValueMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyValueMap.m; path = Util/KeyValueMap.m; sourceTree = "<group>"; };
 		1A5700EF1CB2F2D900F346D9 /* NationalService.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NationalService.png; path = Resources/Policies/NationalService.png; sourceTree = "<group>"; };
 		1A5700F01CB2F2D900F346D9 /* NationalService.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = NationalService.xml; path = Resources/Policies/NationalService.xml; sourceTree = "<group>"; };
 		1A5700F71CB2FAE100F346D9 /* InheritanceTax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InheritanceTax.png; path = Resources/Policies/InheritanceTax.png; sourceTree = "<group>"; };
@@ -739,6 +754,18 @@
 			name = Simulation;
 			sourceTree = "<group>";
 		};
+		1A48FCBD1CEE30FC00CFE558 /* Cities */ = {
+			isa = PBXGroup;
+			children = (
+				1A48FCBE1CEE310B00CFE558 /* city.png */,
+				1A48FCBF1CEE310B00CFE558 /* metropol.png */,
+				1A48FCC01CEE310B00CFE558 /* nomads.png */,
+				1A48FCC11CEE310B00CFE558 /* town.png */,
+				1A48FCC21CEE310B00CFE558 /* villages.png */,
+			);
+			name = Cities;
+			sourceTree = "<group>";
+		};
 		1A57E7731C71C3F200B3890E = {
 			isa = PBXGroup;
 			children = (
@@ -864,6 +891,8 @@
 				1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */,
 				1AEBDE071CC7B57E00BE09E8 /* DateUtils.h */,
 				1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */,
+				1A48FCC81CEE354000CFE558 /* KeyValueMap.h */,
+				1A48FCC91CEE354000CFE558 /* KeyValueMap.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -975,6 +1004,7 @@
 		1AEE80BE1C77350B0028ACFF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A48FCBD1CEE30FC00CFE558 /* Cities */,
 				1A7232B31CBD8EFA00D8AAC8 /* Fonts */,
 				1A5C22B61C9C163E007F324C /* Atlases */,
 				1A3C3A201C805F57004009DA /* Images */,
@@ -1165,6 +1195,7 @@
 				1A57010C1CB2FDDD00F346D9 /* PoliceForce.xml in Resources */,
 				1A5701041CB2FC8600F346D9 /* StateSchools.xml in Resources */,
 				1A5C22DA1C9C164F007F324C /* CitizenTiles.png in Resources */,
+				1A48FCC41CEE310B00CFE558 /* metropol.png in Resources */,
 				1A5C22D81C9C164F007F324C /* BuildingTiles.png in Resources */,
 				1A2EA39B1C8A2F2500633417 /* government.png in Resources */,
 				1A57011C1CB302AC00F346D9 /* SalesTax.xml in Resources */,
@@ -1177,6 +1208,7 @@
 				1A5701091CB2FDDD00F346D9 /* PoliceForce.png in Resources */,
 				1A7232B51CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */,
 				1A5C22E61C9C164F007F324C /* notificationwar.png in Resources */,
+				1A48FCC51CEE310B00CFE558 /* nomads.png in Resources */,
 				1A0FF27E1CA0617900F64050 /* Plains.png in Resources */,
 				1A5C22EF1C9C164F007F324C /* TerrainAtlas.xml in Resources */,
 				1A5C22ED1C9C164F007F324C /* TechnologyAtlas.xml in Resources */,
@@ -1187,6 +1219,7 @@
 				1A35A9D91CAE8D150094F773 /* Government.xml in Resources */,
 				1A0FF2961CA0965500F64050 /* menu-footer.png in Resources */,
 				1A5C22D91C9C164F007F324C /* CitizenAtlas.xml in Resources */,
+				1A48FCC31CEE310B00CFE558 /* city.png in Resources */,
 				1A5C22F41C9C164F007F324C /* UnitTiles.png in Resources */,
 				1A5C22E81C9C164F007F324C /* PolicyTiles.png in Resources */,
 				1A35A9E21CAEF21A0094F773 /* Feudalism.png in Resources */,
@@ -1194,6 +1227,7 @@
 				1A84BB4A1CC029E500CE7EDC /* menu-item-disabled.png in Resources */,
 				1A5C22EA1C9C164F007F324C /* RessourceTiles.png in Resources */,
 				1A35A9CE1CAE8B170094F773 /* Parliament.png in Resources */,
+				1A48FCC61CEE310B00CFE558 /* town.png in Resources */,
 				1A5701191CB302AC00F346D9 /* SalesTax.png in Resources */,
 				1A5C22E01C9C164F007F324C /* ImprovementTiles.png in Resources */,
 				1A5C22F11C9C164F007F324C /* UnitActionAtlas.xml in Resources */,
@@ -1235,6 +1269,7 @@
 				1A5C22E21C9C164F007F324C /* LeaderTiles.png in Resources */,
 				1AEE80CE1C7735960028ACFF /* Grassland.xml in Resources */,
 				1A5C22F31C9C164F007F324C /* UnitAtlas.xml in Resources */,
+				1A48FCC71CEE310B00CFE558 /* villages.png in Resources */,
 				1A0FF2841CA0617900F64050 /* Snow.png in Resources */,
 				1A5C22DC1C9C164F007F324C /* CivilizationTiles.png in Resources */,
 				1A57E7921C71C3F200B3890E /* Assets.xcassets in Resources */,
@@ -1446,6 +1481,7 @@
 				1A5C23031C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */,
 				1AAE3F4B1CD93AB90016F861 /* PlotEconomy.m in Sources */,
 				1A8D66C11CA1306000284BB8 /* BaseTableViewController.m in Sources */,
+				1A48FCCA1CEE354000CFE558 /* KeyValueMap.m in Sources */,
 				1A2EA3CE1C8F2BE600633417 /* MapEvaluator.m in Sources */,
 				1A3C3A091C7F3090004009DA /* Flavor.m in Sources */,
 				1A2EA3A01C8B860300633417 /* MinistryTableViewController.m in Sources */,
@@ -1510,6 +1546,7 @@
 				1AFF700F1CD76EFB009C7203 /* Economy.m in Sources */,
 				1A3C3A0A1C7F3090004009DA /* Flavor.m in Sources */,
 				1A2EA3CF1C8F2BE600633417 /* MapEvaluator.m in Sources */,
+				1A48FCCB1CEE354000CFE558 /* KeyValueMap.m in Sources */,
 				1A57E7A01C71C3F200B3890E /* AITestTests.m in Sources */,
 				1A57E7E91C74ABB300B3890E /* MainMenuViewController.m in Sources */,
 				1A3C3A481C84F028004009DA /* NSString+Custom.m in Sources */,
@@ -1564,6 +1601,7 @@
 				1AFF70101CD76EFB009C7203 /* Economy.m in Sources */,
 				1A3C3A0B1C7F3090004009DA /* Flavor.m in Sources */,
 				1A2EA3D01C8F2BE600633417 /* MapEvaluator.m in Sources */,
+				1A48FCCC1CEE354000CFE558 /* KeyValueMap.m in Sources */,
 				1A57E7AB1C71C3F200B3890E /* AITestUITests.m in Sources */,
 				1A57E7EA1C74ABB300B3890E /* MainMenuViewController.m in Sources */,
 				1A3C3A491C84F028004009DA /* NSString+Custom.m in Sources */,

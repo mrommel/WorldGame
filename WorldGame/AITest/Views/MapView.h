@@ -30,5 +30,6 @@
 - (id)initWithCoder:(NSCoder *)aDecoder;
 
 - (void)moveToX:(NSInteger)x andY:(NSInteger)y;
+- (void)redrawMap;
 
 @end

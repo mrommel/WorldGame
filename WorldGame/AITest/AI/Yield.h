@@ -12,6 +12,8 @@
  type of yields
  */
 typedef NS_ENUM(NSInteger, YieldType) {
+    YieldTypeNone,
+    YieldTypeFood,
     YieldTypeProduction,
     YieldTypeGold,
     YieldTypeScience,

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #import "Map.h"
+#import "Plot.h"
+#import "PlotEconomy.h"
 
 /*!
  callback for game turn events
@@ -16,9 +18,18 @@
 typedef void (^GameTurnProgress)(NSString *, int, int);
 
 /*!
+ delegate
+ */
+@protocol GameDelegate <NSObject>
+
+- (void)requestNeedsDisplay;
+
+@end
+
+/*!
  class the holds all the game objects
  */
-@interface Game : NSObject<NSCoding>
+@interface Game : NSObject<NSCoding, PlotDelegate, PlotEconomyDelegate>
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSDate *date;
@@ -28,6 +39,8 @@ typedef void (^GameTurnProgress)(NSString *, int, int);
 @property (atomic) int currentTurn;
 
 @property (copy) NSString *gamePath;
+
+@property (nonatomic) id<GameDelegate> delegate;
 
 // methods
 

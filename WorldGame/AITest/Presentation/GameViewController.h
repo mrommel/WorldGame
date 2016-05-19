@@ -13,10 +13,9 @@
 #import "MapView.h"
 #import "OverlayView.h"
 #import "UINavigationController+BackButtonHandler.h"
-#import "Plot.h"
-#import "PlotEconomy.h"
+#import "Game.h"
 
-@interface GameViewController : UIViewController<MapViewDelegate, IOverlayDelegate, UINavigationControllerBackButtonDelegate, PlotDelegate, PlotEconomyDelegate>
+@interface GameViewController : UIViewController<MapViewDelegate, IOverlayDelegate, UINavigationControllerBackButtonDelegate, GameDelegate>
 
 @property (nonatomic) MapOptions *options;
 

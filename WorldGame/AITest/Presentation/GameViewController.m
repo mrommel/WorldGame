@@ -125,32 +125,19 @@
                         self.turnLabel.text = [NSString stringWithFormat:@"Players: %lu / current: %d", (unsigned long)[GameProvider sharedInstance].game.players.count, [GameProvider sharedInstance].game.currentTurn];
                         
                         [GameProvider sharedInstance].game = [[Game alloc] initWithMap:map andNumberOfPlayers:2];
+                        [GameProvider sharedInstance].game.delegate = self;
                         
-                        [self attachDelegates];
                         [self.mapView setNeedsDisplay];
                     });
                 }
             }];
         });
     } else {
-        [self attachDelegates];
+        [GameProvider sharedInstance].game.delegate = self;
     }
     
     // update current label
     self.turnLabel.text = [NSString stringWithFormat:@"Players: %lu / current: %d", (unsigned long)[GameProvider sharedInstance].game.players.count, [GameProvider sharedInstance].game.currentTurn];
-}
-
-- (void)attachDelegates
-{
-    // iterate tiles
-    for (int i = 0; i < [GameProvider sharedInstance].game.map.width; i++) {
-        for (int j = 0; j < [GameProvider sharedInstance].game.map.height; j++) {
-            Plot *tile = [[GameProvider sharedInstance].game.map tileAtX:i andY:j];
-            
-            tile.delegate = self;
-            tile.economy.delegate = self;
-        }
-    }
 }
 
 - (void)centerClicked:(id)sender
@@ -342,29 +329,16 @@
 }
 
 #pragma mark -
-#pragma mark PlotDelegate functions
+#pragma mark GameDelegate functions
 
-- (void)plot:(Plot *)plot handlePopulationStateChangeFrom:(PlotPopulationState)fromPlotPopulationState to:(PlotPopulationState)toPlotPopulationState
+- (void)requestNeedsDisplay
 {
-    NSLog(@"handlePopulationStateChangeFrom");
-}
-
-#pragma mark -
-#pragma mark PlotEconomyDelegate functions
-
-- (void)economy:(PlotEconomy *)economy handleTooLittleSoilForPeasants:(NSInteger)peasants
-{
-    // NOOP
-}
-
-- (void)economy:(PlotEconomy *)economy handleLittleFood:(NSInteger)foodRemaining
-{
-    // NOOP
-}
-
-- (void)economy:(PlotEconomy *)economy handleTooLittleFood:(NSInteger)foodRemaining
-{
-    // NOOP
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW,
+                                            (int64_t)(0.005 * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
+        [self.mapView setNeedsDisplay];
+    });
+    
 }
 
 @end

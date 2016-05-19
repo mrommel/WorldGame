@@ -17,6 +17,7 @@
 #import "MapPoint.h"
 #import "BitArray.h"
 #import "RelationsNetwork.h"
+#import "Yield.h"
 
 #define EVEN(x)     ((x % 2) == 0)
 #define ODD(x)     ((x % 2) == 1)
@@ -97,11 +98,12 @@ typedef NS_ENUM(NSInteger, PlotPopulationState) {
 };
 
 /*!
- delegate
+ delegate of each plot (game registers for them)
  */
 @protocol PlotDelegate <NSObject>
 
 - (void)plot:(Plot *)plot handlePopulationStateChangeFrom:(PlotPopulationState)fromPlotPopulationState to:(PlotPopulationState)toPlotPopulationState;
+- (void)plot:(Plot *)plot handlePlayerShouldRequestTileDueToPopulationIncrease:(NSInteger)newPopulation;
 
 @end
 
@@ -124,7 +126,7 @@ typedef NS_ENUM(NSInteger, PlotPopulationState) {
 @property (nonatomic) RelationsNetwork *network;
 
 // simulation values
-@property (atomic) float inhabitants;
+@property (atomic) CGFloat inhabitants;
 @property (atomic) PlotPopulationState populationState;
 
 // economy values
@@ -169,13 +171,19 @@ typedef NS_ENUM(NSInteger, PlotPopulationState) {
 
 - (void)setOwner:(Player *)owner;
 - (Player *)owner;
+- (BOOL)hasOwner;
 
 - (BOOL)hasScience:(NSString *)scienceIdentifier;
 
 - (BOOL)isStartingPlot;
 - (void)setStartingPlot:(BOOL)bNewValue;
 
+- (NSInteger)calculateNatureYield:(YieldType)yieldType forPlayer:(Player *)player;
+
 // turn methods
 - (void)turn;
+
+- (CGFloat)possibleMigrants;
+- (CGFloat)migrationWeight;
 
 @end

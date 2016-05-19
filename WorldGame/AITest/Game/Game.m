@@ -12,6 +12,9 @@
 #import "Civilization.h"
 #import "Leader.h"
 #import "GamePersistance.h"
+#import "Array2D.h"
+#import "MapPoint.h"
+#import "KeyValueMap.h"
 
 #define kDataKey        @"Game"
 #define kDataFile       @"game.plist"
@@ -142,15 +145,93 @@ static NSString* const GameDataPlayerKey = @"Game.Player.%d";
         [self.map tileAtX:startPosition.x andY:startPosition.y].inhabitants = 500;
         [self.players addObject:player];
     }
+    
+    // create site evaluater
+    
+    
+    // set start positions
+    
+    // attach the delegates
+    [self attachDelegates];
 }
+
+- (void)attachDelegates
+{
+    // iterate tiles
+    for (int i = 0; i < self.map.width; i++) {
+        for (int j = 0; j < self.map.height; j++) {
+            Plot *tile = [self.map tileAtX:i andY:j];
+            
+            tile.delegate = self;
+            tile.economy.delegate = self;
+        }
+    }
+}
+
+#pragma mark -
+#pragma mark PlotDelegate functions
+
+- (void)plot:(Plot *)plot handlePopulationStateChangeFrom:(PlotPopulationState)fromPlotPopulationState to:(PlotPopulationState)toPlotPopulationState
+{
+    NSLog(@"handlePopulationStateChangeFrom");
+}
+
+- (void)plot:(Plot *)plot handlePlayerShouldRequestTileDueToPopulationIncrease:(NSInteger)newPopulation
+{
+    NSLog(@"handlePlayerShouldRequestTileDueToPopulationIncrease");
+    
+    KeyValueMap *inhabitantsMap = [[KeyValueMap alloc] init];
+    
+    // we need to find out which player, we should request the tile
+    for (NSNumber *direction in HEXDIRECTIONS) {
+        MapPoint *pt = [plot.coordinate neighborInDirection:[direction intValue]];
+        if ([self.map isValidAt:pt]) {
+            Plot *neighbor = [self.map tileAtX:pt.x andY:pt.y];
+            
+            [inhabitantsMap addValue:neighbor.inhabitants forKey:[NSString stringWithFormat:@"%ld", (long)neighbor.ownerIdentifier]];
+        }
+    }
+    
+    NSInteger newOwner = [[inhabitantsMap keyOfHeightestValue] integerValue];
+    
+    [plot setOwnerIdentifier:newOwner];
+    
+    if (self.delegate) {
+        [self.delegate requestNeedsDisplay];
+    }
+}
+
+#pragma mark -
+#pragma mark PlotEconomyDelegate functions
+
+- (void)economy:(PlotEconomy *)economy handleTooLittleSoilForPeasants:(NSInteger)peasants
+{
+    // NOOP
+}
+
+- (void)economy:(PlotEconomy *)economy handleLittleFood:(NSInteger)foodRemaining
+{
+    // NOOP
+}
+
+- (void)economy:(PlotEconomy *)economy handleTooLittleFood:(NSInteger)foodRemaining
+{
+    // NOOP
+}
+
+#pragma mark -
+#pragma mark turn functions
 
 - (void)turnWithProgress:(GameTurnProgress)progress
 {
-    int numberOfTurns = 2 + (int)self.players.count;
+    int numberOfTurns = 3 + (int)self.players.count;
     progress(@"Start", 0, numberOfTurns);
     
     [self.map turn];
     progress(@"Execute Map", 1, numberOfTurns);
+    
+    [self handleMigration];
+    progress(@"handle migration", 1, numberOfTurns);
     
     // an now every ai player
     for (int i = 0; i < self.players.count; i++) {
@@ -158,15 +239,76 @@ static NSString* const GameDataPlayerKey = @"Game.Player.%d";
 
         if ([player isArtificial]) {
             [player turn];
-            progress(@"Turned ai player", 2 + i, numberOfTurns);
+            progress(@"Turned ai player", 3 + i, numberOfTurns);
         } else {
             [player turn];
-            progress(@"Turned human player player", 2 + i, numberOfTurns);
+            progress(@"Turned human player player", 3 + i, numberOfTurns);
         }
     }
     
     self.currentTurn++;
     progress(@"End", numberOfTurns, numberOfTurns);
+}
+
+- (void)handleMigration
+{
+    Array2D *migrants = [Array2D arrayWithSize:CGSizeMake([GameProvider sharedInstance].game.map.width, [GameProvider sharedInstance].game.map.height)];
+    [migrants fillWithFloat:0];
+    
+    Array2D *weights = [Array2D arrayWithSize:CGSizeMake([GameProvider sharedInstance].game.map.width, [GameProvider sharedInstance].game.map.height)];
+    [weights fillWithFloat:0];
+    
+    for (int i = 0; i < self.map.width; i++) {
+        for (int j = 0; j < self.map.height; j++) {
+            Plot *tile = [self.map tileAtX:i andY:j];
+            
+            [migrants setFloat:[tile possibleMigrants] atX:i andY:j];
+            [weights setFloat:[tile migrationWeight] atX:i andY:j];
+        }
+    }
+    
+    for (int i = 0; i < self.map.width; i++) {
+        for (int j = 0; j < self.map.height; j++) {
+            Plot *tile = [self.map tileAtX:i andY:j];
+            
+            float tileWeight = [weights intAtX:i andY:j];
+            float tileMigrants = [migrants intAtX:i andY:j];
+            float neighborsWeight = 0;
+            float neighborsMigrants = 0;
+            int neighbors = 0;
+            
+            for (NSNumber *direction in HEXDIRECTIONS) {
+                MapPoint *pt = [tile.coordinate neighborInDirection:[direction intValue]];
+                if ([self.map isValidAt:pt]) {
+                    Plot *neighbor = [self.map tileAtX:pt.x andY:pt.y];
+                
+                    if ([neighbor isLandmass]) {
+                        neighborsWeight += [weights intAtX:neighbor.coordinate.x andY:neighbor.coordinate.y];
+                        neighborsMigrants += [migrants intAtX:neighbor.coordinate.x andY:neighbor.coordinate.y];
+                        neighbors++;
+                    }
+                }
+            }
+            
+            // examples:
+            // weight: 5 / [2, 1, 0, 0, 1, 1] = 5
+            // migrants: 3 + 0 = 3
+            // => 1.5 / 1.5
+            //
+            // weight: 2 / [0.01, 0.01, 0.01, 0.01, 0.01, 2] = 2.5
+            // migrants: 6 + 1 = 7
+            // => 3.11 / 3.88
+            //
+            // weight: 0.01 / [0.01, 0.01, 0.01, 0.01, 0.01, 2] = 2.5
+            // migrants: 1 + 6 = 7
+            // => 3.11 / 3.88
+            if (neighbors > 0 && neighborsWeight > 0) {
+                float newMigrants = neighborsWeight * (tileMigrants + neighborsWeight) / (tileWeight + neighborsWeight);
+                tile.inhabitants -= tileMigrants;
+                tile.inhabitants += newMigrants;
+            }
+        }
+    }
 }
 
 - (Player *)humanPlayer

@@ -40,6 +40,7 @@ typedef void (^GameTurnProgress)(NSString *, int, int);
 - (void)turnWithProgress:(GameTurnProgress)progress;
 
 - (Player *)humanPlayer;
+- (Player *)playerForIdentifier:(NSUInteger)identifier;
 
 - (void)logGameState;
 

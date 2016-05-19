@@ -11,6 +11,7 @@
 @class Player;
 @class Continent;
 @class Map;
+@class Plot;
 @class PlotEconomy;
 
 #import "MapPoint.h"
@@ -39,9 +40,6 @@ typedef NS_ENUM(NSInteger, MapTerrain) {
 
 @property (atomic) CGFloat soil;
 @property (atomic) NSInteger acres;
-
-#warning todo: wine has different acre needs than wheat
-#warning todo: what about fishing?
 
 @end
 
@@ -75,13 +73,37 @@ typedef NS_ENUM(NSInteger, MapFeature) {
  state of the plots population
  */
 typedef NS_ENUM(NSInteger, PlotPopulationState) {
+    /*!
+     nomads: (max 3000) slow growth (nomads will move away)
+     */
     PlotPopulationStateNomads,
+    /*!
+     villages: (max 5000), needs agriculture on that tile possible and enabled, can build fortesses
+     */
     PlotPopulationStateVillage,
-    PlotPopulationStateTown, // with some villages around
+    /*!
+     town (min 5000), can have walls, sewing
+     with some villages around
+     */
+    PlotPopulationStateTown,
+    /*!
+     city (min 100000)
+     */
     PlotPopulationStateCity,
+    /*!
+     metropolis: (no max)
+     */
     PlotPopulationStateMetropol
 };
 
+/*!
+ delegate
+ */
+@protocol PlotDelegate <NSObject>
+
+- (void)plot:(Plot *)plot handlePopulationStateChangeFrom:(PlotPopulationState)fromPlotPopulationState to:(PlotPopulationState)toPlotPopulationState;
+
+@end
 
 /*!
  plot, each tile
@@ -110,6 +132,9 @@ typedef NS_ENUM(NSInteger, PlotPopulationState) {
 /*@property (atomic) float soilQuality;
 @property (atomic) int soilAcres; // define the amount of soil
 @property (atomic) float health; // quality of average health*/
+
+@property (nonatomic) id<PlotDelegate> delegate;
+
 
 - (instancetype)initWithX:(int)nx andY:(int)ny andTerrain:(MapTerrain)ntype onMap:(Map *)map;
 - (instancetype)initWithCoord:(MapPoint *)ncoord andTerrain:(MapTerrain)ntype onMap:(Map *)map;
@@ -140,7 +165,12 @@ typedef NS_ENUM(NSInteger, PlotPopulationState) {
 - (BOOL)isLandmass;
 - (BOOL)isOcean;
 
+// player function
+
 - (void)setOwner:(Player *)owner;
+- (Player *)owner;
+
+- (BOOL)hasScience:(NSString *)scienceIdentifier;
 
 - (BOOL)isStartingPlot;
 - (void)setStartingPlot:(BOOL)bNewValue;

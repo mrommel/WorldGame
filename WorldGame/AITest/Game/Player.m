@@ -31,6 +31,7 @@ static NSUInteger playerIdentifier = 0;
         self.civilization = civilization;
         self.units = [[NSMutableArray alloc] init];
         self.cities = [[NSMutableArray alloc] init];
+        self.sciences = [[NSMutableArray alloc] init];
         
         self.policies = [NSMutableArray new];
         
@@ -51,6 +52,7 @@ static NSUInteger playerIdentifier = 0;
         self.civilization = [decoder decodeObjectForKey:PlayerDataCivilizationKey];
         self.units = [[NSMutableArray alloc] init];
         self.cities = [[NSMutableArray alloc] init];
+        self.sciences = [[NSMutableArray alloc] init];
         
         self.policies = [NSMutableArray new];
         
@@ -125,6 +127,17 @@ static NSUInteger playerIdentifier = 0;
     }
     
     return policies;
+}
+
+- (BOOL)hasScience:(NSString *)scienceIdentifier
+{
+    for (NSString *scienceKey in self.sciences) {
+        if ([scienceKey isEqualToString:scienceIdentifier]) {
+            return YES;
+        }
+    }
+    
+    return NO;
 }
 
 - (void)turn

@@ -36,6 +36,7 @@ typedef NS_ENUM(NSInteger, EventType) {
 @property (nonatomic) Leader *leader;
 @property (nonatomic) NSMutableArray *units;
 @property (nonatomic) NSMutableArray *cities;
+@property (nonatomic) NSMutableArray *sciences;
 @property (atomic) CGPoint position; // start position
 
 // government system
@@ -61,6 +62,8 @@ typedef NS_ENUM(NSInteger, EventType) {
 - (void)settleAtX:(int)x andY:(int)y;
 
 - (NSMutableArray *)policiesForMinistry:(Ministry)ministry;
+
+- (BOOL)hasScience:(NSString *)scienceIdentifier;
 
 - (void)turn;
 

@@ -11,10 +11,15 @@
 #import "Policy.h"
 #import "Player.h"
 
+@class Simulation;
+
 /*!
  class that holds all simulations
  */
 @interface RelationsNetwork : NSObject
+
+@property (nonatomic) Simulation *birthRate;
+@property (nonatomic) Simulation *deathRate;
 
 - (instancetype)init;
 

@@ -75,6 +75,11 @@
     if (self) {
         self.simulations = [NSMutableArray new];
         
+        self.birthRate = [[Simulation alloc] initWithName:@"Birth Rate" andDefaultValue:2.0f];
+        //[self.simulations addObject:self.birthRate];
+        self.deathRate = [[Simulation alloc] initWithName:@"Death Rate" andDefaultValue:1.9f];
+        //[self.simulations addObject:self.deathRate];
+        
         // init all simulations
         self.lifeSpan = [[Simulation alloc] initWithName:@"Life Span" andDefaultValue:0.5f];
         [self.simulations addObject:self.lifeSpan];

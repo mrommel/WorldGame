@@ -128,6 +128,8 @@ static NSString* const GameDataPlayerKey = @"Game.Player.%d";
     Civilization *civilization = [[CivilizationProvider sharedInstance] randomCivilization];
     CGPoint startPosition = [[self.map.startPositions objectAtIndex:0] CGPointValue];
     HumanPlayer *humanPlayer = [[HumanPlayer alloc] initWithStartPosition:startPosition andCivilization:civilization];
+    [[self.map tileAtX:startPosition.x andY:startPosition.y] setOwnerIdentifier:humanPlayer.identifier];
+    [self.map tileAtX:startPosition.x andY:startPosition.y].inhabitants = 500;
     [self.players addObject:humanPlayer];
     
     // AI players
@@ -136,6 +138,8 @@ static NSString* const GameDataPlayerKey = @"Game.Player.%d";
         CGPoint startPosition = [[self.map.startPositions objectAtIndex:i] CGPointValue];
         AIPlayer *player = [[AIPlayer alloc] initWithStartPosition:startPosition andCivilization:civilization];
         player.leader = [[LeaderProvider sharedInstance] randomLeaderForCivilizationName:civilization.name];
+        [[self.map tileAtX:startPosition.x andY:startPosition.y] setOwnerIdentifier:player.identifier];
+        [self.map tileAtX:startPosition.x andY:startPosition.y].inhabitants = 500;
         [self.players addObject:player];
     }
 }
@@ -169,6 +173,17 @@ static NSString* const GameDataPlayerKey = @"Game.Player.%d";
 {
     for (Player *player in self.players) {
         if ([player isHuman]) {
+            return player;
+        }
+    }
+    
+    return nil;
+}
+
+- (Player *)playerForIdentifier:(NSUInteger)identifier
+{
+    for (Player *player in self.players) {
+        if (player.identifier == identifier) {
             return player;
         }
     }

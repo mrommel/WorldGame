@@ -104,7 +104,6 @@
 - (void)startOrResumeGame
 {
     if ([GameProvider sharedInstance].game == nil) {
-        //Map *map = [[Map alloc] initWithWidth:mapWidth andHeight:mapHeight];
         Map *map = [[Map alloc] initWithMapSize:self.options.mapSize];
         
         self.overlay = [[OverlayView alloc] initWithFrame:CGRectZero];
@@ -126,15 +125,32 @@
                         self.turnLabel.text = [NSString stringWithFormat:@"Players: %lu / current: %d", (unsigned long)[GameProvider sharedInstance].game.players.count, [GameProvider sharedInstance].game.currentTurn];
                         
                         [GameProvider sharedInstance].game = [[Game alloc] initWithMap:map andNumberOfPlayers:2];
+                        
+                        [self attachDelegates];
                         [self.mapView setNeedsDisplay];
                     });
                 }
             }];
         });
+    } else {
+        [self attachDelegates];
     }
     
     // update current label
     self.turnLabel.text = [NSString stringWithFormat:@"Players: %lu / current: %d", (unsigned long)[GameProvider sharedInstance].game.players.count, [GameProvider sharedInstance].game.currentTurn];
+}
+
+- (void)attachDelegates
+{
+    // iterate tiles
+    for (int i = 0; i < [GameProvider sharedInstance].game.map.width; i++) {
+        for (int j = 0; j < [GameProvider sharedInstance].game.map.height; j++) {
+            Plot *tile = [[GameProvider sharedInstance].game.map tileAtX:i andY:j];
+            
+            tile.delegate = self;
+            tile.economy.delegate = self;
+        }
+    }
 }
 
 - (void)centerClicked:(id)sender
@@ -323,6 +339,32 @@
 {
     NSLog(@"cancelPressed");
     [self.overlay dismiss];
+}
+
+#pragma mark -
+#pragma mark PlotDelegate functions
+
+- (void)plot:(Plot *)plot handlePopulationStateChangeFrom:(PlotPopulationState)fromPlotPopulationState to:(PlotPopulationState)toPlotPopulationState
+{
+    NSLog(@"handlePopulationStateChangeFrom");
+}
+
+#pragma mark -
+#pragma mark PlotEconomyDelegate functions
+
+- (void)economy:(PlotEconomy *)economy handleTooLittleSoilForPeasants:(NSInteger)peasants
+{
+    // NOOP
+}
+
+- (void)economy:(PlotEconomy *)economy handleLittleFood:(NSInteger)foodRemaining
+{
+    // NOOP
+}
+
+- (void)economy:(PlotEconomy *)economy handleTooLittleFood:(NSInteger)foodRemaining
+{
+    // NOOP
 }
 
 @end

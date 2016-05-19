@@ -14,6 +14,7 @@
 #import "NSArray+Util.h"
 #import "Game.h"
 #import "PlotEconomy.h"
+#import "Simulation/Simulation.h"
 
 #define NO_OWNER -1
 
@@ -23,11 +24,14 @@ static NSString* const PlotDataTerrainKey = @"Plot.Terrain";
 static NSString* const PlotDataFeaturesKey = @"Plot.Features";
 static NSString* const PlotDataFeatureKey = @"Plot.Feature.%d";
 static NSString* const PlotDataInhabitantsKey = @"Plot.Inhabitants";
+static NSString* const PlotDataPopulationStateKey = @"Plot.PopulationState";
 static NSString* const PlotDataOwnerKey = @"Plot.Owner";
 static NSString* const PlotDataStartingPlotKey = @"Plot.StartingPlot";
 
 static NSString* const PlotDataRevealedKey = @"Plot.Revealed";
 static NSString* const PlotDataVisibleKey = @"Plot.Visible";
+
+static NSString* const kSCIENCEAGRICULTURE = @"SCIENCE_AGRICULTURE";
 
 @interface MapDataProvider()
 
@@ -196,6 +200,7 @@ static MapDataProvider *shared = nil;
         self.terrain = nterrain;
         self.features = [[NSMutableArray alloc] init];
         self.inhabitants = 0;
+        self.populationState = PlotPopulationStateNomads;
         self.ownerIdentifier = NO_OWNER;
         self.startingPlot = NO;
         self.revealedArray = [[BitArray alloc] initWithSize:8];
@@ -204,6 +209,7 @@ static MapDataProvider *shared = nil;
         
         // economy
         self.economy = [[PlotEconomy alloc] initWithPlot:self];
+        // self.economy.delegate ...
     }
     
     return self;
@@ -219,6 +225,7 @@ static MapDataProvider *shared = nil;
         self.terrain = nterrain;
         self.features = [[NSMutableArray alloc] init];
         self.inhabitants = 0;
+        self.populationState = PlotPopulationStateNomads;
         self.ownerIdentifier = NO_OWNER;
         self.startingPlot = NO;
         self.revealedArray = [[BitArray alloc] initWithSize:8];
@@ -227,6 +234,7 @@ static MapDataProvider *shared = nil;
         
         // economy
         self.economy = [[PlotEconomy alloc] initWithPlot:self];
+        // self.economy.delegate ...
     }
     
     return self;
@@ -251,6 +259,7 @@ static MapDataProvider *shared = nil;
         }
         
         self.inhabitants = [decoder decodeFloatForKey:PlotDataInhabitantsKey];
+        self.populationState = [decoder decodeIntegerForKey:PlotDataPopulationStateKey];
         self.ownerIdentifier = [decoder decodeIntegerForKey:PlotDataOwnerKey];
         self._startingPlot = [decoder decodeBoolForKey:PlotDataStartingPlotKey];
         self.revealedArray = [decoder decodeObjectForKey:PlotDataRevealedKey];
@@ -261,6 +270,7 @@ static MapDataProvider *shared = nil;
         
         // economy
         self.economy = [[PlotEconomy alloc] initWithPlot:self];
+        // self.economy.delegate ...
     }
     
     return self;
@@ -277,6 +287,7 @@ static MapDataProvider *shared = nil;
     }
     
     [encoder encodeFloat:self.inhabitants forKey:PlotDataInhabitantsKey];
+    [encoder encodeInteger:self.populationState forKey:PlotDataPopulationStateKey];
     [encoder encodeInteger:self.ownerIdentifier forKey:PlotDataOwnerKey];
     [encoder encodeBool:self._startingPlot forKey:PlotDataStartingPlotKey];
     
@@ -420,10 +431,22 @@ static MapDataProvider *shared = nil;
     return self.terrain == MapTerrainOcean || self.terrain == MapTerrainShore;
 }
 
+#pragma mark -
+#pragma mark player functions
+
 - (void)setOwner:(Player *)owner
 {
     [self.network setPlayer:owner withEvent:EventTypeClaim];
     self.ownerIdentifier = owner.identifier;
+}
+
+- (Player *)owner
+{
+    if (self.ownerIdentifier == NO_OWNER) {
+        return nil;
+    }
+    
+    return [[GameProvider sharedInstance].game playerForIdentifier:self.ownerIdentifier];
 }
 
 - (BOOL)isStartingPlot
@@ -436,22 +459,49 @@ static MapDataProvider *shared = nil;
     self._startingPlot = bNewValue;
 }
 
-#define kGrowth         0.05f // means 5% growth
-#define kFluctuation    0.01f // means 1% fluctuation to each neighbor
+//#define kGrowth         0.05f // means 5% growth
+//#define kFluctuation    0.01f // means 1% fluctuation to each neighbor
 
 - (void)turn
 {
-    if ([self isLandmass]) {
+    if (self.ownerIdentifier != NO_OWNER && [self isLandmass]) {
         //
         [self.network turn];
         
         // calculate population growth
-        self.inhabitants = self.inhabitants * (1.f + kGrowth) + (((int)(arc4random() % 5) - 2));
-        self.inhabitants = (self.inhabitants < 0 ? 0 : self.inhabitants);
+        // Nt+1 = Nt + Nt * (birth - death)
+        self.inhabitants = self.inhabitants + self.inhabitants * ([self.network.birthRate valueWithDelay:0]  - [self.network.deathRate valueWithDelay:0]);
+        
+        switch (self.populationState) {
+            case PlotPopulationStateNomads:
+                // handle settling (10% chance)
+                if ([[self owner] hasScience:kSCIENCEAGRICULTURE] &&
+                    arc4random() % 100 < 10) {
+                    
+                    self.populationState = PlotPopulationStateVillage;
+                    if (self.delegate) {
+                        [self.delegate plot:self handlePopulationStateChangeFrom:PlotPopulationStateNomads to:PlotPopulationStateVillage];
+                    }
+                }
+                break;
+            case PlotPopulationStateVillage:
+                // check, if we should be a town
+                if (self.inhabitants > 5000) {
+                    self.populationState = PlotPopulationStateTown;
+                    if (self.delegate) {
+                        [self.delegate plot:self handlePopulationStateChangeFrom:PlotPopulationStateVillage to:PlotPopulationStateTown];
+                    }
+                }
+                break;
+        }
     
-        [self.economy turn];
+        // only handle economy when we have settled
+        if (self.populationState != PlotPopulationStateNomads) {
+            [self.economy turn];
+        }
         
         // calculate the population spread
+        // basis: uncertainty, wealth, same culture, same player (oversea)
 #warning to do: spread the population
     }
 }

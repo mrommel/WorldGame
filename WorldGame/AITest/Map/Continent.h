@@ -8,11 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class Area;
+
 @interface Continent : NSObject<NSCoding>
 
 @property (atomic) NSInteger identifier;
-@property (nonatomic) NSString *name;
+@property (nonatomic, nonnull) NSString *name;
 
-- (instancetype)initWithIdentifier:(NSInteger)identifier andName:(NSString *)name;
+- (nonnull instancetype)initWithIdentifier:(NSInteger)identifier andName:(nonnull NSString *)name;
+
+- (void)setObject:(nonnull id<NSCopying>)object forKey:(nonnull id<NSCopying>)key;
+- (void)setInteger:(NSInteger)object forKey:(nonnull id<NSCopying>)key;
+
+- (nonnull id<NSCopying>)objectForKey:(nonnull id<NSCopying>)key;
+- (NSInteger)integerForKey:(nonnull id<NSCopying>)key;
 
 @end

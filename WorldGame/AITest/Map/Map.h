@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "Plot.h"
+@class Area;
 
 // 
 typedef NS_ENUM(NSInteger, MapType) {
@@ -53,7 +54,9 @@ typedef void (^MapGenerateProgress)(int);
 
 @property (atomic, assign) NSInteger width;
 @property (atomic, assign) NSInteger height;
-@property (atomic) NSMutableArray *startPositions;
+
+@property (nonatomic) NSMutableArray *continents;
+//@property (atomic) NSMutableArray *startPositions;
 
 // constructors
 - (instancetype)initWithWidth:(NSInteger)width andHeight:(NSInteger)height;
@@ -82,6 +85,7 @@ typedef void (^MapGenerateProgress)(int);
 // continent functions
 - (Continent *)continentByIdentifier:(NSInteger)identifier;
 - (void)addContinent:(Continent *)continent;
+- (Area *)areaFromContinentByIdentifier:(NSInteger)identifier;
 
 // map generators
 - (void)generateMapWithOptions:(MapOptions *)options withProgress:(MapGenerateProgress)progress;

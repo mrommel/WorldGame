@@ -333,12 +333,10 @@
 
 - (void)requestNeedsDisplay
 {
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW,
-                                            (int64_t)(0.005 * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
+    // run on main thread
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
         [self.mapView setNeedsDisplay];
     });
-    
 }
 
 @end

@@ -303,8 +303,8 @@ typedef enum Climate {
         progress(90);
     
     // add start positions
-    [self.map.startPositions addObject:[NSValue valueWithCGPoint:CGPointMake(0, self.map.height / 2)]];
-    [self.map.startPositions addObject:[NSValue valueWithCGPoint:CGPointMake(self.map.width - 1, self.map.height / 2)]];
+    //[self.map.startPositions addObject:[NSValue valueWithCGPoint:CGPointMake(0, self.map.height / 2)]];
+    //[self.map.startPositions addObject:[NSValue valueWithCGPoint:CGPointMake(self.map.width - 1, self.map.height / 2)]];
     if (progress)
         progress(100);
 }
@@ -440,8 +440,8 @@ typedef enum Climate {
     [NSThread sleepForTimeInterval:0.1f];
     
     // add start positions
-    [self.map.startPositions addObject:[NSValue valueWithCGPoint:CGPointMake(0, self.map.height / 2)]];
-    [self.map.startPositions addObject:[NSValue valueWithCGPoint:CGPointMake(self.map.width - 1, self.map.height / 2)]];
+    //[self.map.startPositions addObject:[NSValue valueWithCGPoint:CGPointMake(0, self.map.height / 2)]];
+    //[self.map.startPositions addObject:[NSValue valueWithCGPoint:CGPointMake(self.map.width - 1, self.map.height / 2)]];
     if (progress)
         progress(100);
 }

@@ -15,6 +15,7 @@
 #import "Array2D.h"
 #import "MapPoint.h"
 #import "KeyValueMap.h"
+#import "MapEvaluator.h"
 
 #define kDataKey        @"Game"
 #define kDataFile       @"game.plist"
@@ -125,11 +126,16 @@ static NSString* const GameDataPlayerKey = @"Game.Player.%d";
 
 - (void)createPlayers:(int)numberOfPlayers
 {
-    NSAssert(self.map.startPositions.count >= numberOfPlayers, @"Not enough starting spots in the map: %lu when %d are needed", (unsigned long)self.map.startPositions.count, numberOfPlayers);
+    // create site evaluator
+    SiteEvaluatorForStart *siteEvaluator = [SiteEvaluatorForStart new];
+    StartPositioner *positioner = [[StartPositioner alloc] initWithMap:self.map andSiteEvaluator:siteEvaluator];
+    NSArray *startPositions = [positioner findStartPositionsForPlayers:numberOfPlayers];
+    
+    NSAssert([startPositions count] >= numberOfPlayers, @"We must have at least %d starting plots but got only %lu.", numberOfPlayers, [startPositions count]);
     
     // Human player
     Civilization *civilization = [[CivilizationProvider sharedInstance] randomCivilization];
-    CGPoint startPosition = [[self.map.startPositions objectAtIndex:0] CGPointValue];
+    CGPoint startPosition = [[startPositions objectAtIndex:0] CGPointValue];
     HumanPlayer *humanPlayer = [[HumanPlayer alloc] initWithStartPosition:startPosition andCivilization:civilization];
     [[self.map tileAtX:startPosition.x andY:startPosition.y] setOwnerIdentifier:humanPlayer.identifier];
     [self.map tileAtX:startPosition.x andY:startPosition.y].inhabitants = 500;
@@ -138,18 +144,13 @@ static NSString* const GameDataPlayerKey = @"Game.Player.%d";
     // AI players
     for (int i = 1; i < numberOfPlayers; i++) {
         Civilization *civilization = [[CivilizationProvider sharedInstance] randomCivilization];
-        CGPoint startPosition = [[self.map.startPositions objectAtIndex:i] CGPointValue];
+        CGPoint startPosition = [[startPositions objectAtIndex:i] CGPointValue];
         AIPlayer *player = [[AIPlayer alloc] initWithStartPosition:startPosition andCivilization:civilization];
         player.leader = [[LeaderProvider sharedInstance] randomLeaderForCivilizationName:civilization.name];
         [[self.map tileAtX:startPosition.x andY:startPosition.y] setOwnerIdentifier:player.identifier];
         [self.map tileAtX:startPosition.x andY:startPosition.y].inhabitants = 500;
         [self.players addObject:player];
     }
-    
-    // create site evaluater
-    
-    
-    // set start positions
     
     // attach the delegates
     [self attachDelegates];
@@ -182,12 +183,13 @@ static NSString* const GameDataPlayerKey = @"Game.Player.%d";
     
     KeyValueMap *inhabitantsMap = [[KeyValueMap alloc] init];
     
-    // we need to find out which player, we should request the tile
+    // we need to find out which player should request the tile
     for (NSNumber *direction in HEXDIRECTIONS) {
         MapPoint *pt = [plot.coordinate neighborInDirection:[direction intValue]];
         if ([self.map isValidAt:pt]) {
             Plot *neighbor = [self.map tileAtX:pt.x andY:pt.y];
             
+#warning maybe influence instead of inhabitants ?
             [inhabitantsMap addValue:neighbor.inhabitants forKey:[NSString stringWithFormat:@"%ld", (long)neighbor.ownerIdentifier]];
         }
     }

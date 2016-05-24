@@ -14,6 +14,7 @@
 #import "Plot.h"
 #import "MapGenerator.h"
 #import "Continent.h"
+#import "Area.h"
 
 static NSString* const MapDataWidthKey = @"Map.Width";
 static NSString* const MapDataHeightKey = @"Map.Height";
@@ -50,7 +51,6 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
 @interface Map()
 
 @property (nonatomic) Array2D *tiles;
-@property (nonatomic) NSMutableArray *continents;
 @property (nonatomic) UIImage *thumbnailImage;
 
 @end
@@ -64,7 +64,7 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
     if (self) {
         self.width = width;
         self.height = height;
-        self.startPositions = [[NSMutableArray alloc] init];
+        //self.startPositions = [[NSMutableArray alloc] init];
         self.continents = [[NSMutableArray alloc] init];
         self.tiles = [[Array2D alloc] initWithSize:CGSizeMake(width, height)];
         self.thumbnailImage = nil;
@@ -118,12 +118,12 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
         self.width = [decoder decodeIntegerForKey:MapDataWidthKey];
         self.height = [decoder decodeIntegerForKey:MapDataHeightKey];
         
-        self.startPositions = [[NSMutableArray alloc] init];
+        /*self.startPositions = [[NSMutableArray alloc] init];
         NSInteger numOfPositions = [decoder decodeIntegerForKey:MapDataStartPositionsKey];
         for (int i = 0; i < numOfPositions; i++) {
             id obj = [decoder decodeObjectForKey:[NSString stringWithFormat:MapDataStartPositionKey, i]];
             [self.startPositions addObject:obj];
-        }
+        }*/
         
         self.continents = [[NSMutableArray alloc] init];
         NSInteger numOfContinents = [decoder decodeIntegerForKey:MapDataContinentsKey];
@@ -152,10 +152,10 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
     [encoder encodeInteger:self.width forKey:MapDataWidthKey];
     [encoder encodeInteger:self.height forKey:MapDataHeightKey];
     
-    [encoder encodeInteger:self.startPositions.count forKey:MapDataStartPositionsKey];
+    /*[encoder encodeInteger:self.startPositions.count forKey:MapDataStartPositionsKey];
     for (int i = 0; i < self.startPositions.count; i++) {
         [encoder encodeObject:[self.startPositions objectAtIndex:i] forKey:[NSString stringWithFormat:MapDataStartPositionKey, i]];
-    }
+    }*/
     
     [encoder encodeInteger:self.continents.count forKey:MapDataContinentsKey];
     for (int i = 0; i < self.continents.count; i++) {
@@ -305,6 +305,37 @@ static NSString* const MapDataTileKey = @"Map.Tile.%d.%d";
 - (void)addContinent:(Continent *)continent
 {
     [self.continents addObject:continent];
+}
+
+- (Area *)areaFromContinentByIdentifier:(NSInteger)identifier
+{
+    Area *area = [[Area alloc] init];
+    
+    NSInteger minX = NSIntegerMax;
+    NSInteger maxX = NSIntegerMin;
+    NSInteger minY = NSIntegerMax;
+    NSInteger maxY = NSIntegerMin;
+    
+    for (int x = 0; x < self.width; x++) {
+        for (int y = 0; y < self.height; y++) {
+            Plot *plot = [self.tiles objectAtX:x andY:y];
+            if (plot.continent.identifier == identifier) {
+                minX = MIN(minX, x);
+                maxX = MAX(maxX, x);
+                minY = MIN(minY, y);
+                maxY = MAX(maxY, y);
+                
+                [area.tiles addObject:plot];
+            }
+        }
+    }
+    
+    area.bounds.westEdge = minX;
+    area.bounds.eastEdge = maxX;
+    area.bounds.northEdge = minY;
+    area.bounds.southEdge = maxY;
+    
+    return area;
 }
 
 #pragma mark -

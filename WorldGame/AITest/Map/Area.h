@@ -11,6 +11,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 @class Area;
+@class Plot;
 
 /*!
  class that holds the bounding box
@@ -44,6 +45,11 @@
 typedef void (^AreaSplitCallback)(Area *first, Area *second);
 
 /*!
+ callback for area tile evaluation
+ */
+typedef NSInteger (^AreaTileEvaluatorCallback)(Plot *plot);
+
+/*!
  class that consists of tiles within bounds
  */
 @interface Area : NSObject
@@ -71,6 +77,8 @@ typedef void (^AreaSplitCallback)(Area *first, Area *second);
 - (CGFloat)distanceTo:(Area *)area;
 
 - (void)divideIntoTwoAreas:(AreaSplitCallback)areaSplitCallback andSplitByPercent:(NSInteger)chopPercent;
+
+- (Plot *)maximumTileFromEvaluator:(AreaTileEvaluatorCallback)evaluatorCallback;
 
 - (NSString *)description;
 

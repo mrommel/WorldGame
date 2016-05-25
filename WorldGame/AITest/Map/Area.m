@@ -181,6 +181,27 @@
     return;
 }
 
+- (Plot *)maximumTileFromEvaluator:(AreaTileEvaluatorCallback)evaluatorCallback
+{
+    if (!evaluatorCallback) {
+        return nil;
+    }
+    
+    Plot *bestPlot = nil;
+    NSInteger maximumValue = NSIntegerMin;
+    
+    for (Plot *plot in self.tiles) {
+        NSInteger value = evaluatorCallback(plot);
+        
+        if (value > maximumValue) {
+            maximumValue = value;
+            bestPlot = plot;
+        }
+    }
+    
+    return bestPlot;
+}
+
 /// Totals up the fertility of one row of data
 - (NSInteger)computeAreaSizeWithWestEdge:(NSInteger)xMin eastEdge:(NSInteger)xMax northEdge:(NSInteger)yMin andSouthEdge:(NSInteger)yMax
 {

@@ -217,14 +217,6 @@ const static NSString *kNumberOfTiles = @"NUMBER_TILES";
     NSAssert([areas count] > numberOfPlayers, @"We need more areas than possible starting plots, otherwise we are lost here!");
     
     // create power sets (with N = number of players) with areas to get the largest distanced set
-    // 2 areas + 2 players => 1 combination
-    // 3 areas + 2 players => 3 combination
-    // 4 areas + 2 players => 6 combination
-    // 5 areas + 2 players => 10 combination
-    // 3 areas + 3 players => 1 combination
-    // 4 areas + 3 players => 4 combination
-    // 5 areas + 3 players =>  combination
-    
     NSArray *bestSet = nil;
     NSInteger maxDistance = NSIntegerMin;
     for (NSArray *set in [self powerSet:areas]) {
@@ -239,26 +231,16 @@ const static NSString *kNumberOfTiles = @"NUMBER_TILES";
             if (distance > maxDistance) {
                 maxDistance = distance;
                 bestSet = set;
-                
-                NSLog(@"Set: %@ => %ld", set, (long)distance);
             }
         }
     }
     
-    // best set
+    // we have the best set, now we find the best plot in each of them and use this as starting position
     for (Area *area in bestSet) {
-        NSLog(@"area => starting: %@", area);
         
-        NSInteger bestfoodValue = NSIntegerMin;
-        Plot *bestPlot = nil;
-        for (Plot *plot in area.tiles) {
-            NSInteger foodValue = [self.siteEvaluator computeFoodValueForPlot:plot andPlayer:nil];
-            
-            if (foodValue > bestfoodValue) {
-                bestfoodValue = foodValue;
-                bestPlot = plot;
-            }
-        }
+        Plot *bestPlot = [area maximumTileFromEvaluator:^(Plot *plot) {
+            return [self.siteEvaluator computeFoodValueForPlot:plot andPlayer:nil];
+        }];
         
         [startPositions addObject:[NSValue valueWithCGPoint:CGPointMake(bestPlot.coordinate.x, bestPlot.coordinate.y)]];
     }

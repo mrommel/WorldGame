@@ -201,9 +201,6 @@ const static NSString *kNumberOfTiles = @"NUMBER_TILES";
         Area *biggestArea = [areas lastObject];
         [areas removeLastObject];
         
-        NSLog(@"areas: %@", areas);
-        NSLog(@"biggest: %@", biggestArea);
-        
         // and add the new parts
         [biggestArea divideIntoTwoAreas:^(Area *first, Area *second) {
             [areas addObject:first];

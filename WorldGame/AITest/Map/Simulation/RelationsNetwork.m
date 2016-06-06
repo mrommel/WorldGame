@@ -174,7 +174,7 @@
     return self;
 }
 
-- (void)setPlayer:(Player *)player withEvent:(EventType)eventType
+- (void)setPlayer:(Player *)player
 {
     self.player = player;
     
@@ -204,11 +204,6 @@
     [self.peopleStateEmployee addRelationTo:GroupValueFreq withFormula:@"-0.05+(0.1*x)" toPolicy:self.player.policeForce];
     [self.peopleStateEmployee addRelationTo:GroupValueMood withFormula:@"0.00+(0.18*x)" toPolicy:self.player.stateSchools];
     [self.peopleStateEmployee addRelationTo:GroupValueFreq withFormula:@"0+(0.1*x)" toPolicy:self.player.stateSchools];
-    
-#warning need to trigger something?
-    if (eventType == EventTypeConquest) {
-        // bad mood
-    }
 }
 
 - (void)turn

@@ -173,8 +173,6 @@ typedef NS_ENUM(NSInteger, PlotPopulationState) {
 - (Player *)owner;
 - (BOOL)hasOwner;
 
-- (BOOL)hasScience:(NSString *)scienceIdentifier;
-
 - (BOOL)isStartingPlot;
 - (void)setStartingPlot:(BOOL)bNewValue;
 

@@ -23,7 +23,7 @@
 
 - (instancetype)init;
 
-- (void)setPlayer:(Player *)player withEvent:(EventType)eventType;
+- (void)setPlayer:(Player *)player;
 
 - (void)turn;
 

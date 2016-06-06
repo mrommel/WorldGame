@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BitArray : NSObject
+@interface BitArray : NSObject<NSCoding>
 
 - (instancetype)initWithSize:(NSInteger)size NS_DESIGNATED_INITIALIZER;
 - (instancetype)initFromNumber:(NSInteger)number NS_DESIGNATED_INITIALIZER;

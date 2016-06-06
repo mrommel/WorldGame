@@ -436,7 +436,7 @@ static MapDataProvider *shared = nil;
 
 - (void)setOwner:(Player *)owner
 {
-    [self.network setPlayer:owner withEvent:EventTypeClaim];
+    [self.network setPlayer:owner];
     self.ownerIdentifier = owner.identifier;
 }
 
@@ -471,6 +471,8 @@ static MapDataProvider *shared = nil;
     switch (yieldType) {
         case YieldTypeFood:
             return data.soil * data.acres;
+        default:
+            return 0;
     }
     
     return 0;
@@ -511,6 +513,11 @@ static MapDataProvider *shared = nil;
                         [self.delegate plot:self handlePopulationStateChangeFrom:PlotPopulationStateVillage to:PlotPopulationStateTown];
                     }
                 }
+                break;
+            case PlotPopulationStateTown:
+            case PlotPopulationStateCity:
+            case PlotPopulationStateMetropol:
+                // NOOP
                 break;
         }
     

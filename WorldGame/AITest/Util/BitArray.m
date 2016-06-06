@@ -8,10 +8,14 @@
 
 #import "BitArray.h"
 
+static NSString * const kBitArrayByteSizeKey = @"BitArray.ByteSize";
+static NSString * const kBitArraySizeKey = @"BitArray.Size";
+static NSString * const kBitArrayValueKey = @"BitArray.Value%d";
+
 @interface BitArray() {
     Byte *_array;  // the bits for the array
     NSInteger   _bsize;  // the size of the byte array
-    NSInteger   _size;   // the number of bits of space actually in use
+    NSInteger   _size;   // the number of bits of space currently in use
 }
 
 
@@ -55,6 +59,39 @@
     _array = malloc(_bsize);
     memcpy(_array, &number, _bsize);
     return self;
+}
+
+#pragma mark -
+
+- (instancetype)initWithCoder:(NSCoder *)decoder
+{
+    self = [self init];
+    if (self) {
+        _bsize = [decoder decodeIntegerForKey:kBitArrayByteSizeKey];
+        _size = [decoder decodeIntegerForKey:kBitArraySizeKey];
+
+        _array = malloc(_bsize);
+        
+        for (int i = 0; i < _size; i++) {
+            BOOL value = [decoder decodeBoolForKey:[NSString stringWithFormat:kBitArrayValueKey, i]];
+            if (value) {
+                [self set:i];
+            } else {
+                [self reset:i];
+            }
+        }
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+    [encoder encodeInteger:_bsize forKey:kBitArrayByteSizeKey];
+    [encoder encodeInteger:_size forKey:kBitArraySizeKey];
+
+    for (int i = 0; i < _size; i++) {
+        [encoder encodeBool:[self isSetAt:i] forKey:[NSString stringWithFormat:kBitArrayValueKey, i]];
+    }
 }
 
 - (void)dealloc

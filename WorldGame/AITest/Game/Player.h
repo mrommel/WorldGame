@@ -17,15 +17,6 @@
 @class Government;
 
 /*!
- type of ministry
- */
-typedef NS_ENUM(NSInteger, EventType) {
-    EventTypeClaim,
-    EventTypeConquest,
-    EventTypeSold,
-};
-
-/*!
  class that hold an player (human or ai)
  */
 @interface Player : NSObject<NSCoding>

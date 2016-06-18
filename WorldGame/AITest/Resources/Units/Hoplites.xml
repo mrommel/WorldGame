@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<UnitType>
+    <Identifier>UNIT_HOPLITES</Identifier>
+    <Name>Hoplites</Name>
+    <Description>The Greeks mastered the art of spear warfare, creating long, deadly-sharp weapons that, in the hands of highly-trained hoplite soldiers moving in phalanx formation, were nearly impossible for standard infantry or horsemen of the day to defeat. A soldier facing a Greek phalanx had to contend with not only the enemy he faced, but also with the spears of the two or three soldiers behind that enemy. The hoplite remained somewhat vulnerable to archery fire, of course, and it was nearly impossible to maintain a phalanx's formation in difficult terrain, but in flat, open terrain, the hoplites were extremely tough opponents.</Description>
+    <ImageName>Hoplites.png</ImageName>
+    <UnitClass>Melee</UnitClass>
+    <MaxHealth>10</MaxHealth>
+    <MaxFuel>0</MaxFuel>
+    <MaxFood>0</MaxFood>
+    <MaxAmmo>0</MaxAmmo>
+</UnitType>

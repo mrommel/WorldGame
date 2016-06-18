@@ -362,11 +362,32 @@
 		1AEE80F21C7C5FB40028ACFF /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE80F11C7C5FB40028ACFF /* Unit.m */; };
 		1AEE80F31C7C5FB40028ACFF /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE80F11C7C5FB40028ACFF /* Unit.m */; };
 		1AEE80F41C7C5FB40028ACFF /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE80F11C7C5FB40028ACFF /* Unit.m */; };
+		1AEF61241D14168400253DD6 /* Hoplites.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AEF61221D14168400253DD6 /* Hoplites.png */; };
+		1AEF61251D14168400253DD6 /* Hoplites.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1AEF61231D14168400253DD6 /* Hoplites.xml */; };
+		1AEF61261D159E2B00253DD6 /* Array2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7C11C71C89900B3890E /* Array2D.m */; };
+		1AEF61271D159E2C00253DD6 /* Array2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7C11C71C89900B3890E /* Array2D.m */; };
+		1AEF61281D159E4B00253DD6 /* GamePersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB5991CB7C6EF00DA478B /* GamePersistance.m */; };
+		1AEF61291D159E4C00253DD6 /* GamePersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB5991CB7C6EF00DA478B /* GamePersistance.m */; };
+		1AEF612A1D159E6400253DD6 /* LoadGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A58E3701CBBB41A00AE7140 /* LoadGameViewController.m */; };
+		1AEF612B1D159E6500253DD6 /* LoadGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A58E3701CBBB41A00AE7140 /* LoadGameViewController.m */; };
+		1AEF612C1D159E7B00253DD6 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7BD1C71C83700B3890E /* Map.m */; };
+		1AEF612D1D159E7C00253DD6 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7BD1C71C83700B3890E /* Map.m */; };
+		1AEF612E1D159E9100253DD6 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7C51C71CBFD00B3890E /* MapView.m */; };
+		1AEF612F1D159E9100253DD6 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7C51C71CBFD00B3890E /* MapView.m */; };
+		1AEF61301D159EA000253DD6 /* Plot.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7BA1C71C45C00B3890E /* Plot.m */; };
+		1AEF61311D159EA100253DD6 /* Plot.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7BA1C71C45C00B3890E /* Plot.m */; };
+		1AEF61321D159EA400253DD6 /* PlotEconomy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3F4A1CD93AB90016F861 /* PlotEconomy.m */; };
+		1AEF61331D159EA400253DD6 /* PlotEconomy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3F4A1CD93AB90016F861 /* PlotEconomy.m */; };
+		1AEF61341D159EB500253DD6 /* SelectMapTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C22B41C9B40A3007F324C /* SelectMapTypeTableViewController.m */; };
+		1AEF61351D159EB600253DD6 /* SelectMapTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C22B41C9B40A3007F324C /* SelectMapTypeTableViewController.m */; };
+		1AEF61371D159F8600253DD6 /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1A2EA3A51C8B8C3900633417 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AFF700B1CD76EAE009C7203 /* MunicipalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700A1CD76EAE009C7203 /* MunicipalEntity.m */; };
 		1AFF700E1CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
 		1AFF700F1CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
 		1AFF70101CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
+		2F08D7799D43847E26BD7626 /* libPods-WorldGameUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BF6CD56DE8767BC4C7A8A6 /* libPods-WorldGameUITests.a */; };
 		8CCAD6340BE6FCF63B8F171D /* libPods-WorldGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6A70C686A1E0BDC5DE12E1 /* libPods-WorldGame.a */; };
+		DD880334038E90BD74FE74C1 /* libPods-WorldGameTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E11BF6731DF0EFE7E5965A /* libPods-WorldGameTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -397,10 +418,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AEF61361D159F5000253DD6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AEF61371D159F8600253DD6 /* CorePlot.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0967CE2F132D9B91D03A3BF9 /* Pods-WorldGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGame.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGame/Pods-WorldGame.debug.xcconfig"; sourceTree = "<group>"; };
+		10E11BF6731DF0EFE7E5965A /* libPods-WorldGameTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldGameTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13837E7261C4C2C87AFEF7CE /* Pods-WorldGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGameUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGameUITests/Pods-WorldGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A0FF26E1CA05E6200F64050 /* Grassland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grassland.png; path = Resources/Terrains/Grassland.png; sourceTree = "<group>"; };
 		1A0FF2721CA0617900F64050 /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Desert.png; path = Resources/Terrains/Desert.png; sourceTree = "<group>"; };
 		1A0FF2731CA0617900F64050 /* Ocean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ocean.png; path = Resources/Terrains/Ocean.png; sourceTree = "<group>"; };
@@ -615,13 +648,19 @@
 		1AEE80EC1C7BB20B0028ACFF /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Game/Player.m; sourceTree = "<group>"; };
 		1AEE80F01C7C5FB40028ACFF /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unit.h; path = Game/Unit.h; sourceTree = "<group>"; };
 		1AEE80F11C7C5FB40028ACFF /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Unit.m; path = Game/Unit.m; sourceTree = "<group>"; };
+		1AEF61221D14168400253DD6 /* Hoplites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hoplites.png; path = Resources/Units/Hoplites.png; sourceTree = "<group>"; };
+		1AEF61231D14168400253DD6 /* Hoplites.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Hoplites.xml; path = Resources/Units/Hoplites.xml; sourceTree = "<group>"; };
 		1AFF70091CD76EAE009C7203 /* MunicipalEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MunicipalEntity.h; path = Map/MunicipalEntity.h; sourceTree = "<group>"; };
 		1AFF700A1CD76EAE009C7203 /* MunicipalEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MunicipalEntity.m; path = Map/MunicipalEntity.m; sourceTree = "<group>"; };
 		1AFF700C1CD76EFB009C7203 /* Economy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Economy.h; path = Map/Economy.h; sourceTree = "<group>"; };
 		1AFF700D1CD76EFB009C7203 /* Economy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Economy.m; path = Map/Economy.m; sourceTree = "<group>"; };
+		27BF6CD56DE8767BC4C7A8A6 /* libPods-WorldGameUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldGameUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A395EDCF5E43F822B4E9DCD /* Pods-WorldGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGameTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGameTests/Pods-WorldGameTests.release.xcconfig"; sourceTree = "<group>"; };
 		2E6A70C686A1E0BDC5DE12E1 /* libPods-WorldGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		472EC2631BFA423A6E1647C5 /* Pods-WorldGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGameTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGameTests/Pods-WorldGameTests.debug.xcconfig"; sourceTree = "<group>"; };
 		807AC7FD8B8DD6A95D7D5509 /* Pods-WorldGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGame.release.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGame/Pods-WorldGame.release.xcconfig"; sourceTree = "<group>"; };
 		DCB729D7369B764E8DAC2248 /* libPods-AITest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AITest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D7BC5C37EBB0E902E8BB35 /* Pods-WorldGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGameUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGameUITests/Pods-WorldGameUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -639,6 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A2EA3A71C8B8C3900633417 /* CorePlot.framework in Frameworks */,
+				DD880334038E90BD74FE74C1 /* libPods-WorldGameTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +687,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A2EA3A81C8B8C3900633417 /* CorePlot.framework in Frameworks */,
+				2F08D7799D43847E26BD7626 /* libPods-WorldGameUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1011,6 +1052,7 @@
 				1AEE80BF1C7735530028ACFF /* Terrains */,
 				1A0FF28A1CA08EC300F64050 /* Features */,
 				1A35A9B31CADB1C90094F773 /* Policies */,
+				1AEF61211D14148F00253DD6 /* Units */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1055,11 +1097,22 @@
 			name = Game;
 			sourceTree = "<group>";
 		};
+		1AEF61211D14148F00253DD6 /* Units */ = {
+			isa = PBXGroup;
+			children = (
+				1AEF61221D14168400253DD6 /* Hoplites.png */,
+				1AEF61231D14168400253DD6 /* Hoplites.xml */,
+			);
+			name = Units;
+			sourceTree = "<group>";
+		};
 		2E294912C2975249D79A63A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				DCB729D7369B764E8DAC2248 /* libPods-AITest.a */,
 				2E6A70C686A1E0BDC5DE12E1 /* libPods-WorldGame.a */,
+				10E11BF6731DF0EFE7E5965A /* libPods-WorldGameTests.a */,
+				27BF6CD56DE8767BC4C7A8A6 /* libPods-WorldGameUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1069,6 +1122,10 @@
 			children = (
 				0967CE2F132D9B91D03A3BF9 /* Pods-WorldGame.debug.xcconfig */,
 				807AC7FD8B8DD6A95D7D5509 /* Pods-WorldGame.release.xcconfig */,
+				472EC2631BFA423A6E1647C5 /* Pods-WorldGameTests.debug.xcconfig */,
+				2A395EDCF5E43F822B4E9DCD /* Pods-WorldGameTests.release.xcconfig */,
+				13837E7261C4C2C87AFEF7CE /* Pods-WorldGameUITests.debug.xcconfig */,
+				F1D7BC5C37EBB0E902E8BB35 /* Pods-WorldGameUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1080,13 +1137,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A57E7AF1C71C3F200B3890E /* Build configuration list for PBXNativeTarget "WorldGame" */;
 			buildPhases = (
-				65823724CEBE3AAF18D7FBC8 /* Check Pods Manifest.lock */,
+				65823724CEBE3AAF18D7FBC8 /* 📦 Check Pods Manifest.lock */,
 				1A57E7781C71C3F200B3890E /* Sources */,
 				1A57E7791C71C3F200B3890E /* Frameworks */,
 				1A57E77A1C71C3F200B3890E /* Resources */,
 				1A2EA3BF1C8B900100633417 /* CopyFiles */,
-				6D23AEDF048CF9CBCF231C0F /* Embed Pods Frameworks */,
-				71E68ACAA8AC913A4CBA2671 /* Copy Pods Resources */,
+				6D23AEDF048CF9CBCF231C0F /* 📦 Embed Pods Frameworks */,
+				71E68ACAA8AC913A4CBA2671 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1101,9 +1158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A57E7B21C71C3F200B3890E /* Build configuration list for PBXNativeTarget "WorldGameTests" */;
 			buildPhases = (
+				4FF1D2DEA2D5B71ABA8F53EA /* 📦 Check Pods Manifest.lock */,
 				1A57E7971C71C3F200B3890E /* Sources */,
 				1A57E7981C71C3F200B3890E /* Frameworks */,
 				1A57E7991C71C3F200B3890E /* Resources */,
+				47DAAB064BCEA6ED65DAA031 /* 📦 Embed Pods Frameworks */,
+				DAC39B35CFF7EF76EE49B2FC /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1119,9 +1179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A57E7B51C71C3F200B3890E /* Build configuration list for PBXNativeTarget "WorldGameUITests" */;
 			buildPhases = (
+				85521AAA63C2FD08E512A4FA /* 📦 Check Pods Manifest.lock */,
 				1A57E7A21C71C3F200B3890E /* Sources */,
 				1A57E7A31C71C3F200B3890E /* Frameworks */,
 				1A57E7A41C71C3F200B3890E /* Resources */,
+				2C6C78A7BEE70AB40037300B /* 📦 Copy Pods Resources */,
+				1AEF61361D159F5000253DD6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1228,6 +1291,7 @@
 				1A5C22EA1C9C164F007F324C /* RessourceTiles.png in Resources */,
 				1A35A9CE1CAE8B170094F773 /* Parliament.png in Resources */,
 				1A48FCC61CEE310B00CFE558 /* town.png in Resources */,
+				1AEF61251D14168400253DD6 /* Hoplites.xml in Resources */,
 				1A5701191CB302AC00F346D9 /* SalesTax.png in Resources */,
 				1A5C22E01C9C164F007F324C /* ImprovementTiles.png in Resources */,
 				1A5C22F11C9C164F007F324C /* UnitActionAtlas.xml in Resources */,
@@ -1235,6 +1299,7 @@
 				1A5C22E71C9C164F007F324C /* PolicyAtlas.xml in Resources */,
 				1A0FF2781CA0617900F64050 /* Desert.png in Resources */,
 				1A5C22F61C9C164F007F324C /* YieldTiles.png in Resources */,
+				1AEF61241D14168400253DD6 /* Hoplites.png in Resources */,
 				1A5701111CB2FE6B00F346D9 /* IncomeTax.png in Resources */,
 				1A57E7951C71C3F200B3890E /* LaunchScreen.storyboard in Resources */,
 				1A84BB3B1CBFB5DF00CE7EDC /* cancel.png in Resources */,
@@ -1401,14 +1466,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		65823724CEBE3AAF18D7FBC8 /* Check Pods Manifest.lock */ = {
+		2C6C78A7BEE70AB40037300B /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-WorldGameUITests/Pods-WorldGameUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47DAAB064BCEA6ED65DAA031 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-WorldGameTests/Pods-WorldGameTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FF1D2DEA2D5B71ABA8F53EA /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1416,14 +1511,29 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6D23AEDF048CF9CBCF231C0F /* Embed Pods Frameworks */ = {
+		65823724CEBE3AAF18D7FBC8 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6D23AEDF048CF9CBCF231C0F /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1431,19 +1541,49 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-WorldGame/Pods-WorldGame-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		71E68ACAA8AC913A4CBA2671 /* Copy Pods Resources */ = {
+		71E68ACAA8AC913A4CBA2671 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-WorldGame/Pods-WorldGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85521AAA63C2FD08E512A4FA /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAC39B35CFF7EF76EE49B2FC /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-WorldGameTests/Pods-WorldGameTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1523,11 +1663,14 @@
 				1A2EA3FF1C994AF300633417 /* NSArray+Util.m in Sources */,
 				1A2EA38E1C89872200633417 /* Policy.m in Sources */,
 				1A3C3A051C7F2F75004009DA /* Leader.m in Sources */,
+				1AEF612B1D159E6500253DD6 /* LoadGameViewController.m in Sources */,
 				1A3C3A001C7F2C98004009DA /* Civilization.m in Sources */,
 				1A2EA3ED1C95FD0500633417 /* DebugUtil.m in Sources */,
 				1A2EA3F51C98AC4000633417 /* HeightMap.m in Sources */,
 				1A2EA3D41C8F694F00633417 /* Situation.m in Sources */,
+				1AEF612C1D159E7B00253DD6 /* Map.m in Sources */,
 				1A2EA3841C89864800633417 /* Relation.m in Sources */,
+				1AEF61341D159EB500253DD6 /* SelectMapTypeTableViewController.m in Sources */,
 				1A2EA3DE1C90702800633417 /* BitArray.m in Sources */,
 				1A3C39FB1C7EF5FA004009DA /* GrandStrategyAI.m in Sources */,
 				1A3C3A3E1C84ED9A004009DA /* UILabel+Custom.m in Sources */,
@@ -1540,13 +1683,18 @@
 				1AEBDE0A1CC7B57E00BE09E8 /* DateUtils.m in Sources */,
 				1A3C3A331C84EA8C004009DA /* OverlayView.m in Sources */,
 				1AEE80F31C7C5FB40028ACFF /* Unit.m in Sources */,
+				1AEF61321D159EA400253DD6 /* PlotEconomy.m in Sources */,
+				1AEF61301D159EA000253DD6 /* Plot.m in Sources */,
 				1A2EA3CA1C8E1C5200633417 /* ChartView.m in Sources */,
 				1A35A9B01CA2BD430094F773 /* PolicyInfo.m in Sources */,
 				1A2EA3891C8986AE00633417 /* Group.m in Sources */,
+				1AEF61281D159E4B00253DD6 /* GamePersistance.m in Sources */,
 				1AFF700F1CD76EFB009C7203 /* Economy.m in Sources */,
 				1A3C3A0A1C7F3090004009DA /* Flavor.m in Sources */,
 				1A2EA3CF1C8F2BE600633417 /* MapEvaluator.m in Sources */,
+				1AEF612E1D159E9100253DD6 /* MapView.m in Sources */,
 				1A48FCCB1CEE354000CFE558 /* KeyValueMap.m in Sources */,
+				1AEF61261D159E2B00253DD6 /* Array2D.m in Sources */,
 				1A57E7A01C71C3F200B3890E /* AITestTests.m in Sources */,
 				1A57E7E91C74ABB300B3890E /* MainMenuViewController.m in Sources */,
 				1A3C3A481C84F028004009DA /* NSString+Custom.m in Sources */,
@@ -1578,11 +1726,14 @@
 				1A2EA4001C994AF300633417 /* NSArray+Util.m in Sources */,
 				1A2EA38F1C89872200633417 /* Policy.m in Sources */,
 				1A3C3A061C7F2F75004009DA /* Leader.m in Sources */,
+				1AEF612A1D159E6400253DD6 /* LoadGameViewController.m in Sources */,
 				1A3C3A011C7F2C98004009DA /* Civilization.m in Sources */,
 				1A2EA3EE1C95FD0500633417 /* DebugUtil.m in Sources */,
 				1A2EA3F61C98AC4000633417 /* HeightMap.m in Sources */,
 				1A2EA3D51C8F694F00633417 /* Situation.m in Sources */,
+				1AEF612D1D159E7C00253DD6 /* Map.m in Sources */,
 				1A2EA3851C89864800633417 /* Relation.m in Sources */,
+				1AEF61351D159EB600253DD6 /* SelectMapTypeTableViewController.m in Sources */,
 				1A2EA3DF1C90702800633417 /* BitArray.m in Sources */,
 				1A3C39FC1C7EF5FA004009DA /* GrandStrategyAI.m in Sources */,
 				1A3C3A3F1C84ED9A004009DA /* UILabel+Custom.m in Sources */,
@@ -1595,13 +1746,18 @@
 				1AEBDE0B1CC7B57E00BE09E8 /* DateUtils.m in Sources */,
 				1A3C3A341C84EA8C004009DA /* OverlayView.m in Sources */,
 				1AEE80F41C7C5FB40028ACFF /* Unit.m in Sources */,
+				1AEF61331D159EA400253DD6 /* PlotEconomy.m in Sources */,
+				1AEF61311D159EA100253DD6 /* Plot.m in Sources */,
 				1A2EA3CB1C8E1C5200633417 /* ChartView.m in Sources */,
 				1A35A9B11CA2BD430094F773 /* PolicyInfo.m in Sources */,
 				1A2EA38A1C8986AE00633417 /* Group.m in Sources */,
+				1AEF61291D159E4C00253DD6 /* GamePersistance.m in Sources */,
 				1AFF70101CD76EFB009C7203 /* Economy.m in Sources */,
 				1A3C3A0B1C7F3090004009DA /* Flavor.m in Sources */,
 				1A2EA3D01C8F2BE600633417 /* MapEvaluator.m in Sources */,
+				1AEF612F1D159E9100253DD6 /* MapView.m in Sources */,
 				1A48FCCC1CEE354000CFE558 /* KeyValueMap.m in Sources */,
+				1AEF61271D159E2C00253DD6 /* Array2D.m in Sources */,
 				1A57E7AB1C71C3F200B3890E /* AITestUITests.m in Sources */,
 				1A57E7EA1C74ABB300B3890E /* MainMenuViewController.m in Sources */,
 				1A3C3A491C84F028004009DA /* NSString+Custom.m in Sources */,
@@ -1767,6 +1923,7 @@
 		};
 		1A57E7B31C71C3F200B3890E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 472EC2631BFA423A6E1647C5 /* Pods-WorldGameTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1783,6 +1940,7 @@
 		};
 		1A57E7B41C71C3F200B3890E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A395EDCF5E43F822B4E9DCD /* Pods-WorldGameTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1799,6 +1957,7 @@
 		};
 		1A57E7B61C71C3F200B3890E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13837E7261C4C2C87AFEF7CE /* Pods-WorldGameUITests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1808,13 +1967,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.AITestUITests;
 				PRODUCT_NAME = WorldGame;
-				TEST_TARGET_NAME = AITest;
+				PROVISIONING_PROFILE = "";
+				TEST_TARGET_NAME = WorldGame;
 				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
 		};
 		1A57E7B71C71C3F200B3890E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1D7BC5C37EBB0E902E8BB35 /* Pods-WorldGameUITests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1824,7 +1985,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.AITestUITests;
 				PRODUCT_NAME = WorldGame;
-				TEST_TARGET_NAME = AITest;
+				PROVISIONING_PROFILE = "";
+				TEST_TARGET_NAME = WorldGame;
 				USES_XCTRUNNER = YES;
 			};
 			name = Release;

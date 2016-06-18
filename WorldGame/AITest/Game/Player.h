@@ -50,7 +50,6 @@
 - (BOOL)isArtificial;
 
 - (void)addUnit:(Unit *)unit;
-- (void)settleAtX:(int)x andY:(int)y;
 
 - (NSMutableArray *)policiesForMinistry:(Ministry)ministry;
 

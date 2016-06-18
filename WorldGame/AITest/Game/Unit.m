@@ -9,38 +9,54 @@
 #import "Unit.h"
 
 #import "Map.h"
+#import "XMLReader.h"
+#import "NSDictionary+Extension.h"
 
 #define INVALID_POINT   CGPointMake(-1, -1)
 
-@implementation UnitOrder
+@implementation NSString (EnumParser)
 
-- (instancetype)initWithType:(UnitOrderType)orderType andDestination:(CGPoint)destination
+- (UnitClass)unitClassValue
 {
-    NSAssert(orderType == UnitOrderTypeStay ||
-             orderType == UnitOrderTypeMove, @"Unsupported OrderType for constructor");
-    
-    self = [super init];
-    
-    if (self) {
-        self.orderType = orderType;
-        self.target = nil;
-        self.destination = destination;
-    }
-    
-    return self;
+    NSDictionary<NSString*, NSNumber*> *unitTypes = @{
+                                                        @"Melee": @(UnitTypeMelee),
+                                                        @"Ranged": @(UnitTypeRanged),
+                                                        @"Cavalry": @(UnitTypeCavalry)
+                                                    };
+    return unitTypes[self].integerValue;
 }
 
-- (instancetype)initWithType:(UnitOrderType)orderType andTarget:(Unit *)target
+- (UnitPromotion)unitPromotionValue
 {
-    NSAssert(orderType == UnitOrderTypeAttack ||
-             orderType == UnitOrderTypeSupport, @"Unsupported OrderType for constructor");
-    
+    return UnitPromotionEmbark;
+}
+
+@end
+
+#pragma mark -
+
+@implementation UnitType
+
+- (instancetype)initFromFile:(NSString *)fileName
+{
     self = [super init];
     
     if (self) {
-        self.orderType = orderType;
-        self.target = target;
-        self.destination = INVALID_POINT;
+        // laod the file
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"xml"];
+        NSError *error = nil;
+        NSData *data = [NSData dataWithContentsOfFile:filePath
+                                              options:NSDataReadingUncached
+                                                error:&error];
+        NSDictionary *dict = [XMLReader dictionaryForXMLData:data
+                                                     options:XMLReaderOptionsProcessNamespaces
+                                                       error:&error];
+        // fill the values
+        self.unitClass = [[dict objectForPath:@"UnitType|UnitClass|text"] unitClassValue];
+        self.maxAmmo = [[dict objectForPath:@"UnitType|MaxAmmo|text"] intValue];
+        self.maxFood = [[dict objectForPath:@"UnitType|MaxFood|text"] intValue];
+        self.maxFuel = [[dict objectForPath:@"UnitType|MaxFuel|text"] intValue];
+        self.maxHealth = [[dict objectForPath:@"UnitType|MaxHealth|text"] intValue];
     }
     
     return self;
@@ -48,32 +64,134 @@
 
 @end
 
-@implementation Unit
+#pragma mark -
 
-- (instancetype)initWithPosition:(CGPoint)position andType:(UnitType)type
+@interface UnitTypeProvider()
+
+@property (nonatomic) NSMutableDictionary *unitTypes;
+
+@end
+
+@implementation UnitTypeProvider
+
+static UnitTypeProvider *shared = nil;
+
++ (UnitTypeProvider *)sharedInstance
+{
+    @synchronized (self) {
+        if (shared == nil) {
+            shared = [[self alloc] init];
+        }
+    }
+    
+    return shared;
+}
+
+- (instancetype)init
 {
     self = [super init];
     
     if (self) {
-        self.type = type;
-        self.position = position;
-        self.health = 100;
+        self.unitTypes = [NSMutableDictionary new];
+        
+        NSArray *unitTypes = @[@"Hoplites"];
+        
+        for (NSString *unitType in unitTypes) {
+            [self.unitTypes setObject:[[UnitType alloc] initFromFile:unitType] forKey:unitType];
+        }
     }
     
     return self;
 }
 
-- (BOOL)executeOrder:(UnitOrder *)order onMap:(Map *)map
+- (UnitType *)unitTypeForTypeKey:(NSString *)typeKey
 {
-    switch (order.orderType) {
-        case UnitOrderTypeMove:
-            
-            break;
-        default:
-            break;
+    return [self.unitTypes objectForKey:typeKey];
+}
+
+@end
+
+#pragma mark -
+
+@implementation Unit
+
+- (instancetype)initWithType:(NSString *)typeKey atPosition:(CGPoint)position onMap:(Map *)map
+{
+    self = [super init];
+    
+    if (self) {
+        self.typeKey = typeKey;
+        self.position = position;
+        
+        UnitType *type = [[UnitTypeProvider sharedInstance] unitTypeForTypeKey:typeKey];
+        self.health = type.maxHealth;
+        self.ammo = type.maxAmmo;
+        self.food = type.maxFood;
+        self.fuel = type.maxFuel;
+
+        // copy promotions
+        self.promotions = [NSMutableArray new];
+        
+        for (NSNumber *promotionNumber in type.promotions) {
+            [self addPromotion:[promotionNumber intValue]];
+        }
     }
     
-    return YES;
+    return self;
+}
+
+- (BOOL)hasPromotion:(UnitPromotion)promotion
+{
+    for (NSNumber *promotionNumber in self.promotions) {
+        if ([promotionNumber intValue] == promotion) {
+            return YES;
+        };
+    }
+    
+    return NO;
+}
+
+- (void)addPromotion:(UnitPromotion)promotion
+{
+    [self.promotions addObject:[NSNumber numberWithInt:promotion]];
+}
+
+@end
+
+#pragma mark -
+
+@implementation Army
+
+- (instancetype)initWithLeader:(ArmyLeader *)leader
+{
+    self = [super init];
+    
+    if (self) {
+        self.leader = leader;
+        self.units = [NSMutableArray new];
+    }
+    
+    return self;
+}
+
+- (void)addUnit:(Unit *)unit
+{
+    
+}
+
+- (void)join:(Army *)army
+{
+    
+}
+
+- (void)attackArmyAt:(CGPoint)position withCallback:(CombatCallback)callback
+{
+    
+}
+
+- (void)siegeCityAt:(CGPoint)position withCallback:(CombatCallback)callback
+{
+    
 }
 
 @end

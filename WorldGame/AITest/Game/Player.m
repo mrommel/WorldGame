@@ -111,11 +111,6 @@ static NSUInteger playerIdentifier = 0;
     [self.units addObject:unit];
 }
 
-- (void)settleAtX:(int)x andY:(int)y
-{
-    //[[[GameProvider sharedInstance].game.map tileAtX:x andY:y] settleWithPlayer:self];
-}
-
 - (NSMutableArray *)policiesForMinistry:(Ministry)ministry
 {
     NSMutableArray *policies = [NSMutableArray new];

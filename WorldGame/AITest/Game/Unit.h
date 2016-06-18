@@ -10,44 +10,66 @@
 #import <UIKit/UIKit.h>
 
 @class Unit;
-
-/*!
- type of unitorder
- */
-typedef NS_ENUM(NSInteger, UnitOrderType) {
-    UnitOrderTypeDefault,
-    UnitOrderTypeStay, /* Idle */
-    UnitOrderTypeMove,
-    UnitOrderTypeFound,
-    UnitOrderTypeBuild,
-    UnitOrderTypeAttack,
-    UnitOrderTypeDefend,
-    UnitOrderTypeSupport
-};
-
-/*!
- this class represents something a Unit can execute
- */
-@interface UnitOrder : NSObject
-
-@property (atomic) UnitOrderType orderType;
-@property (atomic) CGPoint destination;
-@property (nonatomic) Unit *target;
-
-- (instancetype)initWithType:(UnitOrderType)orderType andDestination:(CGPoint)destination;
-- (instancetype)initWithType:(UnitOrderType)orderType andTarget:(Unit *)target;
-
-@end
+@class Army;
 
 /*!
  type of unit
  */
-typedef NS_ENUM(NSInteger, UnitType) {
-    UnitTypeDefault,
-    UnitTypeWorker,
-    UnitTypeWarrior,
-    UnitTypeArcher
+typedef NS_ENUM(NSInteger, UnitClass) {
+    UnitTypeMelee = 0, /* Infantry */
+    UnitTypeRanged = 1, /* Archer */
+    UnitTypeCavalry = 2,
+    UnitTypeSiege = 3,
 };
+
+/*!
+ type of unit
+ */
+typedef NS_ENUM(NSInteger, UnitPromotion) {
+    UnitPromotionEmbark = 0,
+    UnitPromotionSight = 1,
+    UnitPromotionHealing = 2,
+    UnitPromotionRoadBuilding = 3,
+};
+
+/*!
+ class that parses unit types / promotions
+ */
+@interface NSString (EnumParser)
+
+- (UnitClass)unitClassValue;
+- (UnitPromotion)unitPromotionValue;
+
+@end
+
+/*!
+ class that handles units
+ 
+ loaded from file system
+ */
+@interface UnitType : NSObject
+
+@property (atomic) UnitClass unitClass;
+
+@property (atomic) int maxHealth;
+@property (atomic) int maxFuel;
+@property (atomic) int maxAmmo;
+@property (atomic) int maxFood;
+
+@property (nonatomic) NSMutableArray *promotions;
+
+@end
+
+/*!
+ class that returns all unit types
+ */
+@interface UnitTypeProvider : NSObject
+
++ (UnitTypeProvider *)sharedInstance;
+
+- (UnitType *)unitTypeForTypeKey:(NSString *)typeKey;
+
+@end
 
 @class Map;
 
@@ -57,11 +79,60 @@ typedef NS_ENUM(NSInteger, UnitType) {
 @interface Unit : NSObject
 
 @property (atomic) CGPoint position;
-@property (atomic) UnitType type;
-@property (atomic) int health; /* 0 .. 100 */
+@property (nonatomic) NSString *typeKey;
 
-- (instancetype)initWithPosition:(CGPoint)position andType:(UnitType)type;
+// variables
+@property (nonatomic) UnitType *unitType; // prefilled from typeKey
 
-- (BOOL)executeOrder:(UnitOrder *)order onMap:(Map *)map;
+@property (atomic) int health; // max health from type
+
+// supply
+@property (atomic) int fuel; // max fuel from type
+@property (atomic) int ammo; // max ammo from type
+@property (atomic) int food; // max food from type
+
+@property (nonatomic) NSMutableArray *promotions; // prefilled from type (but can get extended)
+
+- (instancetype)initWithType:(NSString *)typeKey atPosition:(CGPoint)position onMap:(Map *)map;
+
+- (BOOL)hasPromotion:(UnitPromotion)promotion;
+- (void)addPromotion:(UnitPromotion)promotion;
 
 @end
+
+@class ArmyLeader;
+
+/*!
+ callback for game turn events
+ */
+typedef void (^CombatCallback)(NSString *message, int attackerLoss, int defenderLoss);
+
+/*!
+ class that handles an army
+ */
+@interface Army : NSObject
+
+@property (nonatomic) NSMutableArray *units;
+@property (nonatomic) ArmyLeader *leader;
+@property (nonatomic) NSString *name;
+
+- (instancetype)initWithLeader:(ArmyLeader *)leader;
+
+- (void)addUnit:(Unit *)unit;
+- (void)join:(Army *)army;
+
+- (void)attackArmyAt:(CGPoint)position withCallback:(CombatCallback)callback;
+- (void)siegeCityAt:(CGPoint)position withCallback:(CombatCallback)callback;
+
+@end
+
+/*!
+ class that handles an army leader
+ */
+@interface ArmyLeader : NSObject
+
+- (instancetype)initWithName:(NSString *)name;
+
+@end
+
+

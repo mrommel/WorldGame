@@ -8,32 +8,55 @@
 
 #import <XCTest/XCTest.h>
 
-@interface AITestTests : XCTestCase
+#import "Unit.h"
+
+@interface UnitTests : XCTestCase
 
 @end
 
-@implementation AITestTests
+@implementation UnitTests
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
-- (void)tearDown {
+- (void)tearDown
+{
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testUnitCreation
+{
+    Unit *unit = [[Unit alloc] initWithType:@"Hoplites" atPosition:CGPointMake(0, 0) onMap:nil];
+    XCTAssertNotNil(unit, @"Unit could not be created");
 }
 
-- (void)testPerformanceExample {
+- (void)testUnitPromotion
+{
+    Unit *unit = [[Unit alloc] initWithType:@"Hoplites" atPosition:CGPointMake(0, 0) onMap:nil];
+    
+    // pre check
+    XCTAssert(![unit hasPromotion:UnitPromotionEmbark], @"unit have the promotion already");
+    
+    [unit addPromotion:UnitPromotionEmbark];
+    
+    XCTAssert([unit hasPromotion:UnitPromotionEmbark], @"unit does not have the promotion");
+}
+
+- (void)testArmyCreation
+{
+    Army *army = [[Army alloc] initWithLeader:nil];
+    XCTAssertNotNil(army, @"Army could not be created");
+}
+
+/*- (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
-}
+}*/
 
 @end

@@ -243,7 +243,7 @@
 		1A57E7921C71C3F200B3890E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A57E7911C71C3F200B3890E /* Assets.xcassets */; };
 		1A57E7951C71C3F200B3890E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A57E7931C71C3F200B3890E /* LaunchScreen.storyboard */; };
 		1A57E7A01C71C3F200B3890E /* AITestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E79F1C71C3F200B3890E /* AITestTests.m */; };
-		1A57E7AB1C71C3F200B3890E /* AITestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7AA1C71C3F200B3890E /* AITestUITests.m */; };
+		1A57E7AB1C71C3F200B3890E /* AITestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7AA1C71C3F200B3890E /* AITestUITests.swift */; };
 		1A57E7BB1C71C45C00B3890E /* Plot.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7BA1C71C45C00B3890E /* Plot.m */; };
 		1A57E7BE1C71C83700B3890E /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7BD1C71C83700B3890E /* Map.m */; };
 		1A57E7C21C71C89900B3890E /* Array2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7C11C71C89900B3890E /* Array2D.m */; };
@@ -381,6 +381,7 @@
 		1AEF61341D159EB500253DD6 /* SelectMapTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C22B41C9B40A3007F324C /* SelectMapTypeTableViewController.m */; };
 		1AEF61351D159EB600253DD6 /* SelectMapTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C22B41C9B40A3007F324C /* SelectMapTypeTableViewController.m */; };
 		1AEF61371D159F8600253DD6 /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1A2EA3A51C8B8C3900633417 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AFAF3A81D212C0500165808 /* BaseUITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF3A71D212C0500165808 /* BaseUITestCase.swift */; };
 		1AFF700B1CD76EAE009C7203 /* MunicipalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700A1CD76EAE009C7203 /* MunicipalEntity.m */; };
 		1AFF700E1CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
 		1AFF700F1CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
@@ -558,7 +559,7 @@
 		1A57E79F1C71C3F200B3890E /* AITestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AITestTests.m; sourceTree = "<group>"; };
 		1A57E7A11C71C3F200B3890E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A57E7A61C71C3F200B3890E /* WorldGame.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldGame.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A57E7AA1C71C3F200B3890E /* AITestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AITestUITests.m; sourceTree = "<group>"; };
+		1A57E7AA1C71C3F200B3890E /* AITestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITestUITests.swift; sourceTree = "<group>"; };
 		1A57E7AC1C71C3F200B3890E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A57E7B91C71C45C00B3890E /* Plot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Plot.h; path = Map/Plot.h; sourceTree = "<group>"; };
 		1A57E7BA1C71C45C00B3890E /* Plot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Plot.m; path = Map/Plot.m; sourceTree = "<group>"; };
@@ -650,6 +651,7 @@
 		1AEE80F11C7C5FB40028ACFF /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Unit.m; path = Game/Unit.m; sourceTree = "<group>"; };
 		1AEF61221D14168400253DD6 /* Hoplites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hoplites.png; path = Resources/Units/Hoplites.png; sourceTree = "<group>"; };
 		1AEF61231D14168400253DD6 /* Hoplites.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Hoplites.xml; path = Resources/Units/Hoplites.xml; sourceTree = "<group>"; };
+		1AFAF3A71D212C0500165808 /* BaseUITestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITestCase.swift; sourceTree = "<group>"; };
 		1AFF70091CD76EAE009C7203 /* MunicipalEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MunicipalEntity.h; path = Map/MunicipalEntity.h; sourceTree = "<group>"; };
 		1AFF700A1CD76EAE009C7203 /* MunicipalEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MunicipalEntity.m; path = Map/MunicipalEntity.m; sourceTree = "<group>"; };
 		1AFF700C1CD76EFB009C7203 /* Economy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Economy.h; path = Map/Economy.h; sourceTree = "<group>"; };
@@ -870,7 +872,8 @@
 		1A57E7A91C71C3F200B3890E /* AITestUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1A57E7AA1C71C3F200B3890E /* AITestUITests.m */,
+				1AFAF3A91D212C4800165808 /* Helpers */,
+				1A57E7AA1C71C3F200B3890E /* AITestUITests.swift */,
 				1A57E7AC1C71C3F200B3890E /* Info.plist */,
 			);
 			path = AITestUITests;
@@ -1104,6 +1107,14 @@
 				1AEF61231D14168400253DD6 /* Hoplites.xml */,
 			);
 			name = Units;
+			sourceTree = "<group>";
+		};
+		1AFAF3A91D212C4800165808 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1AFAF3A71D212C0500165808 /* BaseUITestCase.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		2E294912C2975249D79A63A5 /* Frameworks */ = {
@@ -1723,6 +1734,7 @@
 			files = (
 				1A3C3A1F1C7F9DD7004009DA /* Area.m in Sources */,
 				1A2EA3FB1C98AFF700633417 /* MapGenerator.m in Sources */,
+				1AFAF3A81D212C0500165808 /* BaseUITestCase.swift in Sources */,
 				1A2EA4001C994AF300633417 /* NSArray+Util.m in Sources */,
 				1A2EA38F1C89872200633417 /* Policy.m in Sources */,
 				1A3C3A061C7F2F75004009DA /* Leader.m in Sources */,
@@ -1758,7 +1770,7 @@
 				1AEF612F1D159E9100253DD6 /* MapView.m in Sources */,
 				1A48FCCC1CEE354000CFE558 /* KeyValueMap.m in Sources */,
 				1AEF61271D159E2C00253DD6 /* Array2D.m in Sources */,
-				1A57E7AB1C71C3F200B3890E /* AITestUITests.m in Sources */,
+				1A57E7AB1C71C3F200B3890E /* AITestUITests.swift in Sources */,
 				1A57E7EA1C74ABB300B3890E /* MainMenuViewController.m in Sources */,
 				1A3C3A491C84F028004009DA /* NSString+Custom.m in Sources */,
 				1A5C22FB1C9C16D2007F324C /* ImageAtlas.m in Sources */,
@@ -1959,6 +1971,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13837E7261C4C2C87AFEF7CE /* Pods-WorldGameUITests.debug.xcconfig */;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
@@ -1977,6 +1990,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F1D7BC5C37EBB0E902E8BB35 /* Pods-WorldGameUITests.release.xcconfig */;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",

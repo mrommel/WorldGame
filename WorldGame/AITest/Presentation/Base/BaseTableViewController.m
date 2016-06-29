@@ -145,7 +145,10 @@
 {
     if ([self respondsToSelector:@selector(contentAtIndexPath:)]) {
         TableViewContent *content = [self performSelector:@selector(contentAtIndexPath:) withObject:indexPath];
-        content.action(indexPath);
+        
+        if (content.action != nil) {
+            content.action(indexPath);
+        }
     }
 }
 

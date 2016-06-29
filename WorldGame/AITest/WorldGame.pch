@@ -1,0 +1,14 @@
+//
+//  WorldGame.pch
+//  WorldGame
+//
+//  Created by Michael Rommel on 29.06.16.
+//  Copyright © 2016 Michael Rommel. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#endif /* WorldGame_pch */

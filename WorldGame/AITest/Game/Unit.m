@@ -176,7 +176,7 @@ static UnitTypeProvider *shared = nil;
 
 - (void)addUnit:(Unit *)unit
 {
-    
+    [self.units addObject:unit];
 }
 
 - (void)join:(Army *)army
@@ -184,9 +184,41 @@ static UnitTypeProvider *shared = nil;
     
 }
 
-- (void)attackArmyAt:(CGPoint)position withCallback:(CombatCallback)callback
+/*!
+ questions:
+ * maybe the army needs to move to the spot first
+ * is the combat in turns?
+ * can an army retreat? and when?
+ * what about two armies in the same spot? should they merge first?
+ */
+- (void)attackArmy:(Army *)defender withCallback:(CombatCallback)callback
 {
+    Army *attacker = self;
     
+    // our army should be on the neighboring tile
+    /*if (![attacker isOnPosition:[defender getPosition]]) {
+        if (callback != nil) {
+            CombatResult *combatResult = [[CombatResult alloc] initWithCombatResultType:CombatResultTypeAbort];
+            callback(combatResult);
+            return;
+        }
+    }*/
+    
+    // fill in the play field
+    // start with melee/tanks and end with ranged/artillery/air crafts
+    
+    // #####
+    // #####
+    // #####
+    // ----- (river?)
+    // *****
+    // *****
+    // *****
+    
+    // attacker starts to move/atack with all units
+    // defender
+    // attacker
+    // loop until someone retreats
 }
 
 - (void)siegeCityAt:(CGPoint)position withCallback:(CombatCallback)callback

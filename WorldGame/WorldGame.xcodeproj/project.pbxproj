@@ -323,9 +323,38 @@
 		1A8D66C31CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
 		1AAE3F4B1CD93AB90016F861 /* PlotEconomy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3F4A1CD93AB90016F861 /* PlotEconomy.m */; };
 		1AAEB59A1CB7C6EF00DA478B /* GamePersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB5991CB7C6EF00DA478B /* GamePersistance.m */; };
+		1ABE0E631D2438250009F3F2 /* CombatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E621D2438250009F3F2 /* CombatViewController.m */; };
+		1ABE0E641D2438250009F3F2 /* CombatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E621D2438250009F3F2 /* CombatViewController.m */; };
+		1ABE0E651D2438250009F3F2 /* CombatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E621D2438250009F3F2 /* CombatViewController.m */; };
+		1ABE0E671D24394B0009F3F2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABE0E661D24394B0009F3F2 /* OpenGLES.framework */; };
+		1ABE0E691D2439500009F3F2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABE0E681D2439500009F3F2 /* QuartzCore.framework */; };
+		1ABE0E6C1D2439870009F3F2 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E6B1D2439870009F3F2 /* OpenGLView.m */; };
+		1ABE0E6D1D2439870009F3F2 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E6B1D2439870009F3F2 /* OpenGLView.m */; };
+		1ABE0E6E1D2439870009F3F2 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E6B1D2439870009F3F2 /* OpenGLView.m */; };
+		1ABE0E711D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0E701D243B1E0009F3F2 /* SimpleVertex.glsl */; };
+		1ABE0E721D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0E701D243B1E0009F3F2 /* SimpleVertex.glsl */; };
+		1ABE0E731D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0E701D243B1E0009F3F2 /* SimpleVertex.glsl */; };
+		1ABE0E751D243B420009F3F2 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0E741D243B420009F3F2 /* SimpleFragment.glsl */; };
+		1ABE0E761D243B420009F3F2 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0E741D243B420009F3F2 /* SimpleFragment.glsl */; };
+		1ABE0E771D243B420009F3F2 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0E741D243B420009F3F2 /* SimpleFragment.glsl */; };
+		1ABE0E841D243ECD0009F3F2 /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7B1D243ECD0009F3F2 /* CC3Foundation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1ABE0E851D243ECD0009F3F2 /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7B1D243ECD0009F3F2 /* CC3Foundation.m */; };
+		1ABE0E861D243ECD0009F3F2 /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7B1D243ECD0009F3F2 /* CC3Foundation.m */; };
+		1ABE0E871D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7D1D243ECD0009F3F2 /* CC3GLMatrix.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1ABE0E881D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7D1D243ECD0009F3F2 /* CC3GLMatrix.m */; };
+		1ABE0E891D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7D1D243ECD0009F3F2 /* CC3GLMatrix.m */; };
+		1ABE0E8A1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7E1D243ECD0009F3F2 /* CC3Kazmath.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1ABE0E8B1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7E1D243ECD0009F3F2 /* CC3Kazmath.c */; };
+		1ABE0E8C1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7E1D243ECD0009F3F2 /* CC3Kazmath.c */; };
+		1ABE0E8D1D243ECD0009F3F2 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E821D243ECD0009F3F2 /* CC3Math.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1ABE0E8E1D243ECD0009F3F2 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E821D243ECD0009F3F2 /* CC3Math.m */; };
+		1ABE0E8F1D243ECD0009F3F2 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E821D243ECD0009F3F2 /* CC3Math.m */; };
 		1AEBDE091CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
 		1AEBDE0A1CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
 		1AEBDE0B1CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
+		1AEE071D1D2389EB00E2D866 /* CombatBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE071C1D2389EB00E2D866 /* CombatBoard.m */; };
+		1AEE071E1D2389EB00E2D866 /* CombatBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE071C1D2389EB00E2D866 /* CombatBoard.m */; };
+		1AEE071F1D2389EB00E2D866 /* CombatBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE071C1D2389EB00E2D866 /* CombatBoard.m */; };
 		1AEE80BB1C7733F70028ACFF /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE80BA1C7733F70028ACFF /* XMLReader.m */; };
 		1AEE80BC1C7733F70028ACFF /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE80BA1C7733F70028ACFF /* XMLReader.m */; };
 		1AEE80BD1C7733F70028ACFF /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE80BA1C7733F70028ACFF /* XMLReader.m */; };
@@ -629,8 +658,29 @@
 		1AAE3F4A1CD93AB90016F861 /* PlotEconomy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlotEconomy.m; path = Map/PlotEconomy.m; sourceTree = "<group>"; };
 		1AAEB5981CB7C6EF00DA478B /* GamePersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePersistance.h; path = Game/GamePersistance.h; sourceTree = "<group>"; };
 		1AAEB5991CB7C6EF00DA478B /* GamePersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePersistance.m; path = Game/GamePersistance.m; sourceTree = "<group>"; };
+		1ABE0E611D2438250009F3F2 /* CombatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatViewController.h; path = Presentation/CombatViewController.h; sourceTree = "<group>"; };
+		1ABE0E621D2438250009F3F2 /* CombatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatViewController.m; path = Presentation/CombatViewController.m; sourceTree = "<group>"; };
+		1ABE0E661D24394B0009F3F2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		1ABE0E681D2439500009F3F2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1ABE0E6A1D2439870009F3F2 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLView.h; path = Views/OpenGLView.h; sourceTree = "<group>"; };
+		1ABE0E6B1D2439870009F3F2 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLView.m; path = Views/OpenGLView.m; sourceTree = "<group>"; };
+		1ABE0E701D243B1E0009F3F2 /* SimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SimpleVertex.glsl; path = Resources/OpenGL/SimpleVertex.glsl; sourceTree = "<group>"; };
+		1ABE0E741D243B420009F3F2 /* SimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SimpleFragment.glsl; path = Resources/OpenGL/SimpleFragment.glsl; sourceTree = "<group>"; };
+		1ABE0E7A1D243ECD0009F3F2 /* CC3Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CC3Foundation.h; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3Foundation.h; sourceTree = "<group>"; };
+		1ABE0E7B1D243ECD0009F3F2 /* CC3Foundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CC3Foundation.m; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3Foundation.m; sourceTree = "<group>"; };
+		1ABE0E7C1D243ECD0009F3F2 /* CC3GLMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CC3GLMatrix.h; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3GLMatrix.h; sourceTree = "<group>"; };
+		1ABE0E7D1D243ECD0009F3F2 /* CC3GLMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CC3GLMatrix.m; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3GLMatrix.m; sourceTree = "<group>"; };
+		1ABE0E7E1D243ECD0009F3F2 /* CC3Kazmath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = CC3Kazmath.c; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3Kazmath.c; sourceTree = "<group>"; };
+		1ABE0E7F1D243ECD0009F3F2 /* CC3Kazmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CC3Kazmath.h; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3Kazmath.h; sourceTree = "<group>"; };
+		1ABE0E801D243ECD0009F3F2 /* CC3Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CC3Logging.h; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3Logging.h; sourceTree = "<group>"; };
+		1ABE0E811D243ECD0009F3F2 /* CC3Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CC3Math.h; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3Math.h; sourceTree = "<group>"; };
+		1ABE0E821D243ECD0009F3F2 /* CC3Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CC3Math.m; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3Math.m; sourceTree = "<group>"; };
+		1ABE0E831D243ECD0009F3F2 /* ccTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ccTypes.h; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/ccTypes.h; sourceTree = "<group>"; };
+		1ABE0E901D2440600009F3F2 /* WorldGame.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorldGame.pch; sourceTree = "<group>"; };
 		1AEBDE071CC7B57E00BE09E8 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateUtils.h; path = Util/DateUtils.h; sourceTree = "<group>"; };
 		1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateUtils.m; path = Util/DateUtils.m; sourceTree = "<group>"; };
+		1AEE071B1D2389EB00E2D866 /* CombatBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatBoard.h; path = Game/CombatBoard.h; sourceTree = "<group>"; };
+		1AEE071C1D2389EB00E2D866 /* CombatBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatBoard.m; path = Game/CombatBoard.m; sourceTree = "<group>"; };
 		1AEE80B81C76D8820028ACFF /* UIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIConstants.h; path = Util/UIConstants.h; sourceTree = "<group>"; };
 		1AEE80B91C7733F70028ACFF /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLReader.h; path = Util/XMLReader.h; sourceTree = "<group>"; };
 		1AEE80BA1C7733F70028ACFF /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLReader.m; path = Util/XMLReader.m; sourceTree = "<group>"; };
@@ -670,6 +720,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ABE0E691D2439500009F3F2 /* QuartzCore.framework in Frameworks */,
+				1ABE0E671D24394B0009F3F2 /* OpenGLES.framework in Frameworks */,
 				1A2EA3A61C8B8C3900633417 /* CorePlot.framework in Frameworks */,
 				8CCAD6340BE6FCF63B8F171D /* libPods-WorldGame.a in Frameworks */,
 			);
@@ -812,9 +864,9 @@
 		1A57E7731C71C3F200B3890E = {
 			isa = PBXGroup;
 			children = (
-				1A57E77E1C71C3F200B3890E /* AITest */,
-				1A57E79E1C71C3F200B3890E /* AITestTests */,
-				1A57E7A91C71C3F200B3890E /* AITestUITests */,
+				1A57E77E1C71C3F200B3890E /* WorldGame */,
+				1A57E79E1C71C3F200B3890E /* WorldGameTests */,
+				1A57E7A91C71C3F200B3890E /* WorldGameUITests */,
 				1A57E77D1C71C3F200B3890E /* Products */,
 				569691BACC12D5EB5FE173EC /* Pods */,
 				2E294912C2975249D79A63A5 /* Frameworks */,
@@ -831,7 +883,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1A57E77E1C71C3F200B3890E /* AITest */ = {
+		1A57E77E1C71C3F200B3890E /* WorldGame */ = {
 			isa = PBXGroup;
 			children = (
 				1A3C39F71C7EF5E5004009DA /* AI */,
@@ -847,8 +899,10 @@
 				1A57E7961C71C3F200B3890E /* Info.plist */,
 				1AEE80BE1C77350B0028ACFF /* Resources */,
 				1A57E77F1C71C3F200B3890E /* Supporting Files */,
+				1ABE0E781D243EA40009F3F2 /* OpenGL */,
 				1A2EA3A41C8B8BFE00633417 /* Frameworks */,
 			);
+			name = WorldGame;
 			path = AITest;
 			sourceTree = "<group>";
 		};
@@ -856,26 +910,29 @@
 			isa = PBXGroup;
 			children = (
 				1A57E7801C71C3F200B3890E /* main.m */,
+				1ABE0E901D2440600009F3F2 /* WorldGame.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1A57E79E1C71C3F200B3890E /* AITestTests */ = {
+		1A57E79E1C71C3F200B3890E /* WorldGameTests */ = {
 			isa = PBXGroup;
 			children = (
 				1A57E79F1C71C3F200B3890E /* AITestTests.m */,
 				1A57E7A11C71C3F200B3890E /* Info.plist */,
 			);
+			name = WorldGameTests;
 			path = AITestTests;
 			sourceTree = "<group>";
 		};
-		1A57E7A91C71C3F200B3890E /* AITestUITests */ = {
+		1A57E7A91C71C3F200B3890E /* WorldGameUITests */ = {
 			isa = PBXGroup;
 			children = (
 				1AFAF3A91D212C4800165808 /* Helpers */,
 				1A57E7AA1C71C3F200B3890E /* AITestUITests.swift */,
 				1A57E7AC1C71C3F200B3890E /* Info.plist */,
 			);
+			name = WorldGameUITests;
 			path = AITestUITests;
 			sourceTree = "<group>";
 		};
@@ -955,6 +1012,8 @@
 				1A3C3A411C84EDF1004009DA /* UIButton+Custom.m */,
 				1A2EA3C71C8E1C5200633417 /* ChartView.h */,
 				1A2EA3C81C8E1C5200633417 /* ChartView.m */,
+				1ABE0E6A1D2439870009F3F2 /* OpenGLView.h */,
+				1ABE0E6B1D2439870009F3F2 /* OpenGLView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -973,6 +1032,8 @@
 				1A35A9A91CA1E9050094F773 /* SelectMapSizeTableViewController.m */,
 				1A84BB441CBFB60800CE7EDC /* GameViewController.h */,
 				1A84BB451CBFB60800CE7EDC /* GameViewController.m */,
+				1ABE0E611D2438250009F3F2 /* CombatViewController.h */,
+				1ABE0E621D2438250009F3F2 /* CombatViewController.m */,
 				1A58E36F1CBBB41A00AE7140 /* LoadGameViewController.h */,
 				1A58E3701CBBB41A00AE7140 /* LoadGameViewController.m */,
 				1A2EA39E1C8B860300633417 /* MinistryTableViewController.h */,
@@ -1045,9 +1106,45 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
+		1ABE0E6F1D243B060009F3F2 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				1ABE0E701D243B1E0009F3F2 /* SimpleVertex.glsl */,
+				1ABE0E741D243B420009F3F2 /* SimpleFragment.glsl */,
+			);
+			name = OpenGL;
+			sourceTree = "<group>";
+		};
+		1ABE0E781D243EA40009F3F2 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				1ABE0E791D243EB40009F3F2 /* Cocos3D */,
+			);
+			name = OpenGL;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		1ABE0E791D243EB40009F3F2 /* Cocos3D */ = {
+			isa = PBXGroup;
+			children = (
+				1ABE0E7A1D243ECD0009F3F2 /* CC3Foundation.h */,
+				1ABE0E7B1D243ECD0009F3F2 /* CC3Foundation.m */,
+				1ABE0E7C1D243ECD0009F3F2 /* CC3GLMatrix.h */,
+				1ABE0E7D1D243ECD0009F3F2 /* CC3GLMatrix.m */,
+				1ABE0E7E1D243ECD0009F3F2 /* CC3Kazmath.c */,
+				1ABE0E7F1D243ECD0009F3F2 /* CC3Kazmath.h */,
+				1ABE0E801D243ECD0009F3F2 /* CC3Logging.h */,
+				1ABE0E811D243ECD0009F3F2 /* CC3Math.h */,
+				1ABE0E821D243ECD0009F3F2 /* CC3Math.m */,
+				1ABE0E831D243ECD0009F3F2 /* ccTypes.h */,
+			);
+			name = Cocos3D;
+			sourceTree = "<group>";
+		};
 		1AEE80BE1C77350B0028ACFF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1ABE0E6F1D243B060009F3F2 /* OpenGL */,
 				1A48FCBD1CEE30FC00CFE558 /* Cities */,
 				1A7232B31CBD8EFA00D8AAC8 /* Fonts */,
 				1A5C22B61C9C163E007F324C /* Atlases */,
@@ -1096,6 +1193,8 @@
 				1A3C39FE1C7F2C98004009DA /* Civilization.m */,
 				1A3C3A021C7F2F75004009DA /* Leader.h */,
 				1A3C3A031C7F2F75004009DA /* Leader.m */,
+				1AEE071B1D2389EB00E2D866 /* CombatBoard.h */,
+				1AEE071C1D2389EB00E2D866 /* CombatBoard.m */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -1120,6 +1219,8 @@
 		2E294912C2975249D79A63A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1ABE0E681D2439500009F3F2 /* QuartzCore.framework */,
+				1ABE0E661D24394B0009F3F2 /* OpenGLES.framework */,
 				DCB729D7369B764E8DAC2248 /* libPods-AITest.a */,
 				2E6A70C686A1E0BDC5DE12E1 /* libPods-WorldGame.a */,
 				10E11BF6731DF0EFE7E5965A /* libPods-WorldGameTests.a */,
@@ -1213,6 +1314,9 @@
 		1A57E7741C71C3F200B3890E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Michael Rommel";
 				TargetAttributes = {
@@ -1285,6 +1389,7 @@
 				1A48FCC51CEE310B00CFE558 /* nomads.png in Resources */,
 				1A0FF27E1CA0617900F64050 /* Plains.png in Resources */,
 				1A5C22EF1C9C164F007F324C /* TerrainAtlas.xml in Resources */,
+				1ABE0E751D243B420009F3F2 /* SimpleFragment.glsl in Resources */,
 				1A5C22ED1C9C164F007F324C /* TechnologyAtlas.xml in Resources */,
 				1A5700F11CB2F2D900F346D9 /* NationalService.png in Resources */,
 				1A5C22E51C9C164F007F324C /* naturalwonders1024.png in Resources */,
@@ -1343,6 +1448,7 @@
 				1AEE80D11C7735960028ACFF /* Ocean.xml in Resources */,
 				1A84BB411CBFB5DF00CE7EDC /* okay.png in Resources */,
 				1A5C22E21C9C164F007F324C /* LeaderTiles.png in Resources */,
+				1ABE0E711D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */,
 				1AEE80CE1C7735960028ACFF /* Grassland.xml in Resources */,
 				1A5C22F31C9C164F007F324C /* UnitAtlas.xml in Resources */,
 				1A48FCC71CEE310B00CFE558 /* villages.png in Resources */,
@@ -1365,9 +1471,11 @@
 				1A3C3A4F1C84F280004009DA /* icon_spinning_circle.png in Resources */,
 				1A35A9EE1CAEF4BD0094F773 /* Legalism.xml in Resources */,
 				1A0FF29D1CA0965500F64050 /* menu-item-normal.png in Resources */,
+				1ABE0E761D243B420009F3F2 /* SimpleFragment.glsl in Resources */,
 				1A0FF2881CA0617900F64050 /* Tundra.png in Resources */,
 				1A5701121CB2FE6B00F346D9 /* IncomeTax.png in Resources */,
 				1A5700FA1CB2FAE100F346D9 /* InheritanceTax.png in Resources */,
+				1ABE0E721D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */,
 				1A2EA39C1C8A2F2500633417 /* government.png in Resources */,
 				1A0FF29A1CA0965500F64050 /* menu-header.png in Resources */,
 				1A35A9D21CAE8B170094F773 /* Parliament.xml in Resources */,
@@ -1426,9 +1534,11 @@
 				1A3C3A501C84F280004009DA /* icon_spinning_circle.png in Resources */,
 				1A35A9EF1CAEF4BD0094F773 /* Legalism.xml in Resources */,
 				1A0FF29E1CA0965500F64050 /* menu-item-normal.png in Resources */,
+				1ABE0E771D243B420009F3F2 /* SimpleFragment.glsl in Resources */,
 				1A0FF2891CA0617900F64050 /* Tundra.png in Resources */,
 				1A5701131CB2FE6B00F346D9 /* IncomeTax.png in Resources */,
 				1A5700FB1CB2FAE100F346D9 /* InheritanceTax.png in Resources */,
+				1ABE0E731D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */,
 				1A2EA39D1C8A2F2500633417 /* government.png in Resources */,
 				1A0FF29B1CA0965500F64050 /* menu-header.png in Resources */,
 				1A35A9D31CAE8B170094F773 /* Parliament.xml in Resources */,
@@ -1615,6 +1725,7 @@
 				1A58E3711CBBB41A00AE7140 /* LoadGameViewController.m in Sources */,
 				1AEE80E81C7BA6450028ACFF /* Game.m in Sources */,
 				1A57E7C21C71C89900B3890E /* Array2D.m in Sources */,
+				1ABE0E871D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */,
 				1A2EA4031C994FB700633417 /* Continent.m in Sources */,
 				1A2EA3881C8986AE00633417 /* Group.m in Sources */,
 				1A35A9AF1CA2BD430094F773 /* PolicyInfo.m in Sources */,
@@ -1626,6 +1737,7 @@
 				1A57E7841C71C3F200B3890E /* AppDelegate.m in Sources */,
 				1A84BB461CBFB60800CE7EDC /* GameViewController.m in Sources */,
 				1A57E7811C71C3F200B3890E /* main.m in Sources */,
+				1ABE0E8D1D243ECD0009F3F2 /* CC3Math.m in Sources */,
 				1A2EA3921C89877C00633417 /* RelationsNetwork.m in Sources */,
 				1A3C3A2D1C80FCEA004009DA /* Simulation.m in Sources */,
 				1A2EA3C31C8CD17A00633417 /* PolicyViewController.m in Sources */,
@@ -1641,18 +1753,23 @@
 				1A2EA3831C89864800633417 /* Relation.m in Sources */,
 				1A3C3A471C84F028004009DA /* NSString+Custom.m in Sources */,
 				1A3C39FA1C7EF5FA004009DA /* GrandStrategyAI.m in Sources */,
+				1ABE0E8A1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */,
 				1A3C3A041C7F2F75004009DA /* Leader.m in Sources */,
+				1ABE0E631D2438250009F3F2 /* CombatViewController.m in Sources */,
 				1A57E7C61C71CBFD00B3890E /* MapView.m in Sources */,
 				1A5C22B51C9B40A3007F324C /* SelectMapTypeTableViewController.m in Sources */,
 				1A2EA38D1C89872200633417 /* Policy.m in Sources */,
 				1A3C3A421C84EDF1004009DA /* UIButton+Custom.m in Sources */,
 				1A3C39FF1C7F2C98004009DA /* Civilization.m in Sources */,
 				1A2EA3971C89B95C00633417 /* GroupType.m in Sources */,
+				1ABE0E6C1D2439870009F3F2 /* OpenGLView.m in Sources */,
 				1AFF700B1CD76EAE009C7203 /* MunicipalEntity.m in Sources */,
 				1A2EA3E71C92D73200633417 /* AboutViewController.m in Sources */,
 				1AEBDE091CC7B57E00BE09E8 /* DateUtils.m in Sources */,
 				1A2EA3F91C98AFF700633417 /* MapGenerator.m in Sources */,
+				1AEE071D1D2389EB00E2D866 /* CombatBoard.m in Sources */,
 				1AFF700E1CD76EFB009C7203 /* Economy.m in Sources */,
+				1ABE0E841D243ECD0009F3F2 /* CC3Foundation.m in Sources */,
 				1A5C22F91C9C16D2007F324C /* ImageAtlas.m in Sources */,
 				1A2EA3D31C8F694F00633417 /* Situation.m in Sources */,
 				1A2EA3EC1C95FD0500633417 /* DebugUtil.m in Sources */,
@@ -1669,6 +1786,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ABE0E641D2438250009F3F2 /* CombatViewController.m in Sources */,
 				1A3C3A1E1C7F9DD7004009DA /* Area.m in Sources */,
 				1A2EA3FA1C98AFF700633417 /* MapGenerator.m in Sources */,
 				1A2EA3FF1C994AF300633417 /* NSArray+Util.m in Sources */,
@@ -1680,22 +1798,26 @@
 				1A2EA3F51C98AC4000633417 /* HeightMap.m in Sources */,
 				1A2EA3D41C8F694F00633417 /* Situation.m in Sources */,
 				1AEF612C1D159E7B00253DD6 /* Map.m in Sources */,
+				1ABE0E8E1D243ECD0009F3F2 /* CC3Math.m in Sources */,
 				1A2EA3841C89864800633417 /* Relation.m in Sources */,
 				1AEF61341D159EB500253DD6 /* SelectMapTypeTableViewController.m in Sources */,
 				1A2EA3DE1C90702800633417 /* BitArray.m in Sources */,
 				1A3C39FB1C7EF5FA004009DA /* GrandStrategyAI.m in Sources */,
 				1A3C3A3E1C84ED9A004009DA /* UILabel+Custom.m in Sources */,
 				1A5C23041C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */,
+				1AEE071E1D2389EB00E2D866 /* CombatBoard.m in Sources */,
 				1A8D66C21CA1306000284BB8 /* BaseTableViewController.m in Sources */,
 				1A2EA3C41C8CD17A00633417 /* PolicyViewController.m in Sources */,
 				1A2EA3E81C92D73200633417 /* AboutViewController.m in Sources */,
 				1AEE80E31C78CE6E0028ACFF /* NSDictionary+Extension.m in Sources */,
 				1A5C22FF1C9C42E7007F324C /* UIImage+Sprite.m in Sources */,
 				1AEBDE0A1CC7B57E00BE09E8 /* DateUtils.m in Sources */,
+				1ABE0E881D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */,
 				1A3C3A331C84EA8C004009DA /* OverlayView.m in Sources */,
 				1AEE80F31C7C5FB40028ACFF /* Unit.m in Sources */,
 				1AEF61321D159EA400253DD6 /* PlotEconomy.m in Sources */,
 				1AEF61301D159EA000253DD6 /* Plot.m in Sources */,
+				1ABE0E8B1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */,
 				1A2EA3CA1C8E1C5200633417 /* ChartView.m in Sources */,
 				1A35A9B01CA2BD430094F773 /* PolicyInfo.m in Sources */,
 				1A2EA3891C8986AE00633417 /* Group.m in Sources */,
@@ -1705,8 +1827,10 @@
 				1A2EA3CF1C8F2BE600633417 /* MapEvaluator.m in Sources */,
 				1AEF612E1D159E9100253DD6 /* MapView.m in Sources */,
 				1A48FCCB1CEE354000CFE558 /* KeyValueMap.m in Sources */,
+				1ABE0E851D243ECD0009F3F2 /* CC3Foundation.m in Sources */,
 				1AEF61261D159E2B00253DD6 /* Array2D.m in Sources */,
 				1A57E7A01C71C3F200B3890E /* AITestTests.m in Sources */,
+				1ABE0E6D1D2439870009F3F2 /* OpenGLView.m in Sources */,
 				1A57E7E91C74ABB300B3890E /* MainMenuViewController.m in Sources */,
 				1A3C3A481C84F028004009DA /* NSString+Custom.m in Sources */,
 				1A5C22FA1C9C16D2007F324C /* ImageAtlas.m in Sources */,
@@ -1735,6 +1859,7 @@
 				1A3C3A1F1C7F9DD7004009DA /* Area.m in Sources */,
 				1A2EA3FB1C98AFF700633417 /* MapGenerator.m in Sources */,
 				1AFAF3A81D212C0500165808 /* BaseUITestCase.swift in Sources */,
+				1ABE0E861D243ECD0009F3F2 /* CC3Foundation.m in Sources */,
 				1A2EA4001C994AF300633417 /* NSArray+Util.m in Sources */,
 				1A2EA38F1C89872200633417 /* Policy.m in Sources */,
 				1A3C3A061C7F2F75004009DA /* Leader.m in Sources */,
@@ -1744,12 +1869,14 @@
 				1A2EA3F61C98AC4000633417 /* HeightMap.m in Sources */,
 				1A2EA3D51C8F694F00633417 /* Situation.m in Sources */,
 				1AEF612D1D159E7C00253DD6 /* Map.m in Sources */,
+				1AEE071F1D2389EB00E2D866 /* CombatBoard.m in Sources */,
 				1A2EA3851C89864800633417 /* Relation.m in Sources */,
 				1AEF61351D159EB600253DD6 /* SelectMapTypeTableViewController.m in Sources */,
 				1A2EA3DF1C90702800633417 /* BitArray.m in Sources */,
 				1A3C39FC1C7EF5FA004009DA /* GrandStrategyAI.m in Sources */,
 				1A3C3A3F1C84ED9A004009DA /* UILabel+Custom.m in Sources */,
 				1A5C23051C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */,
+				1ABE0E6E1D2439870009F3F2 /* OpenGLView.m in Sources */,
 				1A8D66C31CA1306000284BB8 /* BaseTableViewController.m in Sources */,
 				1A2EA3C51C8CD17A00633417 /* PolicyViewController.m in Sources */,
 				1A2EA3E91C92D73200633417 /* AboutViewController.m in Sources */,
@@ -1758,6 +1885,7 @@
 				1AEBDE0B1CC7B57E00BE09E8 /* DateUtils.m in Sources */,
 				1A3C3A341C84EA8C004009DA /* OverlayView.m in Sources */,
 				1AEE80F41C7C5FB40028ACFF /* Unit.m in Sources */,
+				1ABE0E891D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */,
 				1AEF61331D159EA400253DD6 /* PlotEconomy.m in Sources */,
 				1AEF61311D159EA100253DD6 /* Plot.m in Sources */,
 				1A2EA3CB1C8E1C5200633417 /* ChartView.m in Sources */,
@@ -1767,13 +1895,16 @@
 				1AFF70101CD76EFB009C7203 /* Economy.m in Sources */,
 				1A3C3A0B1C7F3090004009DA /* Flavor.m in Sources */,
 				1A2EA3D01C8F2BE600633417 /* MapEvaluator.m in Sources */,
+				1ABE0E8F1D243ECD0009F3F2 /* CC3Math.m in Sources */,
 				1AEF612F1D159E9100253DD6 /* MapView.m in Sources */,
 				1A48FCCC1CEE354000CFE558 /* KeyValueMap.m in Sources */,
 				1AEF61271D159E2C00253DD6 /* Array2D.m in Sources */,
+				1ABE0E8C1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */,
 				1A57E7AB1C71C3F200B3890E /* AITestUITests.swift in Sources */,
 				1A57E7EA1C74ABB300B3890E /* MainMenuViewController.m in Sources */,
 				1A3C3A491C84F028004009DA /* NSString+Custom.m in Sources */,
 				1A5C22FB1C9C16D2007F324C /* ImageAtlas.m in Sources */,
+				1ABE0E651D2438250009F3F2 /* CombatViewController.m in Sources */,
 				1A3C3A1A1C7F931E004009DA /* Yield.m in Sources */,
 				1A2EA3941C89877C00633417 /* RelationsNetwork.m in Sources */,
 				1AEE80EA1C7BA6450028ACFF /* Game.m in Sources */,
@@ -1910,6 +2041,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AITest/WorldGame.pch;
 				INFOPLIST_FILE = AITest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.WorldGame;
@@ -1926,6 +2059,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AITest/WorldGame.pch;
 				INFOPLIST_FILE = AITest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.WorldGame;

@@ -103,9 +103,51 @@ typedef NS_ENUM(NSInteger, UnitPromotion) {
 @class ArmyLeader;
 
 /*!
+ class that handles an unit combat results
+ */
+@interface UnitCombatResult : NSObject
+
+@property (nonatomic) Unit *attacker;
+@property (nonatomic) Unit *defender;
+
+@property (atomic) int attackerLosesHealth;
+@property (atomic) int defenderLosesHealth;
+
+@property (atomic) int attackerGainsExperience;
+@property (atomic) int defenderGainsExperience;
+
+@property (atomic) int defenderLosesEntrenchment;
+
+@end
+
+/*!
+ type of combat result
+ */
+typedef NS_ENUM(NSInteger, CombatResultType) {
+    CombatResultTypeAbort = 0,
+    CombatResultTypeMajorVictory = 1,
+    CombatResultTypeMinorVictory = 2,
+    CombatResultTypeUndetermined = 3,
+    CombatResultTypeMinorDefeat = 3,
+    CombatResultTypeMajorDefeat = 5
+};
+
+/*!
+ class that handles an unit combat results
+ */
+@interface CombatResult : NSObject
+
+@property (atomic) CombatResultType combatResultType;
+@property (nonatomic) NSMutableArray *unitCombatResults;
+
+- (instancetype)initWithCombatResultType:(CombatResultType)combatResultType;
+
+@end
+
+/*!
  callback for game turn events
  */
-typedef void (^CombatCallback)(NSString *message, int attackerLoss, int defenderLoss);
+typedef void (^CombatCallback)(CombatResult *combatResult);
 
 /*!
  class that handles an army
@@ -121,7 +163,7 @@ typedef void (^CombatCallback)(NSString *message, int attackerLoss, int defender
 - (void)addUnit:(Unit *)unit;
 - (void)join:(Army *)army;
 
-- (void)attackArmyAt:(CGPoint)position withCallback:(CombatCallback)callback;
+- (void)attackArmy:(Army *)army withCallback:(CombatCallback)callback;
 - (void)siegeCityAt:(CGPoint)position withCallback:(CombatCallback)callback;
 
 @end

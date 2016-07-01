@@ -32,6 +32,9 @@
     
     [[UILabel appearance] setSubstituteFontName:@"Tele-GroteskNor"];
     
+    EAGLContext *context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    [EAGLContext setCurrentContext:context];
+    
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = COLOR_MIRO_BLACK;

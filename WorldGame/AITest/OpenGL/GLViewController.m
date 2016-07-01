@@ -30,15 +30,6 @@
 @synthesize world = world_;
 @synthesize camera = camera_;
 
-- (void)dealloc {
-    [glView_ release];
-    [director_ release];
-    [scene_ release];
-    [world_ release];
-    [camera_ release];
-    [super dealloc];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -48,7 +39,7 @@
     [self.view addSubview:glView_];
     
     camera_ = [[RECamera alloc] initWithProjection:kRECameraProjectionArcBall];
-    camera_.target = CC3VectorMake(20, 0, 20);
+    camera_.target = CC3VectorMake(0, 0, 0);
     camera_.upDirection = CC3VectorMake(0, -1, 0);
     camera_.lookDirection = CC3VectorMake(0, 0, -1);
     camera_.rotation = CC3VectorMake(3.1415, -(M_PI * 0.75f), 0);
@@ -89,11 +80,11 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    [glView_ release], glView_ = nil;
-    [director_ release], director_ = nil;
-    [scene_ release], scene_ = nil;
-    [world_ release], world_ = nil;
-    [camera_ release], camera_ = nil;
+    glView_ = nil;
+    director_ = nil;
+    scene_ = nil;
+    world_ = nil;
+    camera_ = nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -139,7 +130,7 @@
 
 - (void)center
 {
-    camera_.target = CC3VectorMake(20, 0, 20);
+    camera_.target = CC3VectorMake(0, 0, 0);
 }
 
 #pragma mark -

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Atlas>
+    <Rows>8</Rows>
+    <Cols>8</Cols>
+    <Texture>rivers.png</Texture>
+    <Items>
+        <Item>
+            <Index>0</Index>
+            <Name></Name>
+        </Item>
+        <Item>
+            <Index>1</Index>
+            <Name>e</Name>
+        </Item>
+        <Item>
+            <Index>2</Index>
+            <Name>se</Name>
+        </Item>
+        <Item>
+            <Index>3</Index>
+            <Name>e,se</Name>
+        </Item>
+        <Item>
+            <Index>4</Index>
+            <Name>sw</Name>
+        </Item>
+        <Item>
+            <Index>5</Index>
+            <Name>e,sw</Name>
+        </Item>
+        <Item>
+            <Index>6</Index>
+            <Name>se,sw</Name>
+        </Item>
+        <Item>
+            <Index>7</Index>
+            <Name>e,se,sw</Name>
+        </Item>
+    </Items>
+</Atlas>

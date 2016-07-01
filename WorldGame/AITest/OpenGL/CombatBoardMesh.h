@@ -17,7 +17,7 @@
 @property (nonatomic, assign) GLuint riverTexture;
 
 - (id)initWithBoard:(CombatBoard *)board andTerrainAtlas:(TextureAtlas *)textureAtlas andRiverAtlas:(TextureAtlas *)riverAtlas;
-- (id)initWithBoard:(CombatBoard *)board andRiverAtlas:(TextureAtlas *)textureAtlas;
+//- (id)initWithBoard:(CombatBoard *)board andRiverAtlas:(TextureAtlas *)textureAtlas;
 
 @end
 

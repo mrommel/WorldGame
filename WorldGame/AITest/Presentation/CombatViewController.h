@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "OpenGLView.h"
+#import "GLViewController.h"
 
-@interface CombatViewController : UIViewController {
-    OpenGLView* _glView;
-}
+@class CombatBoard;
 
-@property (nonatomic, retain) IBOutlet OpenGLView *glView;
+@interface CombatViewController : GLViewController
+
+@property (nonatomic, retain) CombatBoard *combatBoard;
 
 @end

@@ -103,7 +103,6 @@
 
 - (void)update:(float)dt
 {
-    
 }
 
 #pragma mark -

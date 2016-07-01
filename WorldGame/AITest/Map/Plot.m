@@ -138,6 +138,22 @@ static MapDataProvider *shared = nil;
     return [self.features objectForKey:[self keyForFeature:feature]];
 }
 
+- (NSString *)atlasKeyForMapTerrain:(MapTerrain)terrain
+{
+    switch(terrain) {
+        case MapTerrainGrass:
+            return @"TERRAIN_GRASS";
+        case MapTerrainPlain:
+            return @"TERRAIN_PLAINS";
+        case MapTerrainOcean:
+            return @"TERRAIN_OCEAN";
+        case MapTerrainShore:
+            return @"TERRAIN_SHORE";
+        default:
+            return @"TERRAIN_GRASS";
+    }
+}
+
 @end
 
 @implementation MapTerrainData

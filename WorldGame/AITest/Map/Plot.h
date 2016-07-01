@@ -68,6 +68,8 @@ typedef NS_ENUM(NSInteger, MapFeature) {
 - (MapTerrainData *)terrainDataForMapTerrain:(MapTerrain)terrain;
 - (MapFeatureData *)featureDataForMapFeature:(MapFeature)feature;
 
+- (NSString *)atlasKeyForMapTerrain:(MapTerrain)terrain;
+
 @end
 
 /*!

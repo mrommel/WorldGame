@@ -74,4 +74,14 @@
     return [self.board objectAtX:x andY:y];
 }
 
+- (void)setAttackerArmy:(Army *)army
+{
+    
+}
+
+- (void)setDefenderArmy:(Army *)army
+{
+    
+}
+
 @end

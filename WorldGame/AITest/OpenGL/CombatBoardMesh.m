@@ -9,6 +9,7 @@
 #import "CombatBoardMesh.h"
 
 #import "Array2D.h"
+#import "Plot.h"
 
 #define kSpaceZ 0.8f
 
@@ -39,13 +40,13 @@
                 y = 0;
                 z = iy * 10;
         
-                CGRect tileRect = CGRectMake(0, 0, 1, 1); //[textureAtlas tileForName:@"TERRAIN_GRASS"];
+                CGRect tileRect = [textureAtlas tileForName:[[MapDataProvider sharedInstance] atlasKeyForMapTerrain:item.terrain]];
                 CGFloat ox = tileRect.origin.x;
                 CGFloat oy = tileRect.origin.y;
                 CGFloat ow = tileRect.size.width;
                 CGFloat oh = tileRect.size.height;
                 
-                CGRect riverRect = CGRectMake(0, 0, 1, 1); //[riverAtlas tileForName:@"e"];
+                CGRect riverRect = [riverAtlas tileForName:@""];
                 CGFloat tx = riverRect.origin.x;
                 CGFloat ty = riverRect.origin.y;
                 CGFloat tw = riverRect.size.width;

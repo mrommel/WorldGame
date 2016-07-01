@@ -9,6 +9,9 @@
 #ifndef UIConstants_h
 #define UIConstants_h
 
+#define WINDOW_HEIGHT       ([[UIScreen mainScreen] bounds].size.height)
+#define WINDOW_WIDTH        ([[UIScreen mainScreen] bounds].size.width)
+
 #define COLOR_CLEAR                         [UIColor clearColor]
 #define COLOR_BLACK                         [UIColor colorWithWhite:0.0/255.0 alpha:1.0f]
 #define COLOR_BLACK_A85                     [UIColor colorWithWhite:0.0/255.0 alpha:.85f]

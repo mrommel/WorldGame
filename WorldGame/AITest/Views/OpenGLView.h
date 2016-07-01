@@ -19,6 +19,8 @@
     
     GLuint _positionSlot;
     GLuint _colorSlot;
+    GLuint _texCoordSlot;
+    GLuint _textureUniform;
     
     GLuint _projectionUniform;
     GLuint _modelViewUniform;
@@ -27,5 +29,7 @@
     
     GLuint _depthRenderBuffer;
 }
+
+@property (nonatomic) NSMutableArray *models;
 
 @end

@@ -297,6 +297,133 @@
 		1A5C23031C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */; };
 		1A5C23041C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */; };
 		1A5C23051C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */; };
+		1A613F491D24F56D0052A551 /* tile_floor.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A613F471D24F56D0052A551 /* tile_floor.png */; };
+		1A613F4E1D2606D10052A551 /* AbstractCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F4B1D2606D10052A551 /* AbstractCamera.m */; };
+		1A613F4F1D2606D10052A551 /* AbstractCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F4B1D2606D10052A551 /* AbstractCamera.m */; };
+		1A613F501D2606D10052A551 /* AbstractCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F4B1D2606D10052A551 /* AbstractCamera.m */; };
+		1A613F511D2606D10052A551 /* ArcBallCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F4D1D2606D10052A551 /* ArcBallCamera.m */; };
+		1A613F521D2606D10052A551 /* ArcBallCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F4D1D2606D10052A551 /* ArcBallCamera.m */; };
+		1A613F531D2606D10052A551 /* ArcBallCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F4D1D2606D10052A551 /* ArcBallCamera.m */; };
+		1A613F641D2606E60052A551 /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F551D2606E60052A551 /* CombatBoardMesh.m */; };
+		1A613F651D2606E60052A551 /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F551D2606E60052A551 /* CombatBoardMesh.m */; };
+		1A613F661D2606E60052A551 /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F551D2606E60052A551 /* CombatBoardMesh.m */; };
+		1A613F671D2606E60052A551 /* CubeMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F571D2606E60052A551 /* CubeMesh.m */; };
+		1A613F681D2606E60052A551 /* CubeMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F571D2606E60052A551 /* CubeMesh.m */; };
+		1A613F691D2606E60052A551 /* CubeMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F571D2606E60052A551 /* CubeMesh.m */; };
+		1A613F6A1D2606E60052A551 /* GLPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F591D2606E60052A551 /* GLPlane.m */; };
+		1A613F6B1D2606E60052A551 /* GLPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F591D2606E60052A551 /* GLPlane.m */; };
+		1A613F6C1D2606E60052A551 /* GLPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F591D2606E60052A551 /* GLPlane.m */; };
+		1A613F6D1D2606E60052A551 /* GLRay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5B1D2606E60052A551 /* GLRay.m */; };
+		1A613F6E1D2606E60052A551 /* GLRay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5B1D2606E60052A551 /* GLRay.m */; };
+		1A613F6F1D2606E60052A551 /* GLRay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5B1D2606E60052A551 /* GLRay.m */; };
+		1A613F701D2606E60052A551 /* GLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5D1D2606E60052A551 /* GLViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613F711D2606E60052A551 /* GLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5D1D2606E60052A551 /* GLViewController.m */; };
+		1A613F721D2606E60052A551 /* GLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5D1D2606E60052A551 /* GLViewController.m */; };
+		1A613F731D2606E60052A551 /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5F1D2606E60052A551 /* Mesh.m */; };
+		1A613F741D2606E60052A551 /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5F1D2606E60052A551 /* Mesh.m */; };
+		1A613F751D2606E60052A551 /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5F1D2606E60052A551 /* Mesh.m */; };
+		1A613F761D2606E60052A551 /* OpenGLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F611D2606E60052A551 /* OpenGLUtil.m */; };
+		1A613F771D2606E60052A551 /* OpenGLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F611D2606E60052A551 /* OpenGLUtil.m */; };
+		1A613F781D2606E60052A551 /* OpenGLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F611D2606E60052A551 /* OpenGLUtil.m */; };
+		1A613F791D2606E60052A551 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F631D2606E60052A551 /* OpenGLView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613F7A1D2606E60052A551 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F631D2606E60052A551 /* OpenGLView.m */; };
+		1A613F7B1D2606E60052A551 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F631D2606E60052A551 /* OpenGLView.m */; };
+		1A613F811D2607020052A551 /* TextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F7E1D2607020052A551 /* TextureAtlas.m */; };
+		1A613F821D2607020052A551 /* TextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F7E1D2607020052A551 /* TextureAtlas.m */; };
+		1A613F831D2607020052A551 /* TextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F7E1D2607020052A551 /* TextureAtlas.m */; };
+		1A613F841D2607020052A551 /* Transformations.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F801D2607020052A551 /* Transformations.m */; };
+		1A613F851D2607020052A551 /* Transformations.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F801D2607020052A551 /* Transformations.m */; };
+		1A613F861D2607020052A551 /* Transformations.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F801D2607020052A551 /* Transformations.m */; };
+		1A613FBE1D2607260052A551 /* REBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F881D2607260052A551 /* REBuffer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FBF1D2607260052A551 /* REBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F881D2607260052A551 /* REBuffer.m */; };
+		1A613FC01D2607260052A551 /* REBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F881D2607260052A551 /* REBuffer.m */; };
+		1A613FC11D2607260052A551 /* RECache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8A1D2607260052A551 /* RECache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FC21D2607260052A551 /* RECache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8A1D2607260052A551 /* RECache.m */; };
+		1A613FC31D2607260052A551 /* RECache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8A1D2607260052A551 /* RECache.m */; };
+		1A613FC41D2607260052A551 /* RECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8C1D2607260052A551 /* RECamera.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FC51D2607260052A551 /* RECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8C1D2607260052A551 /* RECamera.m */; };
+		1A613FC61D2607260052A551 /* RECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8C1D2607260052A551 /* RECamera.m */; };
+		1A613FC71D2607260052A551 /* REDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8E1D2607260052A551 /* REDirector.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FC81D2607260052A551 /* REDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8E1D2607260052A551 /* REDirector.m */; };
+		1A613FC91D2607260052A551 /* REDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8E1D2607260052A551 /* REDirector.m */; };
+		1A613FCA1D2607260052A551 /* REGLStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F901D2607260052A551 /* REGLStateManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FCB1D2607260052A551 /* REGLStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F901D2607260052A551 /* REGLStateManager.m */; };
+		1A613FCC1D2607260052A551 /* REGLStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F901D2607260052A551 /* REGLStateManager.m */; };
+		1A613FCD1D2607260052A551 /* REGLTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F921D2607260052A551 /* REGLTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FCE1D2607260052A551 /* REGLTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F921D2607260052A551 /* REGLTypes.m */; };
+		1A613FCF1D2607260052A551 /* REGLTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F921D2607260052A551 /* REGLTypes.m */; };
+		1A613FD01D2607260052A551 /* REGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F941D2607260052A551 /* REGLView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FD11D2607260052A551 /* REGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F941D2607260052A551 /* REGLView.m */; };
+		1A613FD21D2607260052A551 /* REGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F941D2607260052A551 /* REGLView.m */; };
+		1A613FD31D2607260052A551 /* REKeyframedMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F961D2607260052A551 /* REKeyframedMeshNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FD41D2607260052A551 /* REKeyframedMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F961D2607260052A551 /* REKeyframedMeshNode.m */; };
+		1A613FD51D2607260052A551 /* REKeyframedMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F961D2607260052A551 /* REKeyframedMeshNode.m */; };
+		1A613FD61D2607260052A551 /* RELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F981D2607260052A551 /* RELight.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FD71D2607260052A551 /* RELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F981D2607260052A551 /* RELight.m */; };
+		1A613FD81D2607260052A551 /* RELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F981D2607260052A551 /* RELight.m */; };
+		1A613FD91D2607260052A551 /* REMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9A1D2607260052A551 /* REMaterial.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FDA1D2607260052A551 /* REMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9A1D2607260052A551 /* REMaterial.m */; };
+		1A613FDB1D2607260052A551 /* REMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9A1D2607260052A551 /* REMaterial.m */; };
+		1A613FDC1D2607260052A551 /* RENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9D1D2607260052A551 /* RENode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FDD1D2607260052A551 /* RENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9D1D2607260052A551 /* RENode.m */; };
+		1A613FDE1D2607260052A551 /* RENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9D1D2607260052A551 /* RENode.m */; };
+		1A613FDF1D2607260052A551 /* RENSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9F1D2607260052A551 /* RENSArrayAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FE01D2607260052A551 /* RENSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9F1D2607260052A551 /* RENSArrayAdditions.m */; };
+		1A613FE11D2607260052A551 /* RENSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9F1D2607260052A551 /* RENSArrayAdditions.m */; };
+		1A613FE21D2607260052A551 /* RENSValueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA11D2607260052A551 /* RENSValueAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FE31D2607260052A551 /* RENSValueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA11D2607260052A551 /* RENSValueAdditions.m */; };
+		1A613FE41D2607260052A551 /* RENSValueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA11D2607260052A551 /* RENSValueAdditions.m */; };
+		1A613FE51D2607260052A551 /* REProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA31D2607260052A551 /* REProgram.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FE61D2607260052A551 /* REProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA31D2607260052A551 /* REProgram.m */; };
+		1A613FE71D2607260052A551 /* REProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA31D2607260052A551 /* REProgram.m */; };
+		1A613FE81D2607260052A551 /* RERotator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA51D2607260052A551 /* RERotator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FE91D2607260052A551 /* RERotator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA51D2607260052A551 /* RERotator.m */; };
+		1A613FEA1D2607260052A551 /* RERotator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA51D2607260052A551 /* RERotator.m */; };
+		1A613FEB1D2607260052A551 /* REScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA71D2607260052A551 /* REScene.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FEC1D2607260052A551 /* REScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA71D2607260052A551 /* REScene.m */; };
+		1A613FED1D2607260052A551 /* REScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA71D2607260052A551 /* REScene.m */; };
+		1A613FEE1D2607260052A551 /* REScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA91D2607260052A551 /* REScheduler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FEF1D2607260052A551 /* REScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA91D2607260052A551 /* REScheduler.m */; };
+		1A613FF01D2607260052A551 /* REScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA91D2607260052A551 /* REScheduler.m */; };
+		1A613FF11D2607260052A551 /* REShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAB1D2607260052A551 /* REShader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FF21D2607260052A551 /* REShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAB1D2607260052A551 /* REShader.m */; };
+		1A613FF31D2607260052A551 /* REShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAB1D2607260052A551 /* REShader.m */; };
+		1A613FF41D2607260052A551 /* RESprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAD1D2607260052A551 /* RESprite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FF51D2607260052A551 /* RESprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAD1D2607260052A551 /* RESprite.m */; };
+		1A613FF61D2607260052A551 /* RESprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAD1D2607260052A551 /* RESprite.m */; };
+		1A613FF71D2607260052A551 /* RESpriteBatchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAF1D2607260052A551 /* RESpriteBatchNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FF81D2607260052A551 /* RESpriteBatchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAF1D2607260052A551 /* RESpriteBatchNode.m */; };
+		1A613FF91D2607260052A551 /* RESpriteBatchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAF1D2607260052A551 /* RESpriteBatchNode.m */; };
+		1A613FFA1D2607260052A551 /* RETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB11D2607260052A551 /* RETexture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FFB1D2607260052A551 /* RETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB11D2607260052A551 /* RETexture.m */; };
+		1A613FFC1D2607260052A551 /* RETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB11D2607260052A551 /* RETexture.m */; };
+		1A613FFD1D2607260052A551 /* REVertexArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB31D2607260052A551 /* REVertexArrayObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A613FFE1D2607260052A551 /* REVertexArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB31D2607260052A551 /* REVertexArrayObject.m */; };
+		1A613FFF1D2607260052A551 /* REVertexArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB31D2607260052A551 /* REVertexArrayObject.m */; };
+		1A6140001D2607260052A551 /* REWavefrontMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB51D2607260052A551 /* REWavefrontMesh.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A6140011D2607260052A551 /* REWavefrontMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB51D2607260052A551 /* REWavefrontMesh.m */; };
+		1A6140021D2607260052A551 /* REWavefrontMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB51D2607260052A551 /* REWavefrontMesh.m */; };
+		1A6140031D2607260052A551 /* REWavefrontMeshElementIndexBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB71D2607260052A551 /* REWavefrontMeshElementIndexBatch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A6140041D2607260052A551 /* REWavefrontMeshElementIndexBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB71D2607260052A551 /* REWavefrontMeshElementIndexBatch.m */; };
+		1A6140051D2607260052A551 /* REWavefrontMeshElementIndexBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB71D2607260052A551 /* REWavefrontMeshElementIndexBatch.m */; };
+		1A6140061D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB91D2607260052A551 /* REWavefrontMeshGroupNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A6140071D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB91D2607260052A551 /* REWavefrontMeshGroupNode.m */; };
+		1A6140081D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB91D2607260052A551 /* REWavefrontMeshGroupNode.m */; };
+		1A6140091D2607260052A551 /* REWavefrontMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBB1D2607260052A551 /* REWavefrontMeshNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A61400A1D2607260052A551 /* REWavefrontMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBB1D2607260052A551 /* REWavefrontMeshNode.m */; };
+		1A61400B1D2607260052A551 /* REWavefrontMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBB1D2607260052A551 /* REWavefrontMeshNode.m */; };
+		1A61400C1D2607260052A551 /* REWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBD1D2607260052A551 /* REWorld.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A61400D1D2607260052A551 /* REWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBD1D2607260052A551 /* REWorld.m */; };
+		1A61400E1D2607260052A551 /* REWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBD1D2607260052A551 /* REWorld.m */; };
+		1A6140111D2609850052A551 /* CC3GLMatrix+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6140101D2609850052A551 /* CC3GLMatrix+Extension.m */; };
+		1A6140121D2609850052A551 /* CC3GLMatrix+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6140101D2609850052A551 /* CC3GLMatrix+Extension.m */; };
+		1A6140131D2609850052A551 /* CC3GLMatrix+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6140101D2609850052A551 /* CC3GLMatrix+Extension.m */; };
+		1A6140171D260CCB0052A551 /* NSValue+CC3Types.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6140161D260CCB0052A551 /* NSValue+CC3Types.m */; };
+		1A6140181D260CCB0052A551 /* NSValue+CC3Types.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6140161D260CCB0052A551 /* NSValue+CC3Types.m */; };
+		1A6140191D260CCB0052A551 /* NSValue+CC3Types.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6140161D260CCB0052A551 /* NSValue+CC3Types.m */; };
+		1A61401C1D260D3E0052A551 /* ZoomManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A61401B1D260D3E0052A551 /* ZoomManager.m */; };
+		1A61401D1D260D3E0052A551 /* ZoomManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A61401B1D260D3E0052A551 /* ZoomManager.m */; };
+		1A61401E1D260D3E0052A551 /* ZoomManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A61401B1D260D3E0052A551 /* ZoomManager.m */; };
 		1A7232B51CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */; };
 		1A7232B61CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */; };
 		1A7232B71CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */; };
@@ -328,9 +455,6 @@
 		1ABE0E651D2438250009F3F2 /* CombatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E621D2438250009F3F2 /* CombatViewController.m */; };
 		1ABE0E671D24394B0009F3F2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABE0E661D24394B0009F3F2 /* OpenGLES.framework */; };
 		1ABE0E691D2439500009F3F2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABE0E681D2439500009F3F2 /* QuartzCore.framework */; };
-		1ABE0E6C1D2439870009F3F2 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E6B1D2439870009F3F2 /* OpenGLView.m */; };
-		1ABE0E6D1D2439870009F3F2 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E6B1D2439870009F3F2 /* OpenGLView.m */; };
-		1ABE0E6E1D2439870009F3F2 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E6B1D2439870009F3F2 /* OpenGLView.m */; };
 		1ABE0E711D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0E701D243B1E0009F3F2 /* SimpleVertex.glsl */; };
 		1ABE0E721D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0E701D243B1E0009F3F2 /* SimpleVertex.glsl */; };
 		1ABE0E731D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0E701D243B1E0009F3F2 /* SimpleVertex.glsl */; };
@@ -644,6 +768,94 @@
 		1A5C22FD1C9C42E7007F324C /* UIImage+Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Sprite.m"; path = "Util/UIImage+Sprite.m"; sourceTree = "<group>"; };
 		1A5C23011C9DEEE8007F324C /* UINavigationController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+BackButtonHandler.h"; path = "Util/UINavigationController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+BackButtonHandler.m"; path = "Util/UINavigationController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		1A613F471D24F56D0052A551 /* tile_floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile_floor.png; path = Resources/OpenGL/tile_floor.png; sourceTree = "<group>"; };
+		1A613F4A1D2606D10052A551 /* AbstractCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractCamera.h; path = WorldGame/AITest/OpenGL/AbstractCamera.h; sourceTree = "<group>"; };
+		1A613F4B1D2606D10052A551 /* AbstractCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractCamera.m; path = WorldGame/AITest/OpenGL/AbstractCamera.m; sourceTree = "<group>"; };
+		1A613F4C1D2606D10052A551 /* ArcBallCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArcBallCamera.h; path = WorldGame/AITest/OpenGL/ArcBallCamera.h; sourceTree = "<group>"; };
+		1A613F4D1D2606D10052A551 /* ArcBallCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArcBallCamera.m; path = WorldGame/AITest/OpenGL/ArcBallCamera.m; sourceTree = "<group>"; };
+		1A613F541D2606E60052A551 /* CombatBoardMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatBoardMesh.h; path = WorldGame/AITest/OpenGL/CombatBoardMesh.h; sourceTree = "<group>"; };
+		1A613F551D2606E60052A551 /* CombatBoardMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatBoardMesh.m; path = WorldGame/AITest/OpenGL/CombatBoardMesh.m; sourceTree = "<group>"; };
+		1A613F561D2606E60052A551 /* CubeMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CubeMesh.h; path = WorldGame/AITest/OpenGL/CubeMesh.h; sourceTree = "<group>"; };
+		1A613F571D2606E60052A551 /* CubeMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CubeMesh.m; path = WorldGame/AITest/OpenGL/CubeMesh.m; sourceTree = "<group>"; };
+		1A613F581D2606E60052A551 /* GLPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLPlane.h; path = WorldGame/AITest/OpenGL/GLPlane.h; sourceTree = "<group>"; };
+		1A613F591D2606E60052A551 /* GLPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLPlane.m; path = WorldGame/AITest/OpenGL/GLPlane.m; sourceTree = "<group>"; };
+		1A613F5A1D2606E60052A551 /* GLRay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLRay.h; path = WorldGame/AITest/OpenGL/GLRay.h; sourceTree = "<group>"; };
+		1A613F5B1D2606E60052A551 /* GLRay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLRay.m; path = WorldGame/AITest/OpenGL/GLRay.m; sourceTree = "<group>"; };
+		1A613F5C1D2606E60052A551 /* GLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLViewController.h; path = WorldGame/AITest/OpenGL/GLViewController.h; sourceTree = "<group>"; };
+		1A613F5D1D2606E60052A551 /* GLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLViewController.m; path = WorldGame/AITest/OpenGL/GLViewController.m; sourceTree = "<group>"; };
+		1A613F5E1D2606E60052A551 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = WorldGame/AITest/OpenGL/Mesh.h; sourceTree = "<group>"; };
+		1A613F5F1D2606E60052A551 /* Mesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mesh.m; path = WorldGame/AITest/OpenGL/Mesh.m; sourceTree = "<group>"; };
+		1A613F601D2606E60052A551 /* OpenGLUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLUtil.h; path = WorldGame/AITest/OpenGL/OpenGLUtil.h; sourceTree = "<group>"; };
+		1A613F611D2606E60052A551 /* OpenGLUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLUtil.m; path = WorldGame/AITest/OpenGL/OpenGLUtil.m; sourceTree = "<group>"; };
+		1A613F621D2606E60052A551 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLView.h; path = WorldGame/AITest/OpenGL/OpenGLView.h; sourceTree = "<group>"; };
+		1A613F631D2606E60052A551 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLView.m; path = WorldGame/AITest/OpenGL/OpenGLView.m; sourceTree = "<group>"; };
+		1A613F7D1D2607020052A551 /* TextureAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureAtlas.h; path = WorldGame/AITest/OpenGL/TextureAtlas.h; sourceTree = "<group>"; };
+		1A613F7E1D2607020052A551 /* TextureAtlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextureAtlas.m; path = WorldGame/AITest/OpenGL/TextureAtlas.m; sourceTree = "<group>"; };
+		1A613F7F1D2607020052A551 /* Transformations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transformations.h; path = WorldGame/AITest/OpenGL/Transformations.h; sourceTree = "<group>"; };
+		1A613F801D2607020052A551 /* Transformations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Transformations.m; path = WorldGame/AITest/OpenGL/Transformations.m; sourceTree = "<group>"; };
+		1A613F871D2607260052A551 /* REBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REBuffer.h; path = WorldGame/AITest/OpenGL/Rend/REBuffer.h; sourceTree = "<group>"; };
+		1A613F881D2607260052A551 /* REBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REBuffer.m; path = WorldGame/AITest/OpenGL/Rend/REBuffer.m; sourceTree = "<group>"; };
+		1A613F891D2607260052A551 /* RECache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RECache.h; path = WorldGame/AITest/OpenGL/Rend/RECache.h; sourceTree = "<group>"; };
+		1A613F8A1D2607260052A551 /* RECache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RECache.m; path = WorldGame/AITest/OpenGL/Rend/RECache.m; sourceTree = "<group>"; };
+		1A613F8B1D2607260052A551 /* RECamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RECamera.h; path = WorldGame/AITest/OpenGL/Rend/RECamera.h; sourceTree = "<group>"; };
+		1A613F8C1D2607260052A551 /* RECamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RECamera.m; path = WorldGame/AITest/OpenGL/Rend/RECamera.m; sourceTree = "<group>"; };
+		1A613F8D1D2607260052A551 /* REDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REDirector.h; path = WorldGame/AITest/OpenGL/Rend/REDirector.h; sourceTree = "<group>"; };
+		1A613F8E1D2607260052A551 /* REDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REDirector.m; path = WorldGame/AITest/OpenGL/Rend/REDirector.m; sourceTree = "<group>"; };
+		1A613F8F1D2607260052A551 /* REGLStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REGLStateManager.h; path = WorldGame/AITest/OpenGL/Rend/REGLStateManager.h; sourceTree = "<group>"; };
+		1A613F901D2607260052A551 /* REGLStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REGLStateManager.m; path = WorldGame/AITest/OpenGL/Rend/REGLStateManager.m; sourceTree = "<group>"; };
+		1A613F911D2607260052A551 /* REGLTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REGLTypes.h; path = WorldGame/AITest/OpenGL/Rend/REGLTypes.h; sourceTree = "<group>"; };
+		1A613F921D2607260052A551 /* REGLTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REGLTypes.m; path = WorldGame/AITest/OpenGL/Rend/REGLTypes.m; sourceTree = "<group>"; };
+		1A613F931D2607260052A551 /* REGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REGLView.h; path = WorldGame/AITest/OpenGL/Rend/REGLView.h; sourceTree = "<group>"; };
+		1A613F941D2607260052A551 /* REGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REGLView.m; path = WorldGame/AITest/OpenGL/Rend/REGLView.m; sourceTree = "<group>"; };
+		1A613F951D2607260052A551 /* REKeyframedMeshNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REKeyframedMeshNode.h; path = WorldGame/AITest/OpenGL/Rend/REKeyframedMeshNode.h; sourceTree = "<group>"; };
+		1A613F961D2607260052A551 /* REKeyframedMeshNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REKeyframedMeshNode.m; path = WorldGame/AITest/OpenGL/Rend/REKeyframedMeshNode.m; sourceTree = "<group>"; };
+		1A613F971D2607260052A551 /* RELight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RELight.h; path = WorldGame/AITest/OpenGL/Rend/RELight.h; sourceTree = "<group>"; };
+		1A613F981D2607260052A551 /* RELight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RELight.m; path = WorldGame/AITest/OpenGL/Rend/RELight.m; sourceTree = "<group>"; };
+		1A613F991D2607260052A551 /* REMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REMaterial.h; path = WorldGame/AITest/OpenGL/Rend/REMaterial.h; sourceTree = "<group>"; };
+		1A613F9A1D2607260052A551 /* REMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REMaterial.m; path = WorldGame/AITest/OpenGL/Rend/REMaterial.m; sourceTree = "<group>"; };
+		1A613F9B1D2607260052A551 /* Rend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rend.h; path = WorldGame/AITest/OpenGL/Rend/Rend.h; sourceTree = "<group>"; };
+		1A613F9C1D2607260052A551 /* RENode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RENode.h; path = WorldGame/AITest/OpenGL/Rend/RENode.h; sourceTree = "<group>"; };
+		1A613F9D1D2607260052A551 /* RENode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RENode.m; path = WorldGame/AITest/OpenGL/Rend/RENode.m; sourceTree = "<group>"; };
+		1A613F9E1D2607260052A551 /* RENSArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RENSArrayAdditions.h; path = WorldGame/AITest/OpenGL/Rend/RENSArrayAdditions.h; sourceTree = "<group>"; };
+		1A613F9F1D2607260052A551 /* RENSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RENSArrayAdditions.m; path = WorldGame/AITest/OpenGL/Rend/RENSArrayAdditions.m; sourceTree = "<group>"; };
+		1A613FA01D2607260052A551 /* RENSValueAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RENSValueAdditions.h; path = WorldGame/AITest/OpenGL/Rend/RENSValueAdditions.h; sourceTree = "<group>"; };
+		1A613FA11D2607260052A551 /* RENSValueAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RENSValueAdditions.m; path = WorldGame/AITest/OpenGL/Rend/RENSValueAdditions.m; sourceTree = "<group>"; };
+		1A613FA21D2607260052A551 /* REProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REProgram.h; path = WorldGame/AITest/OpenGL/Rend/REProgram.h; sourceTree = "<group>"; };
+		1A613FA31D2607260052A551 /* REProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REProgram.m; path = WorldGame/AITest/OpenGL/Rend/REProgram.m; sourceTree = "<group>"; };
+		1A613FA41D2607260052A551 /* RERotator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RERotator.h; path = WorldGame/AITest/OpenGL/Rend/RERotator.h; sourceTree = "<group>"; };
+		1A613FA51D2607260052A551 /* RERotator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RERotator.m; path = WorldGame/AITest/OpenGL/Rend/RERotator.m; sourceTree = "<group>"; };
+		1A613FA61D2607260052A551 /* REScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REScene.h; path = WorldGame/AITest/OpenGL/Rend/REScene.h; sourceTree = "<group>"; };
+		1A613FA71D2607260052A551 /* REScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REScene.m; path = WorldGame/AITest/OpenGL/Rend/REScene.m; sourceTree = "<group>"; };
+		1A613FA81D2607260052A551 /* REScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REScheduler.h; path = WorldGame/AITest/OpenGL/Rend/REScheduler.h; sourceTree = "<group>"; };
+		1A613FA91D2607260052A551 /* REScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REScheduler.m; path = WorldGame/AITest/OpenGL/Rend/REScheduler.m; sourceTree = "<group>"; };
+		1A613FAA1D2607260052A551 /* REShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REShader.h; path = WorldGame/AITest/OpenGL/Rend/REShader.h; sourceTree = "<group>"; };
+		1A613FAB1D2607260052A551 /* REShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REShader.m; path = WorldGame/AITest/OpenGL/Rend/REShader.m; sourceTree = "<group>"; };
+		1A613FAC1D2607260052A551 /* RESprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RESprite.h; path = WorldGame/AITest/OpenGL/Rend/RESprite.h; sourceTree = "<group>"; };
+		1A613FAD1D2607260052A551 /* RESprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RESprite.m; path = WorldGame/AITest/OpenGL/Rend/RESprite.m; sourceTree = "<group>"; };
+		1A613FAE1D2607260052A551 /* RESpriteBatchNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RESpriteBatchNode.h; path = WorldGame/AITest/OpenGL/Rend/RESpriteBatchNode.h; sourceTree = "<group>"; };
+		1A613FAF1D2607260052A551 /* RESpriteBatchNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RESpriteBatchNode.m; path = WorldGame/AITest/OpenGL/Rend/RESpriteBatchNode.m; sourceTree = "<group>"; };
+		1A613FB01D2607260052A551 /* RETexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RETexture.h; path = WorldGame/AITest/OpenGL/Rend/RETexture.h; sourceTree = "<group>"; };
+		1A613FB11D2607260052A551 /* RETexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RETexture.m; path = WorldGame/AITest/OpenGL/Rend/RETexture.m; sourceTree = "<group>"; };
+		1A613FB21D2607260052A551 /* REVertexArrayObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REVertexArrayObject.h; path = WorldGame/AITest/OpenGL/Rend/REVertexArrayObject.h; sourceTree = "<group>"; };
+		1A613FB31D2607260052A551 /* REVertexArrayObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REVertexArrayObject.m; path = WorldGame/AITest/OpenGL/Rend/REVertexArrayObject.m; sourceTree = "<group>"; };
+		1A613FB41D2607260052A551 /* REWavefrontMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REWavefrontMesh.h; path = WorldGame/AITest/OpenGL/Rend/REWavefrontMesh.h; sourceTree = "<group>"; };
+		1A613FB51D2607260052A551 /* REWavefrontMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REWavefrontMesh.m; path = WorldGame/AITest/OpenGL/Rend/REWavefrontMesh.m; sourceTree = "<group>"; };
+		1A613FB61D2607260052A551 /* REWavefrontMeshElementIndexBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REWavefrontMeshElementIndexBatch.h; path = WorldGame/AITest/OpenGL/Rend/REWavefrontMeshElementIndexBatch.h; sourceTree = "<group>"; };
+		1A613FB71D2607260052A551 /* REWavefrontMeshElementIndexBatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REWavefrontMeshElementIndexBatch.m; path = WorldGame/AITest/OpenGL/Rend/REWavefrontMeshElementIndexBatch.m; sourceTree = "<group>"; };
+		1A613FB81D2607260052A551 /* REWavefrontMeshGroupNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REWavefrontMeshGroupNode.h; path = WorldGame/AITest/OpenGL/Rend/REWavefrontMeshGroupNode.h; sourceTree = "<group>"; };
+		1A613FB91D2607260052A551 /* REWavefrontMeshGroupNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REWavefrontMeshGroupNode.m; path = WorldGame/AITest/OpenGL/Rend/REWavefrontMeshGroupNode.m; sourceTree = "<group>"; };
+		1A613FBA1D2607260052A551 /* REWavefrontMeshNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REWavefrontMeshNode.h; path = WorldGame/AITest/OpenGL/Rend/REWavefrontMeshNode.h; sourceTree = "<group>"; };
+		1A613FBB1D2607260052A551 /* REWavefrontMeshNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REWavefrontMeshNode.m; path = WorldGame/AITest/OpenGL/Rend/REWavefrontMeshNode.m; sourceTree = "<group>"; };
+		1A613FBC1D2607260052A551 /* REWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REWorld.h; path = WorldGame/AITest/OpenGL/Rend/REWorld.h; sourceTree = "<group>"; };
+		1A613FBD1D2607260052A551 /* REWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REWorld.m; path = WorldGame/AITest/OpenGL/Rend/REWorld.m; sourceTree = "<group>"; };
+		1A61400F1D2609850052A551 /* CC3GLMatrix+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CC3GLMatrix+Extension.h"; path = "WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3GLMatrix+Extension.h"; sourceTree = "<group>"; };
+		1A6140101D2609850052A551 /* CC3GLMatrix+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CC3GLMatrix+Extension.m"; path = "WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3GLMatrix+Extension.m"; sourceTree = "<group>"; };
+		1A6140141D260CCB0052A551 /* CC3MathInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CC3MathInclude.h; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3MathInclude.h; sourceTree = "<group>"; };
+		1A6140151D260CCB0052A551 /* NSValue+CC3Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSValue+CC3Types.h"; path = "WorldGame/AITest/OpenGL/Cocos3DMathLib/NSValue+CC3Types.h"; sourceTree = "<group>"; };
+		1A6140161D260CCB0052A551 /* NSValue+CC3Types.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSValue+CC3Types.m"; path = "WorldGame/AITest/OpenGL/Cocos3DMathLib/NSValue+CC3Types.m"; sourceTree = "<group>"; };
+		1A61401A1D260D3E0052A551 /* ZoomManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZoomManager.h; path = Util/ZoomManager.h; sourceTree = "<group>"; };
+		1A61401B1D260D3E0052A551 /* ZoomManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZoomManager.m; path = Util/ZoomManager.m; sourceTree = "<group>"; };
+		1A61401F1D260D950052A551 /* MathHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MathHelper.h; path = Util/MathHelper.h; sourceTree = "<group>"; };
 		1A7232B41CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tele-GroteskNor.ttf"; path = "Resources/Fonts/Tele-GroteskNor.ttf"; sourceTree = "<group>"; };
 		1A84BB381CBFB5DF00CE7EDC /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cancel.png; path = Resources/Images/cancel.png; sourceTree = "<group>"; };
 		1A84BB391CBFB5DF00CE7EDC /* center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = center.png; path = Resources/Images/center.png; sourceTree = "<group>"; };
@@ -662,8 +874,6 @@
 		1ABE0E621D2438250009F3F2 /* CombatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatViewController.m; path = Presentation/CombatViewController.m; sourceTree = "<group>"; };
 		1ABE0E661D24394B0009F3F2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		1ABE0E681D2439500009F3F2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		1ABE0E6A1D2439870009F3F2 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLView.h; path = Views/OpenGLView.h; sourceTree = "<group>"; };
-		1ABE0E6B1D2439870009F3F2 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLView.m; path = Views/OpenGLView.m; sourceTree = "<group>"; };
 		1ABE0E701D243B1E0009F3F2 /* SimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SimpleVertex.glsl; path = Resources/OpenGL/SimpleVertex.glsl; sourceTree = "<group>"; };
 		1ABE0E741D243B420009F3F2 /* SimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SimpleFragment.glsl; path = Resources/OpenGL/SimpleFragment.glsl; sourceTree = "<group>"; };
 		1ABE0E7A1D243ECD0009F3F2 /* CC3Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CC3Foundation.h; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3Foundation.h; sourceTree = "<group>"; };
@@ -890,6 +1100,7 @@
 				1AEE80E51C7BA5B90028ACFF /* Game */,
 				1A57E7EB1C74ABBE00B3890E /* Presentation */,
 				1A57E7C31C71CBDD00B3890E /* Views */,
+				1ABE0E781D243EA40009F3F2 /* OpenGL */,
 				1A57E7BF1C71C88400B3890E /* Util */,
 				1A57E7B81C71C44100B3890E /* Map */,
 				1A57E7821C71C3F200B3890E /* AppDelegate.h */,
@@ -899,7 +1110,6 @@
 				1A57E7961C71C3F200B3890E /* Info.plist */,
 				1AEE80BE1C77350B0028ACFF /* Resources */,
 				1A57E77F1C71C3F200B3890E /* Supporting Files */,
-				1ABE0E781D243EA40009F3F2 /* OpenGL */,
 				1A2EA3A41C8B8BFE00633417 /* Frameworks */,
 			);
 			name = WorldGame;
@@ -980,6 +1190,7 @@
 				1A2EA3DC1C90702800633417 /* BitArray.m */,
 				1A2EA3EA1C95FD0500633417 /* DebugUtil.h */,
 				1A2EA3EB1C95FD0500633417 /* DebugUtil.m */,
+				1A61401F1D260D950052A551 /* MathHelper.h */,
 				1A2EA3F21C98AC4000633417 /* HeightMap.h */,
 				1A2EA3F31C98AC4000633417 /* HeightMap.m */,
 				1A2EA3FC1C994AF300633417 /* NSArray+Util.h */,
@@ -994,6 +1205,8 @@
 				1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */,
 				1A48FCC81CEE354000CFE558 /* KeyValueMap.h */,
 				1A48FCC91CEE354000CFE558 /* KeyValueMap.m */,
+				1A61401A1D260D3E0052A551 /* ZoomManager.h */,
+				1A61401B1D260D3E0052A551 /* ZoomManager.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -1012,8 +1225,6 @@
 				1A3C3A411C84EDF1004009DA /* UIButton+Custom.m */,
 				1A2EA3C71C8E1C5200633417 /* ChartView.h */,
 				1A2EA3C81C8E1C5200633417 /* ChartView.m */,
-				1ABE0E6A1D2439870009F3F2 /* OpenGLView.h */,
-				1ABE0E6B1D2439870009F3F2 /* OpenGLView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1089,6 +1300,68 @@
 			name = Atlases;
 			sourceTree = "<group>";
 		};
+		1A613F7C1D2606EF0052A551 /* Rend */ = {
+			isa = PBXGroup;
+			children = (
+				1A613F871D2607260052A551 /* REBuffer.h */,
+				1A613F881D2607260052A551 /* REBuffer.m */,
+				1A613F891D2607260052A551 /* RECache.h */,
+				1A613F8A1D2607260052A551 /* RECache.m */,
+				1A613F8B1D2607260052A551 /* RECamera.h */,
+				1A613F8C1D2607260052A551 /* RECamera.m */,
+				1A613F8D1D2607260052A551 /* REDirector.h */,
+				1A613F8E1D2607260052A551 /* REDirector.m */,
+				1A613F8F1D2607260052A551 /* REGLStateManager.h */,
+				1A613F901D2607260052A551 /* REGLStateManager.m */,
+				1A613F911D2607260052A551 /* REGLTypes.h */,
+				1A613F921D2607260052A551 /* REGLTypes.m */,
+				1A613F931D2607260052A551 /* REGLView.h */,
+				1A613F941D2607260052A551 /* REGLView.m */,
+				1A613F951D2607260052A551 /* REKeyframedMeshNode.h */,
+				1A613F961D2607260052A551 /* REKeyframedMeshNode.m */,
+				1A613F971D2607260052A551 /* RELight.h */,
+				1A613F981D2607260052A551 /* RELight.m */,
+				1A613F991D2607260052A551 /* REMaterial.h */,
+				1A613F9A1D2607260052A551 /* REMaterial.m */,
+				1A613F9B1D2607260052A551 /* Rend.h */,
+				1A613F9C1D2607260052A551 /* RENode.h */,
+				1A613F9D1D2607260052A551 /* RENode.m */,
+				1A613F9E1D2607260052A551 /* RENSArrayAdditions.h */,
+				1A613F9F1D2607260052A551 /* RENSArrayAdditions.m */,
+				1A613FA01D2607260052A551 /* RENSValueAdditions.h */,
+				1A613FA11D2607260052A551 /* RENSValueAdditions.m */,
+				1A613FA21D2607260052A551 /* REProgram.h */,
+				1A613FA31D2607260052A551 /* REProgram.m */,
+				1A613FA41D2607260052A551 /* RERotator.h */,
+				1A613FA51D2607260052A551 /* RERotator.m */,
+				1A613FA61D2607260052A551 /* REScene.h */,
+				1A613FA71D2607260052A551 /* REScene.m */,
+				1A613FA81D2607260052A551 /* REScheduler.h */,
+				1A613FA91D2607260052A551 /* REScheduler.m */,
+				1A613FAA1D2607260052A551 /* REShader.h */,
+				1A613FAB1D2607260052A551 /* REShader.m */,
+				1A613FAC1D2607260052A551 /* RESprite.h */,
+				1A613FAD1D2607260052A551 /* RESprite.m */,
+				1A613FAE1D2607260052A551 /* RESpriteBatchNode.h */,
+				1A613FAF1D2607260052A551 /* RESpriteBatchNode.m */,
+				1A613FB01D2607260052A551 /* RETexture.h */,
+				1A613FB11D2607260052A551 /* RETexture.m */,
+				1A613FB21D2607260052A551 /* REVertexArrayObject.h */,
+				1A613FB31D2607260052A551 /* REVertexArrayObject.m */,
+				1A613FB41D2607260052A551 /* REWavefrontMesh.h */,
+				1A613FB51D2607260052A551 /* REWavefrontMesh.m */,
+				1A613FB61D2607260052A551 /* REWavefrontMeshElementIndexBatch.h */,
+				1A613FB71D2607260052A551 /* REWavefrontMeshElementIndexBatch.m */,
+				1A613FB81D2607260052A551 /* REWavefrontMeshGroupNode.h */,
+				1A613FB91D2607260052A551 /* REWavefrontMeshGroupNode.m */,
+				1A613FBA1D2607260052A551 /* REWavefrontMeshNode.h */,
+				1A613FBB1D2607260052A551 /* REWavefrontMeshNode.m */,
+				1A613FBC1D2607260052A551 /* REWorld.h */,
+				1A613FBD1D2607260052A551 /* REWorld.m */,
+			);
+			name = Rend;
+			sourceTree = "<group>";
+		};
 		1A7232B31CBD8EFA00D8AAC8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1111,6 +1384,7 @@
 			children = (
 				1ABE0E701D243B1E0009F3F2 /* SimpleVertex.glsl */,
 				1ABE0E741D243B420009F3F2 /* SimpleFragment.glsl */,
+				1A613F471D24F56D0052A551 /* tile_floor.png */,
 			);
 			name = OpenGL;
 			sourceTree = "<group>";
@@ -1118,7 +1392,32 @@
 		1ABE0E781D243EA40009F3F2 /* OpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				1A613F4A1D2606D10052A551 /* AbstractCamera.h */,
+				1A613F4B1D2606D10052A551 /* AbstractCamera.m */,
+				1A613F4C1D2606D10052A551 /* ArcBallCamera.h */,
+				1A613F4D1D2606D10052A551 /* ArcBallCamera.m */,
 				1ABE0E791D243EB40009F3F2 /* Cocos3D */,
+				1A613F541D2606E60052A551 /* CombatBoardMesh.h */,
+				1A613F551D2606E60052A551 /* CombatBoardMesh.m */,
+				1A613F561D2606E60052A551 /* CubeMesh.h */,
+				1A613F571D2606E60052A551 /* CubeMesh.m */,
+				1A613F581D2606E60052A551 /* GLPlane.h */,
+				1A613F591D2606E60052A551 /* GLPlane.m */,
+				1A613F5A1D2606E60052A551 /* GLRay.h */,
+				1A613F5B1D2606E60052A551 /* GLRay.m */,
+				1A613F5C1D2606E60052A551 /* GLViewController.h */,
+				1A613F5D1D2606E60052A551 /* GLViewController.m */,
+				1A613F5E1D2606E60052A551 /* Mesh.h */,
+				1A613F5F1D2606E60052A551 /* Mesh.m */,
+				1A613F601D2606E60052A551 /* OpenGLUtil.h */,
+				1A613F611D2606E60052A551 /* OpenGLUtil.m */,
+				1A613F621D2606E60052A551 /* OpenGLView.h */,
+				1A613F631D2606E60052A551 /* OpenGLView.m */,
+				1A613F7C1D2606EF0052A551 /* Rend */,
+				1A613F7D1D2607020052A551 /* TextureAtlas.h */,
+				1A613F7E1D2607020052A551 /* TextureAtlas.m */,
+				1A613F7F1D2607020052A551 /* Transformations.h */,
+				1A613F801D2607020052A551 /* Transformations.m */,
 			);
 			name = OpenGL;
 			path = ../..;
@@ -1137,6 +1436,11 @@
 				1ABE0E811D243ECD0009F3F2 /* CC3Math.h */,
 				1ABE0E821D243ECD0009F3F2 /* CC3Math.m */,
 				1ABE0E831D243ECD0009F3F2 /* ccTypes.h */,
+				1A61400F1D2609850052A551 /* CC3GLMatrix+Extension.h */,
+				1A6140101D2609850052A551 /* CC3GLMatrix+Extension.m */,
+				1A6140141D260CCB0052A551 /* CC3MathInclude.h */,
+				1A6140151D260CCB0052A551 /* NSValue+CC3Types.h */,
+				1A6140161D260CCB0052A551 /* NSValue+CC3Types.m */,
 			);
 			name = Cocos3D;
 			sourceTree = "<group>";
@@ -1401,6 +1705,7 @@
 				1A48FCC31CEE310B00CFE558 /* city.png in Resources */,
 				1A5C22F41C9C164F007F324C /* UnitTiles.png in Resources */,
 				1A5C22E81C9C164F007F324C /* PolicyTiles.png in Resources */,
+				1A613F491D24F56D0052A551 /* tile_floor.png in Resources */,
 				1A35A9E21CAEF21A0094F773 /* Feudalism.png in Resources */,
 				1AEE80DA1C7735960028ACFF /* Snow.xml in Resources */,
 				1A84BB4A1CC029E500CE7EDC /* menu-item-disabled.png in Resources */,
@@ -1717,36 +2022,64 @@
 				1A57E7E81C74ABB300B3890E /* MainMenuViewController.m in Sources */,
 				1A3C3A3D1C84ED9A004009DA /* UILabel+Custom.m in Sources */,
 				1A3C3A181C7F931E004009DA /* Yield.m in Sources */,
+				1A613F811D2607020052A551 /* TextureAtlas.m in Sources */,
+				1A613F671D2606E60052A551 /* CubeMesh.m in Sources */,
+				1A613F731D2606E60052A551 /* Mesh.m in Sources */,
+				1A6140031D2607260052A551 /* REWavefrontMeshElementIndexBatch.m in Sources */,
 				1AEE80BB1C7733F70028ACFF /* XMLReader.m in Sources */,
 				1A2EA3F41C98AC4000633417 /* HeightMap.m in Sources */,
+				1A613FE81D2607260052A551 /* RERotator.m in Sources */,
+				1A6140091D2607260052A551 /* REWavefrontMeshNode.m in Sources */,
 				1AEE80F21C7C5FB40028ACFF /* Unit.m in Sources */,
+				1A613F701D2606E60052A551 /* GLViewController.m in Sources */,
 				1A35A9AA1CA1E9050094F773 /* SelectMapSizeTableViewController.m in Sources */,
+				1A613F641D2606E60052A551 /* CombatBoardMesh.m in Sources */,
 				1AEE80ED1C7BB20B0028ACFF /* Player.m in Sources */,
 				1A58E3711CBBB41A00AE7140 /* LoadGameViewController.m in Sources */,
 				1AEE80E81C7BA6450028ACFF /* Game.m in Sources */,
 				1A57E7C21C71C89900B3890E /* Array2D.m in Sources */,
 				1ABE0E871D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */,
 				1A2EA4031C994FB700633417 /* Continent.m in Sources */,
+				1A613FF41D2607260052A551 /* RESprite.m in Sources */,
 				1A2EA3881C8986AE00633417 /* Group.m in Sources */,
 				1A35A9AF1CA2BD430094F773 /* PolicyInfo.m in Sources */,
+				1A613FFA1D2607260052A551 /* RETexture.m in Sources */,
 				1A5C22FE1C9C42E7007F324C /* UIImage+Sprite.m in Sources */,
+				1A613FC11D2607260052A551 /* RECache.m in Sources */,
 				1AAEB59A1CB7C6EF00DA478B /* GamePersistance.m in Sources */,
+				1A613FEE1D2607260052A551 /* REScheduler.m in Sources */,
+				1A613FD91D2607260052A551 /* REMaterial.m in Sources */,
 				1A57E7DF1C74700D00B3890E /* MapPoint.m in Sources */,
+				1A6140171D260CCB0052A551 /* NSValue+CC3Types.m in Sources */,
 				1A57E7BE1C71C83700B3890E /* Map.m in Sources */,
 				1A3C3A1D1C7F9DD7004009DA /* Area.m in Sources */,
 				1A57E7841C71C3F200B3890E /* AppDelegate.m in Sources */,
 				1A84BB461CBFB60800CE7EDC /* GameViewController.m in Sources */,
+				1A61401C1D260D3E0052A551 /* ZoomManager.m in Sources */,
+				1A613F4E1D2606D10052A551 /* AbstractCamera.m in Sources */,
+				1A613FCA1D2607260052A551 /* REGLStateManager.m in Sources */,
+				1A613FE51D2607260052A551 /* REProgram.m in Sources */,
+				1A613FFD1D2607260052A551 /* REVertexArrayObject.m in Sources */,
+				1A613F511D2606D10052A551 /* ArcBallCamera.m in Sources */,
 				1A57E7811C71C3F200B3890E /* main.m in Sources */,
+				1A613F6D1D2606E60052A551 /* GLRay.m in Sources */,
 				1ABE0E8D1D243ECD0009F3F2 /* CC3Math.m in Sources */,
+				1A613FD01D2607260052A551 /* REGLView.m in Sources */,
 				1A2EA3921C89877C00633417 /* RelationsNetwork.m in Sources */,
 				1A3C3A2D1C80FCEA004009DA /* Simulation.m in Sources */,
 				1A2EA3C31C8CD17A00633417 /* PolicyViewController.m in Sources */,
+				1A613FE21D2607260052A551 /* RENSValueAdditions.m in Sources */,
 				1A5C23031C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */,
 				1AAE3F4B1CD93AB90016F861 /* PlotEconomy.m in Sources */,
+				1A613FDF1D2607260052A551 /* RENSArrayAdditions.m in Sources */,
 				1A8D66C11CA1306000284BB8 /* BaseTableViewController.m in Sources */,
 				1A48FCCA1CEE354000CFE558 /* KeyValueMap.m in Sources */,
 				1A2EA3CE1C8F2BE600633417 /* MapEvaluator.m in Sources */,
 				1A3C3A091C7F3090004009DA /* Flavor.m in Sources */,
+				1A613FCD1D2607260052A551 /* REGLTypes.m in Sources */,
+				1A613FD61D2607260052A551 /* RELight.m in Sources */,
+				1A6140061D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */,
+				1A613FC71D2607260052A551 /* REDirector.m in Sources */,
 				1A2EA3A01C8B860300633417 /* MinistryTableViewController.m in Sources */,
 				1A2EA3E21C92D5A900633417 /* DebugViewController.m in Sources */,
 				1A57E7BB1C71C45C00B3890E /* Plot.m in Sources */,
@@ -1755,27 +2088,40 @@
 				1A3C39FA1C7EF5FA004009DA /* GrandStrategyAI.m in Sources */,
 				1ABE0E8A1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */,
 				1A3C3A041C7F2F75004009DA /* Leader.m in Sources */,
+				1A6140111D2609850052A551 /* CC3GLMatrix+Extension.m in Sources */,
+				1A61400C1D2607260052A551 /* REWorld.m in Sources */,
+				1A613FEB1D2607260052A551 /* REScene.m in Sources */,
 				1ABE0E631D2438250009F3F2 /* CombatViewController.m in Sources */,
+				1A613F791D2606E60052A551 /* OpenGLView.m in Sources */,
 				1A57E7C61C71CBFD00B3890E /* MapView.m in Sources */,
 				1A5C22B51C9B40A3007F324C /* SelectMapTypeTableViewController.m in Sources */,
 				1A2EA38D1C89872200633417 /* Policy.m in Sources */,
 				1A3C3A421C84EDF1004009DA /* UIButton+Custom.m in Sources */,
 				1A3C39FF1C7F2C98004009DA /* Civilization.m in Sources */,
 				1A2EA3971C89B95C00633417 /* GroupType.m in Sources */,
-				1ABE0E6C1D2439870009F3F2 /* OpenGLView.m in Sources */,
 				1AFF700B1CD76EAE009C7203 /* MunicipalEntity.m in Sources */,
 				1A2EA3E71C92D73200633417 /* AboutViewController.m in Sources */,
 				1AEBDE091CC7B57E00BE09E8 /* DateUtils.m in Sources */,
 				1A2EA3F91C98AFF700633417 /* MapGenerator.m in Sources */,
 				1AEE071D1D2389EB00E2D866 /* CombatBoard.m in Sources */,
 				1AFF700E1CD76EFB009C7203 /* Economy.m in Sources */,
+				1A613FBE1D2607260052A551 /* REBuffer.m in Sources */,
+				1A613FF11D2607260052A551 /* REShader.m in Sources */,
+				1A613FD31D2607260052A551 /* REKeyframedMeshNode.m in Sources */,
 				1ABE0E841D243ECD0009F3F2 /* CC3Foundation.m in Sources */,
 				1A5C22F91C9C16D2007F324C /* ImageAtlas.m in Sources */,
 				1A2EA3D31C8F694F00633417 /* Situation.m in Sources */,
+				1A613FC41D2607260052A551 /* RECamera.m in Sources */,
 				1A2EA3EC1C95FD0500633417 /* DebugUtil.m in Sources */,
+				1A613F761D2606E60052A551 /* OpenGLUtil.m in Sources */,
 				1AEE80E21C78CE6E0028ACFF /* NSDictionary+Extension.m in Sources */,
+				1A613FDC1D2607260052A551 /* RENode.m in Sources */,
 				1A2EA3FE1C994AF300633417 /* NSArray+Util.m in Sources */,
+				1A613F6A1D2606E60052A551 /* GLPlane.m in Sources */,
+				1A613FF71D2607260052A551 /* RESpriteBatchNode.m in Sources */,
+				1A613F841D2607020052A551 /* Transformations.m in Sources */,
 				1A2EA3DD1C90702800633417 /* BitArray.m in Sources */,
+				1A6140001D2607260052A551 /* REWavefrontMesh.m in Sources */,
 				1A3C3A321C84EA8C004009DA /* OverlayView.m in Sources */,
 				1A2EA3C91C8E1C5200633417 /* ChartView.m in Sources */,
 				1A35A99D1CA1A5090094F773 /* SetupGameTableViewController.m in Sources */,
@@ -1788,18 +2134,36 @@
 			files = (
 				1ABE0E641D2438250009F3F2 /* CombatViewController.m in Sources */,
 				1A3C3A1E1C7F9DD7004009DA /* Area.m in Sources */,
+				1A613FE91D2607260052A551 /* RERotator.m in Sources */,
 				1A2EA3FA1C98AFF700633417 /* MapGenerator.m in Sources */,
+				1A6140071D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */,
+				1A613FD41D2607260052A551 /* REKeyframedMeshNode.m in Sources */,
 				1A2EA3FF1C994AF300633417 /* NSArray+Util.m in Sources */,
+				1A613FCE1D2607260052A551 /* REGLTypes.m in Sources */,
 				1A2EA38E1C89872200633417 /* Policy.m in Sources */,
+				1A613F821D2607020052A551 /* TextureAtlas.m in Sources */,
 				1A3C3A051C7F2F75004009DA /* Leader.m in Sources */,
+				1A613FEF1D2607260052A551 /* REScheduler.m in Sources */,
+				1A613F741D2606E60052A551 /* Mesh.m in Sources */,
 				1AEF612B1D159E6500253DD6 /* LoadGameViewController.m in Sources */,
+				1A613FE31D2607260052A551 /* RENSValueAdditions.m in Sources */,
+				1A613F7A1D2606E60052A551 /* OpenGLView.m in Sources */,
+				1A613F711D2606E60052A551 /* GLViewController.m in Sources */,
+				1A613F6B1D2606E60052A551 /* GLPlane.m in Sources */,
+				1A61400A1D2607260052A551 /* REWavefrontMeshNode.m in Sources */,
 				1A3C3A001C7F2C98004009DA /* Civilization.m in Sources */,
 				1A2EA3ED1C95FD0500633417 /* DebugUtil.m in Sources */,
+				1A61400D1D2607260052A551 /* REWorld.m in Sources */,
 				1A2EA3F51C98AC4000633417 /* HeightMap.m in Sources */,
+				1A613FD11D2607260052A551 /* REGLView.m in Sources */,
+				1A613FFE1D2607260052A551 /* REVertexArrayObject.m in Sources */,
+				1A613F851D2607020052A551 /* Transformations.m in Sources */,
 				1A2EA3D41C8F694F00633417 /* Situation.m in Sources */,
 				1AEF612C1D159E7B00253DD6 /* Map.m in Sources */,
 				1ABE0E8E1D243ECD0009F3F2 /* CC3Math.m in Sources */,
+				1A613FCB1D2607260052A551 /* REGLStateManager.m in Sources */,
 				1A2EA3841C89864800633417 /* Relation.m in Sources */,
+				1A6140121D2609850052A551 /* CC3GLMatrix+Extension.m in Sources */,
 				1AEF61341D159EB500253DD6 /* SelectMapTypeTableViewController.m in Sources */,
 				1A2EA3DE1C90702800633417 /* BitArray.m in Sources */,
 				1A3C39FB1C7EF5FA004009DA /* GrandStrategyAI.m in Sources */,
@@ -1807,42 +2171,65 @@
 				1A5C23041C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */,
 				1AEE071E1D2389EB00E2D866 /* CombatBoard.m in Sources */,
 				1A8D66C21CA1306000284BB8 /* BaseTableViewController.m in Sources */,
+				1A613F521D2606D10052A551 /* ArcBallCamera.m in Sources */,
 				1A2EA3C41C8CD17A00633417 /* PolicyViewController.m in Sources */,
+				1A613F681D2606E60052A551 /* CubeMesh.m in Sources */,
+				1A613FBF1D2607260052A551 /* REBuffer.m in Sources */,
 				1A2EA3E81C92D73200633417 /* AboutViewController.m in Sources */,
+				1A613FE61D2607260052A551 /* REProgram.m in Sources */,
 				1AEE80E31C78CE6E0028ACFF /* NSDictionary+Extension.m in Sources */,
+				1A613FC51D2607260052A551 /* RECamera.m in Sources */,
 				1A5C22FF1C9C42E7007F324C /* UIImage+Sprite.m in Sources */,
 				1AEBDE0A1CC7B57E00BE09E8 /* DateUtils.m in Sources */,
 				1ABE0E881D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */,
 				1A3C3A331C84EA8C004009DA /* OverlayView.m in Sources */,
+				1A613FFB1D2607260052A551 /* RETexture.m in Sources */,
 				1AEE80F31C7C5FB40028ACFF /* Unit.m in Sources */,
+				1A613F771D2606E60052A551 /* OpenGLUtil.m in Sources */,
 				1AEF61321D159EA400253DD6 /* PlotEconomy.m in Sources */,
 				1AEF61301D159EA000253DD6 /* Plot.m in Sources */,
 				1ABE0E8B1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */,
+				1A613FF21D2607260052A551 /* REShader.m in Sources */,
 				1A2EA3CA1C8E1C5200633417 /* ChartView.m in Sources */,
 				1A35A9B01CA2BD430094F773 /* PolicyInfo.m in Sources */,
+				1A6140011D2607260052A551 /* REWavefrontMesh.m in Sources */,
 				1A2EA3891C8986AE00633417 /* Group.m in Sources */,
 				1AEF61281D159E4B00253DD6 /* GamePersistance.m in Sources */,
 				1AFF700F1CD76EFB009C7203 /* Economy.m in Sources */,
 				1A3C3A0A1C7F3090004009DA /* Flavor.m in Sources */,
 				1A2EA3CF1C8F2BE600633417 /* MapEvaluator.m in Sources */,
+				1A613FEC1D2607260052A551 /* REScene.m in Sources */,
+				1A613FC21D2607260052A551 /* RECache.m in Sources */,
+				1A6140041D2607260052A551 /* REWavefrontMeshElementIndexBatch.m in Sources */,
+				1A613FC81D2607260052A551 /* REDirector.m in Sources */,
 				1AEF612E1D159E9100253DD6 /* MapView.m in Sources */,
+				1A613F4F1D2606D10052A551 /* AbstractCamera.m in Sources */,
 				1A48FCCB1CEE354000CFE558 /* KeyValueMap.m in Sources */,
 				1ABE0E851D243ECD0009F3F2 /* CC3Foundation.m in Sources */,
 				1AEF61261D159E2B00253DD6 /* Array2D.m in Sources */,
+				1A613FF51D2607260052A551 /* RESprite.m in Sources */,
+				1A6140181D260CCB0052A551 /* NSValue+CC3Types.m in Sources */,
 				1A57E7A01C71C3F200B3890E /* AITestTests.m in Sources */,
-				1ABE0E6D1D2439870009F3F2 /* OpenGLView.m in Sources */,
+				1A613FD71D2607260052A551 /* RELight.m in Sources */,
 				1A57E7E91C74ABB300B3890E /* MainMenuViewController.m in Sources */,
+				1A61401D1D260D3E0052A551 /* ZoomManager.m in Sources */,
 				1A3C3A481C84F028004009DA /* NSString+Custom.m in Sources */,
 				1A5C22FA1C9C16D2007F324C /* ImageAtlas.m in Sources */,
 				1A3C3A191C7F931E004009DA /* Yield.m in Sources */,
+				1A613F651D2606E60052A551 /* CombatBoardMesh.m in Sources */,
 				1A2EA3931C89877C00633417 /* RelationsNetwork.m in Sources */,
 				1AEE80E91C7BA6450028ACFF /* Game.m in Sources */,
+				1A613FE01D2607260052A551 /* RENSArrayAdditions.m in Sources */,
+				1A613FF81D2607260052A551 /* RESpriteBatchNode.m in Sources */,
 				1A3C3A2E1C80FCEA004009DA /* Simulation.m in Sources */,
+				1A613FDD1D2607260052A551 /* RENode.m in Sources */,
 				1A35A9AB1CA1E9050094F773 /* SelectMapSizeTableViewController.m in Sources */,
 				1A3C3A431C84EDF1004009DA /* UIButton+Custom.m in Sources */,
 				1AEE80BC1C7733F70028ACFF /* XMLReader.m in Sources */,
+				1A613F6E1D2606E60052A551 /* GLRay.m in Sources */,
 				1A2EA3981C89B95C00633417 /* GroupType.m in Sources */,
 				1AEE80EE1C7BB20B0028ACFF /* Player.m in Sources */,
+				1A613FDA1D2607260052A551 /* REMaterial.m in Sources */,
 				1A57E7E01C74700D00B3890E /* MapPoint.m in Sources */,
 				1A84BB471CBFB60800CE7EDC /* GameViewController.m in Sources */,
 				1A2EA3A11C8B860300633417 /* MinistryTableViewController.m in Sources */,
@@ -1861,65 +2248,106 @@
 				1AFAF3A81D212C0500165808 /* BaseUITestCase.swift in Sources */,
 				1ABE0E861D243ECD0009F3F2 /* CC3Foundation.m in Sources */,
 				1A2EA4001C994AF300633417 /* NSArray+Util.m in Sources */,
+				1A6140051D2607260052A551 /* REWavefrontMeshElementIndexBatch.m in Sources */,
+				1A613FED1D2607260052A551 /* REScene.m in Sources */,
 				1A2EA38F1C89872200633417 /* Policy.m in Sources */,
 				1A3C3A061C7F2F75004009DA /* Leader.m in Sources */,
+				1A613FDE1D2607260052A551 /* RENode.m in Sources */,
 				1AEF612A1D159E6400253DD6 /* LoadGameViewController.m in Sources */,
 				1A3C3A011C7F2C98004009DA /* Civilization.m in Sources */,
+				1A613FC61D2607260052A551 /* RECamera.m in Sources */,
 				1A2EA3EE1C95FD0500633417 /* DebugUtil.m in Sources */,
 				1A2EA3F61C98AC4000633417 /* HeightMap.m in Sources */,
+				1A613F6F1D2606E60052A551 /* GLRay.m in Sources */,
+				1A613F661D2606E60052A551 /* CombatBoardMesh.m in Sources */,
 				1A2EA3D51C8F694F00633417 /* Situation.m in Sources */,
+				1A613F751D2606E60052A551 /* Mesh.m in Sources */,
 				1AEF612D1D159E7C00253DD6 /* Map.m in Sources */,
+				1A613F831D2607020052A551 /* TextureAtlas.m in Sources */,
+				1A613FE71D2607260052A551 /* REProgram.m in Sources */,
 				1AEE071F1D2389EB00E2D866 /* CombatBoard.m in Sources */,
+				1A613F501D2606D10052A551 /* AbstractCamera.m in Sources */,
 				1A2EA3851C89864800633417 /* Relation.m in Sources */,
 				1AEF61351D159EB600253DD6 /* SelectMapTypeTableViewController.m in Sources */,
 				1A2EA3DF1C90702800633417 /* BitArray.m in Sources */,
 				1A3C39FC1C7EF5FA004009DA /* GrandStrategyAI.m in Sources */,
 				1A3C3A3F1C84ED9A004009DA /* UILabel+Custom.m in Sources */,
+				1A613FDB1D2607260052A551 /* REMaterial.m in Sources */,
 				1A5C23051C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */,
-				1ABE0E6E1D2439870009F3F2 /* OpenGLView.m in Sources */,
+				1A613FD51D2607260052A551 /* REKeyframedMeshNode.m in Sources */,
+				1A613FF31D2607260052A551 /* REShader.m in Sources */,
+				1A6140131D2609850052A551 /* CC3GLMatrix+Extension.m in Sources */,
+				1A613F781D2606E60052A551 /* OpenGLUtil.m in Sources */,
 				1A8D66C31CA1306000284BB8 /* BaseTableViewController.m in Sources */,
 				1A2EA3C51C8CD17A00633417 /* PolicyViewController.m in Sources */,
 				1A2EA3E91C92D73200633417 /* AboutViewController.m in Sources */,
 				1AEE80E41C78CE6E0028ACFF /* NSDictionary+Extension.m in Sources */,
+				1A613F6C1D2606E60052A551 /* GLPlane.m in Sources */,
+				1A61400B1D2607260052A551 /* REWavefrontMeshNode.m in Sources */,
 				1A5C23001C9C42E7007F324C /* UIImage+Sprite.m in Sources */,
+				1A613FC31D2607260052A551 /* RECache.m in Sources */,
 				1AEBDE0B1CC7B57E00BE09E8 /* DateUtils.m in Sources */,
+				1A613FD21D2607260052A551 /* REGLView.m in Sources */,
 				1A3C3A341C84EA8C004009DA /* OverlayView.m in Sources */,
+				1A613F721D2606E60052A551 /* GLViewController.m in Sources */,
 				1AEE80F41C7C5FB40028ACFF /* Unit.m in Sources */,
 				1ABE0E891D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */,
+				1A613F861D2607020052A551 /* Transformations.m in Sources */,
+				1A613FE11D2607260052A551 /* RENSArrayAdditions.m in Sources */,
 				1AEF61331D159EA400253DD6 /* PlotEconomy.m in Sources */,
+				1A613FD81D2607260052A551 /* RELight.m in Sources */,
 				1AEF61311D159EA100253DD6 /* Plot.m in Sources */,
 				1A2EA3CB1C8E1C5200633417 /* ChartView.m in Sources */,
+				1A613FF61D2607260052A551 /* RESprite.m in Sources */,
 				1A35A9B11CA2BD430094F773 /* PolicyInfo.m in Sources */,
 				1A2EA38A1C8986AE00633417 /* Group.m in Sources */,
+				1A613F531D2606D10052A551 /* ArcBallCamera.m in Sources */,
 				1AEF61291D159E4C00253DD6 /* GamePersistance.m in Sources */,
 				1AFF70101CD76EFB009C7203 /* Economy.m in Sources */,
 				1A3C3A0B1C7F3090004009DA /* Flavor.m in Sources */,
+				1A6140021D2607260052A551 /* REWavefrontMesh.m in Sources */,
 				1A2EA3D01C8F2BE600633417 /* MapEvaluator.m in Sources */,
 				1ABE0E8F1D243ECD0009F3F2 /* CC3Math.m in Sources */,
+				1A613FE41D2607260052A551 /* RENSValueAdditions.m in Sources */,
+				1A613FFF1D2607260052A551 /* REVertexArrayObject.m in Sources */,
+				1A613FCC1D2607260052A551 /* REGLStateManager.m in Sources */,
+				1A6140191D260CCB0052A551 /* NSValue+CC3Types.m in Sources */,
 				1AEF612F1D159E9100253DD6 /* MapView.m in Sources */,
 				1A48FCCC1CEE354000CFE558 /* KeyValueMap.m in Sources */,
 				1AEF61271D159E2C00253DD6 /* Array2D.m in Sources */,
 				1ABE0E8C1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */,
+				1A613FF91D2607260052A551 /* RESpriteBatchNode.m in Sources */,
 				1A57E7AB1C71C3F200B3890E /* AITestUITests.swift in Sources */,
+				1A61401E1D260D3E0052A551 /* ZoomManager.m in Sources */,
 				1A57E7EA1C74ABB300B3890E /* MainMenuViewController.m in Sources */,
+				1A613FC91D2607260052A551 /* REDirector.m in Sources */,
+				1A613FEA1D2607260052A551 /* RERotator.m in Sources */,
 				1A3C3A491C84F028004009DA /* NSString+Custom.m in Sources */,
 				1A5C22FB1C9C16D2007F324C /* ImageAtlas.m in Sources */,
 				1ABE0E651D2438250009F3F2 /* CombatViewController.m in Sources */,
 				1A3C3A1A1C7F931E004009DA /* Yield.m in Sources */,
+				1A613F691D2606E60052A551 /* CubeMesh.m in Sources */,
 				1A2EA3941C89877C00633417 /* RelationsNetwork.m in Sources */,
 				1AEE80EA1C7BA6450028ACFF /* Game.m in Sources */,
+				1A613FCF1D2607260052A551 /* REGLTypes.m in Sources */,
 				1A3C3A2F1C80FCEA004009DA /* Simulation.m in Sources */,
 				1A35A9AC1CA1E9050094F773 /* SelectMapSizeTableViewController.m in Sources */,
 				1A3C3A441C84EDF1004009DA /* UIButton+Custom.m in Sources */,
 				1AEE80BD1C7733F70028ACFF /* XMLReader.m in Sources */,
+				1A613FFC1D2607260052A551 /* RETexture.m in Sources */,
 				1A2EA3991C89B95C00633417 /* GroupType.m in Sources */,
+				1A6140081D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */,
 				1AEE80EF1C7BB20B0028ACFF /* Player.m in Sources */,
 				1A57E7E11C74700D00B3890E /* MapPoint.m in Sources */,
 				1A84BB481CBFB60800CE7EDC /* GameViewController.m in Sources */,
+				1A613F7B1D2606E60052A551 /* OpenGLView.m in Sources */,
 				1A2EA3A21C8B860300633417 /* MinistryTableViewController.m in Sources */,
+				1A613FC01D2607260052A551 /* REBuffer.m in Sources */,
 				1A2EA4051C994FB700633417 /* Continent.m in Sources */,
+				1A61400E1D2607260052A551 /* REWorld.m in Sources */,
 				1A2EA3E41C92D5A900633417 /* DebugViewController.m in Sources */,
 				1A35A99F1CA1A5090094F773 /* SetupGameTableViewController.m in Sources */,
+				1A613FF01D2607260052A551 /* REScheduler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

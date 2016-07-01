@@ -11,4 +11,12 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+#import "CC3Foundation.h"
+#import "CC3GLMatrix.h"
+
+#include <OpenGLES/ES2/gl.h>
+#include <OpenGLES/ES2/glext.h>
+
+#import "Rend.h"
+
 #endif /* WorldGame_pch */

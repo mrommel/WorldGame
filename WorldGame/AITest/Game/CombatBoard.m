@@ -57,6 +57,8 @@
             }
         }
         
+        // river, city wall
+        
         for (int x = 0; x < 5; x++) {
             for (int y = 3; y < 6; y++) {
                 CombatBoardTile *boardTile = [[CombatBoardTile alloc] initWithX:x andY:y onBoard:self];

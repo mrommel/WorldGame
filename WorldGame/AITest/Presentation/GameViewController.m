@@ -17,6 +17,9 @@
 #import "Policy.h"
 #import "PolicyInfo.h"
 
+#import "CombatViewController.h"
+#import "CombatBoard.h"
+
 #import "SCLAlertView.h"
 
 @interface GameViewController ()
@@ -237,10 +240,14 @@
 {
     [self.overlay dismiss];
     
-    MinistryTableViewController *viewController = [[MinistryTableViewController alloc] init];
+    /*MinistryTableViewController *viewController = [[MinistryTableViewController alloc] init];
     viewController.ministry = MinistryFinance;
     viewController.player = [[GameProvider sharedInstance].game humanPlayer];
-    [self.navigationController pushViewController:viewController animated:YES];
+    [self.navigationController pushViewController:viewController animated:YES];*/
+    
+    CombatViewController *combatViewController = [[CombatViewController alloc] init];
+    combatViewController.combatBoard = [[CombatBoard alloc] initWithAttackerPosition:CGPointMake(0, 0) andDefenderPosition:CGPointMake(1, 1) onMap:[GameProvider sharedInstance].game.map];
+    [self.navigationController pushViewController:combatViewController animated:YES];
 }
 
 - (void)goChancellery:(id)sender

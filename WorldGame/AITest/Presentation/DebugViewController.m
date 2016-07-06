@@ -10,6 +10,7 @@
 
 #import "UIConstants.h"
 #import "CombatViewController.h"
+#import "CombatBoard.h"
 
 @interface DebugViewController ()
 
@@ -98,9 +99,8 @@
             return [[TableViewContent alloc] initWithTitle:@"OpenGL"
                                                andSubtitle:@"open"
                                                   andStyle:ContentStyleNormal
-                                                 andAction:^(NSIndexPath *path){
-                                                     CombatViewController *combat = [[CombatViewController alloc] init];
-                                                     [self.navigationController pushViewController:combat animated:YES];
+                                                 andAction:^(NSIndexPath *path) {
+
                                                  }];
             break;
     }

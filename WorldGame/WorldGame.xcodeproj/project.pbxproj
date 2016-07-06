@@ -43,6 +43,36 @@
 		1A0FF29C1CA0965500F64050 /* menu-item-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF2951CA0965500F64050 /* menu-item-normal.png */; };
 		1A0FF29D1CA0965500F64050 /* menu-item-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF2951CA0965500F64050 /* menu-item-normal.png */; };
 		1A0FF29E1CA0965500F64050 /* menu-item-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF2951CA0965500F64050 /* menu-item-normal.png */; };
+		1A2CB4A41D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
+		1A2CB4A51D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
+		1A2CB4A61D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
+		1A2CB4A71D2BCD97005E9F9E /* CubeMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB4A11D2BCD97005E9F9E /* CubeMesh.m */; };
+		1A2CB4A81D2BCD97005E9F9E /* CubeMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB4A11D2BCD97005E9F9E /* CubeMesh.m */; };
+		1A2CB4A91D2BCD97005E9F9E /* CubeMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB4A11D2BCD97005E9F9E /* CubeMesh.m */; };
+		1A2CB4AA1D2BCD97005E9F9E /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB4A31D2BCD97005E9F9E /* Mesh.m */; };
+		1A2CB4AB1D2BCD97005E9F9E /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB4A31D2BCD97005E9F9E /* Mesh.m */; };
+		1A2CB4AC1D2BCD97005E9F9E /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB4A31D2BCD97005E9F9E /* Mesh.m */; };
+		1A2CB4AF1D2BCEAF005E9F9E /* TerrainNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB4AE1D2BCEAF005E9F9E /* TerrainNode.m */; };
+		1A2CB4B01D2BCEAF005E9F9E /* TerrainNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB4AE1D2BCEAF005E9F9E /* TerrainNode.m */; };
+		1A2CB4B11D2BCEAF005E9F9E /* TerrainNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB4AE1D2BCEAF005E9F9E /* TerrainNode.m */; };
+		1A2CB4B41D2BCF78005E9F9E /* TerrainFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4B21D2BCF78005E9F9E /* TerrainFragment.glsl */; };
+		1A2CB4B51D2BCF78005E9F9E /* TerrainFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4B21D2BCF78005E9F9E /* TerrainFragment.glsl */; };
+		1A2CB4B61D2BCF78005E9F9E /* TerrainFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4B21D2BCF78005E9F9E /* TerrainFragment.glsl */; };
+		1A2CB4B71D2BCF78005E9F9E /* TerrainVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4B31D2BCF78005E9F9E /* TerrainVertex.glsl */; };
+		1A2CB4B81D2BCF78005E9F9E /* TerrainVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4B31D2BCF78005E9F9E /* TerrainVertex.glsl */; };
+		1A2CB4B91D2BCF78005E9F9E /* TerrainVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4B31D2BCF78005E9F9E /* TerrainVertex.glsl */; };
+		1A2CB4BF1D2CEA13005E9F9E /* dirt512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4BB1D2CEA13005E9F9E /* dirt512.png */; };
+		1A2CB4C01D2CEA13005E9F9E /* dirt512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4BB1D2CEA13005E9F9E /* dirt512.png */; };
+		1A2CB4C11D2CEA13005E9F9E /* dirt512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4BB1D2CEA13005E9F9E /* dirt512.png */; };
+		1A2CB4C21D2CEA13005E9F9E /* grass512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4BC1D2CEA13005E9F9E /* grass512.png */; };
+		1A2CB4C31D2CEA13005E9F9E /* grass512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4BC1D2CEA13005E9F9E /* grass512.png */; };
+		1A2CB4C41D2CEA13005E9F9E /* grass512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4BC1D2CEA13005E9F9E /* grass512.png */; };
+		1A2CB4C51D2CEA13005E9F9E /* rock512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4BD1D2CEA13005E9F9E /* rock512.png */; };
+		1A2CB4C61D2CEA13005E9F9E /* rock512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4BD1D2CEA13005E9F9E /* rock512.png */; };
+		1A2CB4C71D2CEA13005E9F9E /* rock512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4BD1D2CEA13005E9F9E /* rock512.png */; };
+		1A2CB4C81D2CEA13005E9F9E /* sand512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4BE1D2CEA13005E9F9E /* sand512.png */; };
+		1A2CB4C91D2CEA13005E9F9E /* sand512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4BE1D2CEA13005E9F9E /* sand512.png */; };
+		1A2CB4CA1D2CEA13005E9F9E /* sand512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CB4BE1D2CEA13005E9F9E /* sand512.png */; };
 		1A2EA3831C89864800633417 /* Relation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA3821C89864800633417 /* Relation.m */; };
 		1A2EA3841C89864800633417 /* Relation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA3821C89864800633417 /* Relation.m */; };
 		1A2EA3851C89864800633417 /* Relation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA3821C89864800633417 /* Relation.m */; };
@@ -304,12 +334,6 @@
 		1A613F511D2606D10052A551 /* ArcBallCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F4D1D2606D10052A551 /* ArcBallCamera.m */; };
 		1A613F521D2606D10052A551 /* ArcBallCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F4D1D2606D10052A551 /* ArcBallCamera.m */; };
 		1A613F531D2606D10052A551 /* ArcBallCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F4D1D2606D10052A551 /* ArcBallCamera.m */; };
-		1A613F641D2606E60052A551 /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F551D2606E60052A551 /* CombatBoardMesh.m */; };
-		1A613F651D2606E60052A551 /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F551D2606E60052A551 /* CombatBoardMesh.m */; };
-		1A613F661D2606E60052A551 /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F551D2606E60052A551 /* CombatBoardMesh.m */; };
-		1A613F671D2606E60052A551 /* CubeMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F571D2606E60052A551 /* CubeMesh.m */; };
-		1A613F681D2606E60052A551 /* CubeMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F571D2606E60052A551 /* CubeMesh.m */; };
-		1A613F691D2606E60052A551 /* CubeMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F571D2606E60052A551 /* CubeMesh.m */; };
 		1A613F6A1D2606E60052A551 /* GLPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F591D2606E60052A551 /* GLPlane.m */; };
 		1A613F6B1D2606E60052A551 /* GLPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F591D2606E60052A551 /* GLPlane.m */; };
 		1A613F6C1D2606E60052A551 /* GLPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F591D2606E60052A551 /* GLPlane.m */; };
@@ -319,15 +343,9 @@
 		1A613F701D2606E60052A551 /* GLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5D1D2606E60052A551 /* GLViewController.m */; };
 		1A613F711D2606E60052A551 /* GLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5D1D2606E60052A551 /* GLViewController.m */; };
 		1A613F721D2606E60052A551 /* GLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5D1D2606E60052A551 /* GLViewController.m */; };
-		1A613F731D2606E60052A551 /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5F1D2606E60052A551 /* Mesh.m */; };
-		1A613F741D2606E60052A551 /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5F1D2606E60052A551 /* Mesh.m */; };
-		1A613F751D2606E60052A551 /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F5F1D2606E60052A551 /* Mesh.m */; };
 		1A613F761D2606E60052A551 /* OpenGLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F611D2606E60052A551 /* OpenGLUtil.m */; };
 		1A613F771D2606E60052A551 /* OpenGLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F611D2606E60052A551 /* OpenGLUtil.m */; };
 		1A613F781D2606E60052A551 /* OpenGLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F611D2606E60052A551 /* OpenGLUtil.m */; };
-		1A613F791D2606E60052A551 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F631D2606E60052A551 /* OpenGLView.m */; };
-		1A613F7A1D2606E60052A551 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F631D2606E60052A551 /* OpenGLView.m */; };
-		1A613F7B1D2606E60052A551 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F631D2606E60052A551 /* OpenGLView.m */; };
 		1A613F811D2607020052A551 /* TextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F7E1D2607020052A551 /* TextureAtlas.m */; };
 		1A613F821D2607020052A551 /* TextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F7E1D2607020052A551 /* TextureAtlas.m */; };
 		1A613F831D2607020052A551 /* TextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F7E1D2607020052A551 /* TextureAtlas.m */; };
@@ -630,6 +648,20 @@
 		1A0FF2931CA0965500F64050 /* menu-footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-footer.png"; path = "Resources/Images/menu-footer.png"; sourceTree = "<group>"; };
 		1A0FF2941CA0965500F64050 /* menu-header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-header.png"; path = "Resources/Images/menu-header.png"; sourceTree = "<group>"; };
 		1A0FF2951CA0965500F64050 /* menu-item-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-item-normal.png"; path = "Resources/Images/menu-item-normal.png"; sourceTree = "<group>"; };
+		1A2CB49E1D2BCD97005E9F9E /* CombatBoardMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatBoardMesh.h; path = WorldGame/AITest/OpenGL/Mesh/CombatBoardMesh.h; sourceTree = "<group>"; };
+		1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatBoardMesh.m; path = WorldGame/AITest/OpenGL/Mesh/CombatBoardMesh.m; sourceTree = "<group>"; };
+		1A2CB4A01D2BCD97005E9F9E /* CubeMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CubeMesh.h; path = WorldGame/AITest/OpenGL/Mesh/CubeMesh.h; sourceTree = "<group>"; };
+		1A2CB4A11D2BCD97005E9F9E /* CubeMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CubeMesh.m; path = WorldGame/AITest/OpenGL/Mesh/CubeMesh.m; sourceTree = "<group>"; };
+		1A2CB4A21D2BCD97005E9F9E /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = WorldGame/AITest/OpenGL/Mesh/Mesh.h; sourceTree = "<group>"; };
+		1A2CB4A31D2BCD97005E9F9E /* Mesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mesh.m; path = WorldGame/AITest/OpenGL/Mesh/Mesh.m; sourceTree = "<group>"; };
+		1A2CB4AD1D2BCEAF005E9F9E /* TerrainNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerrainNode.h; path = WorldGame/AITest/OpenGL/Nodes/TerrainNode.h; sourceTree = "<group>"; };
+		1A2CB4AE1D2BCEAF005E9F9E /* TerrainNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TerrainNode.m; path = WorldGame/AITest/OpenGL/Nodes/TerrainNode.m; sourceTree = "<group>"; };
+		1A2CB4B21D2BCF78005E9F9E /* TerrainFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TerrainFragment.glsl; path = Resources/OpenGL/TerrainFragment.glsl; sourceTree = "<group>"; };
+		1A2CB4B31D2BCF78005E9F9E /* TerrainVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TerrainVertex.glsl; path = Resources/OpenGL/TerrainVertex.glsl; sourceTree = "<group>"; };
+		1A2CB4BB1D2CEA13005E9F9E /* dirt512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dirt512.png; path = Resources/Textures/dirt512.png; sourceTree = "<group>"; };
+		1A2CB4BC1D2CEA13005E9F9E /* grass512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grass512.png; path = Resources/Textures/grass512.png; sourceTree = "<group>"; };
+		1A2CB4BD1D2CEA13005E9F9E /* rock512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rock512.png; path = Resources/Textures/rock512.png; sourceTree = "<group>"; };
+		1A2CB4BE1D2CEA13005E9F9E /* sand512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sand512.png; path = Resources/Textures/sand512.png; sourceTree = "<group>"; };
 		1A2EA3811C89864800633417 /* Relation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Relation.h; path = Map/Simulation/Relation.h; sourceTree = "<group>"; };
 		1A2EA3821C89864800633417 /* Relation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Relation.m; path = Map/Simulation/Relation.m; sourceTree = "<group>"; };
 		1A2EA3861C8986AE00633417 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = Map/Simulation/Group.h; sourceTree = "<group>"; };
@@ -803,22 +835,14 @@
 		1A613F4B1D2606D10052A551 /* AbstractCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractCamera.m; path = WorldGame/AITest/OpenGL/AbstractCamera.m; sourceTree = "<group>"; };
 		1A613F4C1D2606D10052A551 /* ArcBallCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArcBallCamera.h; path = WorldGame/AITest/OpenGL/ArcBallCamera.h; sourceTree = "<group>"; };
 		1A613F4D1D2606D10052A551 /* ArcBallCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArcBallCamera.m; path = WorldGame/AITest/OpenGL/ArcBallCamera.m; sourceTree = "<group>"; };
-		1A613F541D2606E60052A551 /* CombatBoardMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatBoardMesh.h; path = WorldGame/AITest/OpenGL/CombatBoardMesh.h; sourceTree = "<group>"; };
-		1A613F551D2606E60052A551 /* CombatBoardMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatBoardMesh.m; path = WorldGame/AITest/OpenGL/CombatBoardMesh.m; sourceTree = "<group>"; };
-		1A613F561D2606E60052A551 /* CubeMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CubeMesh.h; path = WorldGame/AITest/OpenGL/CubeMesh.h; sourceTree = "<group>"; };
-		1A613F571D2606E60052A551 /* CubeMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CubeMesh.m; path = WorldGame/AITest/OpenGL/CubeMesh.m; sourceTree = "<group>"; };
 		1A613F581D2606E60052A551 /* GLPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLPlane.h; path = WorldGame/AITest/OpenGL/GLPlane.h; sourceTree = "<group>"; };
 		1A613F591D2606E60052A551 /* GLPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLPlane.m; path = WorldGame/AITest/OpenGL/GLPlane.m; sourceTree = "<group>"; };
 		1A613F5A1D2606E60052A551 /* GLRay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLRay.h; path = WorldGame/AITest/OpenGL/GLRay.h; sourceTree = "<group>"; };
 		1A613F5B1D2606E60052A551 /* GLRay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLRay.m; path = WorldGame/AITest/OpenGL/GLRay.m; sourceTree = "<group>"; };
 		1A613F5C1D2606E60052A551 /* GLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLViewController.h; path = WorldGame/AITest/OpenGL/GLViewController.h; sourceTree = "<group>"; };
 		1A613F5D1D2606E60052A551 /* GLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLViewController.m; path = WorldGame/AITest/OpenGL/GLViewController.m; sourceTree = "<group>"; };
-		1A613F5E1D2606E60052A551 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = WorldGame/AITest/OpenGL/Mesh.h; sourceTree = "<group>"; };
-		1A613F5F1D2606E60052A551 /* Mesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mesh.m; path = WorldGame/AITest/OpenGL/Mesh.m; sourceTree = "<group>"; };
 		1A613F601D2606E60052A551 /* OpenGLUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLUtil.h; path = WorldGame/AITest/OpenGL/OpenGLUtil.h; sourceTree = "<group>"; };
 		1A613F611D2606E60052A551 /* OpenGLUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLUtil.m; path = WorldGame/AITest/OpenGL/OpenGLUtil.m; sourceTree = "<group>"; };
-		1A613F621D2606E60052A551 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLView.h; path = WorldGame/AITest/OpenGL/OpenGLView.h; sourceTree = "<group>"; };
-		1A613F631D2606E60052A551 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLView.m; path = WorldGame/AITest/OpenGL/OpenGLView.m; sourceTree = "<group>"; };
 		1A613F7D1D2607020052A551 /* TextureAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureAtlas.h; path = WorldGame/AITest/OpenGL/TextureAtlas.h; sourceTree = "<group>"; };
 		1A613F7E1D2607020052A551 /* TextureAtlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextureAtlas.m; path = WorldGame/AITest/OpenGL/TextureAtlas.m; sourceTree = "<group>"; };
 		1A613F7F1D2607020052A551 /* Transformations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transformations.h; path = WorldGame/AITest/OpenGL/Transformations.h; sourceTree = "<group>"; };
@@ -1007,6 +1031,17 @@
 				1A0FF28F1CA08F5800F64050 /* Forest.png */,
 			);
 			name = Features;
+			sourceTree = "<group>";
+		};
+		1A2CB4BA1D2CEA09005E9F9E /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				1A2CB4BB1D2CEA13005E9F9E /* dirt512.png */,
+				1A2CB4BC1D2CEA13005E9F9E /* grass512.png */,
+				1A2CB4BD1D2CEA13005E9F9E /* rock512.png */,
+				1A2CB4BE1D2CEA13005E9F9E /* sand512.png */,
+			);
+			name = Textures;
 			sourceTree = "<group>";
 		};
 		1A2EA3A41C8B8BFE00633417 /* Frameworks */ = {
@@ -1411,6 +1446,8 @@
 			children = (
 				1A6140201D2613230052A551 /* CombatBoardNode.h */,
 				1A6140211D2613230052A551 /* CombatBoardNode.m */,
+				1A2CB4AD1D2BCEAF005E9F9E /* TerrainNode.h */,
+				1A2CB4AE1D2BCEAF005E9F9E /* TerrainNode.m */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -1437,6 +1474,19 @@
 			name = Buttons;
 			sourceTree = "<group>";
 		};
+		1A61404D1D2B91070052A551 /* Meshes */ = {
+			isa = PBXGroup;
+			children = (
+				1A2CB49E1D2BCD97005E9F9E /* CombatBoardMesh.h */,
+				1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */,
+				1A2CB4A01D2BCD97005E9F9E /* CubeMesh.h */,
+				1A2CB4A11D2BCD97005E9F9E /* CubeMesh.m */,
+				1A2CB4A21D2BCD97005E9F9E /* Mesh.h */,
+				1A2CB4A31D2BCD97005E9F9E /* Mesh.m */,
+			);
+			name = Meshes;
+			sourceTree = "<group>";
+		};
 		1A7232B31CBD8EFA00D8AAC8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1459,6 +1509,8 @@
 			children = (
 				1ABE0E701D243B1E0009F3F2 /* SimpleVertex.glsl */,
 				1ABE0E741D243B420009F3F2 /* SimpleFragment.glsl */,
+				1A2CB4B31D2BCF78005E9F9E /* TerrainVertex.glsl */,
+				1A2CB4B21D2BCF78005E9F9E /* TerrainFragment.glsl */,
 				1A613F471D24F56D0052A551 /* tile_floor.png */,
 			);
 			name = OpenGL;
@@ -1467,6 +1519,7 @@
 		1ABE0E781D243EA40009F3F2 /* OpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				1A61404D1D2B91070052A551 /* Meshes */,
 				1A6140251D2613290052A551 /* Nodes */,
 				1ABE0E791D243EB40009F3F2 /* Cocos3D */,
 				1A613F7C1D2606EF0052A551 /* Rend */,
@@ -1474,22 +1527,14 @@
 				1A613F4B1D2606D10052A551 /* AbstractCamera.m */,
 				1A613F4C1D2606D10052A551 /* ArcBallCamera.h */,
 				1A613F4D1D2606D10052A551 /* ArcBallCamera.m */,
-				1A613F541D2606E60052A551 /* CombatBoardMesh.h */,
-				1A613F551D2606E60052A551 /* CombatBoardMesh.m */,
-				1A613F561D2606E60052A551 /* CubeMesh.h */,
-				1A613F571D2606E60052A551 /* CubeMesh.m */,
 				1A613F581D2606E60052A551 /* GLPlane.h */,
 				1A613F591D2606E60052A551 /* GLPlane.m */,
 				1A613F5A1D2606E60052A551 /* GLRay.h */,
 				1A613F5B1D2606E60052A551 /* GLRay.m */,
 				1A613F5C1D2606E60052A551 /* GLViewController.h */,
 				1A613F5D1D2606E60052A551 /* GLViewController.m */,
-				1A613F5E1D2606E60052A551 /* Mesh.h */,
-				1A613F5F1D2606E60052A551 /* Mesh.m */,
 				1A613F601D2606E60052A551 /* OpenGLUtil.h */,
 				1A613F611D2606E60052A551 /* OpenGLUtil.m */,
-				1A613F621D2606E60052A551 /* OpenGLView.h */,
-				1A613F631D2606E60052A551 /* OpenGLView.m */,
 				1A613F7D1D2607020052A551 /* TextureAtlas.h */,
 				1A613F7E1D2607020052A551 /* TextureAtlas.m */,
 				1A613F7F1D2607020052A551 /* Transformations.h */,
@@ -1524,6 +1569,7 @@
 		1AEE80BE1C77350B0028ACFF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A2CB4BA1D2CEA09005E9F9E /* Textures */,
 				1A61403C1D2628760052A551 /* Buttons */,
 				1A6140261D2615880052A551 /* TilesSets */,
 				1ABE0E6F1D243B060009F3F2 /* OpenGL */,
@@ -1780,6 +1826,7 @@
 				1A5C22ED1C9C164F007F324C /* TechnologyAtlas.xml in Resources */,
 				1A5700F11CB2F2D900F346D9 /* NationalService.png in Resources */,
 				1A5C22E51C9C164F007F324C /* naturalwonders1024.png in Resources */,
+				1A2CB4C51D2CEA13005E9F9E /* rock512.png in Resources */,
 				1A5C22DF1C9C164F007F324C /* ImprovementAtlas.xml in Resources */,
 				1A5C22DD1C9C164F007F324C /* FeatureAtlas.xml in Resources */,
 				1A35A9D91CAE8D150094F773 /* Government.xml in Resources */,
@@ -1789,6 +1836,7 @@
 				1A48FCC31CEE310B00CFE558 /* city.png in Resources */,
 				1A5C22F41C9C164F007F324C /* UnitTiles.png in Resources */,
 				1A5C22E81C9C164F007F324C /* PolicyTiles.png in Resources */,
+				1A2CB4B71D2BCF78005E9F9E /* TerrainVertex.glsl in Resources */,
 				1A613F491D24F56D0052A551 /* tile_floor.png in Resources */,
 				1A35A9E21CAEF21A0094F773 /* Feudalism.png in Resources */,
 				1AEE80DA1C7735960028ACFF /* Snow.xml in Resources */,
@@ -1807,12 +1855,14 @@
 				1AEF61241D14168400253DD6 /* Hoplites.png in Resources */,
 				1A5701111CB2FE6B00F346D9 /* IncomeTax.png in Resources */,
 				1A57E7951C71C3F200B3890E /* LaunchScreen.storyboard in Resources */,
+				1A2CB4B41D2BCF78005E9F9E /* TerrainFragment.glsl in Resources */,
 				1A84BB3B1CBFB5DF00CE7EDC /* cancel.png in Resources */,
 				1A3C3A4E1C84F280004009DA /* icon_spinning_circle.png in Resources */,
 				1A35A9E51CAEF21A0094F773 /* Feudalism.xml in Resources */,
 				1A5C22E91C9C164F007F324C /* RessourceAtlas.xml in Resources */,
 				1A0FF2811CA0617900F64050 /* Shore.png in Resources */,
 				1A5701141CB2FE6B00F346D9 /* IncomeTax.xml in Resources */,
+				1A2CB4C81D2CEA13005E9F9E /* sand512.png in Resources */,
 				1A5C22E41C9C164F007F324C /* MapTypeTiles.png in Resources */,
 				1A3C3A541C84F280004009DA /* icon_spinning_circle@2x~ipad.png in Resources */,
 				1A0FF2991CA0965500F64050 /* menu-header.png in Resources */,
@@ -1829,6 +1879,8 @@
 				1A5700F41CB2F2D900F346D9 /* NationalService.xml in Resources */,
 				1A0FF28C1CA08F2300F64050 /* Forest.xml in Resources */,
 				1A5C22EE1C9C164F007F324C /* TechnologyTiles.png in Resources */,
+				1A2CB4C21D2CEA13005E9F9E /* grass512.png in Resources */,
+				1A2CB4BF1D2CEA13005E9F9E /* dirt512.png in Resources */,
 				1A5C22EC1C9C164F007F324C /* TechBranchTiles.png in Resources */,
 				1A5C22F01C9C164F007F324C /* TerrainTiles.png in Resources */,
 				1A35A9D61CAE8D150094F773 /* Government.png in Resources */,
@@ -1858,6 +1910,7 @@
 				1AEE80DB1C7735960028ACFF /* Snow.xml in Resources */,
 				1A5700F21CB2F2D900F346D9 /* NationalService.png in Resources */,
 				1A7232B61CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */,
+				1A2CB4B51D2BCF78005E9F9E /* TerrainFragment.glsl in Resources */,
 				1A84BB4F1CC0FC7E00CE7EDC /* menu-item-highlighted.png in Resources */,
 				1A3C3A4F1C84F280004009DA /* icon_spinning_circle.png in Resources */,
 				1A35A9EE1CAEF4BD0094F773 /* Legalism.xml in Resources */,
@@ -1867,6 +1920,7 @@
 				1A5701121CB2FE6B00F346D9 /* IncomeTax.png in Resources */,
 				1A6140481D26289C0052A551 /* blueButtonHighlight.png in Resources */,
 				1A5700FA1CB2FAE100F346D9 /* InheritanceTax.png in Resources */,
+				1A2CB4C31D2CEA13005E9F9E /* grass512.png in Resources */,
 				1A6140421D26289C0052A551 /* blueButton.png in Resources */,
 				1ABE0E721D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */,
 				1A2EA39C1C8A2F2500633417 /* government.png in Resources */,
@@ -1883,6 +1937,7 @@
 				1A6140321D26159F0052A551 /* terrains.png in Resources */,
 				1A5701021CB2FC8600F346D9 /* StateSchools.png in Resources */,
 				1A5701051CB2FC8600F346D9 /* StateSchools.xml in Resources */,
+				1A2CB4B81D2BCF78005E9F9E /* TerrainVertex.glsl in Resources */,
 				1A84BB421CBFB5DF00CE7EDC /* okay.png in Resources */,
 				1A84BB3C1CBFB5DF00CE7EDC /* cancel.png in Resources */,
 				1A3C3A551C84F280004009DA /* icon_spinning_circle@2x~ipad.png in Resources */,
@@ -1890,8 +1945,10 @@
 				1A0FF2851CA0617900F64050 /* Snow.png in Resources */,
 				1A35A9DA1CAE8D150094F773 /* Government.xml in Resources */,
 				1A0FF2821CA0617900F64050 /* Shore.png in Resources */,
+				1A2CB4C61D2CEA13005E9F9E /* rock512.png in Resources */,
 				1A35A9E61CAEF21A0094F773 /* Feudalism.xml in Resources */,
 				1A0FF28D1CA08F2300F64050 /* Forest.xml in Resources */,
+				1A2CB4C01D2CEA13005E9F9E /* dirt512.png in Resources */,
 				1A35A9D71CAE8D150094F773 /* Government.png in Resources */,
 				1AEE80D21C7735960028ACFF /* Ocean.xml in Resources */,
 				1A35A9A31CA1E7720094F773 /* MapSizeAtlas.xml in Resources */,
@@ -1910,6 +1967,7 @@
 				1A0FF27C1CA0617900F64050 /* Ocean.png in Resources */,
 				1AEE80DE1C7735960028ACFF /* Tundra.xml in Resources */,
 				1A3C3A521C84F280004009DA /* icon_spinning_circle@2x.png in Resources */,
+				1A2CB4C91D2CEA13005E9F9E /* sand512.png in Resources */,
 				1A0FF2701CA05E6200F64050 /* Grassland.png in Resources */,
 				1A35A9A61CA1E7720094F773 /* MapSizeTiles.png in Resources */,
 				1A84BB4B1CC029E500CE7EDC /* menu-item-disabled.png in Resources */,
@@ -1929,6 +1987,7 @@
 				1AEE80DC1C7735960028ACFF /* Snow.xml in Resources */,
 				1A5700F31CB2F2D900F346D9 /* NationalService.png in Resources */,
 				1A7232B71CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */,
+				1A2CB4B61D2BCF78005E9F9E /* TerrainFragment.glsl in Resources */,
 				1A84BB501CC0FC7E00CE7EDC /* menu-item-highlighted.png in Resources */,
 				1A3C3A501C84F280004009DA /* icon_spinning_circle.png in Resources */,
 				1A35A9EF1CAEF4BD0094F773 /* Legalism.xml in Resources */,
@@ -1938,6 +1997,7 @@
 				1A5701131CB2FE6B00F346D9 /* IncomeTax.png in Resources */,
 				1A6140491D26289C0052A551 /* blueButtonHighlight.png in Resources */,
 				1A5700FB1CB2FAE100F346D9 /* InheritanceTax.png in Resources */,
+				1A2CB4C41D2CEA13005E9F9E /* grass512.png in Resources */,
 				1A6140431D26289C0052A551 /* blueButton.png in Resources */,
 				1ABE0E731D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */,
 				1A2EA39D1C8A2F2500633417 /* government.png in Resources */,
@@ -1954,6 +2014,7 @@
 				1A6140331D26159F0052A551 /* terrains.png in Resources */,
 				1A5701031CB2FC8600F346D9 /* StateSchools.png in Resources */,
 				1A5701061CB2FC8600F346D9 /* StateSchools.xml in Resources */,
+				1A2CB4B91D2BCF78005E9F9E /* TerrainVertex.glsl in Resources */,
 				1A84BB431CBFB5DF00CE7EDC /* okay.png in Resources */,
 				1A84BB3D1CBFB5DF00CE7EDC /* cancel.png in Resources */,
 				1A3C3A561C84F280004009DA /* icon_spinning_circle@2x~ipad.png in Resources */,
@@ -1961,8 +2022,10 @@
 				1A0FF2861CA0617900F64050 /* Snow.png in Resources */,
 				1A35A9DB1CAE8D150094F773 /* Government.xml in Resources */,
 				1A0FF2831CA0617900F64050 /* Shore.png in Resources */,
+				1A2CB4C71D2CEA13005E9F9E /* rock512.png in Resources */,
 				1A35A9E71CAEF21A0094F773 /* Feudalism.xml in Resources */,
 				1A0FF28E1CA08F2300F64050 /* Forest.xml in Resources */,
+				1A2CB4C11D2CEA13005E9F9E /* dirt512.png in Resources */,
 				1A35A9D81CAE8D150094F773 /* Government.png in Resources */,
 				1AEE80D31C7735960028ACFF /* Ocean.xml in Resources */,
 				1A35A9A41CA1E7720094F773 /* MapSizeAtlas.xml in Resources */,
@@ -1981,6 +2044,7 @@
 				1A0FF27D1CA0617900F64050 /* Ocean.png in Resources */,
 				1AEE80DF1C7735960028ACFF /* Tundra.xml in Resources */,
 				1A3C3A531C84F280004009DA /* icon_spinning_circle@2x.png in Resources */,
+				1A2CB4CA1D2CEA13005E9F9E /* sand512.png in Resources */,
 				1A0FF2711CA05E6200F64050 /* Grassland.png in Resources */,
 				1A35A9A71CA1E7720094F773 /* MapSizeTiles.png in Resources */,
 				1A84BB4C1CC029E500CE7EDC /* menu-item-disabled.png in Resources */,
@@ -2125,8 +2189,6 @@
 				1A3C3A3D1C84ED9A004009DA /* UILabel+Custom.m in Sources */,
 				1A3C3A181C7F931E004009DA /* Yield.m in Sources */,
 				1A613F811D2607020052A551 /* TextureAtlas.m in Sources */,
-				1A613F671D2606E60052A551 /* CubeMesh.m in Sources */,
-				1A613F731D2606E60052A551 /* Mesh.m in Sources */,
 				1A6140031D2607260052A551 /* REWavefrontMeshElementIndexBatch.m in Sources */,
 				1AEE80BB1C7733F70028ACFF /* XMLReader.m in Sources */,
 				1A2EA3F41C98AC4000633417 /* HeightMap.m in Sources */,
@@ -2135,7 +2197,6 @@
 				1AEE80F21C7C5FB40028ACFF /* Unit.m in Sources */,
 				1A613F701D2606E60052A551 /* GLViewController.m in Sources */,
 				1A35A9AA1CA1E9050094F773 /* SelectMapSizeTableViewController.m in Sources */,
-				1A613F641D2606E60052A551 /* CombatBoardMesh.m in Sources */,
 				1AEE80ED1C7BB20B0028ACFF /* Player.m in Sources */,
 				1A58E3711CBBB41A00AE7140 /* LoadGameViewController.m in Sources */,
 				1AEE80E81C7BA6450028ACFF /* Game.m in Sources */,
@@ -2150,11 +2211,13 @@
 				1A5C22FE1C9C42E7007F324C /* UIImage+Sprite.m in Sources */,
 				1A613FC11D2607260052A551 /* RECache.m in Sources */,
 				1AAEB59A1CB7C6EF00DA478B /* GamePersistance.m in Sources */,
+				1A2CB4A41D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */,
 				1A613FEE1D2607260052A551 /* REScheduler.m in Sources */,
 				1A613FD91D2607260052A551 /* REMaterial.m in Sources */,
 				1A57E7DF1C74700D00B3890E /* MapPoint.m in Sources */,
 				1A6140171D260CCB0052A551 /* NSValue+CC3Types.m in Sources */,
 				1A57E7BE1C71C83700B3890E /* Map.m in Sources */,
+				1A2CB4A71D2BCD97005E9F9E /* CubeMesh.m in Sources */,
 				1A3C3A1D1C7F9DD7004009DA /* Area.m in Sources */,
 				1A57E7841C71C3F200B3890E /* AppDelegate.m in Sources */,
 				1A84BB461CBFB60800CE7EDC /* GameViewController.m in Sources */,
@@ -2163,6 +2226,7 @@
 				1A613FCA1D2607260052A551 /* REGLStateManager.m in Sources */,
 				1A613FE51D2607260052A551 /* REProgram.m in Sources */,
 				1A613FFD1D2607260052A551 /* REVertexArrayObject.m in Sources */,
+				1A2CB4AA1D2BCD97005E9F9E /* Mesh.m in Sources */,
 				1A6140221D2613230052A551 /* CombatBoardNode.m in Sources */,
 				1A613F511D2606D10052A551 /* ArcBallCamera.m in Sources */,
 				1A57E7811C71C3F200B3890E /* main.m in Sources */,
@@ -2188,6 +2252,7 @@
 				1A2EA3E21C92D5A900633417 /* DebugViewController.m in Sources */,
 				1A57E7BB1C71C45C00B3890E /* Plot.m in Sources */,
 				1A2EA3831C89864800633417 /* Relation.m in Sources */,
+				1A2CB4AF1D2BCEAF005E9F9E /* TerrainNode.m in Sources */,
 				1A3C3A471C84F028004009DA /* NSString+Custom.m in Sources */,
 				1A3C39FA1C7EF5FA004009DA /* GrandStrategyAI.m in Sources */,
 				1ABE0E8A1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */,
@@ -2196,7 +2261,6 @@
 				1A61400C1D2607260052A551 /* REWorld.m in Sources */,
 				1A613FEB1D2607260052A551 /* REScene.m in Sources */,
 				1ABE0E631D2438250009F3F2 /* CombatViewController.m in Sources */,
-				1A613F791D2606E60052A551 /* OpenGLView.m in Sources */,
 				1A57E7C61C71CBFD00B3890E /* MapView.m in Sources */,
 				1A5C22B51C9B40A3007F324C /* SelectMapTypeTableViewController.m in Sources */,
 				1A2EA38D1C89872200633417 /* Policy.m in Sources */,
@@ -2248,11 +2312,10 @@
 				1A613F821D2607020052A551 /* TextureAtlas.m in Sources */,
 				1A3C3A051C7F2F75004009DA /* Leader.m in Sources */,
 				1A613FEF1D2607260052A551 /* REScheduler.m in Sources */,
-				1A613F741D2606E60052A551 /* Mesh.m in Sources */,
 				1AEF612B1D159E6500253DD6 /* LoadGameViewController.m in Sources */,
 				1A613FE31D2607260052A551 /* RENSValueAdditions.m in Sources */,
-				1A613F7A1D2606E60052A551 /* OpenGLView.m in Sources */,
 				1A613F711D2606E60052A551 /* GLViewController.m in Sources */,
+				1A2CB4B01D2BCEAF005E9F9E /* TerrainNode.m in Sources */,
 				1A613F6B1D2606E60052A551 /* GLPlane.m in Sources */,
 				1A61400A1D2607260052A551 /* REWavefrontMeshNode.m in Sources */,
 				1A3C3A001C7F2C98004009DA /* Civilization.m in Sources */,
@@ -2268,6 +2331,7 @@
 				1ABE0E8E1D243ECD0009F3F2 /* CC3Math.m in Sources */,
 				1A613FCB1D2607260052A551 /* REGLStateManager.m in Sources */,
 				1A2EA3841C89864800633417 /* Relation.m in Sources */,
+				1A2CB4A51D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */,
 				1A6140121D2609850052A551 /* CC3GLMatrix+Extension.m in Sources */,
 				1AEF61341D159EB500253DD6 /* SelectMapTypeTableViewController.m in Sources */,
 				1A2EA3DE1C90702800633417 /* BitArray.m in Sources */,
@@ -2278,7 +2342,6 @@
 				1A8D66C21CA1306000284BB8 /* BaseTableViewController.m in Sources */,
 				1A613F521D2606D10052A551 /* ArcBallCamera.m in Sources */,
 				1A2EA3C41C8CD17A00633417 /* PolicyViewController.m in Sources */,
-				1A613F681D2606E60052A551 /* CubeMesh.m in Sources */,
 				1A613FBF1D2607260052A551 /* REBuffer.m in Sources */,
 				1A6140231D2613230052A551 /* CombatBoardNode.m in Sources */,
 				1A2EA3E81C92D73200633417 /* AboutViewController.m in Sources */,
@@ -2316,18 +2379,19 @@
 				1A613FF51D2607260052A551 /* RESprite.m in Sources */,
 				1A6140181D260CCB0052A551 /* NSValue+CC3Types.m in Sources */,
 				1A57E7A01C71C3F200B3890E /* AITestTests.m in Sources */,
+				1A2CB4AB1D2BCD97005E9F9E /* Mesh.m in Sources */,
 				1A613FD71D2607260052A551 /* RELight.m in Sources */,
 				1A57E7E91C74ABB300B3890E /* MainMenuViewController.m in Sources */,
 				1A61401D1D260D3E0052A551 /* ZoomManager.m in Sources */,
 				1A3C3A481C84F028004009DA /* NSString+Custom.m in Sources */,
 				1A5C22FA1C9C16D2007F324C /* ImageAtlas.m in Sources */,
 				1A3C3A191C7F931E004009DA /* Yield.m in Sources */,
-				1A613F651D2606E60052A551 /* CombatBoardMesh.m in Sources */,
 				1A2EA3931C89877C00633417 /* RelationsNetwork.m in Sources */,
 				1AEE80E91C7BA6450028ACFF /* Game.m in Sources */,
 				1A613FE01D2607260052A551 /* RENSArrayAdditions.m in Sources */,
 				1A613FF81D2607260052A551 /* RESpriteBatchNode.m in Sources */,
 				1A3C3A2E1C80FCEA004009DA /* Simulation.m in Sources */,
+				1A2CB4A81D2BCD97005E9F9E /* CubeMesh.m in Sources */,
 				1A613FDD1D2607260052A551 /* RENode.m in Sources */,
 				1A35A9AB1CA1E9050094F773 /* SelectMapSizeTableViewController.m in Sources */,
 				1A3C3A431C84EDF1004009DA /* UIButton+Custom.m in Sources */,
@@ -2364,11 +2428,10 @@
 				1A3C3A011C7F2C98004009DA /* Civilization.m in Sources */,
 				1A613FC61D2607260052A551 /* RECamera.m in Sources */,
 				1A2EA3EE1C95FD0500633417 /* DebugUtil.m in Sources */,
+				1A2CB4A91D2BCD97005E9F9E /* CubeMesh.m in Sources */,
 				1A2EA3F61C98AC4000633417 /* HeightMap.m in Sources */,
 				1A613F6F1D2606E60052A551 /* GLRay.m in Sources */,
-				1A613F661D2606E60052A551 /* CombatBoardMesh.m in Sources */,
 				1A2EA3D51C8F694F00633417 /* Situation.m in Sources */,
-				1A613F751D2606E60052A551 /* Mesh.m in Sources */,
 				1AEF612D1D159E7C00253DD6 /* Map.m in Sources */,
 				1A613F831D2607020052A551 /* TextureAtlas.m in Sources */,
 				1A613FE71D2607260052A551 /* REProgram.m in Sources */,
@@ -2390,8 +2453,10 @@
 				1A2EA3C51C8CD17A00633417 /* PolicyViewController.m in Sources */,
 				1A2EA3E91C92D73200633417 /* AboutViewController.m in Sources */,
 				1AEE80E41C78CE6E0028ACFF /* NSDictionary+Extension.m in Sources */,
+				1A2CB4B11D2BCEAF005E9F9E /* TerrainNode.m in Sources */,
 				1A613F6C1D2606E60052A551 /* GLPlane.m in Sources */,
 				1A61400B1D2607260052A551 /* REWavefrontMeshNode.m in Sources */,
+				1A2CB4A61D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */,
 				1A5C23001C9C42E7007F324C /* UIImage+Sprite.m in Sources */,
 				1A613FC31D2607260052A551 /* RECache.m in Sources */,
 				1AEBDE0B1CC7B57E00BE09E8 /* DateUtils.m in Sources */,
@@ -2434,9 +2499,9 @@
 				1A5C22FB1C9C16D2007F324C /* ImageAtlas.m in Sources */,
 				1ABE0E651D2438250009F3F2 /* CombatViewController.m in Sources */,
 				1A3C3A1A1C7F931E004009DA /* Yield.m in Sources */,
-				1A613F691D2606E60052A551 /* CubeMesh.m in Sources */,
 				1A2EA3941C89877C00633417 /* RelationsNetwork.m in Sources */,
 				1AEE80EA1C7BA6450028ACFF /* Game.m in Sources */,
+				1A2CB4AC1D2BCD97005E9F9E /* Mesh.m in Sources */,
 				1A613FCF1D2607260052A551 /* REGLTypes.m in Sources */,
 				1A3C3A2F1C80FCEA004009DA /* Simulation.m in Sources */,
 				1A35A9AC1CA1E9050094F773 /* SelectMapSizeTableViewController.m in Sources */,
@@ -2448,7 +2513,6 @@
 				1AEE80EF1C7BB20B0028ACFF /* Player.m in Sources */,
 				1A57E7E11C74700D00B3890E /* MapPoint.m in Sources */,
 				1A84BB481CBFB60800CE7EDC /* GameViewController.m in Sources */,
-				1A613F7B1D2606E60052A551 /* OpenGLView.m in Sources */,
 				1A2EA3A21C8B860300633417 /* MinistryTableViewController.m in Sources */,
 				1A613FC01D2607260052A551 /* REBuffer.m in Sources */,
 				1A2EA4051C994FB700633417 /* Continent.m in Sources */,

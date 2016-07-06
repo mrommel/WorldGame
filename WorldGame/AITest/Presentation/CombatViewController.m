@@ -12,6 +12,8 @@
 #import "UIBlockButton.h"
 #import "UIConstants.h"
 
+#import "TerrainNode.h"
+
 @interface CombatViewController () {
 }
 
@@ -29,8 +31,11 @@
     [self.world addLight:light];
     
     // Board
-    self.combatBoardNode = [[CombatBoardNode alloc] initWithCombatBoard:self.combatBoard];
-    [self.world addChild:self.combatBoardNode];
+    //self.combatBoardNode = [[CombatBoardNode alloc] initWithCombatBoard:self.combatBoard];
+    //[self.world addChild:self.combatBoardNode];
+    
+    TerrainNode *terrainNode = [[TerrainNode alloc] init];
+    [self.world addChild:terrainNode];
 }
 
 - (void)viewDidAppear:(BOOL)animated

@@ -18,12 +18,12 @@ typedef struct {
     float TextureContributions[4];
 } TerrainVertex;
 
-TerrainVertex TerrainVertexMake(float x, float y, float texx, float texy, float tex0, float tex1, float tex2, float tex3)
+TerrainVertex TerrainVertexMake(float x, float y, float z, float texx, float texy, float tex0, float tex1, float tex2, float tex3)
 {
     TerrainVertex vertex;
     vertex.Position[0] = x;
-    vertex.Position[1] = 0;
-    vertex.Position[2] = y;
+    vertex.Position[1] = y;
+    vertex.Position[2] = z;
     vertex.Color[0] = 1;
     vertex.Color[1] = 1;
     vertex.Color[2] = 1;
@@ -111,25 +111,25 @@ typedef unsigned int Index;
     
     TerrainVertex *vertices = malloc(16 * sizeof(TerrainVertex));
     // first quad
-    vertices[0] = TerrainVertexMake(0, 0, 0, 0, 1, 0, 0, 0);
-    vertices[1] = TerrainVertexMake(10, 0, 1, 0, 1, 0, 0, 0);
-    vertices[2] = TerrainVertexMake(0, 10, 0, 1, 1, 0, 0, 0);
-    vertices[3] = TerrainVertexMake(10, 10, 1, 1, 0, 0, 1, 0); //center
+    vertices[0] = TerrainVertexMake(0, 0, 0, 0, 0, 1, 0, 0, 0);
+    vertices[1] = TerrainVertexMake(10, 0, 0, 1, 0, 1, 0, 0, 0);
+    vertices[2] = TerrainVertexMake(0, 0, 10, 0, 1, 1, 0, 0, 0);
+    vertices[3] = TerrainVertexMake(10, -5, 10, 1, 1, 0, 0, 0, 1); //center
     // second quad
-    vertices[4] = TerrainVertexMake(10, 0, 0, 0, 1, 0, 0, 0);
-    vertices[5] = TerrainVertexMake(20, 0, 1, 0, 1, 0, 0, 0);
-    vertices[6] = TerrainVertexMake(10, 10, 0, 1, 0, 0, 1, 0); //center
-    vertices[7] = TerrainVertexMake(20, 10, 1, 1, 1, 0, 0, 0);
+    vertices[4] = TerrainVertexMake(10, 0, 0, 0, 0, 1, 0, 0, 0);
+    vertices[5] = TerrainVertexMake(20, 0, 0, 1, 0, 1, 0, 0, 0);
+    vertices[6] = TerrainVertexMake(10, -5, 10, 0, 1, 0, 0, 0, 1); //center
+    vertices[7] = TerrainVertexMake(20, 0, 10, 1, 1, 1, 0, 0, 0);
     // third quad
-    vertices[8] = TerrainVertexMake(0, 10, 0, 0, 1, 0, 0, 0);
-    vertices[9] = TerrainVertexMake(10, 10, 1, 0, 0, 0, 1, 0); //center
-    vertices[10] = TerrainVertexMake(0, 20, 0, 1, 1, 0, 0, 0);
-    vertices[11] = TerrainVertexMake(10, 20, 1, 1, 1, 0, 0, 0);
+    vertices[8] = TerrainVertexMake(0, 0, 10, 0, 0, 1, 0, 0, 0);
+    vertices[9] = TerrainVertexMake(10, -5, 10, 1, 0, 0, 0, 0, 1); //center
+    vertices[10] = TerrainVertexMake(0, 0, 20, 0, 1, 1, 0, 0, 0);
+    vertices[11] = TerrainVertexMake(10, 0, 20, 1, 1, 1, 0, 0, 0);
     // fourth quad
-    vertices[12] = TerrainVertexMake(10, 10, 0, 0, 0, 0, 1, 0); //center
-    vertices[13] = TerrainVertexMake(20, 10, 1, 0, 1, 0, 0, 0);
-    vertices[14] = TerrainVertexMake(10, 20, 0, 1, 1, 0, 0, 0);
-    vertices[15] = TerrainVertexMake(20, 20, 1, 1, 1, 0, 0, 0);
+    vertices[12] = TerrainVertexMake(10, -5, 10, 0, 0, 0, 0, 0, 1); //center
+    vertices[13] = TerrainVertexMake(20, 0, 10, 1, 0, 1, 0, 0, 0);
+    vertices[14] = TerrainVertexMake(10, 0, 20, 0, 1, 1, 0, 0, 0);
+    vertices[15] = TerrainVertexMake(20, 0, 20, 1, 1, 1, 0, 0, 0);
 
     Index *indices = malloc(24 * sizeof(Index));
     // first quad

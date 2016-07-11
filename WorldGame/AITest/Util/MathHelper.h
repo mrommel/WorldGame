@@ -49,6 +49,11 @@ static __inline__ GLKQuaternion QuaternionMakeFromYawPitchRoll(float yaw, float 
 #pragma mark Implementations
 #pragma mark -
 
+static __inline__ NSString* GLKVector3ToString(GLKVector3 vector)
+{
+    return [NSString stringWithFormat:@"%.2f, %.2f, %.2f", vector.x, vector.y, vector.z];
+}
+
 static __inline__ GLKVector3 Vector3DDirectionToAngle(GLKVector3 direction)
 {
     // Convert direction vector to angle

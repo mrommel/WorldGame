@@ -10,6 +10,9 @@
 
 #import "GLPlane.h"
 #import "OpenGLUtil.h"
+#import "MathHelper.h"
+
+#define TRIANGLE(idx, v0, v1, v2)  indices[idx] = v0; indices[(idx + 1)] = v1; indices[(idx + 2)] = v2
 
 typedef struct {
     float Position[3];
@@ -18,26 +21,28 @@ typedef struct {
     float TextureContributions[4];
 } TerrainVertex;
 
-TerrainVertex TerrainVertexMake(float x, float y, float z, float texx, float texy, float tex0, float tex1, float tex2, float tex3)
+TerrainVertex TerrainVertexMake(GLKVector3 pos, GLKVector2 tex, GLKVector4 contrib)
 {
     TerrainVertex vertex;
-    vertex.Position[0] = x;
-    vertex.Position[1] = y;
-    vertex.Position[2] = z;
+    
+    vertex.Position[0] = pos.x;
+    vertex.Position[1] = pos.y;
+    vertex.Position[2] = pos.z;
     vertex.Color[0] = 1;
     vertex.Color[1] = 1;
     vertex.Color[2] = 1;
     vertex.Color[3] = 1;
-    vertex.TexCoord[0] = texx;
-    vertex.TexCoord[1] = texy;
-    vertex.TextureContributions[0] = tex0;
-    vertex.TextureContributions[1] = tex1;
-    vertex.TextureContributions[2] = tex2;
-    vertex.TextureContributions[3] = tex3;
+    vertex.TexCoord[0] = tex.x;
+    vertex.TexCoord[1] = tex.y;
+    vertex.TextureContributions[0] = contrib.x;
+    vertex.TextureContributions[1] = contrib.y;
+    vertex.TextureContributions[2] = contrib.z;
+    vertex.TextureContributions[3] = contrib.w;
+    
     return vertex;
 }
 
-typedef unsigned int Index;
+typedef unsigned int TerrainIndex;
 
 @interface TerrainNode() {
     
@@ -109,49 +114,129 @@ typedef unsigned int Index;
     texture2 = [[OpenGLUtil sharedInstance] setupTexture:@"dirt512.png"];
     texture3 = [[OpenGLUtil sharedInstance] setupTexture:@"rock512.png"];
     
-    TerrainVertex *vertices = malloc(16 * sizeof(TerrainVertex));
-    // first quad
-    vertices[0] = TerrainVertexMake(0, 0, 0, 0, 0, 1, 0, 0, 0);
-    vertices[1] = TerrainVertexMake(10, 0, 0, 1, 0, 1, 0, 0, 0);
-    vertices[2] = TerrainVertexMake(0, 0, 10, 0, 1, 1, 0, 0, 0);
-    vertices[3] = TerrainVertexMake(10, -5, 10, 1, 1, 0, 0, 0, 1); //center
-    // second quad
-    vertices[4] = TerrainVertexMake(10, 0, 0, 0, 0, 1, 0, 0, 0);
-    vertices[5] = TerrainVertexMake(20, 0, 0, 1, 0, 1, 0, 0, 0);
-    vertices[6] = TerrainVertexMake(10, -5, 10, 0, 1, 0, 0, 0, 1); //center
-    vertices[7] = TerrainVertexMake(20, 0, 10, 1, 1, 1, 0, 0, 0);
-    // third quad
-    vertices[8] = TerrainVertexMake(0, 0, 10, 0, 0, 1, 0, 0, 0);
-    vertices[9] = TerrainVertexMake(10, -5, 10, 1, 0, 0, 0, 0, 1); //center
-    vertices[10] = TerrainVertexMake(0, 0, 20, 0, 1, 1, 0, 0, 0);
-    vertices[11] = TerrainVertexMake(10, 0, 20, 1, 1, 1, 0, 0, 0);
-    // fourth quad
-    vertices[12] = TerrainVertexMake(10, -5, 10, 0, 0, 0, 0, 0, 1); //center
-    vertices[13] = TerrainVertexMake(20, 0, 10, 1, 0, 1, 0, 0, 0);
-    vertices[14] = TerrainVertexMake(10, 0, 20, 0, 1, 1, 0, 0, 0);
-    vertices[15] = TerrainVertexMake(20, 0, 20, 1, 1, 1, 0, 0, 0);
+    int width = 1;
+    int height = 1;
+    
+    float x0 = 0.0f;
+    float y0 = 0.0f;
+    float d = 5.0f;
+    
+    TerrainVertex *vertices = malloc(19 * width * height * sizeof(TerrainVertex));
+    TerrainIndex *indices = malloc(72 * width * height * sizeof(TerrainIndex));
+    
+    for (int x = 0; x < width; x++) {
+        for (int y = 0; y < height; y++) {
+            int vi = (x + y * width) * 19;
+            int ii = (x + y * width) * 24;
+            
+            // points
+            GLKVector3 p10 = GLKVector3Make(x0 + y * d, 0, y0 + x * d);
+            
+            GLKVector3 p1 = GLKVector3Add(GLKVector3Make(cosf(DegreesToRadians(120)) * d, 0, -sinf(DegreesToRadians(120)) * d), p10);
+            GLKVector3 p3 = GLKVector3Add(GLKVector3Make(cosf(DegreesToRadians(60)) * d, 0, -sinf(DegreesToRadians(60)) * d), p10);
+            GLKVector3 p8 = GLKVector3Add(GLKVector3Make(cosf(DegreesToRadians(180)) * d, 0, -sinf(DegreesToRadians(180)) * d), p10);
+            GLKVector3 p12 = GLKVector3Add(GLKVector3Make(cosf(DegreesToRadians(0)) * d, 0, -sinf(DegreesToRadians(0)) * d), p10);
+            GLKVector3 p17 = GLKVector3Add(GLKVector3Make(cosf(DegreesToRadians(240)) * d, 0, -sinf(DegreesToRadians(240)) * d), p10);
+            GLKVector3 p19 = GLKVector3Add(GLKVector3Make(cosf(DegreesToRadians(300)) * d, 0, -sinf(DegreesToRadians(300)) * d), p10);
+            
+            GLKVector3 p2 = GLKVector3Lerp(p1, p3, 0.5f);
+            GLKVector3 p4 = GLKVector3Lerp(p1, p8, 0.5f);
+            GLKVector3 p5 = GLKVector3Lerp(p1, p10, 0.5f);
+            GLKVector3 p6 = GLKVector3Lerp(p3, p10, 0.5f);
+            GLKVector3 p7 = GLKVector3Lerp(p3, p12, 0.5f);
+            GLKVector3 p9 = GLKVector3Lerp(p8, p10, 0.5f);
+            GLKVector3 p11 = GLKVector3Lerp(p10, p12, 0.5f);
+            GLKVector3 p13 = GLKVector3Lerp(p8, p17, 0.5f);
+            GLKVector3 p14 = GLKVector3Lerp(p10, p17, 0.5f);
+            GLKVector3 p15 = GLKVector3Lerp(p10, p19, 0.5f);
+            GLKVector3 p16 = GLKVector3Lerp(p12, p19, 0.5f);
+            GLKVector3 p18 = GLKVector3Lerp(p17, p19, 0.5f);
+            
+            // textures
+            GLKVector2 t10 = GLKVector2Make(0.5f, 0.5f);
+            
+            GLKVector2 t1 = GLKVector2Make(0.3f, 0.0f);
+            GLKVector2 t3 = GLKVector2Make(0.7f, 0.0f);
+            GLKVector2 t8 = GLKVector2Make(0.0f, 0.5f);
+            GLKVector2 t12 = GLKVector2Make(1.0f, 0.5f);
+            GLKVector2 t17 = GLKVector2Make(0.3f, 1.0f);
+            GLKVector2 t19 = GLKVector2Make(0.7f, 1.0f);
+            
+            GLKVector2 t2 = GLKVector2Lerp(t1, t3, 0.5f);
+            GLKVector2 t4 = GLKVector2Lerp(t1, t8, 0.5f);
+            GLKVector2 t5 = GLKVector2Lerp(t1, t10, 0.5f);
+            GLKVector2 t6 = GLKVector2Lerp(t3, t10, 0.5f);
+            GLKVector2 t7 = GLKVector2Lerp(t3, t12, 0.5f);
+            GLKVector2 t9 = GLKVector2Lerp(t8, t10, 0.5f);
+            GLKVector2 t11 = GLKVector2Lerp(t10, t12, 0.5f);
+            GLKVector2 t13 = GLKVector2Lerp(t8, t17, 0.5f);
+            GLKVector2 t14 = GLKVector2Lerp(t10, t17, 0.5f);
+            GLKVector2 t15 = GLKVector2Lerp(t10, t19, 0.5f);
+            GLKVector2 t16 = GLKVector2Lerp(t12, t19, 0.5f);
+            GLKVector2 t18 = GLKVector2Lerp(t17, t19, 0.5f);
+            
+            vertices[vi + 0] = TerrainVertexMake(p1, t1, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 1] = TerrainVertexMake(p2, t2, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 2] = TerrainVertexMake(p3, t3, GLKVector4Make(1, 0, 0, 0));
+            
+            vertices[vi + 3] = TerrainVertexMake(p4, t4, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 4] = TerrainVertexMake(p5, t5, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 5] = TerrainVertexMake(p6, t6, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 6] = TerrainVertexMake(p7, t7, GLKVector4Make(1, 0, 0, 0));
+            
+            vertices[vi + 7] = TerrainVertexMake(p8, t8, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 8] = TerrainVertexMake(p9, t9, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 9] = TerrainVertexMake(p10, t10, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 10] = TerrainVertexMake(p11, t11, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 11] = TerrainVertexMake(p12, t12, GLKVector4Make(1, 0, 0, 0));
+            
+            vertices[vi + 12] = TerrainVertexMake(p13, t13, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 13] = TerrainVertexMake(p14, t14, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 14] = TerrainVertexMake(p15, t15, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 15] = TerrainVertexMake(p16, t16, GLKVector4Make(1, 0, 0, 0));
+            
+            vertices[vi + 16] = TerrainVertexMake(p17, t17, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 17] = TerrainVertexMake(p18, t18, GLKVector4Make(1, 0, 0, 0));
+            vertices[vi + 18] = TerrainVertexMake(p19, t19, GLKVector4Make(1, 0, 0, 0));
+            
+            //
+            TRIANGLE(ii + 0, vi + 0, vi + 1, vi + 4);
+            TRIANGLE(ii + 3, vi + 1, vi + 2, vi + 5);
+            TRIANGLE(ii + 6, vi + 0, vi + 3, vi + 4);
+            TRIANGLE(ii + 9, vi + 1, vi + 4, vi + 5);
+            TRIANGLE(ii + 12, vi + 2, vi + 5, vi + 6);
+            
+            TRIANGLE(ii + 15, vi + 3, vi + 4, vi + 8);
+            TRIANGLE(ii + 18, vi + 4, vi + 5, vi + 9);
+            TRIANGLE(ii + 21, vi + 5, vi + 6, vi + 10);
+            TRIANGLE(ii + 24, vi + 3, vi + 7, vi + 8);
+            TRIANGLE(ii + 27, vi + 4, vi + 8, vi + 9);
+            TRIANGLE(ii + 30, vi + 5, vi + 9, vi + 10);
+            TRIANGLE(ii + 33, vi + 6, vi + 10, vi + 11);
 
-    Index *indices = malloc(24 * sizeof(Index));
-    // first quad
-    indices[0] = 0; indices[1] = 3; indices[2] = 2; // I
-    indices[3] = 0; indices[4] = 1; indices[5] = 3; // II
-    // second quad
-    indices[6] = 4; indices[7] = 5; indices[8] = 6; // III
-    indices[9] = 5; indices[10] = 7; indices[11] = 6; // IV
-    // third quad
-    indices[12] = 8; indices[13] = 9; indices[14] = 10; // V
-    indices[15] = 9; indices[16] = 11; indices[17] = 10; // VI
-    // fourth quad
-    indices[18] = 12; indices[19] = 13; indices[20] = 15; // VII
-    indices[21] = 12; indices[22] = 15; indices[23] = 14; // VIII
+            TRIANGLE(ii + 36, vi + 7, vi + 8, vi + 12);
+            TRIANGLE(ii + 39, vi + 8, vi + 9, vi + 13);
+            TRIANGLE(ii + 42, vi + 9, vi + 10, vi + 14);
+            TRIANGLE(ii + 45, vi + 10, vi + 11, vi + 15);
+            TRIANGLE(ii + 48, vi + 8, vi + 12, vi + 13);
+            TRIANGLE(ii + 51, vi + 9, vi + 13, vi + 14);
+            TRIANGLE(ii + 54, vi + 10, vi + 14, vi + 15);
+            
+            TRIANGLE(ii + 57, vi + 12, vi + 13, vi + 16);
+            TRIANGLE(ii + 60, vi + 13, vi + 14, vi + 17);
+            TRIANGLE(ii + 63, vi + 14, vi + 15, vi + 18);
+            TRIANGLE(ii + 66, vi + 13, vi + 16, vi + 17);
+            TRIANGLE(ii + 69, vi + 14, vi + 17, vi + 18);
+        }
+    }
     
     glGenBuffers(1, &_vertexBufferTerrains);
     glBindBuffer(GL_ARRAY_BUFFER, _vertexBufferTerrains);
-    glBufferData(GL_ARRAY_BUFFER, 16 * sizeof(TerrainVertex), vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, 19 * width * height * sizeof(TerrainVertex), vertices, GL_STATIC_DRAW);
     
     glGenBuffers(1, &_indexBufferTerrains);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexBufferTerrains);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, 24 * sizeof(Index), indices, GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, 24 * width * height * sizeof(TerrainIndex), indices, GL_STATIC_DRAW);
 }
 
 - (void)compileShaders
@@ -191,6 +276,10 @@ typedef unsigned int Index;
     glEnable (GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
+    //glEnable(GL_CULL_FACE);
+    //glCullFace(GL_FRONT_AND_BACK);
+    glFrontFace(GL_CCW);
+    
     // Projection Matrix
     const CC3GLMatrix *projectionMatrix = [self.camera projectionMatrix];
     glUniformMatrix4fv(_projectionUniform, 1, 0, projectionMatrix.glMatrix);
@@ -228,7 +317,7 @@ typedef unsigned int Index;
     glVertexAttribPointer(_textureContributionsSlot, 4, GL_FLOAT, GL_FALSE, sizeof(TerrainVertex), (GLvoid*) (sizeof(float) * 9));
     glEnableVertexAttribArray(_textureContributionsSlot);
     
-    glDrawElements(GL_TRIANGLES, 24, GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, 72 * 1 * 1, GL_UNSIGNED_INT, 0);
     
     // unbind textures
     [RETexture unbind];

@@ -751,6 +751,7 @@
 		1A48FCC21CEE310B00CFE558 /* villages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = villages.png; path = Resources/Cities/villages.png; sourceTree = "<group>"; };
 		1A48FCC81CEE354000CFE558 /* KeyValueMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyValueMap.h; path = Util/KeyValueMap.h; sourceTree = "<group>"; };
 		1A48FCC91CEE354000CFE558 /* KeyValueMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyValueMap.m; path = Util/KeyValueMap.m; sourceTree = "<group>"; };
+		1A4C97861D3503F200EED467 /* TerrainVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerrainVertex.h; path = WorldGame/AITest/OpenGL/TerrainVertex.h; sourceTree = "<group>"; };
 		1A5700EF1CB2F2D900F346D9 /* NationalService.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NationalService.png; path = Resources/Policies/NationalService.png; sourceTree = "<group>"; };
 		1A5700F01CB2F2D900F346D9 /* NationalService.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = NationalService.xml; path = Resources/Policies/NationalService.xml; sourceTree = "<group>"; };
 		1A5700F71CB2FAE100F346D9 /* InheritanceTax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InheritanceTax.png; path = Resources/Policies/InheritanceTax.png; sourceTree = "<group>"; };
@@ -1448,6 +1449,7 @@
 				1A6140211D2613230052A551 /* CombatBoardNode.m */,
 				1A2CB4AD1D2BCEAF005E9F9E /* TerrainNode.h */,
 				1A2CB4AE1D2BCEAF005E9F9E /* TerrainNode.m */,
+				1A4C97861D3503F200EED467 /* TerrainVertex.h */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";

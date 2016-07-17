@@ -46,9 +46,17 @@ static __inline__ NSString* TerrainVertexToString(TerrainVertex vertex)
     return [NSString stringWithFormat:@"TerrainVertex(%.2f, %.2f, %.2f - %.2f, %.2f)", vertex.Position[0], vertex.Position[1], vertex.Position[2], vertex.TexCoord[0], vertex.TexCoord[1]];
 }
 
-static __inline__ void TerrainVertexSetHeight(TerrainVertex vertex, float height)
+static __inline__ void TerrainVertexSetHeight(TerrainVertex *vertex, float height)
 {
-    vertex.Position[1] = height;
+    vertex->Position[1] = -height;
+}
+
+static __inline__ void TerrainVertexSetContribution(TerrainVertex *vertex, GLKVector4 contrib)
+{
+    vertex->TextureContributions[0] = contrib.x;
+    vertex->TextureContributions[1] = contrib.y;
+    vertex->TextureContributions[2] = contrib.z;
+    vertex->TextureContributions[3] = contrib.w;
 }
 
 typedef unsigned int TerrainIndex;

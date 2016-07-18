@@ -5,7 +5,11 @@ varying vec4 textureContributions;
 
 uniform sampler2D TexturesIn[4];
 
+varying float v_clipDistance;
+
 void main(void) {
+    if(v_clipDistance > 0.0) discard;
+    
     vec4 texel0 = texture2D(TexturesIn[0], texCoord);
     vec4 texel1 = texture2D(TexturesIn[1], texCoord);
     vec4 texel2 = texture2D(TexturesIn[2], texCoord);

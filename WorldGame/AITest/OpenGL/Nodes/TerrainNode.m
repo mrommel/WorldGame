@@ -13,6 +13,7 @@
 #import "MathHelper.h"
 #import "TerrainVertex.h"
 #import "Array2D.h"
+#import "CC3GLMatrix+Extension.h"
 
 @interface TerrainNode() {
     
@@ -22,6 +23,7 @@
     NSTimer *_timer;
     GLuint _projectionUniform;
     GLuint _modelViewUniform;
+    GLuint _modelUniform;
     GLuint _depthRenderBuffer;
     
     GLuint _texCoordSlot;
@@ -34,6 +36,8 @@
     GLuint texture0, texture1, texture2, texture3;
     
     GLPlane *_groundPlane;
+    GLKVector4 m_clipPlane;
+    GLuint _clipPlainSlot;
 }
 
 @property (atomic) CGSize tileSize;
@@ -239,6 +243,9 @@
                 TerrainVertexSetContribution(&vertices[vi + 8], CONTRIBUTION_SAND);
                 TerrainVertexSetHeight(&vertices[vi + 9], -1.0f);
                 TerrainVertexSetContribution(&vertices[vi + 9], CONTRIBUTION_SAND);
+                
+                NSLog(@"Ocean: %@", TerrainVertexToString(vertices[vi + 9]));
+                
                 TerrainVertexSetHeight(&vertices[vi + 10], -0.5f);
                 TerrainVertexSetContribution(&vertices[vi + 10], CONTRIBUTION_SAND);
                 TerrainVertexSetHeight(&vertices[vi + 11], 0.5f);
@@ -359,7 +366,8 @@
     glEnableVertexAttribArray(_colorSlot);
     
     _projectionUniform = glGetUniformLocation(self.program.program, "Projection");
-    _modelViewUniform = glGetUniformLocation(self.program.program, "Modelview");
+    _modelViewUniform = glGetUniformLocation(self.program.program, "ModelView");
+    _modelUniform = glGetUniformLocation(self.program.program, "ModelMatrix");
     
     _texCoordSlot = glGetAttribLocation(self.program.program, "TexCoordIn");
     glEnableVertexAttribArray(_texCoordSlot);
@@ -368,6 +376,9 @@
     glEnableVertexAttribArray(_textureContributionsSlot);
     
     _samplerArrayLoc = glGetUniformLocation(self.program.program, "TexturesIn");
+    
+    // clipping
+    _clipPlainSlot = glGetAttribLocation(self.program.program, "u_clipPlane");
 }
 
 + (REProgram*)program
@@ -389,12 +400,17 @@
     
     glFrontFace(GL_CCW);
     
+    // Model Matrix
+    const CC3GLMatrix *modelMatrix = [CC3GLMatrix identity];
+    glUniformMatrix4fv(_modelUniform, 1, 0, modelMatrix.glMatrix);
+    
+    // View Matrix
+    const CC3GLMatrix *viewMatrix = [modelMatrix copyMultipliedBy:[self.camera viewMatrix]];
+    glUniformMatrix4fv(_modelViewUniform, 1, 0, viewMatrix.glMatrix);
+    
     // Projection Matrix
     const CC3GLMatrix *projectionMatrix = [self.camera projectionMatrix];
     glUniformMatrix4fv(_projectionUniform, 1, 0, projectionMatrix.glMatrix);
-    
-    // View Matrix
-    const CC3GLMatrix *viewMatrix = [self.camera viewMatrix];
     
     // ---------------------------------
     
@@ -415,8 +431,6 @@
     glBindBuffer(GL_ARRAY_BUFFER, _vertexBufferTerrains);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexBufferTerrains);
     
-    glUniformMatrix4fv(_modelViewUniform, 1, 0, viewMatrix.glMatrix);
-    
     glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(TerrainVertex), 0);
     glEnableVertexAttribArray(_positionSlot);
     glVertexAttribPointer(_colorSlot, 4, GL_FLOAT, GL_FALSE, sizeof(TerrainVertex), (GLvoid*) (sizeof(float) * 3));
@@ -425,6 +439,13 @@
     glEnableVertexAttribArray(_texCoordSlot);
     glVertexAttribPointer(_textureContributionsSlot, 4, GL_FLOAT, GL_FALSE, sizeof(TerrainVertex), (GLvoid*) (sizeof(float) * 9));
     glEnableVertexAttribArray(_textureContributionsSlot);
+    
+    // apply the clipping
+    m_clipPlane.x = 0.0f; // normal
+    m_clipPlane.y = -1.0f; // normal
+    m_clipPlane.z = 0.0f; // normal
+    m_clipPlane.w = 0.1f; // water level
+    glUniform4f(_clipPlainSlot, m_clipPlane.x, m_clipPlane.y, m_clipPlane.z, m_clipPlane.w);
     
     glDrawElements(GL_TRIANGLES, kIndicesPerTile * self.tileSize.width * self.tileSize.height, GL_UNSIGNED_INT, 0);
     

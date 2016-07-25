@@ -23,5 +23,6 @@ void main(void) { // 4
     texCoord = TexCoordIn;
     textureContributions = TextureContributionsIn;
     
-    v_clipDistance = dot(ModelMatrix * Position, u_clipPlane);
+    //v_clipDistance = dot(ModelMatrix * Position, u_clipPlane);
+    v_clipDistance = dot(Position, u_clipPlane);
 }

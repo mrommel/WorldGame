@@ -43,6 +43,12 @@
 		1A0FF29C1CA0965500F64050 /* menu-item-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF2951CA0965500F64050 /* menu-item-normal.png */; };
 		1A0FF29D1CA0965500F64050 /* menu-item-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF2951CA0965500F64050 /* menu-item-normal.png */; };
 		1A0FF29E1CA0965500F64050 /* menu-item-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF2951CA0965500F64050 /* menu-item-normal.png */; };
+		1A29EFDB1D450EC700909426 /* ViewportFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFD91D450EC700909426 /* ViewportFragment.glsl */; };
+		1A29EFDC1D450EC700909426 /* ViewportFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFD91D450EC700909426 /* ViewportFragment.glsl */; };
+		1A29EFDD1D450EC700909426 /* ViewportFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFD91D450EC700909426 /* ViewportFragment.glsl */; };
+		1A29EFDE1D450EC700909426 /* ViewportVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFDA1D450EC700909426 /* ViewportVertex.glsl */; };
+		1A29EFDF1D450EC700909426 /* ViewportVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFDA1D450EC700909426 /* ViewportVertex.glsl */; };
+		1A29EFE01D450EC700909426 /* ViewportVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFDA1D450EC700909426 /* ViewportVertex.glsl */; };
 		1A2CB4A41D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
 		1A2CB4A51D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
 		1A2CB4A61D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
@@ -648,6 +654,8 @@
 		1A0FF2931CA0965500F64050 /* menu-footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-footer.png"; path = "Resources/Images/menu-footer.png"; sourceTree = "<group>"; };
 		1A0FF2941CA0965500F64050 /* menu-header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-header.png"; path = "Resources/Images/menu-header.png"; sourceTree = "<group>"; };
 		1A0FF2951CA0965500F64050 /* menu-item-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-item-normal.png"; path = "Resources/Images/menu-item-normal.png"; sourceTree = "<group>"; };
+		1A29EFD91D450EC700909426 /* ViewportFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ViewportFragment.glsl; path = Resources/OpenGL/ViewportFragment.glsl; sourceTree = "<group>"; };
+		1A29EFDA1D450EC700909426 /* ViewportVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ViewportVertex.glsl; path = Resources/OpenGL/ViewportVertex.glsl; sourceTree = "<group>"; };
 		1A2CB49E1D2BCD97005E9F9E /* CombatBoardMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatBoardMesh.h; path = WorldGame/AITest/OpenGL/Mesh/CombatBoardMesh.h; sourceTree = "<group>"; };
 		1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatBoardMesh.m; path = WorldGame/AITest/OpenGL/Mesh/CombatBoardMesh.m; sourceTree = "<group>"; };
 		1A2CB4A01D2BCD97005E9F9E /* CubeMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CubeMesh.h; path = WorldGame/AITest/OpenGL/Mesh/CubeMesh.h; sourceTree = "<group>"; };
@@ -1513,6 +1521,8 @@
 				1ABE0E741D243B420009F3F2 /* SimpleFragment.glsl */,
 				1A2CB4B31D2BCF78005E9F9E /* TerrainVertex.glsl */,
 				1A2CB4B21D2BCF78005E9F9E /* TerrainFragment.glsl */,
+				1A29EFD91D450EC700909426 /* ViewportFragment.glsl */,
+				1A29EFDA1D450EC700909426 /* ViewportVertex.glsl */,
 				1A613F471D24F56D0052A551 /* tile_floor.png */,
 			);
 			name = OpenGL;
@@ -1791,6 +1801,7 @@
 				1AEE80CB1C7735960028ACFF /* Desert.xml in Resources */,
 				1A35A9ED1CAEF4BD0094F773 /* Legalism.xml in Resources */,
 				1A0FF29C1CA0965500F64050 /* menu-item-normal.png in Resources */,
+				1A29EFDE1D450EC700909426 /* ViewportVertex.glsl in Resources */,
 				1A84BB3E1CBFB5DF00CE7EDC /* center.png in Resources */,
 				1A5C22EB1C9C164F007F324C /* TechBranchAtlas.xml in Resources */,
 				1A3C3A361C84EBFB004009DA /* OverlayView.xib in Resources */,
@@ -1844,6 +1855,7 @@
 				1AEE80DA1C7735960028ACFF /* Snow.xml in Resources */,
 				1A84BB4A1CC029E500CE7EDC /* menu-item-disabled.png in Resources */,
 				1A5C22EA1C9C164F007F324C /* RessourceTiles.png in Resources */,
+				1A29EFDB1D450EC700909426 /* ViewportFragment.glsl in Resources */,
 				1A35A9CE1CAE8B170094F773 /* Parliament.png in Resources */,
 				1A48FCC61CEE310B00CFE558 /* town.png in Resources */,
 				1AEF61251D14168400253DD6 /* Hoplites.xml in Resources */,
@@ -1944,6 +1956,7 @@
 				1A84BB3C1CBFB5DF00CE7EDC /* cancel.png in Resources */,
 				1A3C3A551C84F280004009DA /* icon_spinning_circle@2x~ipad.png in Resources */,
 				1A57010D1CB2FDDD00F346D9 /* PoliceForce.xml in Resources */,
+				1A29EFDC1D450EC700909426 /* ViewportFragment.glsl in Resources */,
 				1A0FF2851CA0617900F64050 /* Snow.png in Resources */,
 				1A35A9DA1CAE8D150094F773 /* Government.xml in Resources */,
 				1A0FF2821CA0617900F64050 /* Shore.png in Resources */,
@@ -1963,6 +1976,7 @@
 				1AEE80D81C7735960028ACFF /* Shore.xml in Resources */,
 				1A35A9EB1CAEF4BD0094F773 /* Legalism.png in Resources */,
 				1A0FF2911CA08F5800F64050 /* Forest.png in Resources */,
+				1A29EFDF1D450EC700909426 /* ViewportVertex.glsl in Resources */,
 				1A61404B1D26289C0052A551 /* blueButtonHighlight@2x.png in Resources */,
 				1A61402F1D26159F0052A551 /* rivers.xml in Resources */,
 				1A0FF2971CA0965500F64050 /* menu-footer.png in Resources */,
@@ -2021,6 +2035,7 @@
 				1A84BB3D1CBFB5DF00CE7EDC /* cancel.png in Resources */,
 				1A3C3A561C84F280004009DA /* icon_spinning_circle@2x~ipad.png in Resources */,
 				1A57010E1CB2FDDD00F346D9 /* PoliceForce.xml in Resources */,
+				1A29EFDD1D450EC700909426 /* ViewportFragment.glsl in Resources */,
 				1A0FF2861CA0617900F64050 /* Snow.png in Resources */,
 				1A35A9DB1CAE8D150094F773 /* Government.xml in Resources */,
 				1A0FF2831CA0617900F64050 /* Shore.png in Resources */,
@@ -2040,6 +2055,7 @@
 				1AEE80D91C7735960028ACFF /* Shore.xml in Resources */,
 				1A35A9EC1CAEF4BD0094F773 /* Legalism.png in Resources */,
 				1A0FF2921CA08F5800F64050 /* Forest.png in Resources */,
+				1A29EFE01D450EC700909426 /* ViewportVertex.glsl in Resources */,
 				1A61404C1D26289C0052A551 /* blueButtonHighlight@2x.png in Resources */,
 				1A6140301D26159F0052A551 /* rivers.xml in Resources */,
 				1A0FF2981CA0965500F64050 /* menu-footer.png in Resources */,

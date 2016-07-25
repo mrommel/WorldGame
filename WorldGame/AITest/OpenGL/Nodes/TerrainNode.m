@@ -38,6 +38,24 @@
     GLPlane *_groundPlane;
     GLKVector4 m_clipPlane;
     GLuint _clipPlainSlot;
+    
+    //
+    GLfloat _waterHeight, _waterOffset;
+    
+    // viewport
+    REProgram *viewportProgram;
+    GLuint _viewportSizedQuadVertexBuffer;
+    GLuint _viewportSizedQuadIndexBuffer;
+    
+    GLuint _viewportPositionSlot;
+    GLuint _viewportColorSlot;
+    GLuint _viewportTexCoordSlot;
+    GLuint _viewportTextureUniform;
+    
+    // refraction
+    GLuint _refractionFrameBuffer;
+    GLuint _refractionTexture;
+    GLuint _refractionDepthBuffer;
 }
 
 @property (atomic) CGSize tileSize;
@@ -54,6 +72,26 @@
 #define CONTRIBUTION_SAND    GLKVector4Make(0, 1, 0, 0)
 
 @implementation TerrainNode
+
+#define TEX_COORD_MAX 1
+
+typedef struct {
+    float Position[3];
+    float Color[4];
+    float TexCoord[2];
+} ViewportVertex;
+
+const ViewportVertex viewPortQuadVertices[] = {
+    {{1, -1, 0}, {1, 1, 1, 1}, {TEX_COORD_MAX, 0}},
+    {{1, 1, 0}, {1, 1, 1, 1}, {TEX_COORD_MAX, TEX_COORD_MAX}},
+    {{-1, 1, 0}, {1, 1, 1, 1}, {0, TEX_COORD_MAX}},
+    {{-1, -1, 0}, {1, 1, 1, 1}, {0, 0}}
+};
+
+const TerrainIndex viewPortQuadIndices[] = {
+    0, 1, 2,
+    2, 3, 0,
+};
 
 - (id)init
 {
@@ -74,6 +112,9 @@
         [self.tiles setObject:TERRAIN_OCEAN atX:1 andY:2];
         [self.tiles setObject:TERRAIN_OCEAN atX:2 andY:2];
         
+        _waterHeight = 0.0f;
+        _waterOffset = 0.55f;
+        
         [self setupRenderBuffer];
         [self setupDepthBuffer];
         [self setupFrameBuffer];
@@ -90,10 +131,12 @@
     glBindRenderbuffer(GL_RENDERBUFFER, _colorRenderBuffer);
 }
 
-- (void)setupDepthBuffer {
+- (void)setupDepthBuffer
+{
     glGenRenderbuffers(1, &_depthRenderBuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _depthRenderBuffer);
-    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, 200, 200);
+#warning get device size
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, 1024, 1024);
 }
 
 - (void)setupFrameBuffer
@@ -101,9 +144,64 @@
     GLuint framebuffer;
     glGenFramebuffers(1, &framebuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
-    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0,
-                              GL_RENDERBUFFER, _colorRenderBuffer);
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _colorRenderBuffer);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, _depthRenderBuffer);
+    
+    // ---------------------
+    // create viewport buffers
+    glGenBuffers(1, &_viewportSizedQuadVertexBuffer);
+    glBindBuffer(GL_ARRAY_BUFFER, _viewportSizedQuadVertexBuffer);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(viewPortQuadVertices), viewPortQuadVertices, GL_STATIC_DRAW);
+    
+    glGenBuffers(1, &_viewportSizedQuadIndexBuffer);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _viewportSizedQuadIndexBuffer);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(viewPortQuadIndices), viewPortQuadIndices, GL_STATIC_DRAW);
+    
+    // ---------------------
+    // refraction frame buffer
+    GLint maxRenderBufferSize;
+    glGetIntegerv(GL_MAX_RENDERBUFFER_SIZE, &maxRenderBufferSize);
+    
+#warning get device size
+    GLuint textureWidth = 1024;
+    GLuint textureHeight = 1024;
+    
+    if (maxRenderBufferSize <= textureWidth || maxRenderBufferSize <= textureHeight) {
+        NSLog(@"FBO cant allocate that much space");
+    }
+    
+    // The framebuffer, which regroups 0, 1, or more textures, and 0 or 1 depth buffer.
+    glGenFramebuffers(1, &_refractionFrameBuffer);
+    glBindFramebuffer(GL_FRAMEBUFFER, _refractionFrameBuffer);
+    
+    // The texture we're going to render to
+    glGenTextures(1, &_refractionTexture);
+    
+    // "Bind" the newly created texture : all future texture functions will modify this texture
+    glBindTexture(GL_TEXTURE_2D, _refractionTexture);
+    
+    // Give an empty image to OpenGL ( the last "0" )
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, textureWidth, textureHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, 0);
+    
+    // Poor filtering. Needed !
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    
+    // The depth buffer
+    glGenRenderbuffers(1, &_refractionDepthBuffer);
+    glBindRenderbuffer(GL_RENDERBUFFER, _refractionDepthBuffer);
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, textureWidth, textureHeight);
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, _refractionDepthBuffer);
+    
+    // Set "renderedTexture" as our colour attachement #0
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, _refractionTexture, 0);
+    
+    GLuint status = glCheckFramebufferStatus(GL_FRAMEBUFFER);
+    if (status != GL_FRAMEBUFFER_COMPLETE) {
+        NSLog(@"refraction buffers are not complete :%u", status);
+    }
 }
 
 - (void)setupVBOs
@@ -244,7 +342,8 @@
                 TerrainVertexSetHeight(&vertices[vi + 9], -1.0f);
                 TerrainVertexSetContribution(&vertices[vi + 9], CONTRIBUTION_SAND);
                 
-                NSLog(@"Ocean: %@", TerrainVertexToString(vertices[vi + 9]));
+                //NSLog(@"Ocean: %@", TerrainVertexToString(vertices[vi + 9]));
+                //http://www.calculatorsoup.com/calculators/algebra/dot-product-calculator.php
                 
                 TerrainVertexSetHeight(&vertices[vi + 10], -0.5f);
                 TerrainVertexSetContribution(&vertices[vi + 10], CONTRIBUTION_SAND);
@@ -378,20 +477,34 @@
     _samplerArrayLoc = glGetUniformLocation(self.program.program, "TexturesIn");
     
     // clipping
-    _clipPlainSlot = glGetAttribLocation(self.program.program, "u_clipPlane");
+    _clipPlainSlot = glGetUniformLocation(self.program.program, "u_clipPlane");
+ 
+    // ------------------------------
+    // viewport shader
+    viewportProgram = [REProgram programWithVertexFilename:@"ViewportVertex.glsl"
+                                           fragmentFilename:@"ViewportFragment.glsl"];
+    
+    _viewportPositionSlot = glGetAttribLocation(viewportProgram.program, "texPosition");
+    glEnableVertexAttribArray(_viewportPositionSlot);
+    _viewportColorSlot = glGetAttribLocation(viewportProgram.program, "texSourceColor");
+    glEnableVertexAttribArray(_viewportColorSlot);
+    _viewportTexCoordSlot = glGetAttribLocation(viewportProgram.program, "texTexCoordIn");
+    glEnableVertexAttribArray(_viewportTexCoordSlot);
+    _viewportTextureUniform = glGetUniformLocation(viewportProgram.program, "Texture");
 }
 
-+ (REProgram*)program
++ (REProgram *)program
 {
     return [REProgram programWithVertexFilename:@"TerrainVertex.glsl"
                                fragmentFilename:@"TerrainFragment.glsl"];
 }
 
-- (void)draw
+/*!
+ @param plane (x, y, z) direction of normal, w distance
+ */
+- (void)drawWithClipPlane:(GLKVector4)plane
 {
-    [super draw];
-    
-    glClearColor(0.0/255.0, 20.0/255.0, 0.0/255.0, 1.0);
+    glClearColor(214.0/255.0, 226.0/255.0, 255.0/255.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_DEPTH_TEST);
     
@@ -399,6 +512,8 @@
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
     glFrontFace(GL_CCW);
+    
+    glUseProgram(self.program.program);
     
     // Model Matrix
     const CC3GLMatrix *modelMatrix = [CC3GLMatrix identity];
@@ -441,14 +556,59 @@
     glEnableVertexAttribArray(_textureContributionsSlot);
     
     // apply the clipping
-    m_clipPlane.x = 0.0f; // normal
-    m_clipPlane.y = -1.0f; // normal
-    m_clipPlane.z = 0.0f; // normal
-    m_clipPlane.w = 0.1f; // water level
-    glUniform4f(_clipPlainSlot, m_clipPlane.x, m_clipPlane.y, m_clipPlane.z, m_clipPlane.w);
+    glUniform4f(_clipPlainSlot, plane.x, plane.y, plane.z, plane.w);
     
     glDrawElements(GL_TRIANGLES, kIndicesPerTile * self.tileSize.width * self.tileSize.height, GL_UNSIGNED_INT, 0);
+}
+
+- (void)draw
+{
+    [super draw];
     
+    // First save the default frame buffer.
+    static GLint default_frame_buffer = 0;
+    glGetIntegerv(GL_FRAMEBUFFER_BINDING, &default_frame_buffer);
+    
+    // ---------------------------------------
+    // first we render the under water part into refraction buffer
+    glBindFramebuffer(GL_FRAMEBUFFER, _refractionFrameBuffer);
+    glViewport(0, 0, 1024, 1024);
+    //[self drawWithClipPlane:GLKVector4Make(0.0f, 0.0f, 0.0f, 0.0f)];
+    [self drawWithClipPlane:GLKVector4Make(0.0f, -1.0f, 0.0f, _waterHeight + _waterOffset)];
+    
+    // ///////////////////////////////////
+    
+    glBindFramebuffer(GL_FRAMEBUFFER, default_frame_buffer);
+    //glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    glViewport(0, 0, 1024, 1024);
+    
+    glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_BLEND);
+    
+    glFrontFace(GL_CCW);
+    
+    glClearColor(127.0/255.0, 0.0/255.0, 127.0/255.0, 1.0);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glEnable(GL_DEPTH_TEST);
+    
+    glUseProgram(viewportProgram.program);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, _viewportSizedQuadVertexBuffer);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _viewportSizedQuadIndexBuffer);
+    
+    glVertexAttribPointer(_viewportPositionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(ViewportVertex), 0);
+    glEnableVertexAttribArray(_viewportPositionSlot);
+    glVertexAttribPointer(_viewportColorSlot, 4, GL_FLOAT, GL_FALSE, sizeof(ViewportVertex), (GLvoid*) (sizeof(float) * 3));
+    glEnableVertexAttribArray(_viewportColorSlot);
+    glVertexAttribPointer(_viewportTexCoordSlot, 2, GL_FLOAT, GL_FALSE, sizeof(ViewportVertex), (GLvoid*) (sizeof(float) * 7));
+    glEnableVertexAttribArray(_viewportTexCoordSlot);
+    
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, _refractionTexture);
+    //glBindTexture(GL_TEXTURE_2D, texture2);
+    glUniform1i(_viewportTextureUniform, 0);
+    glDrawElements(GL_TRIANGLES, sizeof(viewPortQuadIndices)/sizeof(viewPortQuadIndices[0]), GL_UNSIGNED_INT, 0);
+
     // unbind textures
     [RETexture unbind];
 }

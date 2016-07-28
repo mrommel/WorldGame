@@ -55,6 +55,24 @@
 		1A29EFE61D47854300909426 /* SkyboxVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFE21D47854300909426 /* SkyboxVertex.glsl */; };
 		1A29EFE71D47854300909426 /* SkyboxVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFE21D47854300909426 /* SkyboxVertex.glsl */; };
 		1A29EFE81D47854300909426 /* SkyboxVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFE21D47854300909426 /* SkyboxVertex.glsl */; };
+		1A29EFEF1D4A21EB00909426 /* skyboxBack256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFE91D4A21EB00909426 /* skyboxBack256.png */; };
+		1A29EFF01D4A21EB00909426 /* skyboxBack256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFE91D4A21EB00909426 /* skyboxBack256.png */; };
+		1A29EFF11D4A21EB00909426 /* skyboxBack256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFE91D4A21EB00909426 /* skyboxBack256.png */; };
+		1A29EFF21D4A21EB00909426 /* skyboxBottom256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEA1D4A21EB00909426 /* skyboxBottom256.png */; };
+		1A29EFF31D4A21EB00909426 /* skyboxBottom256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEA1D4A21EB00909426 /* skyboxBottom256.png */; };
+		1A29EFF41D4A21EB00909426 /* skyboxBottom256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEA1D4A21EB00909426 /* skyboxBottom256.png */; };
+		1A29EFF51D4A21EB00909426 /* skyboxFront256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEB1D4A21EB00909426 /* skyboxFront256.png */; };
+		1A29EFF61D4A21EB00909426 /* skyboxFront256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEB1D4A21EB00909426 /* skyboxFront256.png */; };
+		1A29EFF71D4A21EB00909426 /* skyboxFront256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEB1D4A21EB00909426 /* skyboxFront256.png */; };
+		1A29EFF81D4A21EB00909426 /* skyboxLeft256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEC1D4A21EB00909426 /* skyboxLeft256.png */; };
+		1A29EFF91D4A21EB00909426 /* skyboxLeft256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEC1D4A21EB00909426 /* skyboxLeft256.png */; };
+		1A29EFFA1D4A21EB00909426 /* skyboxLeft256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEC1D4A21EB00909426 /* skyboxLeft256.png */; };
+		1A29EFFB1D4A21EB00909426 /* skyboxRight256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFED1D4A21EB00909426 /* skyboxRight256.png */; };
+		1A29EFFC1D4A21EB00909426 /* skyboxRight256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFED1D4A21EB00909426 /* skyboxRight256.png */; };
+		1A29EFFD1D4A21EB00909426 /* skyboxRight256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFED1D4A21EB00909426 /* skyboxRight256.png */; };
+		1A29EFFE1D4A21EB00909426 /* skyboxTop256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEE1D4A21EB00909426 /* skyboxTop256.png */; };
+		1A29EFFF1D4A21EB00909426 /* skyboxTop256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEE1D4A21EB00909426 /* skyboxTop256.png */; };
+		1A29F0001D4A21EB00909426 /* skyboxTop256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEE1D4A21EB00909426 /* skyboxTop256.png */; };
 		1A2CB4A41D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
 		1A2CB4A51D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
 		1A2CB4A61D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
@@ -339,7 +357,6 @@
 		1A5C23031C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */; };
 		1A5C23041C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */; };
 		1A5C23051C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */; };
-		1A613F491D24F56D0052A551 /* tile_floor.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A613F471D24F56D0052A551 /* tile_floor.png */; };
 		1A613F4E1D2606D10052A551 /* AbstractCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F4B1D2606D10052A551 /* AbstractCamera.m */; };
 		1A613F4F1D2606D10052A551 /* AbstractCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F4B1D2606D10052A551 /* AbstractCamera.m */; };
 		1A613F501D2606D10052A551 /* AbstractCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F4B1D2606D10052A551 /* AbstractCamera.m */; };
@@ -664,6 +681,12 @@
 		1A29EFDA1D450EC700909426 /* ViewportVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ViewportVertex.glsl; path = Resources/OpenGL/ViewportVertex.glsl; sourceTree = "<group>"; };
 		1A29EFE11D47854300909426 /* SkyboxFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SkyboxFragment.glsl; path = Resources/OpenGL/SkyboxFragment.glsl; sourceTree = "<group>"; };
 		1A29EFE21D47854300909426 /* SkyboxVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SkyboxVertex.glsl; path = Resources/OpenGL/SkyboxVertex.glsl; sourceTree = "<group>"; };
+		1A29EFE91D4A21EB00909426 /* skyboxBack256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxBack256.png; path = Resources/Textures/skyboxBack256.png; sourceTree = "<group>"; };
+		1A29EFEA1D4A21EB00909426 /* skyboxBottom256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxBottom256.png; path = Resources/Textures/skyboxBottom256.png; sourceTree = "<group>"; };
+		1A29EFEB1D4A21EB00909426 /* skyboxFront256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxFront256.png; path = Resources/Textures/skyboxFront256.png; sourceTree = "<group>"; };
+		1A29EFEC1D4A21EB00909426 /* skyboxLeft256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxLeft256.png; path = Resources/Textures/skyboxLeft256.png; sourceTree = "<group>"; };
+		1A29EFED1D4A21EB00909426 /* skyboxRight256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxRight256.png; path = Resources/Textures/skyboxRight256.png; sourceTree = "<group>"; };
+		1A29EFEE1D4A21EB00909426 /* skyboxTop256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxTop256.png; path = Resources/Textures/skyboxTop256.png; sourceTree = "<group>"; };
 		1A2CB49E1D2BCD97005E9F9E /* CombatBoardMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatBoardMesh.h; path = WorldGame/AITest/OpenGL/Mesh/CombatBoardMesh.h; sourceTree = "<group>"; };
 		1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatBoardMesh.m; path = WorldGame/AITest/OpenGL/Mesh/CombatBoardMesh.m; sourceTree = "<group>"; };
 		1A2CB4A01D2BCD97005E9F9E /* CubeMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CubeMesh.h; path = WorldGame/AITest/OpenGL/Mesh/CubeMesh.h; sourceTree = "<group>"; };
@@ -847,7 +870,6 @@
 		1A5C22FD1C9C42E7007F324C /* UIImage+Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Sprite.m"; path = "Util/UIImage+Sprite.m"; sourceTree = "<group>"; };
 		1A5C23011C9DEEE8007F324C /* UINavigationController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+BackButtonHandler.h"; path = "Util/UINavigationController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		1A5C23021C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+BackButtonHandler.m"; path = "Util/UINavigationController+BackButtonHandler.m"; sourceTree = "<group>"; };
-		1A613F471D24F56D0052A551 /* tile_floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile_floor.png; path = Resources/OpenGL/tile_floor.png; sourceTree = "<group>"; };
 		1A613F4A1D2606D10052A551 /* AbstractCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractCamera.h; path = WorldGame/AITest/OpenGL/AbstractCamera.h; sourceTree = "<group>"; };
 		1A613F4B1D2606D10052A551 /* AbstractCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractCamera.m; path = WorldGame/AITest/OpenGL/AbstractCamera.m; sourceTree = "<group>"; };
 		1A613F4C1D2606D10052A551 /* ArcBallCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArcBallCamera.h; path = WorldGame/AITest/OpenGL/ArcBallCamera.h; sourceTree = "<group>"; };
@@ -1057,6 +1079,12 @@
 				1A2CB4BC1D2CEA13005E9F9E /* grass512.png */,
 				1A2CB4BD1D2CEA13005E9F9E /* rock512.png */,
 				1A2CB4BE1D2CEA13005E9F9E /* sand512.png */,
+				1A29EFE91D4A21EB00909426 /* skyboxBack256.png */,
+				1A29EFEA1D4A21EB00909426 /* skyboxBottom256.png */,
+				1A29EFEB1D4A21EB00909426 /* skyboxFront256.png */,
+				1A29EFEC1D4A21EB00909426 /* skyboxLeft256.png */,
+				1A29EFED1D4A21EB00909426 /* skyboxRight256.png */,
+				1A29EFEE1D4A21EB00909426 /* skyboxTop256.png */,
 			);
 			name = Textures;
 			sourceTree = "<group>";
@@ -1533,7 +1561,6 @@
 				1A29EFD91D450EC700909426 /* ViewportFragment.glsl */,
 				1A29EFE21D47854300909426 /* SkyboxVertex.glsl */,
 				1A29EFE11D47854300909426 /* SkyboxFragment.glsl */,
-				1A613F471D24F56D0052A551 /* tile_floor.png */,
 			);
 			name = OpenGL;
 			sourceTree = "<group>";
@@ -1840,9 +1867,11 @@
 				1A5701091CB2FDDD00F346D9 /* PoliceForce.png in Resources */,
 				1A7232B51CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */,
 				1A5C22E61C9C164F007F324C /* notificationwar.png in Resources */,
+				1A29EFFB1D4A21EB00909426 /* skyboxRight256.png in Resources */,
 				1A48FCC51CEE310B00CFE558 /* nomads.png in Resources */,
 				1A6140341D26159F0052A551 /* terrains.xml in Resources */,
 				1A0FF27E1CA0617900F64050 /* Plains.png in Resources */,
+				1A29EFF51D4A21EB00909426 /* skyboxFront256.png in Resources */,
 				1A61402B1D26159F0052A551 /* rivers.png in Resources */,
 				1A5C22EF1C9C164F007F324C /* TerrainAtlas.xml in Resources */,
 				1ABE0E751D243B420009F3F2 /* SimpleFragment.glsl in Resources */,
@@ -1861,7 +1890,6 @@
 				1A5C22F41C9C164F007F324C /* UnitTiles.png in Resources */,
 				1A5C22E81C9C164F007F324C /* PolicyTiles.png in Resources */,
 				1A2CB4B71D2BCF78005E9F9E /* TerrainVertex.glsl in Resources */,
-				1A613F491D24F56D0052A551 /* tile_floor.png in Resources */,
 				1A35A9E21CAEF21A0094F773 /* Feudalism.png in Resources */,
 				1AEE80DA1C7735960028ACFF /* Snow.xml in Resources */,
 				1A84BB4A1CC029E500CE7EDC /* menu-item-disabled.png in Resources */,
@@ -1871,6 +1899,7 @@
 				1A48FCC61CEE310B00CFE558 /* town.png in Resources */,
 				1AEF61251D14168400253DD6 /* Hoplites.xml in Resources */,
 				1A5701191CB302AC00F346D9 /* SalesTax.png in Resources */,
+				1A29EFEF1D4A21EB00909426 /* skyboxBack256.png in Resources */,
 				1A5C22E01C9C164F007F324C /* ImprovementTiles.png in Resources */,
 				1A5C22F11C9C164F007F324C /* UnitActionAtlas.xml in Resources */,
 				1AEE80D71C7735960028ACFF /* Shore.xml in Resources */,
@@ -1908,15 +1937,18 @@
 				1A2CB4BF1D2CEA13005E9F9E /* dirt512.png in Resources */,
 				1A5C22EC1C9C164F007F324C /* TechBranchTiles.png in Resources */,
 				1A5C22F01C9C164F007F324C /* TerrainTiles.png in Resources */,
+				1A29EFF81D4A21EB00909426 /* skyboxLeft256.png in Resources */,
 				1A35A9D61CAE8D150094F773 /* Government.png in Resources */,
 				1A5C22DE1C9C164F007F324C /* FeatureTiles.png in Resources */,
 				1A61402E1D26159F0052A551 /* rivers.xml in Resources */,
 				1A35A9A21CA1E7720094F773 /* MapSizeAtlas.xml in Resources */,
 				1AEE80D11C7735960028ACFF /* Ocean.xml in Resources */,
 				1A84BB411CBFB5DF00CE7EDC /* okay.png in Resources */,
+				1A29EFFE1D4A21EB00909426 /* skyboxTop256.png in Resources */,
 				1A5C22E21C9C164F007F324C /* LeaderTiles.png in Resources */,
 				1ABE0E711D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */,
 				1AEE80CE1C7735960028ACFF /* Grassland.xml in Resources */,
+				1A29EFF21D4A21EB00909426 /* skyboxBottom256.png in Resources */,
 				1A5C22F31C9C164F007F324C /* UnitAtlas.xml in Resources */,
 				1A48FCC71CEE310B00CFE558 /* villages.png in Resources */,
 				1A0FF2841CA0617900F64050 /* Snow.png in Resources */,
@@ -1932,12 +1964,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A57011A1CB302AC00F346D9 /* SalesTax.png in Resources */,
+				1A29EFF61D4A21EB00909426 /* skyboxFront256.png in Resources */,
 				1AEE80CF1C7735960028ACFF /* Grassland.xml in Resources */,
 				1AEE80DB1C7735960028ACFF /* Snow.xml in Resources */,
 				1A5700F21CB2F2D900F346D9 /* NationalService.png in Resources */,
 				1A7232B61CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */,
 				1A2CB4B51D2BCF78005E9F9E /* TerrainFragment.glsl in Resources */,
 				1A84BB4F1CC0FC7E00CE7EDC /* menu-item-highlighted.png in Resources */,
+				1A29EFFC1D4A21EB00909426 /* skyboxRight256.png in Resources */,
 				1A29EFE71D47854300909426 /* SkyboxVertex.glsl in Resources */,
 				1A3C3A4F1C84F280004009DA /* icon_spinning_circle.png in Resources */,
 				1A35A9EE1CAEF4BD0094F773 /* Legalism.xml in Resources */,
@@ -1948,12 +1982,15 @@
 				1A6140481D26289C0052A551 /* blueButtonHighlight.png in Resources */,
 				1A5700FA1CB2FAE100F346D9 /* InheritanceTax.png in Resources */,
 				1A2CB4C31D2CEA13005E9F9E /* grass512.png in Resources */,
+				1A29EFFF1D4A21EB00909426 /* skyboxTop256.png in Resources */,
 				1A6140421D26289C0052A551 /* blueButton.png in Resources */,
 				1ABE0E721D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */,
 				1A2EA39C1C8A2F2500633417 /* government.png in Resources */,
+				1A29EFF01D4A21EB00909426 /* skyboxBack256.png in Resources */,
 				1A0FF29A1CA0965500F64050 /* menu-header.png in Resources */,
 				1A35A9D21CAE8B170094F773 /* Parliament.xml in Resources */,
 				1A0FF27F1CA0617900F64050 /* Plains.png in Resources */,
+				1A29EFF31D4A21EB00909426 /* skyboxBottom256.png in Resources */,
 				1A61402C1D26159F0052A551 /* rivers.png in Resources */,
 				1A5700F51CB2F2D900F346D9 /* NationalService.xml in Resources */,
 				1A3C3A581C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */,
@@ -1990,6 +2027,7 @@
 				1AEE80D81C7735960028ACFF /* Shore.xml in Resources */,
 				1A35A9EB1CAEF4BD0094F773 /* Legalism.png in Resources */,
 				1A0FF2911CA08F5800F64050 /* Forest.png in Resources */,
+				1A29EFF91D4A21EB00909426 /* skyboxLeft256.png in Resources */,
 				1A29EFDF1D450EC700909426 /* ViewportVertex.glsl in Resources */,
 				1A61404B1D26289C0052A551 /* blueButtonHighlight@2x.png in Resources */,
 				1A61402F1D26159F0052A551 /* rivers.xml in Resources */,
@@ -2013,12 +2051,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A57011B1CB302AC00F346D9 /* SalesTax.png in Resources */,
+				1A29EFF71D4A21EB00909426 /* skyboxFront256.png in Resources */,
 				1AEE80D01C7735960028ACFF /* Grassland.xml in Resources */,
 				1AEE80DC1C7735960028ACFF /* Snow.xml in Resources */,
 				1A5700F31CB2F2D900F346D9 /* NationalService.png in Resources */,
 				1A7232B71CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */,
 				1A2CB4B61D2BCF78005E9F9E /* TerrainFragment.glsl in Resources */,
 				1A84BB501CC0FC7E00CE7EDC /* menu-item-highlighted.png in Resources */,
+				1A29EFFD1D4A21EB00909426 /* skyboxRight256.png in Resources */,
 				1A29EFE81D47854300909426 /* SkyboxVertex.glsl in Resources */,
 				1A3C3A501C84F280004009DA /* icon_spinning_circle.png in Resources */,
 				1A35A9EF1CAEF4BD0094F773 /* Legalism.xml in Resources */,
@@ -2029,12 +2069,15 @@
 				1A6140491D26289C0052A551 /* blueButtonHighlight.png in Resources */,
 				1A5700FB1CB2FAE100F346D9 /* InheritanceTax.png in Resources */,
 				1A2CB4C41D2CEA13005E9F9E /* grass512.png in Resources */,
+				1A29F0001D4A21EB00909426 /* skyboxTop256.png in Resources */,
 				1A6140431D26289C0052A551 /* blueButton.png in Resources */,
 				1ABE0E731D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */,
 				1A2EA39D1C8A2F2500633417 /* government.png in Resources */,
+				1A29EFF11D4A21EB00909426 /* skyboxBack256.png in Resources */,
 				1A0FF29B1CA0965500F64050 /* menu-header.png in Resources */,
 				1A35A9D31CAE8B170094F773 /* Parliament.xml in Resources */,
 				1A0FF2801CA0617900F64050 /* Plains.png in Resources */,
+				1A29EFF41D4A21EB00909426 /* skyboxBottom256.png in Resources */,
 				1A61402D1D26159F0052A551 /* rivers.png in Resources */,
 				1A5700F61CB2F2D900F346D9 /* NationalService.xml in Resources */,
 				1A3C3A591C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */,
@@ -2071,6 +2114,7 @@
 				1AEE80D91C7735960028ACFF /* Shore.xml in Resources */,
 				1A35A9EC1CAEF4BD0094F773 /* Legalism.png in Resources */,
 				1A0FF2921CA08F5800F64050 /* Forest.png in Resources */,
+				1A29EFFA1D4A21EB00909426 /* skyboxLeft256.png in Resources */,
 				1A29EFE01D450EC700909426 /* ViewportVertex.glsl in Resources */,
 				1A61404C1D26289C0052A551 /* blueButtonHighlight@2x.png in Resources */,
 				1A6140301D26159F0052A551 /* rivers.xml in Resources */,

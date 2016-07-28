@@ -49,6 +49,12 @@
 		1A29EFDE1D450EC700909426 /* ViewportVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFDA1D450EC700909426 /* ViewportVertex.glsl */; };
 		1A29EFDF1D450EC700909426 /* ViewportVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFDA1D450EC700909426 /* ViewportVertex.glsl */; };
 		1A29EFE01D450EC700909426 /* ViewportVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFDA1D450EC700909426 /* ViewportVertex.glsl */; };
+		1A29EFE31D47854300909426 /* SkyboxFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFE11D47854300909426 /* SkyboxFragment.glsl */; };
+		1A29EFE41D47854300909426 /* SkyboxFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFE11D47854300909426 /* SkyboxFragment.glsl */; };
+		1A29EFE51D47854300909426 /* SkyboxFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFE11D47854300909426 /* SkyboxFragment.glsl */; };
+		1A29EFE61D47854300909426 /* SkyboxVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFE21D47854300909426 /* SkyboxVertex.glsl */; };
+		1A29EFE71D47854300909426 /* SkyboxVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFE21D47854300909426 /* SkyboxVertex.glsl */; };
+		1A29EFE81D47854300909426 /* SkyboxVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFE21D47854300909426 /* SkyboxVertex.glsl */; };
 		1A2CB4A41D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
 		1A2CB4A51D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
 		1A2CB4A61D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
@@ -656,6 +662,8 @@
 		1A0FF2951CA0965500F64050 /* menu-item-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-item-normal.png"; path = "Resources/Images/menu-item-normal.png"; sourceTree = "<group>"; };
 		1A29EFD91D450EC700909426 /* ViewportFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ViewportFragment.glsl; path = Resources/OpenGL/ViewportFragment.glsl; sourceTree = "<group>"; };
 		1A29EFDA1D450EC700909426 /* ViewportVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ViewportVertex.glsl; path = Resources/OpenGL/ViewportVertex.glsl; sourceTree = "<group>"; };
+		1A29EFE11D47854300909426 /* SkyboxFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SkyboxFragment.glsl; path = Resources/OpenGL/SkyboxFragment.glsl; sourceTree = "<group>"; };
+		1A29EFE21D47854300909426 /* SkyboxVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SkyboxVertex.glsl; path = Resources/OpenGL/SkyboxVertex.glsl; sourceTree = "<group>"; };
 		1A2CB49E1D2BCD97005E9F9E /* CombatBoardMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatBoardMesh.h; path = WorldGame/AITest/OpenGL/Mesh/CombatBoardMesh.h; sourceTree = "<group>"; };
 		1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatBoardMesh.m; path = WorldGame/AITest/OpenGL/Mesh/CombatBoardMesh.m; sourceTree = "<group>"; };
 		1A2CB4A01D2BCD97005E9F9E /* CubeMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CubeMesh.h; path = WorldGame/AITest/OpenGL/Mesh/CubeMesh.h; sourceTree = "<group>"; };
@@ -1521,8 +1529,10 @@
 				1ABE0E741D243B420009F3F2 /* SimpleFragment.glsl */,
 				1A2CB4B31D2BCF78005E9F9E /* TerrainVertex.glsl */,
 				1A2CB4B21D2BCF78005E9F9E /* TerrainFragment.glsl */,
-				1A29EFD91D450EC700909426 /* ViewportFragment.glsl */,
 				1A29EFDA1D450EC700909426 /* ViewportVertex.glsl */,
+				1A29EFD91D450EC700909426 /* ViewportFragment.glsl */,
+				1A29EFE21D47854300909426 /* SkyboxVertex.glsl */,
+				1A29EFE11D47854300909426 /* SkyboxFragment.glsl */,
 				1A613F471D24F56D0052A551 /* tile_floor.png */,
 			);
 			name = OpenGL;
@@ -1817,6 +1827,7 @@
 				1A5C22DA1C9C164F007F324C /* CitizenTiles.png in Resources */,
 				1A48FCC41CEE310B00CFE558 /* metropol.png in Resources */,
 				1A5C22D81C9C164F007F324C /* BuildingTiles.png in Resources */,
+				1A29EFE61D47854300909426 /* SkyboxVertex.glsl in Resources */,
 				1A2EA39B1C8A2F2500633417 /* government.png in Resources */,
 				1A6140441D26289C0052A551 /* blueButton@2x.png in Resources */,
 				1A57011C1CB302AC00F346D9 /* SalesTax.xml in Resources */,
@@ -1910,6 +1921,7 @@
 				1A48FCC71CEE310B00CFE558 /* villages.png in Resources */,
 				1A0FF2841CA0617900F64050 /* Snow.png in Resources */,
 				1A5C22DC1C9C164F007F324C /* CivilizationTiles.png in Resources */,
+				1A29EFE31D47854300909426 /* SkyboxFragment.glsl in Resources */,
 				1A6140311D26159F0052A551 /* terrains.png in Resources */,
 				1A57E7921C71C3F200B3890E /* Assets.xcassets in Resources */,
 			);
@@ -1926,6 +1938,7 @@
 				1A7232B61CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */,
 				1A2CB4B51D2BCF78005E9F9E /* TerrainFragment.glsl in Resources */,
 				1A84BB4F1CC0FC7E00CE7EDC /* menu-item-highlighted.png in Resources */,
+				1A29EFE71D47854300909426 /* SkyboxVertex.glsl in Resources */,
 				1A3C3A4F1C84F280004009DA /* icon_spinning_circle.png in Resources */,
 				1A35A9EE1CAEF4BD0094F773 /* Legalism.xml in Resources */,
 				1A0FF29D1CA0965500F64050 /* menu-item-normal.png in Resources */,
@@ -1951,6 +1964,7 @@
 				1A6140321D26159F0052A551 /* terrains.png in Resources */,
 				1A5701021CB2FC8600F346D9 /* StateSchools.png in Resources */,
 				1A5701051CB2FC8600F346D9 /* StateSchools.xml in Resources */,
+				1A29EFE41D47854300909426 /* SkyboxFragment.glsl in Resources */,
 				1A2CB4B81D2BCF78005E9F9E /* TerrainVertex.glsl in Resources */,
 				1A84BB421CBFB5DF00CE7EDC /* okay.png in Resources */,
 				1A84BB3C1CBFB5DF00CE7EDC /* cancel.png in Resources */,
@@ -2005,6 +2019,7 @@
 				1A7232B71CBD8F4900D8AAC8 /* Tele-GroteskNor.ttf in Resources */,
 				1A2CB4B61D2BCF78005E9F9E /* TerrainFragment.glsl in Resources */,
 				1A84BB501CC0FC7E00CE7EDC /* menu-item-highlighted.png in Resources */,
+				1A29EFE81D47854300909426 /* SkyboxVertex.glsl in Resources */,
 				1A3C3A501C84F280004009DA /* icon_spinning_circle.png in Resources */,
 				1A35A9EF1CAEF4BD0094F773 /* Legalism.xml in Resources */,
 				1A0FF29E1CA0965500F64050 /* menu-item-normal.png in Resources */,
@@ -2030,6 +2045,7 @@
 				1A6140331D26159F0052A551 /* terrains.png in Resources */,
 				1A5701031CB2FC8600F346D9 /* StateSchools.png in Resources */,
 				1A5701061CB2FC8600F346D9 /* StateSchools.xml in Resources */,
+				1A29EFE51D47854300909426 /* SkyboxFragment.glsl in Resources */,
 				1A2CB4B91D2BCF78005E9F9E /* TerrainVertex.glsl in Resources */,
 				1A84BB431CBFB5DF00CE7EDC /* okay.png in Resources */,
 				1A84BB3D1CBFB5DF00CE7EDC /* cancel.png in Resources */,

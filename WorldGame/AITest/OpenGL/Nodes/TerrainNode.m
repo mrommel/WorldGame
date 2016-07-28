@@ -39,6 +39,19 @@
     GLKVector4 m_clipPlane;
     GLuint _clipPlainSlot;
     
+    // skybox
+    REProgram *skyboxProgram;
+    GLuint _skyboxVertexBuffer;
+    GLuint _skyBoxIndexBuffer;
+    GLuint _skyboxPositionSlot;
+    GLuint _skyboxColorSlot;
+    GLuint _skyboxProjectionUniform;
+    GLuint _skyboxModelViewUniform;
+    GLuint _skyboxModelUniform;
+    GLuint _skyboxTexCoordSlot;
+    GLuint _skyboxTextureUniform;
+    GLuint skyboxTexture;
+    
     //
     GLfloat _waterHeight, _waterOffset;
     
@@ -81,14 +94,36 @@ typedef struct {
     float TexCoord[2];
 } ViewportVertex;
 
+typedef unsigned int ViewportIndex;
+
+typedef struct {
+    float Position[3];
+    float Color[4];
+    float TexCoord[2];
+} SkyboxVertex;
+
+typedef unsigned int SkyboxIndex;
+
 const ViewportVertex viewPortQuadVertices[] = {
     {{1, -1, 0}, {1, 1, 1, 1}, {TEX_COORD_MAX, 0}},
     {{1, 1, 0}, {1, 1, 1, 1}, {TEX_COORD_MAX, TEX_COORD_MAX}},
     {{-1, 1, 0}, {1, 1, 1, 1}, {0, TEX_COORD_MAX}},
-    {{-1, -1, 0}, {1, 1, 1, 1}, {0, 0}}
+    {{-1, -1, 0}, {1, 1, 1, 1}, {0, 0}},
 };
 
-const TerrainIndex viewPortQuadIndices[] = {
+const ViewportIndex viewPortQuadIndices[] = {
+    0, 1, 2,
+    2, 3, 0,
+};
+
+const SkyboxVertex skyboxVertices[] = {
+    {{0, 0, 0}, {1, 1, 1, 1}, {0, 0}},
+    {{10, 0, 0}, {1, 1, 1, 1}, {1, 0}},
+    {{10, 0, 10}, {1, 1, 1, 1}, {1, 1}},
+    {{0, 0, 10}, {1, 1, 1, 1}, {0, 1}},
+};
+
+const SkyboxIndex skyboxIndices[] = {
     0, 1, 2,
     2, 3, 0,
 };
@@ -135,7 +170,6 @@ const TerrainIndex viewPortQuadIndices[] = {
 {
     glGenRenderbuffers(1, &_depthRenderBuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _depthRenderBuffer);
-#warning get device size
     glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, 1024, 1024);
 }
 
@@ -146,6 +180,16 @@ const TerrainIndex viewPortQuadIndices[] = {
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _colorRenderBuffer);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, _depthRenderBuffer);
+    
+    // ---------------------
+    // create skybox buffers
+    glGenBuffers (1, &_skyboxVertexBuffer);
+    glBindBuffer (GL_ARRAY_BUFFER, _skyboxVertexBuffer);
+    glBufferData (GL_ARRAY_BUFFER, sizeof(skyboxVertices), skyboxVertices, GL_STATIC_DRAW);
+    
+    glGenBuffers(1, &_skyBoxIndexBuffer);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _skyBoxIndexBuffer);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(skyboxIndices), skyboxIndices, GL_STATIC_DRAW);
     
     // ---------------------
     // create viewport buffers
@@ -162,7 +206,6 @@ const TerrainIndex viewPortQuadIndices[] = {
     GLint maxRenderBufferSize;
     glGetIntegerv(GL_MAX_RENDERBUFFER_SIZE, &maxRenderBufferSize);
     
-#warning get device size
     GLuint textureWidth = 1024;
     GLuint textureHeight = 1024;
     
@@ -478,11 +521,30 @@ const TerrainIndex viewPortQuadIndices[] = {
     
     // clipping
     _clipPlainSlot = glGetUniformLocation(self.program.program, "u_clipPlane");
- 
+    
+    // ------------------------------
+    // skybox shader
+    skyboxProgram = [REProgram programWithVertexFilename:@"SkyboxVertex.glsl"
+                                        fragmentFilename:@"SkyboxFragment.glsl"];
+    
+    _skyboxPositionSlot = glGetAttribLocation(skyboxProgram.program, "Position");
+    glEnableVertexAttribArray(_skyboxPositionSlot);
+    _skyboxColorSlot = glGetAttribLocation(skyboxProgram.program, "SourceColor");
+    glEnableVertexAttribArray(_skyboxColorSlot);
+    _skyboxTexCoordSlot = glGetAttribLocation(skyboxProgram.program, "TexCoordIn");
+    glEnableVertexAttribArray(_skyboxTexCoordSlot);
+    
+    _skyboxProjectionUniform = glGetUniformLocation(skyboxProgram.program, "Projection");
+    _skyboxModelViewUniform = glGetUniformLocation(skyboxProgram.program, "ModelView");
+    _skyboxModelUniform = glGetUniformLocation(skyboxProgram.program, "ModelMatrix");
+    
+    skyboxTexture = [[OpenGLUtil sharedInstance] setupTexture:@"grass512.png"];
+    _skyboxTextureUniform = glGetUniformLocation(skyboxProgram.program, "Texture");
+    
     // ------------------------------
     // viewport shader
     viewportProgram = [REProgram programWithVertexFilename:@"ViewportVertex.glsl"
-                                           fragmentFilename:@"ViewportFragment.glsl"];
+                                          fragmentFilename:@"ViewportFragment.glsl"];
     
     _viewportPositionSlot = glGetAttribLocation(viewportProgram.program, "texPosition");
     glEnableVertexAttribArray(_viewportPositionSlot);
@@ -502,13 +564,16 @@ const TerrainIndex viewPortQuadIndices[] = {
 /*!
  @param plane (x, y, z) direction of normal, w distance
  */
-- (void)drawWithClipPlane:(GLKVector4)plane
+- (void)drawTerrainWithClipPlane:(GLKVector4)plane andCameraToggle:(BOOL)cameraToogle andClear:(BOOL)clearToogle
 {
-    glClearColor(214.0/255.0, 226.0/255.0, 255.0/255.0, 1.0);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    if (clearToogle) {
+        glClearColor(214.0/255.0, 226.0/255.0, 255.0/255.0, 1.0);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    }
+    
     glEnable(GL_DEPTH_TEST);
     
-    glEnable (GL_BLEND);
+    glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
     glFrontFace(GL_CCW);
@@ -519,13 +584,31 @@ const TerrainIndex viewPortQuadIndices[] = {
     const CC3GLMatrix *modelMatrix = [CC3GLMatrix identity];
     glUniformMatrix4fv(_modelUniform, 1, 0, modelMatrix.glMatrix);
     
-    // View Matrix
-    const CC3GLMatrix *viewMatrix = [modelMatrix copyMultipliedBy:[self.camera viewMatrix]];
-    glUniformMatrix4fv(_modelViewUniform, 1, 0, viewMatrix.glMatrix);
+    if (cameraToogle) { // reflection
+        RECamera *reflectionCamera = [[RECamera alloc] initWithProjection:kRECameraProjectionArcBall];
+        
+        reflectionCamera.target = CC3VectorMake(0, 0, 0);
+        reflectionCamera.upDirection = CC3VectorMake(0, 1, 0); // (0, -1, 0)
+        reflectionCamera.lookDirection = CC3VectorMake(0, 0, -1);
+        reflectionCamera.rotation = CC3VectorMake(3.1415, -(M_PI * 0.75f), 0);
+        reflectionCamera.distance = self.camera.distance;
+        
+        // View Matrix
+        const CC3GLMatrix *viewMatrix = [modelMatrix copyMultipliedBy:[reflectionCamera viewMatrix]];
+        glUniformMatrix4fv(_modelViewUniform, 1, 0, viewMatrix.glMatrix);
+        
+        // Projection Matrix
+        const CC3GLMatrix *projectionMatrix = [reflectionCamera projectionMatrix];
+        glUniformMatrix4fv(_projectionUniform, 1, 0, projectionMatrix.glMatrix);
+    } else { // normal
+        // View Matrix
+        const CC3GLMatrix *viewMatrix = [modelMatrix copyMultipliedBy:[self.camera viewMatrix]];
+        glUniformMatrix4fv(_modelViewUniform, 1, 0, viewMatrix.glMatrix);
     
-    // Projection Matrix
-    const CC3GLMatrix *projectionMatrix = [self.camera projectionMatrix];
-    glUniformMatrix4fv(_projectionUniform, 1, 0, projectionMatrix.glMatrix);
+        // Projection Matrix
+        const CC3GLMatrix *projectionMatrix = [self.camera projectionMatrix];
+        glUniformMatrix4fv(_projectionUniform, 1, 0, projectionMatrix.glMatrix);
+    }
     
     // ---------------------------------
     
@@ -561,27 +644,53 @@ const TerrainIndex viewPortQuadIndices[] = {
     glDrawElements(GL_TRIANGLES, kIndicesPerTile * self.tileSize.width * self.tileSize.height, GL_UNSIGNED_INT, 0);
 }
 
-- (void)draw
+/*!
+ *
+ */
+- (void)drawSkybox
 {
-    [super draw];
+    glClearColor(214.0/255.0, 226.0/255.0, 255.0/255.0, 1.0);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-    // First save the default frame buffer.
-    static GLint default_frame_buffer = 0;
-    glGetIntegerv(GL_FRAMEBUFFER_BINDING, &default_frame_buffer);
+    glDisable(GL_DEPTH_TEST);   // skybox should be drawn behind anything else
+    glFrontFace(GL_CW);
     
-    // ---------------------------------------
-    // first we render the under water part into refraction buffer
-    glBindFramebuffer(GL_FRAMEBUFFER, _refractionFrameBuffer);
-    glViewport(0, 0, 1024, 1024);
-    //[self drawWithClipPlane:GLKVector4Make(0.0f, 0.0f, 0.0f, 0.0f)];
-    [self drawWithClipPlane:GLKVector4Make(0.0f, -1.0f, 0.0f, _waterHeight + _waterOffset)];
+    glUseProgram(skyboxProgram.program);
     
-    // ///////////////////////////////////
+    // Model Matrix
+    const CC3GLMatrix *modelMatrix = [CC3GLMatrix identity];
+    glUniformMatrix4fv(_skyboxModelUniform, 1, 0, modelMatrix.glMatrix);
+
+    // View Matrix
+    const CC3GLMatrix *viewMatrix = [modelMatrix copyMultipliedBy:[self.camera viewMatrix]];
+    glUniformMatrix4fv(_skyboxModelViewUniform, 1, 0, viewMatrix.glMatrix);
+        
+    // Projection Matrix
+    const CC3GLMatrix *projectionMatrix = [self.camera projectionMatrix];
+    glUniformMatrix4fv(_skyboxProjectionUniform, 1, 0, projectionMatrix.glMatrix);
     
-    glBindFramebuffer(GL_FRAMEBUFFER, default_frame_buffer);
-    //glBindFramebuffer(GL_FRAMEBUFFER, 0);
-    glViewport(0, 0, 1024, 1024);
+    // bind buffers
+    glBindBuffer(GL_ARRAY_BUFFER, _skyboxVertexBuffer);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _skyBoxIndexBuffer);
     
+    // bind position
+    glVertexAttribPointer(_skyboxPositionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(SkyboxVertex), 0);
+    glEnableVertexAttribArray(_skyboxPositionSlot);
+    glVertexAttribPointer(_skyboxColorSlot, 4, GL_FLOAT, GL_FALSE, sizeof(SkyboxVertex), (GLvoid*) (sizeof(float) * 3));
+    glEnableVertexAttribArray(_skyboxColorSlot);
+    glVertexAttribPointer(_skyboxTexCoordSlot, 2, GL_FLOAT, GL_FALSE, sizeof(SkyboxVertex), (GLvoid*) (sizeof(float) * 7));
+    glEnableVertexAttribArray(_skyboxTexCoordSlot);
+    
+    // bind texture
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, skyboxTexture);
+    glUniform1i(_skyboxTextureUniform, 0);
+    
+    glDrawElements(GL_TRIANGLES, sizeof(skyboxIndices) / sizeof(skyboxIndices[0]) /* number of indices */, GL_UNSIGNED_INT, 0);
+}
+
+- (void)drawViewport
+{
     glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
     glEnable(GL_BLEND);
     
@@ -605,9 +714,45 @@ const TerrainIndex viewPortQuadIndices[] = {
     
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, _refractionTexture);
-    //glBindTexture(GL_TEXTURE_2D, texture2);
     glUniform1i(_viewportTextureUniform, 0);
-    glDrawElements(GL_TRIANGLES, sizeof(viewPortQuadIndices)/sizeof(viewPortQuadIndices[0]), GL_UNSIGNED_INT, 0);
+    
+    glDrawElements(GL_TRIANGLES, 6/* number of indices */, GL_UNSIGNED_INT, 0);
+}
+
+- (void)draw
+{
+    [super draw];
+    
+    // First save the default frame buffer.
+    static GLint default_frame_buffer = 0;
+    glGetIntegerv(GL_FRAMEBUFFER_BINDING, &default_frame_buffer);
+    
+    // ///////////////////////////////////
+    
+    // first we render the under water part into refraction buffer
+    glBindFramebuffer(GL_FRAMEBUFFER, _refractionFrameBuffer);
+    glViewport(0, 0, 1024, 1024);
+    //[self drawTerrainWithClipPlane:GLKVector4Make(0.0f, -1.0f, 0.0f, _waterHeight + _waterOffset) andCameraToggle:NO andClear:YES];
+    
+    //[self drawTerrainWithClipPlane:GLKVector4Make(0.0f, 1.0f, 0.0f, -_waterHeight) andCameraToggle:NO andClear:NO];
+    
+    // ///////////////////////////////////
+    [self drawSkybox];
+    
+    // ///////////////////////////////////
+    
+    // second we render the above water part into reflection buffer
+    /*glBindFramebuffer(GL_FRAMEBUFFER, _reflectionFrameBuffer);
+    glViewport(0, 0, 1024, 1024);*/
+    //[self drawTerrainWithClipPlane:GLKVector4Make(0.0f, 1.0f, 0.0f, -_waterHeight) andCameraToggle:NO andClear:NO];
+    
+    // ///////////////////////////////////
+
+    // now we switch back to default buffer
+    glBindFramebuffer(GL_FRAMEBUFFER, default_frame_buffer);
+    glViewport(0, 0, 1024, 1024);
+    
+    [self drawViewport];
 
     // unbind textures
     [RETexture unbind];

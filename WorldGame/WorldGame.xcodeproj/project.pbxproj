@@ -73,6 +73,24 @@
 		1A29EFFE1D4A21EB00909426 /* skyboxTop256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEE1D4A21EB00909426 /* skyboxTop256.png */; };
 		1A29EFFF1D4A21EB00909426 /* skyboxTop256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEE1D4A21EB00909426 /* skyboxTop256.png */; };
 		1A29F0001D4A21EB00909426 /* skyboxTop256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29EFEE1D4A21EB00909426 /* skyboxTop256.png */; };
+		1A29F0071D4AAC0400909426 /* skyboxBack2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0011D4AAC0400909426 /* skyboxBack2048.png */; };
+		1A29F0081D4AAC0400909426 /* skyboxBack2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0011D4AAC0400909426 /* skyboxBack2048.png */; };
+		1A29F0091D4AAC0400909426 /* skyboxBack2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0011D4AAC0400909426 /* skyboxBack2048.png */; };
+		1A29F00A1D4AAC0400909426 /* skyboxBottom2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0021D4AAC0400909426 /* skyboxBottom2048.png */; };
+		1A29F00B1D4AAC0400909426 /* skyboxBottom2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0021D4AAC0400909426 /* skyboxBottom2048.png */; };
+		1A29F00C1D4AAC0400909426 /* skyboxBottom2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0021D4AAC0400909426 /* skyboxBottom2048.png */; };
+		1A29F00D1D4AAC0400909426 /* skyboxFront2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0031D4AAC0400909426 /* skyboxFront2048.png */; };
+		1A29F00E1D4AAC0400909426 /* skyboxFront2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0031D4AAC0400909426 /* skyboxFront2048.png */; };
+		1A29F00F1D4AAC0400909426 /* skyboxFront2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0031D4AAC0400909426 /* skyboxFront2048.png */; };
+		1A29F0101D4AAC0400909426 /* skyboxLeft2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0041D4AAC0400909426 /* skyboxLeft2048.png */; };
+		1A29F0111D4AAC0400909426 /* skyboxLeft2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0041D4AAC0400909426 /* skyboxLeft2048.png */; };
+		1A29F0121D4AAC0400909426 /* skyboxLeft2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0041D4AAC0400909426 /* skyboxLeft2048.png */; };
+		1A29F0131D4AAC0400909426 /* skyboxRight2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0051D4AAC0400909426 /* skyboxRight2048.png */; };
+		1A29F0141D4AAC0400909426 /* skyboxRight2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0051D4AAC0400909426 /* skyboxRight2048.png */; };
+		1A29F0151D4AAC0400909426 /* skyboxRight2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0051D4AAC0400909426 /* skyboxRight2048.png */; };
+		1A29F0161D4AAC0400909426 /* skyboxTop2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0061D4AAC0400909426 /* skyboxTop2048.png */; };
+		1A29F0171D4AAC0400909426 /* skyboxTop2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0061D4AAC0400909426 /* skyboxTop2048.png */; };
+		1A29F0181D4AAC0400909426 /* skyboxTop2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A29F0061D4AAC0400909426 /* skyboxTop2048.png */; };
 		1A2CB4A41D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
 		1A2CB4A51D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
 		1A2CB4A61D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */; };
@@ -687,6 +705,12 @@
 		1A29EFEC1D4A21EB00909426 /* skyboxLeft256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxLeft256.png; path = Resources/Textures/skyboxLeft256.png; sourceTree = "<group>"; };
 		1A29EFED1D4A21EB00909426 /* skyboxRight256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxRight256.png; path = Resources/Textures/skyboxRight256.png; sourceTree = "<group>"; };
 		1A29EFEE1D4A21EB00909426 /* skyboxTop256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxTop256.png; path = Resources/Textures/skyboxTop256.png; sourceTree = "<group>"; };
+		1A29F0011D4AAC0400909426 /* skyboxBack2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxBack2048.png; path = Resources/Textures/skyboxBack2048.png; sourceTree = "<group>"; };
+		1A29F0021D4AAC0400909426 /* skyboxBottom2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxBottom2048.png; path = Resources/Textures/skyboxBottom2048.png; sourceTree = "<group>"; };
+		1A29F0031D4AAC0400909426 /* skyboxFront2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxFront2048.png; path = Resources/Textures/skyboxFront2048.png; sourceTree = "<group>"; };
+		1A29F0041D4AAC0400909426 /* skyboxLeft2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxLeft2048.png; path = Resources/Textures/skyboxLeft2048.png; sourceTree = "<group>"; };
+		1A29F0051D4AAC0400909426 /* skyboxRight2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxRight2048.png; path = Resources/Textures/skyboxRight2048.png; sourceTree = "<group>"; };
+		1A29F0061D4AAC0400909426 /* skyboxTop2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxTop2048.png; path = Resources/Textures/skyboxTop2048.png; sourceTree = "<group>"; };
 		1A2CB49E1D2BCD97005E9F9E /* CombatBoardMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatBoardMesh.h; path = WorldGame/AITest/OpenGL/Mesh/CombatBoardMesh.h; sourceTree = "<group>"; };
 		1A2CB49F1D2BCD97005E9F9E /* CombatBoardMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatBoardMesh.m; path = WorldGame/AITest/OpenGL/Mesh/CombatBoardMesh.m; sourceTree = "<group>"; };
 		1A2CB4A01D2BCD97005E9F9E /* CubeMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CubeMesh.h; path = WorldGame/AITest/OpenGL/Mesh/CubeMesh.h; sourceTree = "<group>"; };
@@ -1085,6 +1109,12 @@
 				1A29EFEC1D4A21EB00909426 /* skyboxLeft256.png */,
 				1A29EFED1D4A21EB00909426 /* skyboxRight256.png */,
 				1A29EFEE1D4A21EB00909426 /* skyboxTop256.png */,
+				1A29F0011D4AAC0400909426 /* skyboxBack2048.png */,
+				1A29F0021D4AAC0400909426 /* skyboxBottom2048.png */,
+				1A29F0031D4AAC0400909426 /* skyboxFront2048.png */,
+				1A29F0041D4AAC0400909426 /* skyboxLeft2048.png */,
+				1A29F0051D4AAC0400909426 /* skyboxRight2048.png */,
+				1A29F0061D4AAC0400909426 /* skyboxTop2048.png */,
 			);
 			name = Textures;
 			sourceTree = "<group>";
@@ -1845,6 +1875,7 @@
 				1A0FF26F1CA05E6200F64050 /* Grassland.png in Resources */,
 				1A5C22E31C9C164F007F324C /* MapTypeAtlas.xml in Resources */,
 				1A5C22F21C9C164F007F324C /* UnitActionTiles.png in Resources */,
+				1A29F0161D4AAC0400909426 /* skyboxTop2048.png in Resources */,
 				1A35A9A51CA1E7720094F773 /* MapSizeTiles.png in Resources */,
 				1A35A9D11CAE8B170094F773 /* Parliament.xml in Resources */,
 				1A3C3A221C805F7D004009DA /* king.png in Resources */,
@@ -1891,10 +1922,13 @@
 				1A5C22E81C9C164F007F324C /* PolicyTiles.png in Resources */,
 				1A2CB4B71D2BCF78005E9F9E /* TerrainVertex.glsl in Resources */,
 				1A35A9E21CAEF21A0094F773 /* Feudalism.png in Resources */,
+				1A29F0101D4AAC0400909426 /* skyboxLeft2048.png in Resources */,
 				1AEE80DA1C7735960028ACFF /* Snow.xml in Resources */,
 				1A84BB4A1CC029E500CE7EDC /* menu-item-disabled.png in Resources */,
 				1A5C22EA1C9C164F007F324C /* RessourceTiles.png in Resources */,
 				1A29EFDB1D450EC700909426 /* ViewportFragment.glsl in Resources */,
+				1A29F00A1D4AAC0400909426 /* skyboxBottom2048.png in Resources */,
+				1A29F0071D4AAC0400909426 /* skyboxBack2048.png in Resources */,
 				1A35A9CE1CAE8B170094F773 /* Parliament.png in Resources */,
 				1A48FCC61CEE310B00CFE558 /* town.png in Resources */,
 				1AEF61251D14168400253DD6 /* Hoplites.xml in Resources */,
@@ -1942,10 +1976,12 @@
 				1A5C22DE1C9C164F007F324C /* FeatureTiles.png in Resources */,
 				1A61402E1D26159F0052A551 /* rivers.xml in Resources */,
 				1A35A9A21CA1E7720094F773 /* MapSizeAtlas.xml in Resources */,
+				1A29F0131D4AAC0400909426 /* skyboxRight2048.png in Resources */,
 				1AEE80D11C7735960028ACFF /* Ocean.xml in Resources */,
 				1A84BB411CBFB5DF00CE7EDC /* okay.png in Resources */,
 				1A29EFFE1D4A21EB00909426 /* skyboxTop256.png in Resources */,
 				1A5C22E21C9C164F007F324C /* LeaderTiles.png in Resources */,
+				1A29F00D1D4AAC0400909426 /* skyboxFront2048.png in Resources */,
 				1ABE0E711D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */,
 				1AEE80CE1C7735960028ACFF /* Grassland.xml in Resources */,
 				1A29EFF21D4A21EB00909426 /* skyboxBottom256.png in Resources */,
@@ -1979,18 +2015,22 @@
 				1ABE0E761D243B420009F3F2 /* SimpleFragment.glsl in Resources */,
 				1A0FF2881CA0617900F64050 /* Tundra.png in Resources */,
 				1A5701121CB2FE6B00F346D9 /* IncomeTax.png in Resources */,
+				1A29F0141D4AAC0400909426 /* skyboxRight2048.png in Resources */,
 				1A6140481D26289C0052A551 /* blueButtonHighlight.png in Resources */,
 				1A5700FA1CB2FAE100F346D9 /* InheritanceTax.png in Resources */,
 				1A2CB4C31D2CEA13005E9F9E /* grass512.png in Resources */,
 				1A29EFFF1D4A21EB00909426 /* skyboxTop256.png in Resources */,
+				1A29F0171D4AAC0400909426 /* skyboxTop2048.png in Resources */,
 				1A6140421D26289C0052A551 /* blueButton.png in Resources */,
 				1ABE0E721D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */,
+				1A29F0111D4AAC0400909426 /* skyboxLeft2048.png in Resources */,
 				1A2EA39C1C8A2F2500633417 /* government.png in Resources */,
 				1A29EFF01D4A21EB00909426 /* skyboxBack256.png in Resources */,
 				1A0FF29A1CA0965500F64050 /* menu-header.png in Resources */,
 				1A35A9D21CAE8B170094F773 /* Parliament.xml in Resources */,
 				1A0FF27F1CA0617900F64050 /* Plains.png in Resources */,
 				1A29EFF31D4A21EB00909426 /* skyboxBottom256.png in Resources */,
+				1A29F00E1D4AAC0400909426 /* skyboxFront2048.png in Resources */,
 				1A61402C1D26159F0052A551 /* rivers.png in Resources */,
 				1A5700F51CB2F2D900F346D9 /* NationalService.xml in Resources */,
 				1A3C3A581C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */,
@@ -2023,6 +2063,7 @@
 				1A35A9CF1CAE8B170094F773 /* Parliament.png in Resources */,
 				1A84BB3F1CBFB5DF00CE7EDC /* center.png in Resources */,
 				1A0FF2791CA0617900F64050 /* Desert.png in Resources */,
+				1A29F00B1D4AAC0400909426 /* skyboxBottom2048.png in Resources */,
 				1A3C3A371C84EBFB004009DA /* OverlayView.xib in Resources */,
 				1AEE80D81C7735960028ACFF /* Shore.xml in Resources */,
 				1A35A9EB1CAEF4BD0094F773 /* Legalism.png in Resources */,
@@ -2043,6 +2084,7 @@
 				1A5701151CB2FE6B00F346D9 /* IncomeTax.xml in Resources */,
 				1A57010A1CB2FDDD00F346D9 /* PoliceForce.png in Resources */,
 				1A6140351D26159F0052A551 /* terrains.xml in Resources */,
+				1A29F0081D4AAC0400909426 /* skyboxBack2048.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2066,18 +2108,22 @@
 				1ABE0E771D243B420009F3F2 /* SimpleFragment.glsl in Resources */,
 				1A0FF2891CA0617900F64050 /* Tundra.png in Resources */,
 				1A5701131CB2FE6B00F346D9 /* IncomeTax.png in Resources */,
+				1A29F0151D4AAC0400909426 /* skyboxRight2048.png in Resources */,
 				1A6140491D26289C0052A551 /* blueButtonHighlight.png in Resources */,
 				1A5700FB1CB2FAE100F346D9 /* InheritanceTax.png in Resources */,
 				1A2CB4C41D2CEA13005E9F9E /* grass512.png in Resources */,
 				1A29F0001D4A21EB00909426 /* skyboxTop256.png in Resources */,
+				1A29F0181D4AAC0400909426 /* skyboxTop2048.png in Resources */,
 				1A6140431D26289C0052A551 /* blueButton.png in Resources */,
 				1ABE0E731D243B1E0009F3F2 /* SimpleVertex.glsl in Resources */,
+				1A29F0121D4AAC0400909426 /* skyboxLeft2048.png in Resources */,
 				1A2EA39D1C8A2F2500633417 /* government.png in Resources */,
 				1A29EFF11D4A21EB00909426 /* skyboxBack256.png in Resources */,
 				1A0FF29B1CA0965500F64050 /* menu-header.png in Resources */,
 				1A35A9D31CAE8B170094F773 /* Parliament.xml in Resources */,
 				1A0FF2801CA0617900F64050 /* Plains.png in Resources */,
 				1A29EFF41D4A21EB00909426 /* skyboxBottom256.png in Resources */,
+				1A29F00F1D4AAC0400909426 /* skyboxFront2048.png in Resources */,
 				1A61402D1D26159F0052A551 /* rivers.png in Resources */,
 				1A5700F61CB2F2D900F346D9 /* NationalService.xml in Resources */,
 				1A3C3A591C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */,
@@ -2110,6 +2156,7 @@
 				1A35A9D01CAE8B170094F773 /* Parliament.png in Resources */,
 				1A84BB401CBFB5DF00CE7EDC /* center.png in Resources */,
 				1A0FF27A1CA0617900F64050 /* Desert.png in Resources */,
+				1A29F00C1D4AAC0400909426 /* skyboxBottom2048.png in Resources */,
 				1A3C3A381C84EBFB004009DA /* OverlayView.xib in Resources */,
 				1AEE80D91C7735960028ACFF /* Shore.xml in Resources */,
 				1A35A9EC1CAEF4BD0094F773 /* Legalism.png in Resources */,
@@ -2130,6 +2177,7 @@
 				1A5701161CB2FE6B00F346D9 /* IncomeTax.xml in Resources */,
 				1A57010B1CB2FDDD00F346D9 /* PoliceForce.png in Resources */,
 				1A6140361D26159F0052A551 /* terrains.xml in Resources */,
+				1A29F0091D4AAC0400909426 /* skyboxBack2048.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

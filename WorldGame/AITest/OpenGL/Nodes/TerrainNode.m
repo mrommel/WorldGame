@@ -116,16 +116,18 @@ const ViewportIndex viewPortQuadIndices[] = {
     2, 3, 0,
 };
 
+#define SKYBOX_SIZE 100
+
 const SkyboxVertex skyboxVertices[] = {
-    {{0, 0, 0}, {1, 1, 1, 1}, {0, 0}},
-    {{10, 0, 0}, {1, 1, 1, 1}, {1, 0}},
-    {{10, 0, 10}, {1, 1, 1, 1}, {1, 1}},
-    {{0, 0, 10}, {1, 1, 1, 1}, {0, 1}},
+    {{-SKYBOX_SIZE / 2, 0, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0, 1}},
+    {{SKYBOX_SIZE / 2, 0, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {1, 1}},
+    {{-SKYBOX_SIZE / 2, -SKYBOX_SIZE, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0, 0}},
+    {{SKYBOX_SIZE / 2, -SKYBOX_SIZE, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {1, 0}},
 };
 
 const SkyboxIndex skyboxIndices[] = {
     0, 1, 2,
-    2, 3, 0,
+    2, 1, 3,
 };
 
 - (id)init
@@ -170,7 +172,7 @@ const SkyboxIndex skyboxIndices[] = {
 {
     glGenRenderbuffers(1, &_depthRenderBuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _depthRenderBuffer);
-    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, 1024, 1024);
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, 1024, 2048);
 }
 
 - (void)setupFrameBuffer
@@ -207,7 +209,7 @@ const SkyboxIndex skyboxIndices[] = {
     glGetIntegerv(GL_MAX_RENDERBUFFER_SIZE, &maxRenderBufferSize);
     
     GLuint textureWidth = 1024;
-    GLuint textureHeight = 1024;
+    GLuint textureHeight = 2048;
     
     if (maxRenderBufferSize <= textureWidth || maxRenderBufferSize <= textureHeight) {
         NSLog(@"FBO cant allocate that much space");
@@ -538,7 +540,7 @@ const SkyboxIndex skyboxIndices[] = {
     _skyboxModelViewUniform = glGetUniformLocation(skyboxProgram.program, "ModelView");
     _skyboxModelUniform = glGetUniformLocation(skyboxProgram.program, "ModelMatrix");
     
-    skyboxTexture = [[OpenGLUtil sharedInstance] setupTexture:@"skyboxBack256.png"];
+    skyboxTexture = [[OpenGLUtil sharedInstance] setupTexture:@"skyboxBack2048.png"];
     _skyboxTextureUniform = glGetUniformLocation(skyboxProgram.program, "Texture");
     
     // ------------------------------
@@ -653,9 +655,7 @@ const SkyboxIndex skyboxIndices[] = {
     glEnable(GL_BLEND);
     
     glFrontFace(GL_CCW);
-    
-    //glClearColor(0.0/255.0, 0.0/255.0, 127.0/255.0, 1.0);
-    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
     glEnable(GL_DEPTH_TEST);
     
     glUseProgram(skyboxProgram.program);
@@ -689,7 +689,7 @@ const SkyboxIndex skyboxIndices[] = {
     glBindTexture(GL_TEXTURE_2D, skyboxTexture);
     glUniform1i(_skyboxTextureUniform, 0);
     
-    glDrawElements(GL_TRIANGLES, 6 /*sizeof(skyboxIndices) / sizeof(skyboxIndices[0])*/ /* number of indices */, GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, sizeof(skyboxIndices) / sizeof(skyboxIndices[0]) /* number of indices */, GL_UNSIGNED_INT, 0);
 }
 
 - (void)drawViewport
@@ -734,7 +734,7 @@ const SkyboxIndex skyboxIndices[] = {
     
     // first we render the under water part into refraction buffer
     glBindFramebuffer(GL_FRAMEBUFFER, _refractionFrameBuffer);
-    glViewport(0, 0, 1024, 1024);
+    glViewport(0, 0, 1024, 2048);
     [self drawTerrainWithClipPlane:GLKVector4Make(0.0f, -1.0f, 0.0f, _waterHeight + _waterOffset) andCameraToggle:NO andClear:YES];
     
     //[self drawTerrainWithClipPlane:GLKVector4Make(0.0f, 1.0f, 0.0f, -_waterHeight) andCameraToggle:NO andClear:NO];
@@ -746,14 +746,14 @@ const SkyboxIndex skyboxIndices[] = {
     
     // second we render the above water part into reflection buffer
     /*glBindFramebuffer(GL_FRAMEBUFFER, _reflectionFrameBuffer);
-    glViewport(0, 0, 1024, 1024);*/
+    glViewport(0, 0, 1024, 2048);*/
     //[self drawTerrainWithClipPlane:GLKVector4Make(0.0f, 1.0f, 0.0f, -_waterHeight) andCameraToggle:NO andClear:NO];
     
     // ///////////////////////////////////
 
     // now we switch back to default buffer
     glBindFramebuffer(GL_FRAMEBUFFER, default_frame_buffer);
-    glViewport(0, 0, 1024, 1024);
+    glViewport(0, 0, 1024, 2048);
     
     [self drawViewport];
 

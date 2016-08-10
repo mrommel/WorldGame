@@ -182,6 +182,7 @@
 		1A2EA4031C994FB700633417 /* Continent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA4021C994FB700633417 /* Continent.m */; };
 		1A2EA4041C994FB700633417 /* Continent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA4021C994FB700633417 /* Continent.m */; };
 		1A2EA4051C994FB700633417 /* Continent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA4021C994FB700633417 /* Continent.m */; };
+		1A3323BB1D5BB54E00A9B469 /* skyboxMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3323BA1D5BB54E00A9B469 /* skyboxMap.png */; };
 		1A35A99D1CA1A5090094F773 /* SetupGameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A35A99C1CA1A5090094F773 /* SetupGameTableViewController.m */; };
 		1A35A99E1CA1A5090094F773 /* SetupGameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A35A99C1CA1A5090094F773 /* SetupGameTableViewController.m */; };
 		1A35A99F1CA1A5090094F773 /* SetupGameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A35A99C1CA1A5090094F773 /* SetupGameTableViewController.m */; };
@@ -763,6 +764,7 @@
 		1A2EA3FD1C994AF300633417 /* NSArray+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Util.m"; path = "Util/NSArray+Util.m"; sourceTree = "<group>"; };
 		1A2EA4011C994FB700633417 /* Continent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Continent.h; path = Map/Continent.h; sourceTree = "<group>"; };
 		1A2EA4021C994FB700633417 /* Continent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Continent.m; path = Map/Continent.m; sourceTree = "<group>"; };
+		1A3323BA1D5BB54E00A9B469 /* skyboxMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skyboxMap.png; path = Resources/Textures/skyboxMap.png; sourceTree = "<group>"; };
 		1A35A99B1CA1A5090094F773 /* SetupGameTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetupGameTableViewController.h; path = Presentation/SetupGameTableViewController.h; sourceTree = "<group>"; };
 		1A35A99C1CA1A5090094F773 /* SetupGameTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetupGameTableViewController.m; path = Presentation/SetupGameTableViewController.m; sourceTree = "<group>"; };
 		1A35A9A01CA1E7720094F773 /* MapSizeAtlas.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = MapSizeAtlas.xml; path = Resources/Atlases/MapSizeAtlas.xml; sourceTree = "<group>"; };
@@ -1115,6 +1117,7 @@
 				1A29F0041D4AAC0400909426 /* skyboxLeft2048.png */,
 				1A29F0051D4AAC0400909426 /* skyboxRight2048.png */,
 				1A29F0061D4AAC0400909426 /* skyboxTop2048.png */,
+				1A3323BA1D5BB54E00A9B469 /* skyboxMap.png */,
 			);
 			name = Textures;
 			sourceTree = "<group>";
@@ -1927,6 +1930,7 @@
 				1A84BB4A1CC029E500CE7EDC /* menu-item-disabled.png in Resources */,
 				1A5C22EA1C9C164F007F324C /* RessourceTiles.png in Resources */,
 				1A29EFDB1D450EC700909426 /* ViewportFragment.glsl in Resources */,
+				1A3323BB1D5BB54E00A9B469 /* skyboxMap.png in Resources */,
 				1A29F00A1D4AAC0400909426 /* skyboxBottom2048.png in Resources */,
 				1A29F0071D4AAC0400909426 /* skyboxBack2048.png in Resources */,
 				1A35A9CE1CAE8B170094F773 /* Parliament.png in Resources */,

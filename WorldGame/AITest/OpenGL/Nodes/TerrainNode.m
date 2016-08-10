@@ -116,18 +116,36 @@ const ViewportIndex viewPortQuadIndices[] = {
     2, 3, 0,
 };
 
-#define SKYBOX_SIZE 100
+#define SKYBOX_SIZE 50
 
 const SkyboxVertex skyboxVertices[] = {
-    {{-SKYBOX_SIZE / 2, 0, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0, 1}},
-    {{SKYBOX_SIZE / 2, 0, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {1, 1}},
-    {{-SKYBOX_SIZE / 2, -SKYBOX_SIZE, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0, 0}},
-    {{SKYBOX_SIZE / 2, -SKYBOX_SIZE, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {1, 0}},
+    // back
+    {{-SKYBOX_SIZE / 2, SKYBOX_SIZE / 3, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0, 1}}, // bottom 1
+    {{SKYBOX_SIZE / 2, SKYBOX_SIZE / 3, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0.5, 1}}, // bottom 2
+    {{-SKYBOX_SIZE / 2, -SKYBOX_SIZE * 2 / 3, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0, 0}},
+    {{SKYBOX_SIZE / 2, -SKYBOX_SIZE * 2 / 3, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0.5, 0}},
+    // left
+    {{-SKYBOX_SIZE / 2, SKYBOX_SIZE / 3, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0, 1}}, // bottom 1
+    {{-SKYBOX_SIZE / 2, SKYBOX_SIZE / 3, -SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0.5, 1}}, // bottom 3
+    {{-SKYBOX_SIZE / 2, -SKYBOX_SIZE * 2 / 3, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0, 0}},
+    {{-SKYBOX_SIZE / 2, -SKYBOX_SIZE * 2 / 3, -SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0.5, 0}},
+    // right
+    {{SKYBOX_SIZE / 2, SKYBOX_SIZE / 3, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0, 1}}, // bottom 2
+    {{SKYBOX_SIZE / 2, SKYBOX_SIZE / 3, -SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0.5, 1}}, // bottom 4
+    {{SKYBOX_SIZE / 2, -SKYBOX_SIZE * 2 / 3, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0, 0}},
+    {{SKYBOX_SIZE / 2, -SKYBOX_SIZE * 2 / 3, -SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0.5, 0}},
+    // bottom
+    {{-SKYBOX_SIZE / 2, SKYBOX_SIZE / 3, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0.5, 1}}, // bottom 1
+    {{SKYBOX_SIZE / 2, SKYBOX_SIZE / 3, SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {1, 1}}, // bottom 2
+    {{-SKYBOX_SIZE / 2, SKYBOX_SIZE / 3, -SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {0.5, 0}}, // bottom 3
+    {{SKYBOX_SIZE / 2, SKYBOX_SIZE / 3, -SKYBOX_SIZE / 2}, {1, 1, 1, 1}, {1, 0}}, // bottom 4
 };
 
 const SkyboxIndex skyboxIndices[] = {
-    0, 1, 2,
-    2, 1, 3,
+    0, 1, 2, 2, 1, 3, // back
+    4, 6, 5, 6, 7, 5, // left
+    8, 9, 10, 10, 9, 11, // right
+    12, 14, 13, 14, 15, 13, // bottom
 };
 
 - (id)init
@@ -540,7 +558,7 @@ const SkyboxIndex skyboxIndices[] = {
     _skyboxModelViewUniform = glGetUniformLocation(skyboxProgram.program, "ModelView");
     _skyboxModelUniform = glGetUniformLocation(skyboxProgram.program, "ModelMatrix");
     
-    skyboxTexture = [[OpenGLUtil sharedInstance] setupTexture:@"skyboxBack2048.png"];
+    skyboxTexture = [[OpenGLUtil sharedInstance] setupTexture:@"skyboxMap.png"];
     _skyboxTextureUniform = glGetUniformLocation(skyboxProgram.program, "Texture");
     
     // ------------------------------
@@ -692,6 +710,9 @@ const SkyboxIndex skyboxIndices[] = {
     glDrawElements(GL_TRIANGLES, sizeof(skyboxIndices) / sizeof(skyboxIndices[0]) /* number of indices */, GL_UNSIGNED_INT, 0);
 }
 
+/*!
+ *
+ */
 - (void)drawViewport
 {
     glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);

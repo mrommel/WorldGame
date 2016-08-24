@@ -631,6 +631,9 @@
 		1AEF61351D159EB600253DD6 /* SelectMapTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C22B41C9B40A3007F324C /* SelectMapTypeTableViewController.m */; };
 		1AEF61371D159F8600253DD6 /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1A2EA3A51C8B8C3900633417 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AFAF3A81D212C0500165808 /* BaseUITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF3A71D212C0500165808 /* BaseUITestCase.swift */; };
+		1AFCE1881D6D68F00029A990 /* SimulationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */; };
+		1AFCE1891D6D68F00029A990 /* SimulationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */; };
+		1AFCE18A1D6D68F00029A990 /* SimulationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */; };
 		1AFF700B1CD76EAE009C7203 /* MunicipalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700A1CD76EAE009C7203 /* MunicipalEntity.m */; };
 		1AFF700E1CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
 		1AFF700F1CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
@@ -1043,6 +1046,8 @@
 		1AEF61221D14168400253DD6 /* Hoplites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hoplites.png; path = Resources/Units/Hoplites.png; sourceTree = "<group>"; };
 		1AEF61231D14168400253DD6 /* Hoplites.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Hoplites.xml; path = Resources/Units/Hoplites.xml; sourceTree = "<group>"; };
 		1AFAF3A71D212C0500165808 /* BaseUITestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITestCase.swift; sourceTree = "<group>"; };
+		1AFCE1861D6D68F00029A990 /* SimulationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimulationTableViewController.h; path = Presentation/SimulationTableViewController.h; sourceTree = "<group>"; };
+		1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimulationTableViewController.m; path = Presentation/SimulationTableViewController.m; sourceTree = "<group>"; };
 		1AFF70091CD76EAE009C7203 /* MunicipalEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MunicipalEntity.h; path = Map/MunicipalEntity.h; sourceTree = "<group>"; };
 		1AFF700A1CD76EAE009C7203 /* MunicipalEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MunicipalEntity.m; path = Map/MunicipalEntity.m; sourceTree = "<group>"; };
 		1AFF700C1CD76EFB009C7203 /* Economy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Economy.h; path = Map/Economy.h; sourceTree = "<group>"; };
@@ -1412,6 +1417,8 @@
 				1A2EA3E61C92D73200633417 /* AboutViewController.m */,
 				1A2EA3E01C92D5A900633417 /* DebugViewController.h */,
 				1A2EA3E11C92D5A900633417 /* DebugViewController.m */,
+				1AFCE1861D6D68F00029A990 /* SimulationTableViewController.h */,
+				1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
@@ -2415,6 +2422,7 @@
 				1AEE80E21C78CE6E0028ACFF /* NSDictionary+Extension.m in Sources */,
 				1A613FDC1D2607260052A551 /* RENode.m in Sources */,
 				1A2EA3FE1C994AF300633417 /* NSArray+Util.m in Sources */,
+				1AFCE1881D6D68F00029A990 /* SimulationTableViewController.m in Sources */,
 				1A613F6A1D2606E60052A551 /* GLPlane.m in Sources */,
 				1A613FF71D2607260052A551 /* RESpriteBatchNode.m in Sources */,
 				1A613F841D2607020052A551 /* Transformations.m in Sources */,
@@ -2446,6 +2454,7 @@
 				1A613FE31D2607260052A551 /* RENSValueAdditions.m in Sources */,
 				1A613F711D2606E60052A551 /* GLViewController.m in Sources */,
 				1A2CB4B01D2BCEAF005E9F9E /* TerrainNode.m in Sources */,
+				1AFCE1891D6D68F00029A990 /* SimulationTableViewController.m in Sources */,
 				1A613F6B1D2606E60052A551 /* GLPlane.m in Sources */,
 				1A61400A1D2607260052A551 /* REWavefrontMeshNode.m in Sources */,
 				1A3C3A001C7F2C98004009DA /* Civilization.m in Sources */,
@@ -2629,6 +2638,7 @@
 				1A5C22FB1C9C16D2007F324C /* ImageAtlas.m in Sources */,
 				1ABE0E651D2438250009F3F2 /* CombatViewController.m in Sources */,
 				1A3C3A1A1C7F931E004009DA /* Yield.m in Sources */,
+				1AFCE18A1D6D68F00029A990 /* SimulationTableViewController.m in Sources */,
 				1A2EA3941C89877C00633417 /* RelationsNetwork.m in Sources */,
 				1AEE80EA1C7BA6450028ACFF /* Game.m in Sources */,
 				1A2CB4AC1D2BCD97005E9F9E /* Mesh.m in Sources */,

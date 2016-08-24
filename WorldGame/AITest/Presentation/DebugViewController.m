@@ -9,8 +9,11 @@
 #import "DebugViewController.h"
 
 #import "UIConstants.h"
+
 #import "CombatViewController.h"
 #import "CombatBoard.h"
+#import "Game.h"
+#import "SimulationTableViewController.h"
 
 @interface DebugViewController ()
 
@@ -40,7 +43,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-    return 9;
+    return 10;
 }
 
 - (TableViewContent *)contentAtIndexPath:(NSIndexPath *)indexPath
@@ -100,9 +103,20 @@
                                                andSubtitle:@"open"
                                                   andStyle:ContentStyleNormal
                                                  andAction:^(NSIndexPath *path) {
-
+                                                     CombatViewController *combatViewController = [[CombatViewController alloc] init];
+                                                     combatViewController.combatBoard = [[CombatBoard alloc] initWithAttackerPosition:CGPointMake(0, 0) andDefenderPosition:CGPointMake(1, 1) onMap:[GameProvider sharedInstance].game.map];
+                                                     [self.navigationController pushViewController:combatViewController animated:YES];
                                                  }];
             break;
+        case 9:
+            return [[TableViewContent alloc] initWithTitle:@"Simulation"
+                                               andSubtitle:@"open"
+                                                  andStyle:ContentStyleNormal
+                                                 andAction:^(NSIndexPath *path) {
+                                                     SimulationTableViewController *simulationViewController = [[SimulationTableViewController alloc] init];
+                                                     [self.navigationController pushViewController:simulationViewController animated:YES];
+                                                 }];
+            
     }
     
     return nil;

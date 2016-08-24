@@ -37,6 +37,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = COLOR_MIRO_BLACK;
+    self.window.tintColor = [UIColor colorWithWhite:0 alpha:1];
     
     MainMenuViewController *viewController = [[MainMenuViewController alloc] init];
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:viewController];

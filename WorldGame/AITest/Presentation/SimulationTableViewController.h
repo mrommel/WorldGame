@@ -8,6 +8,24 @@
 
 #import "BaseTableViewController.h"
 
-@interface SimulationTableViewController : BaseTableViewController
+/*!
+ delegates
+ */
+@protocol PeopleDistributionTerrainDelegate <NSObject>
+
+- (BOOL)isRiver;
+- (NSString *)terrain;
+
+@end
+
+@protocol PeopleDistributionScienceDelegate <NSObject>
+
+- (BOOL)hasScience:(NSString *)science;
+
+@end
+
+
+
+@interface SimulationTableViewController : BaseTableViewController<PeopleDistributionTerrainDelegate, PeopleDistributionScienceDelegate>
 
 @end

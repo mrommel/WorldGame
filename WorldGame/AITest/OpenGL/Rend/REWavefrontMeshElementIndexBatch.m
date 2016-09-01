@@ -44,7 +44,7 @@
             for (NSValue *rangeValue in elementSet.indexRanges) {
                 NSRange range = [rangeValue rangeValue];
                 length += range.length;
-                numberOfAttributes = MAX(numberOfAttributes, range.location + range.length);
+                numberOfAttributes = MAX(numberOfAttributes, (int)range.location + (int)range.length);
             }
         }
         

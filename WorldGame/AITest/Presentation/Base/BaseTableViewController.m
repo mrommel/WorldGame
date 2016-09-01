@@ -10,6 +10,8 @@
 
 #import "UIConstants.h"
 
+#define SECTION_MULTIPLIER  1000
+
 @implementation TableViewContent
 
 - (instancetype)initWithTitle:(NSString *)title andSubtitle:(NSString *)subtitle andAction:(ActionBlock)action
@@ -57,6 +59,66 @@
 
 @end
 
+#pragma mark -
+
+@interface TableViewContentDataSource()
+
+@property (nonatomic) NSMutableArray *contents;
+
+@end
+
+@implementation TableViewContentDataSource
+
+- (instancetype)init
+{
+    self = [super init];
+    
+    if (self) {
+        self.contents = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
+}
+
+- (NSInteger)numberOfSections
+{
+    return 1;
+}
+
+- (NSInteger)numberOfRowsInSection:(NSInteger)section
+{
+    return [self.contents count];
+}
+
+- (void)addContent:(TableViewContent *)content
+{
+    [self.contents addObject:content];
+}
+
+- (void)insertContent:(TableViewContent *)content atIndex:(NSInteger)index
+{
+    [self.contents insertObject:content atIndex:index];
+}
+
+- (void)insertContent:(TableViewContent *)content atIndexPath:(NSIndexPath *)indexPath
+{
+    [self.contents insertObject:content atIndex:(indexPath.section * SECTION_MULTIPLIER + indexPath.row)];
+}
+
+- (TableViewContent *)contentAtIndex:(NSInteger)index
+{
+    return [self.contents objectAtIndex:index];
+}
+
+- (TableViewContent *)contentAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.contents objectAtIndex:(indexPath.section * SECTION_MULTIPLIER + indexPath.row)];
+}
+
+@end
+
+#pragma mark -
+
 @implementation BaseTableViewController
 
 - (void)viewDidLoad
@@ -79,6 +141,15 @@
     UIImageView *footerView = [[UIImageView alloc] initWithImage:footerImage];
     footerView.frame = CGRectMake(0, 0, DEVICE_WIDTH, 70);
     self.tableView.tableFooterView = footerView;
+}
+
+- (void)setNavigationRightButtonWithImage:(UIImage *)image action:(SEL)action
+{
+    self.navigationItem.rightBarButtonItem.action = nil;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:image
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:action];
 }
 
 #pragma mark - Table view data source
@@ -106,8 +177,13 @@
     TableViewContent *content = nil;
     
     if ([self respondsToSelector:@selector(contentAtIndexPath:)]) {
+        // check if vc is the data source
         content = [self performSelector:@selector(contentAtIndexPath:) withObject:indexPath];
+    } else if (self.dataSource) {
+        // maybe we have a data source attached
+        content = [self.dataSource contentAtIndexPath:indexPath];
     } else {
+        // fallback
         content = [[TableViewContent alloc] initWithTitle:@"title" andSubtitle:@"subtitle" andAction:nil];
     }
     
@@ -130,6 +206,17 @@
             cell.textLabel.textColor = [UIColor lightGrayColor];
             cell.detailTextLabel.textColor = [UIColor lightGrayColor];
             break;
+        case ContentStyleSwitch:
+            cellBackView.image = [UIImage imageNamed:@"menu-item-normal.png"];
+            cell.textLabel.textColor = [UIColor whiteColor];
+            cell.detailTextLabel.textColor = [UIColor whiteColor];
+            
+            UISwitch *uiswitch = [[UISwitch alloc] init];
+            uiswitch.tintColor = [UIColor blackColor];
+            uiswitch.tag = indexPath.section * 1000 + indexPath.row;
+            [uiswitch addTarget:self action:@selector(toggleChanged:) forControlEvents:UIControlEventValueChanged];
+            cell.accessoryView = uiswitch;
+            break;
     }
     
     cell.backgroundView = cellBackView;
@@ -141,10 +228,39 @@
     return cell;
 }
 
+- (void)toggleChanged:(UISwitch *)uiswitch
+{
+    NSLog(@"toggled: %d, tag: %ld", uiswitch.isOn, (long)uiswitch.tag);
+    
+    NSInteger row = uiswitch.tag % 1000;
+    NSInteger section = uiswitch.tag / 1000;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+    
+    if ([self respondsToSelector:@selector(contentAtIndexPath:)]) {
+        TableViewContent *content = [self performSelector:@selector(contentAtIndexPath:) withObject:indexPath];
+        
+        if (content.action != nil) {
+            content.action(indexPath);
+        }
+    } else if (self.dataSource) {
+        TableViewContent *content = [self.dataSource contentAtIndexPath:indexPath];
+        
+        if (content.action != nil) {
+            content.action(indexPath);
+        }
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([self respondsToSelector:@selector(contentAtIndexPath:)]) {
         TableViewContent *content = [self performSelector:@selector(contentAtIndexPath:) withObject:indexPath];
+        
+        if (content.action != nil) {
+            content.action(indexPath);
+        }
+    } else if (self.dataSource) {
+        TableViewContent *content = [self.dataSource contentAtIndexPath:indexPath];
         
         if (content.action != nil) {
             content.action(indexPath);

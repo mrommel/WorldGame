@@ -10,9 +10,49 @@
 
 #import "UIConstants.h"
 
+@interface PeopleDistribution : NSObject
+
+@property (nonatomic) id<PeopleDistributionTerrainDelegate> terrainDelegate;
+@property (nonatomic) id<PeopleDistributionScienceDelegate> scienceDelegate;
+
+@property (atomic) NSInteger hunters;
+@property (atomic) NSInteger peasants;
+
+@end
+
+@implementation PeopleDistribution
+
+- (instancetype)initWithTerrainDelegate:(id<PeopleDistributionTerrainDelegate>) terrainDelegate andScienceDelegate:(id<PeopleDistributionScienceDelegate>) scienceDelegate
+{
+    self = [super init];
+    
+    if (self) {
+        self.hunters = 100; // or fishermen
+        self.peasants = 0;
+        self.terrainDelegate = terrainDelegate;
+        self.scienceDelegate = scienceDelegate;
+    }
+    
+    return self;
+}
+
+- (void)turn
+{
+    if (self.peasants == 0) {
+        if ([self.scienceDelegate hasScience:@"AGRICULTURE"]) {
+            self.peasants = 5;
+        }
+    }
+}
+
+@end
+
+#pragma mark -
+
 @interface SimulationTableViewController ()
 
-@property (atomic) NSInteger numberOfEntries;
+@property (atomic) NSInteger currentTurn;
+@property (nonatomic) PeopleDistribution *people;
 
 @end
 
@@ -22,28 +62,56 @@
 {
     [super viewDidLoad];
     
-    self.numberOfEntries = 1;
+    self.currentTurn = 0;
+    self.people = [[PeopleDistribution alloc] initWithTerrainDelegate:self andScienceDelegate:self];
     
     self.title = @"Simulation";
     self.tableView.backgroundColor = COLOR_MIRO_BLACK;
     
     [self setNavigationRightButtonWithImage:[UIImage imageNamed:@"sync"] action:@selector(handleRefreshNavigationBarItem:)];
+    
+    self.dataSource = [[TableViewContentDataSource alloc] init];
+    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"is river"
+                                                           andSubtitle:@""
+                                                              andStyle:ContentStyleSwitch
+                                                             andAction:^(NSIndexPath *path) {
+                                                                 NSLog(@"toggle:::");
+                                                             }]];
+    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:[NSString stringWithFormat:@"Turn %ld", (long)self.currentTurn]
+                                                           andSubtitle:@""
+                                                              andStyle:ContentStyleNormal
+                                                              andAction:nil]];
+    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:[NSString stringWithFormat:@"Hunters %ld", (long)self.people.hunters]
+                                                           andSubtitle:@""
+                                                              andStyle:ContentStyleNormal
+                                                              andAction:nil]];
+    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:[NSString stringWithFormat:@"Peasants %ld", (long)self.people.peasants]
+                                                           andSubtitle:@""
+                                                              andStyle:ContentStyleNormal
+                                                              andAction:nil]];
 }
 
-- (void)setNavigationRightButtonWithImage:(UIImage *)image action:(SEL)action
+- (BOOL)hasScience:(NSString *)science
 {
-    self.navigationItem.rightBarButtonItem.action = nil;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:image
-                                                                              style:UIBarButtonItemStylePlain
-                                                                             target:self
-                                                                            action:action];
+    return NO;
+}
+
+- (BOOL)isRiver
+{
+    return NO;
+}
+
+- (NSString *)terrain
+{
+    return @"GRASSLAND";
 }
 
 - (void)handleRefreshNavigationBarItem:(UIBarButtonItem *)sender
 {
     NSLog(@"refresh");
     
-    self.numberOfEntries = 2;
+    self.currentTurn++;
+    [self.people turn];
     
     [self.tableView reloadData];
 }
@@ -60,31 +128,14 @@
     return 80;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.numberOfEntries;
+    return [self.dataSource numberOfSections];
 }
 
-- (TableViewContent *)contentAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    switch (indexPath.row)
-    {
-        case 0:
-            return [[TableViewContent alloc] initWithTitle:@"1"
-                                               andSubtitle:@"done"
-                                                  andStyle:ContentStyleNormal
-                                                 andAction:nil];
-            break;
-        case 1:
-            return [[TableViewContent alloc] initWithTitle:@"2"
-                                               andSubtitle:@"done"
-                                                  andStyle:ContentStyleNormal
-                                                 andAction:nil];
-            break;
-            
-    }
-    
-    return nil;
+    return [self.dataSource numberOfRowsInSection:section];
 }
 
 @end

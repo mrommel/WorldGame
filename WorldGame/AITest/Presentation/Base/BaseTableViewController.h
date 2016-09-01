@@ -11,14 +11,19 @@
 typedef void (^ActionBlock)(NSIndexPath *indexPath);
 typedef void (^ActionRowBlock)(UITableViewRowAction *action, NSIndexPath *indexPath);
 
+#pragma mark -
+
 /*!
  type of grand strategy
  */
 typedef NS_ENUM(NSInteger, ContentStyle) {
     ContentStyleNormal,
     ContentStyleHighlighted,
-    ContentStyleDisabled
+    ContentStyleDisabled,
+    ContentStyleSwitch
 };
+
+#pragma mark -
 
 /*!
  content of list entries
@@ -37,16 +42,36 @@ typedef NS_ENUM(NSInteger, ContentStyle) {
 
 @end
 
+#pragma mark -
+
 @protocol TableViewContentSource <NSObject>
 
 - (TableViewContent *)contentAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
+#pragma mark -
 
+@interface TableViewContentDataSource : NSObject<TableViewContentSource>
+
+- (NSInteger)numberOfSections;
+- (NSInteger)numberOfRowsInSection:(NSInteger)section;
+
+- (void)addContent:(TableViewContent *)content;
+- (void)insertContent:(TableViewContent *)content atIndex:(NSInteger)index;
+- (void)insertContent:(TableViewContent *)content atIndexPath:(NSIndexPath *)indexPath;
+
+- (TableViewContent *)contentAtIndex:(NSInteger)index;
+- (TableViewContent *)contentAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
+#pragma mark -
 
 @interface BaseTableViewController : UITableViewController
 
+@property (nonatomic) TableViewContentDataSource* dataSource; // can be null, in this case the vc should implement TableViewContentSource
 
+- (void)setNavigationRightButtonWithImage:(UIImage *)image action:(SEL)action;
 
 @end

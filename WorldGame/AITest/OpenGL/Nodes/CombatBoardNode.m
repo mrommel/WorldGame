@@ -166,7 +166,7 @@
     glEnableVertexAttribArray(_texCoordSlot);
     glEnableVertexAttribArray(_texCoordSlot2);
     
-    glDrawElements(GL_TRIANGLES, _terrainMesh.numberOfIndices, GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, (int)_terrainMesh.numberOfIndices, GL_UNSIGNED_INT, 0);
     
     // unbind textures
     [RETexture unbind];

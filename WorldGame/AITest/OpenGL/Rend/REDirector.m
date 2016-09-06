@@ -447,7 +447,7 @@ static int REDirectorNumberOfRunningDirectors = 0;
     // OpenGL ES measures data in PIXELS
     // Create a graphics context with the target size measured in POINTS
     NSInteger widthInPoints, heightInPoints;
-    if (NULL != UIGraphicsBeginImageContextWithOptions) {
+    if (NULL != &UIGraphicsBeginImageContextWithOptions) {
         // On iOS 4 and later, use UIGraphicsBeginImageContextWithOptions to take the scale into consideration
         // Set the scale parameter to your OpenGL ES view's contentScaleFactor
         // so that you get a high-resolution snapshot when its value is greater than 1.0

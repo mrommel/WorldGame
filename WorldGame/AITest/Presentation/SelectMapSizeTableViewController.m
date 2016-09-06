@@ -51,7 +51,7 @@ const static int kMapSizes = 6;
             return [[TableViewContent alloc] initWithTitle:@"Duel Map"
                                                andSubtitle:@"Duel"
                                                   andImage:[ImageAtlas imageNamed:@"Duel" fromAtlasNamed:@"MapSizeAtlas"]
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      GameViewController *viewcontroller = [[GameViewController alloc] init];
                                                      viewcontroller.options = [[MapOptions alloc] initWithMapType:weakSelf.mapType andSize:kMapSizeDuel];
                                                      [self.navigationController pushViewController:viewcontroller animated:YES];
@@ -61,7 +61,7 @@ const static int kMapSizes = 6;
             return [[TableViewContent alloc] initWithTitle:@"Tiny Map"
                                                andSubtitle:@"Tiny"
                                                   andImage:[ImageAtlas imageNamed:@"Tiny" fromAtlasNamed:@"MapSizeAtlas"]
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      GameViewController *viewcontroller = [[GameViewController alloc] init];
                                                      viewcontroller.options = [[MapOptions alloc] initWithMapType:weakSelf.mapType andSize:kMapSizeTiny];
                                                      [self.navigationController pushViewController:viewcontroller animated:YES];
@@ -71,7 +71,7 @@ const static int kMapSizes = 6;
             return [[TableViewContent alloc] initWithTitle:@"Small Map"
                                                andSubtitle:@"Small"
                                                   andImage:[ImageAtlas imageNamed:@"Small" fromAtlasNamed:@"MapSizeAtlas"]
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      GameViewController *viewcontroller = [[GameViewController alloc] init];
                                                      viewcontroller.options = [[MapOptions alloc] initWithMapType:weakSelf.mapType andSize:kMapSizeSmall];
                                                      [self.navigationController pushViewController:viewcontroller animated:YES];
@@ -81,7 +81,7 @@ const static int kMapSizes = 6;
             return [[TableViewContent alloc] initWithTitle:@"Standard Map"
                                                andSubtitle:@"Standard"
                                                   andImage:[ImageAtlas imageNamed:@"Standard" fromAtlasNamed:@"MapSizeAtlas"]
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      GameViewController *viewcontroller = [[GameViewController alloc] init];
                                                      viewcontroller.options = [[MapOptions alloc] initWithMapType:weakSelf.mapType andSize:kMapSizeStandard];
                                                      [self.navigationController pushViewController:viewcontroller animated:YES];
@@ -91,7 +91,7 @@ const static int kMapSizes = 6;
             return [[TableViewContent alloc] initWithTitle:@"Large Map"
                                                andSubtitle:@"Large"
                                                   andImage:[ImageAtlas imageNamed:@"Large" fromAtlasNamed:@"MapSizeAtlas"]
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      GameViewController *viewcontroller = [[GameViewController alloc] init];
                                                      viewcontroller.options = [[MapOptions alloc] initWithMapType:weakSelf.mapType andSize:kMapSizeLarge];
                                                      [self.navigationController pushViewController:viewcontroller animated:YES];
@@ -101,7 +101,7 @@ const static int kMapSizes = 6;
             return [[TableViewContent alloc] initWithTitle:@"Huge Map"
                                                andSubtitle:@"Huge"
                                                   andImage:[ImageAtlas imageNamed:@"Huge" fromAtlasNamed:@"MapSizeAtlas"]
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      GameViewController *viewcontroller = [[GameViewController alloc] init];
                                                      viewcontroller.options = [[MapOptions alloc] initWithMapType:weakSelf.mapType andSize:kMapSizeHuge];
                                                      [self.navigationController pushViewController:viewcontroller animated:YES];

@@ -51,7 +51,7 @@
         case 0:
             return [[TableViewContent alloc] initWithTitle:([GameProvider sharedInstance].game == nil ? @"New Game" : @"Continue Game")
                                                   andSubtitle:@"Configure your game"
-                                                    andAction:^(NSIndexPath *indexPath) {
+                                                    andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                 if ([GameProvider sharedInstance].game == nil) {
                     [self.navigationController pushViewController:[[SetupGameTableViewController alloc] init] animated:YES];
                 } else {
@@ -62,21 +62,21 @@
         case 1:
             return [[TableViewContent alloc] initWithTitle:@"Load game"
                                                andSubtitle:@"Load"
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      [self.navigationController pushViewController:[[LoadGameViewController alloc] init] animated:YES];
                                                  }];
             break;
         case 2:
             return [[TableViewContent alloc] initWithTitle:@"About"
                                                   andSubtitle:@"Load"
-                                                    andAction:^(NSIndexPath *indexPath) {
+                                                    andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                         [self.navigationController pushViewController:[[AboutViewController alloc] init] animated:YES];
                                                     }];
             break;
         case 3:
             return [[TableViewContent alloc] initWithTitle:@"Debug"
                                                   andSubtitle:@"Load"
-                                                    andAction:^(NSIndexPath *indexPath) {
+                                                    andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                         [self.navigationController pushViewController:[[DebugViewController alloc] init] animated:YES];
                                                     }];
             break;

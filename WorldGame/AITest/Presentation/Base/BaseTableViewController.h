@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^ActionBlock)(NSIndexPath *indexPath);
+typedef void (^ActionBlock)(NSIndexPath *indexPath, NSObject *payload);
 typedef void (^ActionRowBlock)(UITableViewRowAction *action, NSIndexPath *indexPath);
 
 #pragma mark -
@@ -39,6 +39,9 @@ typedef NS_ENUM(NSInteger, ContentStyle) {
 - (instancetype)initWithTitle:(NSString *)title andSubtitle:(NSString *)subtitle andAction:(ActionBlock)action;
 - (instancetype)initWithTitle:(NSString *)title andSubtitle:(NSString *)subtitle andImage:(UIImage *)image andAction:(ActionBlock)action;
 - (instancetype)initWithTitle:(NSString *)title andSubtitle:(NSString *)subtitle andStyle:(ContentStyle)style andAction:(ActionBlock)action;
+
+- (void)setBool:(BOOL)boolValue;
+- (void)setNumber:(NSInteger)integerValue;
 
 @end
 

@@ -14,6 +14,8 @@
 @protocol PeopleDistributionTerrainDelegate <NSObject>
 
 - (BOOL)isRiver;
+- (void)setIsRiver:(BOOL)isRiverValue;
+
 - (NSString *)terrain;
 
 @end

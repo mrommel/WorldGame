@@ -12,6 +12,12 @@
 
 #define SECTION_MULTIPLIER  1000
 
+@interface TableViewContent()
+
+@property (nonatomic) NSObject *payload;
+
+@end
+
 @implementation TableViewContent
 
 - (instancetype)initWithTitle:(NSString *)title andSubtitle:(NSString *)subtitle andAction:(ActionBlock)action
@@ -55,6 +61,34 @@
     }
     
     return self;
+}
+
+- (void)setBool:(BOOL)boolValue
+{
+    self.payload = [NSNumber numberWithBool:boolValue];
+}
+
+- (BOOL)boolValue
+{
+    if (self.payload) {
+        return [((NSNumber *)self.payload) boolValue];
+    }
+    
+    return NO;
+}
+
+- (void)setNumber:(NSInteger)integerValue
+{
+    self.payload = [NSNumber numberWithInteger:integerValue];
+}
+
+- (NSInteger)integerValue
+{
+    if (self.payload) {
+        return [((NSNumber *)self.payload) integerValue];
+    }
+    
+    return 0;
 }
 
 @end
@@ -212,6 +246,7 @@
             cell.detailTextLabel.textColor = [UIColor whiteColor];
             
             UISwitch *uiswitch = [[UISwitch alloc] init];
+            [uiswitch setOn:[content boolValue]];
             uiswitch.tintColor = [UIColor blackColor];
             uiswitch.tag = indexPath.section * 1000 + indexPath.row;
             [uiswitch addTarget:self action:@selector(toggleChanged:) forControlEvents:UIControlEventValueChanged];
@@ -240,13 +275,13 @@
         TableViewContent *content = [self performSelector:@selector(contentAtIndexPath:) withObject:indexPath];
         
         if (content.action != nil) {
-            content.action(indexPath);
+            content.action(indexPath, [NSNumber numberWithBool:uiswitch.isOn]);
         }
     } else if (self.dataSource) {
         TableViewContent *content = [self.dataSource contentAtIndexPath:indexPath];
         
         if (content.action != nil) {
-            content.action(indexPath);
+            content.action(indexPath, [NSNumber numberWithBool:uiswitch.isOn]);
         }
     }
 }
@@ -257,13 +292,13 @@
         TableViewContent *content = [self performSelector:@selector(contentAtIndexPath:) withObject:indexPath];
         
         if (content.action != nil) {
-            content.action(indexPath);
+            content.action(indexPath, nil);
         }
     } else if (self.dataSource) {
         TableViewContent *content = [self.dataSource contentAtIndexPath:indexPath];
         
         if (content.action != nil) {
-            content.action(indexPath);
+            content.action(indexPath, nil);
         }
     }
 }

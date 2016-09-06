@@ -51,7 +51,7 @@
 {
     Game *game = [self.games objectAtIndex:indexPath.row];
     
-    ActionBlock loadGame = ^(NSIndexPath *indexPath) {
+    ActionBlock loadGame = ^(NSIndexPath *indexPath, NSObject *payload) {
         Game *game = [self.games objectAtIndex:indexPath.row];
         [GameProvider sharedInstance].game = game;
         

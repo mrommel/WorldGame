@@ -47,7 +47,7 @@ const static int kMapTypes = 3;
             return [[TableViewContent alloc] initWithTitle:@"Bipolar Map"
                                                andSubtitle:@"A generic Map that consists of two land masses divided by an ocean, but connects thru a small land bridge."
                                                   andImage:[ImageAtlas imageNamed:@"MapBipolar" fromAtlasNamed:@"MapTypeAtlas"]
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      SelectMapSizeTableViewController *viewcontroller = [[SelectMapSizeTableViewController alloc] init];
                                                      viewcontroller.mapType = MapTypeBipolar;
                                                      [self.navigationController pushViewController:viewcontroller animated:YES];
@@ -57,7 +57,7 @@ const static int kMapTypes = 3;
             return [[TableViewContent alloc] initWithTitle:@"Continent Map"
                                                andSubtitle:@"Generates a Map with a multiple continents"
                                                   andImage:[ImageAtlas imageNamed:@"MapContinents" fromAtlasNamed:@"MapTypeAtlas"]
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      SelectMapSizeTableViewController *viewcontroller = [[SelectMapSizeTableViewController alloc] init];
                                                      viewcontroller.mapType = MapTypeContinents;
                                                      [self.navigationController pushViewController:viewcontroller animated:YES];
@@ -67,7 +67,7 @@ const static int kMapTypes = 3;
             return [[TableViewContent alloc] initWithTitle:@"Pangea Map"
                                                andSubtitle:@"Generates a Map with one big continent"
                                                   andImage:[ImageAtlas imageNamed:@"MapPangea" fromAtlasNamed:@"MapTypeAtlas"]
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      SelectMapSizeTableViewController *viewcontroller = [[SelectMapSizeTableViewController alloc] init];
                                                      viewcontroller.mapType = MapTypePangea;
                                                      [self.navigationController pushViewController:viewcontroller animated:YES];

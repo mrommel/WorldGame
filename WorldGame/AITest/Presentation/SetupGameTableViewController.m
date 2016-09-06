@@ -42,7 +42,7 @@
         case 0:
             return [[TableViewContent alloc] initWithTitle:@"Quick Start"
                                                andSubtitle:@"default params"
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      GameViewController *viewcontroller = [[GameViewController alloc] init];
                                                      viewcontroller.options = [[MapOptions alloc] initWithMapType:MapTypeDefault andSize:MapSizeDefault];
                                                      [self.navigationController pushViewController:viewcontroller animated:YES];
@@ -51,7 +51,7 @@
         case 1:
             return [[TableViewContent alloc] initWithTitle:@"Setup Game"
                                                andSubtitle:@"Setup"
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      // NOOP
                                                      [self.navigationController pushViewController:[[SelectMapTypeTableViewController alloc] init] animated:YES];
                                                  }];
@@ -59,7 +59,7 @@
         case 2:
             return [[TableViewContent alloc] initWithTitle:@"Load Game"
                                                andSubtitle:@"Load"
-                                                 andAction:^(NSIndexPath *indexPath) {
+                                                 andAction:^(NSIndexPath *indexPath, NSObject *payload) {
                                                      
                                                  }];
             break;

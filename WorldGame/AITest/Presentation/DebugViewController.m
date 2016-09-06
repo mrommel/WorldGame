@@ -102,7 +102,7 @@
             return [[TableViewContent alloc] initWithTitle:@"OpenGL"
                                                andSubtitle:@"open"
                                                   andStyle:ContentStyleNormal
-                                                 andAction:^(NSIndexPath *path) {
+                                                 andAction:^(NSIndexPath *path, NSObject *payload) {
                                                      CombatViewController *combatViewController = [[CombatViewController alloc] init];
                                                      combatViewController.combatBoard = [[CombatBoard alloc] initWithAttackerPosition:CGPointMake(0, 0) andDefenderPosition:CGPointMake(1, 1) onMap:[GameProvider sharedInstance].game.map];
                                                      [self.navigationController pushViewController:combatViewController animated:YES];
@@ -112,7 +112,7 @@
             return [[TableViewContent alloc] initWithTitle:@"Simulation"
                                                andSubtitle:@"open"
                                                   andStyle:ContentStyleNormal
-                                                 andAction:^(NSIndexPath *path) {
+                                                 andAction:^(NSIndexPath *path, NSObject *payload) {
                                                      SimulationTableViewController *simulationViewController = [[SimulationTableViewController alloc] init];
                                                      [self.navigationController pushViewController:simulationViewController animated:YES];
                                                  }];

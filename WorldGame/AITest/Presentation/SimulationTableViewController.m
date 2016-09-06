@@ -54,6 +54,8 @@
 @property (atomic) NSInteger currentTurn;
 @property (nonatomic) PeopleDistribution *people;
 
+@property (atomic) BOOL isRiverValue;
+
 @end
 
 @implementation SimulationTableViewController
@@ -70,13 +72,17 @@
     
     [self setNavigationRightButtonWithImage:[UIImage imageNamed:@"sync"] action:@selector(handleRefreshNavigationBarItem:)];
     
+    ActionBlock toggleIsRiverBlock = ^(NSIndexPath *path, NSObject *payload) {
+        BOOL isRiverActive = [((NSNumber *)payload) boolValue];
+        self.isRiver = isRiverActive;
+        [[self.dataSource contentAtIndexPath:path] setBool:isRiverActive];
+    };
+    
     self.dataSource = [[TableViewContentDataSource alloc] init];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"is river"
                                                            andSubtitle:@""
                                                               andStyle:ContentStyleSwitch
-                                                             andAction:^(NSIndexPath *path) {
-                                                                 NSLog(@"toggle:::");
-                                                             }]];
+                                                             andAction:toggleIsRiverBlock]];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:[NSString stringWithFormat:@"Turn %ld", (long)self.currentTurn]
                                                            andSubtitle:@""
                                                               andStyle:ContentStyleNormal
@@ -98,7 +104,12 @@
 
 - (BOOL)isRiver
 {
-    return NO;
+    return self.isRiverValue;
+}
+
+- (void)setIsRiver:(BOOL)isRiverValue
+{
+    self.isRiverValue = isRiverValue;
 }
 
 - (NSString *)terrain

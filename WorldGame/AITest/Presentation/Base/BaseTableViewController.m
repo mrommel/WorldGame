@@ -10,7 +10,7 @@
 
 #import "UIConstants.h"
 
-#define SECTION_MULTIPLIER  1000
+#define SECTION_KEY(section)    [NSString stringWithFormat:@"SECTION_%ld", section]
 
 @interface TableViewContent()
 
@@ -97,7 +97,7 @@
 
 @interface TableViewContentDataSource()
 
-@property (nonatomic) NSMutableArray *contents;
+@property (nonatomic) NSMutableDictionary *contents;
 
 @end
 
@@ -108,7 +108,7 @@
     self = [super init];
     
     if (self) {
-        self.contents = [[NSMutableArray alloc] init];
+        self.contents = [[NSMutableDictionary alloc] init];
     }
     
     return self;
@@ -116,37 +116,45 @@
 
 - (NSInteger)numberOfSections
 {
-    return 1;
+    return [self.contents count];
 }
 
 - (NSInteger)numberOfRowsInSection:(NSInteger)section
 {
-    return [self.contents count];
+    return [[self.contents objectForKey:SECTION_KEY(section)] count];
 }
 
-- (void)addContent:(TableViewContent *)content
+- (void)addContent:(TableViewContent *)content inSection:(NSInteger)section
 {
-    [self.contents addObject:content];
+    if ([self.contents objectForKey:SECTION_KEY(section)] == nil) {
+        [self.contents setObject:[[NSMutableArray alloc] init] forKey:SECTION_KEY(section)];
+    }
+    
+    [[self.contents objectForKey:SECTION_KEY(section)] addObject:content];
 }
 
-- (void)insertContent:(TableViewContent *)content atIndex:(NSInteger)index
+- (void)insertContent:(TableViewContent *)content atIndex:(NSInteger)index inSection:(NSInteger)section
 {
-    [self.contents insertObject:content atIndex:index];
+    if ([self.contents objectForKey:SECTION_KEY(section)] == nil) {
+        [self.contents setObject:[[NSMutableArray alloc] init] forKey:SECTION_KEY(section)];
+    }
+    
+    [[self.contents objectForKey:SECTION_KEY(section)] insertObject:content atIndex:index];
 }
 
 - (void)insertContent:(TableViewContent *)content atIndexPath:(NSIndexPath *)indexPath
 {
-    [self.contents insertObject:content atIndex:(indexPath.section * SECTION_MULTIPLIER + indexPath.row)];
+    [self insertContent:content atIndex:indexPath.row inSection:indexPath.section];
 }
 
-- (TableViewContent *)contentAtIndex:(NSInteger)index
+- (TableViewContent *)contentAtIndex:(NSInteger)index inSection:(NSInteger)section
 {
-    return [self.contents objectAtIndex:index];
+    return [[self.contents objectForKey:SECTION_KEY(section)] objectAtIndex:index];
 }
 
 - (TableViewContent *)contentAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [self.contents objectAtIndex:(indexPath.section * SECTION_MULTIPLIER + indexPath.row)];
+    return [[self.contents objectForKey:SECTION_KEY(indexPath.section)] objectAtIndex:indexPath.row];
 }
 
 @end

@@ -60,11 +60,11 @@ typedef NS_ENUM(NSInteger, ContentStyle) {
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfRowsInSection:(NSInteger)section;
 
-- (void)addContent:(TableViewContent *)content;
-- (void)insertContent:(TableViewContent *)content atIndex:(NSInteger)index;
+- (void)addContent:(TableViewContent *)content inSection:(NSInteger)section;
+- (void)insertContent:(TableViewContent *)content atIndex:(NSInteger)index inSection:(NSInteger)section;
 - (void)insertContent:(TableViewContent *)content atIndexPath:(NSIndexPath *)indexPath;
 
-- (TableViewContent *)contentAtIndex:(NSInteger)index;
+- (TableViewContent *)contentAtIndex:(NSInteger)index inSection:(NSInteger)section;
 - (TableViewContent *)contentAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

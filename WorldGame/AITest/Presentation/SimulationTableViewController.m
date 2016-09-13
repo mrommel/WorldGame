@@ -80,21 +80,25 @@
     
     self.dataSource = [[TableViewContentDataSource alloc] init];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"is river"
-                                                           andSubtitle:@""
-                                                              andStyle:ContentStyleSwitch
-                                                             andAction:toggleIsRiverBlock]];
+                                                            andSubtitle:@""
+                                                               andStyle:ContentStyleSwitch
+                                                              andAction:toggleIsRiverBlock]
+                      inSection:0];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:[NSString stringWithFormat:@"Turn %ld", (long)self.currentTurn]
-                                                           andSubtitle:@""
-                                                              andStyle:ContentStyleNormal
-                                                              andAction:nil]];
+                                                            andSubtitle:@""
+                                                               andStyle:ContentStyleNormal
+                                                              andAction:nil]
+                      inSection:0];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:[NSString stringWithFormat:@"Hunters %ld", (long)self.people.hunters]
-                                                           andSubtitle:@""
-                                                              andStyle:ContentStyleNormal
-                                                              andAction:nil]];
+                                                            andSubtitle:@""
+                                                               andStyle:ContentStyleNormal
+                                                              andAction:nil]
+                      inSection:0];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:[NSString stringWithFormat:@"Peasants %ld", (long)self.people.peasants]
-                                                           andSubtitle:@""
-                                                              andStyle:ContentStyleNormal
-                                                              andAction:nil]];
+                                                            andSubtitle:@""
+                                                               andStyle:ContentStyleNormal
+                                                              andAction:nil]
+                      inSection:0];
 }
 
 - (BOOL)hasScience:(NSString *)science

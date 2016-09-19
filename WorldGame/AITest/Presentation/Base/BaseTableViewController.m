@@ -11,6 +11,7 @@
 #import "UIConstants.h"
 
 #define SECTION_KEY(section)    [NSString stringWithFormat:@"SECTION_%ld", section]
+#define kSectionHeaderHeight    36
 
 @interface TableViewContent()
 
@@ -97,6 +98,7 @@
 
 @interface TableViewContentDataSource()
 
+@property (nonatomic) NSMutableDictionary *headers;
 @property (nonatomic) NSMutableDictionary *contents;
 
 @end
@@ -109,6 +111,7 @@
     
     if (self) {
         self.contents = [[NSMutableDictionary alloc] init];
+        self.headers = [[NSMutableDictionary alloc] init];
     }
     
     return self;
@@ -122,6 +125,16 @@
 - (NSInteger)numberOfRowsInSection:(NSInteger)section
 {
     return [[self.contents objectForKey:SECTION_KEY(section)] count];
+}
+
+- (void)setTitle:(NSString *)title forHeaderInSection:(NSInteger)section
+{
+    [self.headers setObject:title forKey:SECTION_KEY(section)];
+}
+
+- (NSString *)titleForHeaderInSection:(NSInteger)section
+{
+    return [self.headers objectForKey:SECTION_KEY(section)];
 }
 
 - (void)addContent:(TableViewContent *)content inSection:(NSInteger)section
@@ -169,7 +182,6 @@
     
     self.view.backgroundColor = COLOR_MIRO_BLACK;
     self.tableView.backgroundColor = COLOR_MIRO_BLACK;
-    //self.tableView.separatorColor = [UIColor clearColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     // header
@@ -198,7 +210,43 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    if (self.dataSource) {
+        return [self.dataSource numberOfSections];
+    }
+    
     return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.dataSource numberOfRowsInSection:section];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (self.dataSource && [self.dataSource numberOfSections] > 1) {
+        return kSectionHeaderHeight;
+    }
+    
+    return 0;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, kSectionHeaderHeight)];
+    [view setBackgroundColor:COLOR_MIRO_SAND];
+    
+    /* Create custom view to display section header... */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, kSectionHeaderHeight)];
+    [label setFont:[UIFont boldSystemFontOfSize:18]];
+    if (self.dataSource) {
+        [label setText:[self.dataSource titleForHeaderInSection:section]];
+    } else {
+        [label setText:@"title"];
+    }
+    [view addSubview:label];
+    
+    return view;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

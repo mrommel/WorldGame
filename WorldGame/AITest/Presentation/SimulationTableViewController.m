@@ -79,6 +79,7 @@
     };
     
     self.dataSource = [[TableViewContentDataSource alloc] init];
+    [self.dataSource setTitle:@"deff" forHeaderInSection:0];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"is river"
                                                             andSubtitle:@""
                                                                andStyle:ContentStyleSwitch
@@ -99,6 +100,13 @@
                                                                andStyle:ContentStyleNormal
                                                               andAction:nil]
                       inSection:0];
+    
+    [self.dataSource setTitle:@"ffed" forHeaderInSection:1];
+    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Graph"
+                                                            andSubtitle:@""
+                                                               andStyle:ContentStyleNormal
+                                                              andAction:nil]
+                      inSection:1];
 }
 
 - (BOOL)hasScience:(NSString *)science
@@ -141,16 +149,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 80;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return [self.dataSource numberOfSections];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [self.dataSource numberOfRowsInSection:section];
 }
 
 @end

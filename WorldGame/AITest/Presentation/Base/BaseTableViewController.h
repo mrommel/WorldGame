@@ -60,6 +60,9 @@ typedef NS_ENUM(NSInteger, ContentStyle) {
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfRowsInSection:(NSInteger)section;
 
+- (void)setTitle:(NSString *)title forHeaderInSection:(NSInteger)section;
+- (NSString *)titleForHeaderInSection:(NSInteger)section;
+
 - (void)addContent:(TableViewContent *)content inSection:(NSInteger)section;
 - (void)insertContent:(TableViewContent *)content atIndex:(NSInteger)index inSection:(NSInteger)section;
 - (void)insertContent:(TableViewContent *)content atIndexPath:(NSIndexPath *)indexPath;
@@ -71,7 +74,7 @@ typedef NS_ENUM(NSInteger, ContentStyle) {
 
 #pragma mark -
 
-@interface BaseTableViewController : UITableViewController
+@interface BaseTableViewController : UITableViewController<UITableViewDelegate>
 
 @property (nonatomic) TableViewContentDataSource* dataSource; // can be null, in this case the vc should implement TableViewContentSource
 

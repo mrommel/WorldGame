@@ -287,8 +287,8 @@
         }
         //[modelViewMatrix release];
         
-        glUniformMatrix4fv(u_mvMatrix, [spritesInBatch count], GL_FALSE, modelViewMatrices);
-        glUniform4fv(u_multiplyColor, [spritesInBatch count], multiplyColors);
+        glUniformMatrix4fv(u_mvMatrix, (GLsizei)[spritesInBatch count], GL_FALSE, modelViewMatrices);
+        glUniform4fv(u_multiplyColor, (GLsizei)[spritesInBatch count], multiplyColors);
         
         
         GLfloat *texCoords = malloc(4 * 2 * sizeof(GLfloat) * [spritesInBatch count]);
@@ -391,7 +391,7 @@
          */
          
         [elementIndexBuffer bind];
-        glDrawElements(GL_TRIANGLES, 6 * [spritesInBatch count] , GL_UNSIGNED_SHORT, 0);
+        glDrawElements(GL_TRIANGLES, (GLsizei)(6 * [spritesInBatch count]) , GL_UNSIGNED_SHORT, 0);
         
         free(texCoords);
         

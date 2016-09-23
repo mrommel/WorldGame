@@ -26,7 +26,7 @@
     
     // Do any additional setup after loading the view.
     self.chartView = [[ChartView alloc] initWithFrame:CGRectMake(BU, BU8, DEVICE_WIDTH - BU2, BU8)];
-    self.chartView.values = [self.policy stackedValues];
+    //self.chartView.values = [self.policy stackedValues];
     [self.view addSubview:self.chartView];
 }
 

@@ -149,9 +149,6 @@
 		1A2EA3C31C8CD17A00633417 /* PolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA3C21C8CD17A00633417 /* PolicyViewController.m */; };
 		1A2EA3C41C8CD17A00633417 /* PolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA3C21C8CD17A00633417 /* PolicyViewController.m */; };
 		1A2EA3C51C8CD17A00633417 /* PolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA3C21C8CD17A00633417 /* PolicyViewController.m */; };
-		1A2EA3C91C8E1C5200633417 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA3C81C8E1C5200633417 /* ChartView.m */; };
-		1A2EA3CA1C8E1C5200633417 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA3C81C8E1C5200633417 /* ChartView.m */; };
-		1A2EA3CB1C8E1C5200633417 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA3C81C8E1C5200633417 /* ChartView.m */; };
 		1A2EA3CE1C8F2BE600633417 /* MapEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA3CD1C8F2BE600633417 /* MapEvaluator.m */; };
 		1A2EA3CF1C8F2BE600633417 /* MapEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA3CD1C8F2BE600633417 /* MapEvaluator.m */; };
 		1A2EA3D01C8F2BE600633417 /* MapEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2EA3CD1C8F2BE600633417 /* MapEvaluator.m */; };
@@ -569,6 +566,13 @@
 		1ABE0E8D1D243ECD0009F3F2 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E821D243ECD0009F3F2 /* CC3Math.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1ABE0E8E1D243ECD0009F3F2 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E821D243ECD0009F3F2 /* CC3Math.m */; };
 		1ABE0E8F1D243ECD0009F3F2 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E821D243ECD0009F3F2 /* CC3Math.m */; };
+		1AC4FEB31D946BFF00E4DD59 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEB21D946BFF00E4DD59 /* ChartView.m */; };
+		1AC4FEB61D946C5300E4DD59 /* GraphDataEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEB51D946C5300E4DD59 /* GraphDataEntry.m */; };
+		1AC4FEB71D946C5300E4DD59 /* GraphDataEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEB51D946C5300E4DD59 /* GraphDataEntry.m */; };
+		1AC4FEB81D946C5300E4DD59 /* GraphDataEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEB51D946C5300E4DD59 /* GraphDataEntry.m */; };
+		1AC4FEBB1D946CA200E4DD59 /* GraphData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEBA1D946CA200E4DD59 /* GraphData.m */; };
+		1AC4FEBC1D946CA200E4DD59 /* GraphData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEBA1D946CA200E4DD59 /* GraphData.m */; };
+		1AC4FEBD1D946CA200E4DD59 /* GraphData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEBA1D946CA200E4DD59 /* GraphData.m */; };
 		1AEBDE091CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
 		1AEBDE0A1CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
 		1AEBDE0B1CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
@@ -638,9 +642,9 @@
 		1AFF700E1CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
 		1AFF700F1CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
 		1AFF70101CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
-		2F08D7799D43847E26BD7626 /* libPods-WorldGameUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BF6CD56DE8767BC4C7A8A6 /* libPods-WorldGameUITests.a */; };
-		8CCAD6340BE6FCF63B8F171D /* libPods-WorldGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6A70C686A1E0BDC5DE12E1 /* libPods-WorldGame.a */; };
-		DD880334038E90BD74FE74C1 /* libPods-WorldGameTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E11BF6731DF0EFE7E5965A /* libPods-WorldGameTests.a */; };
+		1D952C58D61BC6139EB70A8F /* Pods_WorldGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCAD12746242915C14261C8 /* Pods_WorldGameUITests.framework */; };
+		6342231264BA8C73E759F278 /* Pods_WorldGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB5BD26EFC0EECDE8A70D8A /* Pods_WorldGame.framework */; };
+		865B815D3529CB360F2270B1 /* Pods_WorldGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BE01460DEE5972E5311475 /* Pods_WorldGameTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -685,7 +689,6 @@
 
 /* Begin PBXFileReference section */
 		0967CE2F132D9B91D03A3BF9 /* Pods-WorldGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGame.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGame/Pods-WorldGame.debug.xcconfig"; sourceTree = "<group>"; };
-		10E11BF6731DF0EFE7E5965A /* libPods-WorldGameTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldGameTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13837E7261C4C2C87AFEF7CE /* Pods-WorldGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGameUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGameUITests/Pods-WorldGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A0FF26E1CA05E6200F64050 /* Grassland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grassland.png; path = Resources/Terrains/Grassland.png; sourceTree = "<group>"; };
 		1A0FF2721CA0617900F64050 /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Desert.png; path = Resources/Terrains/Desert.png; sourceTree = "<group>"; };
@@ -745,8 +748,6 @@
 		1A2EA3A51C8B8C3900633417 /* CorePlot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CorePlot.framework; path = Frameworks/CorePlot.framework; sourceTree = "<group>"; };
 		1A2EA3C11C8CD17A00633417 /* PolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PolicyViewController.h; path = Presentation/PolicyViewController.h; sourceTree = "<group>"; };
 		1A2EA3C21C8CD17A00633417 /* PolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PolicyViewController.m; path = Presentation/PolicyViewController.m; sourceTree = "<group>"; };
-		1A2EA3C71C8E1C5200633417 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartView.h; path = Views/ChartView.h; sourceTree = "<group>"; };
-		1A2EA3C81C8E1C5200633417 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartView.m; path = Views/ChartView.m; sourceTree = "<group>"; };
 		1A2EA3CC1C8F2BE600633417 /* MapEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapEvaluator.h; path = Map/MapEvaluator.h; sourceTree = "<group>"; };
 		1A2EA3CD1C8F2BE600633417 /* MapEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapEvaluator.m; path = Map/MapEvaluator.m; sourceTree = "<group>"; };
 		1A2EA3D11C8F694F00633417 /* Situation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Situation.h; path = Map/Simulation/Situation.h; sourceTree = "<group>"; };
@@ -820,6 +821,8 @@
 		1A48FCC81CEE354000CFE558 /* KeyValueMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyValueMap.h; path = Util/KeyValueMap.h; sourceTree = "<group>"; };
 		1A48FCC91CEE354000CFE558 /* KeyValueMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyValueMap.m; path = Util/KeyValueMap.m; sourceTree = "<group>"; };
 		1A4C97861D3503F200EED467 /* TerrainVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerrainVertex.h; path = WorldGame/AITest/OpenGL/TerrainVertex.h; sourceTree = "<group>"; };
+		1A50BEA81D902F2900EAAB9F /* WorldGame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WorldGame-Bridging-Header.h"; sourceTree = "<group>"; };
+		1A50BEA91D902F2900EAAB9F /* WorldGameTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WorldGameTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A5700EF1CB2F2D900F346D9 /* NationalService.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NationalService.png; path = Resources/Policies/NationalService.png; sourceTree = "<group>"; };
 		1A5700F01CB2F2D900F346D9 /* NationalService.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = NationalService.xml; path = Resources/Policies/NationalService.xml; sourceTree = "<group>"; };
 		1A5700F71CB2FAE100F346D9 /* InheritanceTax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InheritanceTax.png; path = Resources/Policies/InheritanceTax.png; sourceTree = "<group>"; };
@@ -1021,6 +1024,12 @@
 		1ABE0E821D243ECD0009F3F2 /* CC3Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CC3Math.m; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/CC3Math.m; sourceTree = "<group>"; };
 		1ABE0E831D243ECD0009F3F2 /* ccTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ccTypes.h; path = WorldGame/AITest/OpenGL/Cocos3DMathLib/ccTypes.h; sourceTree = "<group>"; };
 		1ABE0E901D2440600009F3F2 /* WorldGame.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorldGame.pch; sourceTree = "<group>"; };
+		1AC4FEB11D946BFF00E4DD59 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartView.h; path = Views/Chart/ChartView.h; sourceTree = "<group>"; };
+		1AC4FEB21D946BFF00E4DD59 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartView.m; path = Views/Chart/ChartView.m; sourceTree = "<group>"; };
+		1AC4FEB41D946C5300E4DD59 /* GraphDataEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphDataEntry.h; path = Views/Chart/GraphDataEntry.h; sourceTree = "<group>"; };
+		1AC4FEB51D946C5300E4DD59 /* GraphDataEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphDataEntry.m; path = Views/Chart/GraphDataEntry.m; sourceTree = "<group>"; };
+		1AC4FEB91D946CA200E4DD59 /* GraphData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphData.h; path = Views/Chart/GraphData.h; sourceTree = "<group>"; };
+		1AC4FEBA1D946CA200E4DD59 /* GraphData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphData.m; path = Views/Chart/GraphData.m; sourceTree = "<group>"; };
 		1AEBDE071CC7B57E00BE09E8 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateUtils.h; path = Util/DateUtils.h; sourceTree = "<group>"; };
 		1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateUtils.m; path = Util/DateUtils.m; sourceTree = "<group>"; };
 		1AEE071B1D2389EB00E2D866 /* CombatBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatBoard.h; path = Game/CombatBoard.h; sourceTree = "<group>"; };
@@ -1052,12 +1061,13 @@
 		1AFF700A1CD76EAE009C7203 /* MunicipalEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MunicipalEntity.m; path = Map/MunicipalEntity.m; sourceTree = "<group>"; };
 		1AFF700C1CD76EFB009C7203 /* Economy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Economy.h; path = Map/Economy.h; sourceTree = "<group>"; };
 		1AFF700D1CD76EFB009C7203 /* Economy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Economy.m; path = Map/Economy.m; sourceTree = "<group>"; };
-		27BF6CD56DE8767BC4C7A8A6 /* libPods-WorldGameUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldGameUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A395EDCF5E43F822B4E9DCD /* Pods-WorldGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGameTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGameTests/Pods-WorldGameTests.release.xcconfig"; sourceTree = "<group>"; };
-		2E6A70C686A1E0BDC5DE12E1 /* libPods-WorldGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		472EC2631BFA423A6E1647C5 /* Pods-WorldGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGameTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGameTests/Pods-WorldGameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CB5BD26EFC0EECDE8A70D8A /* Pods_WorldGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CCAD12746242915C14261C8 /* Pods_WorldGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		807AC7FD8B8DD6A95D7D5509 /* Pods-WorldGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGame.release.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGame/Pods-WorldGame.release.xcconfig"; sourceTree = "<group>"; };
 		DCB729D7369B764E8DAC2248 /* libPods-AITest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AITest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9BE01460DEE5972E5311475 /* Pods_WorldGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D7BC5C37EBB0E902E8BB35 /* Pods-WorldGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGameUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGameUITests/Pods-WorldGameUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1069,7 +1079,7 @@
 				1ABE0E691D2439500009F3F2 /* QuartzCore.framework in Frameworks */,
 				1ABE0E671D24394B0009F3F2 /* OpenGLES.framework in Frameworks */,
 				1A2EA3A61C8B8C3900633417 /* CorePlot.framework in Frameworks */,
-				8CCAD6340BE6FCF63B8F171D /* libPods-WorldGame.a in Frameworks */,
+				6342231264BA8C73E759F278 /* Pods_WorldGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1078,7 +1088,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A2EA3A71C8B8C3900633417 /* CorePlot.framework in Frameworks */,
-				DD880334038E90BD74FE74C1 /* libPods-WorldGameTests.a in Frameworks */,
+				865B815D3529CB360F2270B1 /* Pods_WorldGameTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1087,7 +1097,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A2EA3A81C8B8C3900633417 /* CorePlot.framework in Frameworks */,
-				2F08D7799D43847E26BD7626 /* libPods-WorldGameUITests.a in Frameworks */,
+				1D952C58D61BC6139EB70A8F /* Pods_WorldGameUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1279,6 +1289,8 @@
 		1A57E77F1C71C3F200B3890E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1A50BEA81D902F2900EAAB9F /* WorldGame-Bridging-Header.h */,
+				1A50BEA91D902F2900EAAB9F /* WorldGameTests-Bridging-Header.h */,
 				1A57E7801C71C3F200B3890E /* main.m */,
 				1ABE0E901D2440600009F3F2 /* WorldGame.pch */,
 			);
@@ -1374,6 +1386,7 @@
 		1A57E7C31C71CBDD00B3890E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1AC4FEB01D946BCA00E4DD59 /* Chart */,
 				1A57E7C41C71CBFD00B3890E /* MapView.h */,
 				1A57E7C51C71CBFD00B3890E /* MapView.m */,
 				1A3C3A301C84EA8C004009DA /* OverlayView.h */,
@@ -1383,8 +1396,6 @@
 				1A3C3A3C1C84ED9A004009DA /* UILabel+Custom.m */,
 				1A3C3A401C84EDF1004009DA /* UIButton+Custom.h */,
 				1A3C3A411C84EDF1004009DA /* UIButton+Custom.m */,
-				1A2EA3C71C8E1C5200633417 /* ChartView.h */,
-				1A2EA3C81C8E1C5200633417 /* ChartView.m */,
 				1A6140371D261C240052A551 /* UIBlockButton.h */,
 				1A6140381D261C240052A551 /* UIBlockButton.m */,
 			);
@@ -1655,6 +1666,19 @@
 			name = Cocos3D;
 			sourceTree = "<group>";
 		};
+		1AC4FEB01D946BCA00E4DD59 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				1AC4FEB11D946BFF00E4DD59 /* ChartView.h */,
+				1AC4FEB21D946BFF00E4DD59 /* ChartView.m */,
+				1AC4FEB41D946C5300E4DD59 /* GraphDataEntry.h */,
+				1AC4FEB51D946C5300E4DD59 /* GraphDataEntry.m */,
+				1AC4FEB91D946CA200E4DD59 /* GraphData.h */,
+				1AC4FEBA1D946CA200E4DD59 /* GraphData.m */,
+			);
+			name = Chart;
+			sourceTree = "<group>";
+		};
 		1AEE80BE1C77350B0028ACFF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1739,9 +1763,9 @@
 				1ABE0E681D2439500009F3F2 /* QuartzCore.framework */,
 				1ABE0E661D24394B0009F3F2 /* OpenGLES.framework */,
 				DCB729D7369B764E8DAC2248 /* libPods-AITest.a */,
-				2E6A70C686A1E0BDC5DE12E1 /* libPods-WorldGame.a */,
-				10E11BF6731DF0EFE7E5965A /* libPods-WorldGameTests.a */,
-				27BF6CD56DE8767BC4C7A8A6 /* libPods-WorldGameUITests.a */,
+				5CB5BD26EFC0EECDE8A70D8A /* Pods_WorldGame.framework */,
+				E9BE01460DEE5972E5311475 /* Pods_WorldGameTests.framework */,
+				6CCAD12746242915C14261C8 /* Pods_WorldGameUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1834,6 +1858,7 @@
 				KnownAssetTags = (
 					New,
 				);
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Michael Rommel";
 				TargetAttributes = {
@@ -2328,6 +2353,7 @@
 				1A613F811D2607020052A551 /* TextureAtlas.m in Sources */,
 				1A6140031D2607260052A551 /* REWavefrontMeshElementIndexBatch.m in Sources */,
 				1AEE80BB1C7733F70028ACFF /* XMLReader.m in Sources */,
+				1AC4FEBB1D946CA200E4DD59 /* GraphData.m in Sources */,
 				1A2EA3F41C98AC4000633417 /* HeightMap.m in Sources */,
 				1A613FE81D2607260052A551 /* RERotator.m in Sources */,
 				1A6140091D2607260052A551 /* REWavefrontMeshNode.m in Sources */,
@@ -2383,6 +2409,7 @@
 				1A3C3A091C7F3090004009DA /* Flavor.m in Sources */,
 				1A613FCD1D2607260052A551 /* REGLTypes.m in Sources */,
 				1A613FD61D2607260052A551 /* RELight.m in Sources */,
+				1AC4FEB31D946BFF00E4DD59 /* ChartView.m in Sources */,
 				1A6140061D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */,
 				1A613FC71D2607260052A551 /* REDirector.m in Sources */,
 				1A2EA3A01C8B860300633417 /* MinistryTableViewController.m in Sources */,
@@ -2414,6 +2441,7 @@
 				1A613FF11D2607260052A551 /* REShader.m in Sources */,
 				1A613FD31D2607260052A551 /* REKeyframedMeshNode.m in Sources */,
 				1ABE0E841D243ECD0009F3F2 /* CC3Foundation.m in Sources */,
+				1AC4FEB61D946C5300E4DD59 /* GraphDataEntry.m in Sources */,
 				1A5C22F91C9C16D2007F324C /* ImageAtlas.m in Sources */,
 				1A2EA3D31C8F694F00633417 /* Situation.m in Sources */,
 				1A613FC41D2607260052A551 /* RECamera.m in Sources */,
@@ -2429,7 +2457,6 @@
 				1A2EA3DD1C90702800633417 /* BitArray.m in Sources */,
 				1A6140001D2607260052A551 /* REWavefrontMesh.m in Sources */,
 				1A3C3A321C84EA8C004009DA /* OverlayView.m in Sources */,
-				1A2EA3C91C8E1C5200633417 /* ChartView.m in Sources */,
 				1A35A99D1CA1A5090094F773 /* SetupGameTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2468,6 +2495,7 @@
 				1A2EA3D41C8F694F00633417 /* Situation.m in Sources */,
 				1AEF612C1D159E7B00253DD6 /* Map.m in Sources */,
 				1ABE0E8E1D243ECD0009F3F2 /* CC3Math.m in Sources */,
+				1AC4FEBC1D946CA200E4DD59 /* GraphData.m in Sources */,
 				1A613FCB1D2607260052A551 /* REGLStateManager.m in Sources */,
 				1A2EA3841C89864800633417 /* Relation.m in Sources */,
 				1A2CB4A51D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */,
@@ -2498,7 +2526,6 @@
 				1AEF61301D159EA000253DD6 /* Plot.m in Sources */,
 				1ABE0E8B1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */,
 				1A613FF21D2607260052A551 /* REShader.m in Sources */,
-				1A2EA3CA1C8E1C5200633417 /* ChartView.m in Sources */,
 				1A35A9B01CA2BD430094F773 /* PolicyInfo.m in Sources */,
 				1A6140011D2607260052A551 /* REWavefrontMesh.m in Sources */,
 				1A2EA3891C8986AE00633417 /* Group.m in Sources */,
@@ -2545,6 +2572,7 @@
 				1A2EA4041C994FB700633417 /* Continent.m in Sources */,
 				1A2EA3E31C92D5A900633417 /* DebugViewController.m in Sources */,
 				1A35A99E1CA1A5090094F773 /* SetupGameTableViewController.m in Sources */,
+				1AC4FEB71D946C5300E4DD59 /* GraphDataEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2573,7 +2601,9 @@
 				1A2EA3D51C8F694F00633417 /* Situation.m in Sources */,
 				1AEF612D1D159E7C00253DD6 /* Map.m in Sources */,
 				1A613F831D2607020052A551 /* TextureAtlas.m in Sources */,
+				1AC4FEB81D946C5300E4DD59 /* GraphDataEntry.m in Sources */,
 				1A613FE71D2607260052A551 /* REProgram.m in Sources */,
+				1AC4FEBD1D946CA200E4DD59 /* GraphData.m in Sources */,
 				1AEE071F1D2389EB00E2D866 /* CombatBoard.m in Sources */,
 				1A613F501D2606D10052A551 /* AbstractCamera.m in Sources */,
 				1A2EA3851C89864800633417 /* Relation.m in Sources */,
@@ -2609,7 +2639,6 @@
 				1AEF61331D159EA400253DD6 /* PlotEconomy.m in Sources */,
 				1A613FD81D2607260052A551 /* RELight.m in Sources */,
 				1AEF61311D159EA100253DD6 /* Plot.m in Sources */,
-				1A2EA3CB1C8E1C5200633417 /* ChartView.m in Sources */,
 				1A613FF61D2607260052A551 /* RESprite.m in Sources */,
 				1A35A9B11CA2BD430094F773 /* PolicyInfo.m in Sources */,
 				1A2EA38A1C8986AE00633417 /* Group.m in Sources */,
@@ -2777,6 +2806,8 @@
 			baseConfigurationReference = 0967CE2F132D9B91D03A3BF9 /* Pods-WorldGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
@@ -2787,6 +2818,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.WorldGame;
 				PRODUCT_NAME = WorldGame;
+				SWIFT_OBJC_BRIDGING_HEADER = "AITest/WorldGame-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -2795,6 +2828,8 @@
 			baseConfigurationReference = 807AC7FD8B8DD6A95D7D5509 /* Pods-WorldGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
@@ -2805,6 +2840,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.WorldGame;
 				PRODUCT_NAME = WorldGame;
+				SWIFT_OBJC_BRIDGING_HEADER = "AITest/WorldGame-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -2813,6 +2849,7 @@
 			baseConfigurationReference = 472EC2631BFA423A6E1647C5 /* Pods-WorldGameTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
@@ -2821,6 +2858,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.AITestTests;
 				PRODUCT_NAME = WorldGame;
+				SWIFT_OBJC_BRIDGING_HEADER = "AITest/WorldGameTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldGame.app/WorldGame";
 			};
 			name = Debug;
@@ -2830,6 +2869,7 @@
 			baseConfigurationReference = 2A395EDCF5E43F822B4E9DCD /* Pods-WorldGameTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
@@ -2838,6 +2878,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.AITestTests;
 				PRODUCT_NAME = WorldGame;
+				SWIFT_OBJC_BRIDGING_HEADER = "AITest/WorldGameTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldGame.app/WorldGame";
 			};
 			name = Release;

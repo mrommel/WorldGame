@@ -101,10 +101,10 @@
                                                               andAction:nil]
                       inSection:0];
     
-    [self.dataSource setTitle:@"ffed" forHeaderInSection:1];
+    [self.dataSource setTitle:@"Graphs" forHeaderInSection:1];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Graph"
                                                             andSubtitle:@""
-                                                               andStyle:ContentStyleNormal
+                                                               andStyle:ContentStyleGraph
                                                               andAction:nil]
                       inSection:1];
 }
@@ -144,11 +144,6 @@
     [super viewDidAppear:animated];
     
     [self.tableView reloadData];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 80;
 }
 
 @end

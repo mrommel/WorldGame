@@ -9,6 +9,7 @@
 #import "BaseTableViewController.h"
 
 #import "UIConstants.h"
+#import "ChartView.h"
 
 #define SECTION_KEY(section)    [NSString stringWithFormat:@"SECTION_%ld", section]
 #define kSectionHeaderHeight    36
@@ -249,21 +250,8 @@
     return view;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (TableViewContent *)contentForIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSString *className = [NSString stringWithFormat:@"%@Cell", [[self class] description] ];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:className];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:className];
-    }
-    
-    // Configure the cell...
     TableViewContent *content = nil;
     
     if ([self respondsToSelector:@selector(contentAtIndexPath:)]) {
@@ -277,7 +265,34 @@
         content = [[TableViewContent alloc] initWithTitle:@"title" andSubtitle:@"subtitle" andAction:nil];
     }
     
-    UIImageView *cellBackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+    return content;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TableViewContent *content = [self contentForIndexPath:indexPath];
+    
+    if (content.style == ContentStyleGraph) {
+        return 200;
+    }
+    
+    return 100;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *className = [NSString stringWithFormat:@"%@Cell", [[self class] description] ];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:className];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:className];
+    }
+    
+    // Configure the cell...
+    TableViewContent *content = [self contentForIndexPath:indexPath];
+    int contentHeight = content.style == ContentStyleGraph ? 200 : 100;
+    
+    UIImageView *cellBackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, contentHeight)];
     cellBackView.backgroundColor = COLOR_MIRO_BLACK;
     switch (content.style)
     {
@@ -285,21 +300,48 @@
             cellBackView.image = [UIImage imageNamed:@"menu-item-normal.png"];
             cell.textLabel.textColor = [UIColor whiteColor];
             cell.detailTextLabel.textColor = [UIColor whiteColor];
+            
+            cell.backgroundView = cellBackView;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.textLabel.text = content.title;
+            cell.detailTextLabel.text = content.subtitle;
+            cell.imageView.image = content.image;
+            
             break;
         case ContentStyleHighlighted:
             cellBackView.image = [UIImage imageNamed:@"menu-item-highlighted.png"];
             cell.textLabel.textColor = [UIColor yellowColor];
             cell.detailTextLabel.textColor = [UIColor yellowColor];
+            
+            cell.backgroundView = cellBackView;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.textLabel.text = content.title;
+            cell.detailTextLabel.text = content.subtitle;
+            cell.imageView.image = content.image;
+            
             break;
         case ContentStyleDisabled:
             cellBackView.image = [UIImage imageNamed:@"menu-item-disabled.png"];
             cell.textLabel.textColor = [UIColor lightGrayColor];
             cell.detailTextLabel.textColor = [UIColor lightGrayColor];
+            
+            cell.backgroundView = cellBackView;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.textLabel.text = content.title;
+            cell.detailTextLabel.text = content.subtitle;
+            cell.imageView.image = content.image;
+            
             break;
-        case ContentStyleSwitch:
+        case ContentStyleSwitch: {
             cellBackView.image = [UIImage imageNamed:@"menu-item-normal.png"];
             cell.textLabel.textColor = [UIColor whiteColor];
             cell.detailTextLabel.textColor = [UIColor whiteColor];
+            
+            cell.backgroundView = cellBackView;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.textLabel.text = content.title;
+            cell.detailTextLabel.text = content.subtitle;
+            cell.imageView.image = content.image;
             
             UISwitch *uiswitch = [[UISwitch alloc] init];
             [uiswitch setOn:[content boolValue]];
@@ -307,15 +349,27 @@
             uiswitch.tag = indexPath.section * 1000 + indexPath.row;
             [uiswitch addTarget:self action:@selector(toggleChanged:) forControlEvents:UIControlEventValueChanged];
             cell.accessoryView = uiswitch;
+        }
+            break;
+        case ContentStyleGraph: {
+            cellBackView.image = [UIImage imageNamed:@"menu-item-normal.png"];
+            
+            ChartView *chartView = [[ChartView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 200) andTitle:@"def"];
+            chartView.backgroundColor = [UIColor whiteColor];
+            
+            GraphData *data = [[GraphData alloc] initWithLabel:@"abc"];
+            [data addValue:[NSNumber numberWithFloat:0.5f] atIndex:0];
+            [data addValue:[NSNumber numberWithFloat:0.4f] atIndex:1];
+            [data addValue:[NSNumber numberWithFloat:0.6f] atIndex:2];
+            [data addValue:[NSNumber numberWithFloat:0.2f] atIndex:3];
+            
+            [chartView addGraphData:data];
+            
+            cell.backgroundView = chartView;
+        }
             break;
     }
-    
-    cell.backgroundView = cellBackView;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.text = content.title;
-    cell.detailTextLabel.text = content.subtitle;
-    cell.imageView.image = content.image;
-    
+
     return cell;
 }
 

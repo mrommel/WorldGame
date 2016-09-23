@@ -20,7 +20,8 @@ typedef NS_ENUM(NSInteger, ContentStyle) {
     ContentStyleNormal,
     ContentStyleHighlighted,
     ContentStyleDisabled,
-    ContentStyleSwitch
+    ContentStyleSwitch,
+    ContentStyleGraph
 };
 
 #pragma mark -

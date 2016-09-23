@@ -10,7 +10,11 @@
 
 @interface GraphTitleRenderer : NSObject
 
+// properties
 @property (nonatomic) NSString *title;
+@property (nonatomic) UIColor *backgroundColor;
+@property (nonatomic) UIFont *titleFont;
+@property (nonatomic) UIColor *titleColor;
 
 - (instancetype)initWithTitle:(NSString *)title;
 

@@ -16,6 +16,10 @@
     
     if (self) {
         self.title = title;
+        
+        self.backgroundColor = [UIColor whiteColor];
+        self.titleColor = [UIColor grayColor];
+        self.titleFont = [UIFont systemFontOfSize:14];
     }
     
     return self;
@@ -23,17 +27,17 @@
 
 - (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect
 {
-    [[UIColor blueColor] set];
+    [self.backgroundColor set];
     CGContextFillRect(ctx, rect);
     
-    [[UIColor whiteColor] set];
-    UIFont *font = [UIFont systemFontOfSize:14];
-    [self drawString:self.title withFont:font inRect:rect];
+    [self.titleColor set];
+    [self drawString:self.title withFont:self.titleFont andColor:self.titleColor inRect:rect];
 }
 
-- (void) drawString:(NSString *)string
-           withFont:(UIFont *)font
-             inRect:(CGRect)contextRect
+- (void)drawString:(NSString *)string
+          withFont:(UIFont *)font
+         andColor:(UIColor *)color
+            inRect:(CGRect)contextRect
 {
     
     /// Make a copy of the default paragraph style
@@ -44,7 +48,7 @@
     paragraphStyle.alignment = NSTextAlignmentCenter;
     
     NSDictionary *attributes = @{ NSFontAttributeName: font,
-                                  NSForegroundColorAttributeName: [UIColor whiteColor],
+                                  NSForegroundColorAttributeName: color,
                                   NSParagraphStyleAttributeName: paragraphStyle };
     
     CGSize size = [string sizeWithAttributes:attributes];

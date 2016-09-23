@@ -12,8 +12,11 @@
 
 @interface GraphAxisRenderer : NSObject
 
-@property (atomic) GraphChartAxis *axis;
+// properties
+@property (nonatomic) GraphChartAxis *axis;
+@property (nonatomic) UIColor* backgroundColor;
 
+// methods
 - (instancetype)initWithAxis:(GraphChartAxis *)axis;
 
 - (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect;

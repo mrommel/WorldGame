@@ -26,8 +26,10 @@ typedef NS_ENUM(NSInteger, GraphChartAxisPosition) {
 @property (nonatomic) GraphChartAxisOrientation orientation;
 @property (nonatomic) GraphChartAxisPosition position;
 
-@property (atomic) CGFloat minimumValue;
-@property (atomic) CGFloat maximumValue;
+@property (atomic) NSInteger numberOfTicks;
+@property (atomic) CGFloat startValue;
+@property (atomic) CGFloat endValue;
+@property (atomic) CGFloat tickValue;
 
 - (instancetype)initWithOrientation:(GraphChartAxisOrientation)orientation andPosition:(GraphChartAxisPosition)position;
 

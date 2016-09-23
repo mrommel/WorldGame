@@ -20,6 +20,7 @@
     
     if (self) {
         self.axis = axis;
+        self.backgroundColor = [UIColor whiteColor];
     }
     
     return self;
@@ -27,10 +28,11 @@
 
 - (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect
 {
+    [self.backgroundColor set];
+    CGContextFillRect(ctx, rect);
+    
     switch (self.axis.position) {
-        case GraphChartAxisPositionBottom:
-            [[UIColor redColor] set];
-            CGContextFillRect(ctx, rect);
+        case GraphChartAxisPositionBottom: {
             
             // line
             [[UIColor grayColor] set];
@@ -44,10 +46,12 @@
             
             CGPathRelease(bottomLine);
             
+            // ticks
+            NSString *txt = [NSString stringWithFormat:@"%.1f-%.1f", self.axis.startValue, self.axis.endValue];
+            [self drawString:txt withFont:[UIFont systemFontOfSize:10] andColor:[UIColor blueColor] inRect:rect];
+        }
             break;
         case GraphChartAxisPositionLeft:
-            [[UIColor greenColor] set];
-            CGContextFillRect(ctx, rect);
             
             // line
             [[UIColor grayColor] set];
@@ -63,12 +67,36 @@
             
             break;
         case GraphChartAxisPositionRight:
-            [[UIColor blueColor] set];
-            CGContextFillRect(ctx, rect);
+            
             break;
     }
+}
+
+- (void)drawString:(NSString *)string
+          withFont:(UIFont *)font
+         andColor:(UIColor *)color
+            inRect:(CGRect)contextRect
+{
     
+    /// Make a copy of the default paragraph style
+    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    /// Set line break mode
+    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    /// Set text alignment
+    paragraphStyle.alignment = NSTextAlignmentCenter;
     
+    NSDictionary *attributes = @{ NSFontAttributeName: font,
+                                  NSForegroundColorAttributeName: color,
+                                  NSParagraphStyleAttributeName: paragraphStyle };
+    
+    CGSize size = [string sizeWithAttributes:attributes];
+    
+    CGRect textRect = CGRectMake(contextRect.origin.x + floorf((contextRect.size.width - size.width) / 2),
+                                 contextRect.origin.y + floorf((contextRect.size.height - size.height) / 2),
+                                 size.width,
+                                 size.height);
+    
+    [string drawInRect:textRect withAttributes:attributes];
 }
 
 @end

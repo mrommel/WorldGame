@@ -573,6 +573,18 @@
 		1AC4FEBB1D946CA200E4DD59 /* GraphData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEBA1D946CA200E4DD59 /* GraphData.m */; };
 		1AC4FEBC1D946CA200E4DD59 /* GraphData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEBA1D946CA200E4DD59 /* GraphData.m */; };
 		1AC4FEBD1D946CA200E4DD59 /* GraphData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEBA1D946CA200E4DD59 /* GraphData.m */; };
+		1AC4FEC01D952A9A00E4DD59 /* GraphTitleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEBF1D952A9A00E4DD59 /* GraphTitleRenderer.m */; };
+		1AC4FEC11D952A9A00E4DD59 /* GraphTitleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEBF1D952A9A00E4DD59 /* GraphTitleRenderer.m */; };
+		1AC4FEC21D952A9A00E4DD59 /* GraphTitleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEBF1D952A9A00E4DD59 /* GraphTitleRenderer.m */; };
+		1AC4FEC61D952B7100E4DD59 /* GraphChartLineRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEC51D952B7100E4DD59 /* GraphChartLineRenderer.m */; };
+		1AC4FEC71D952B7100E4DD59 /* GraphChartLineRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEC51D952B7100E4DD59 /* GraphChartLineRenderer.m */; };
+		1AC4FEC81D952B7100E4DD59 /* GraphChartLineRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEC51D952B7100E4DD59 /* GraphChartLineRenderer.m */; };
+		1AC4FECB1D952BFF00E4DD59 /* GraphChartAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FECA1D952BFF00E4DD59 /* GraphChartAxis.m */; };
+		1AC4FECC1D952BFF00E4DD59 /* GraphChartAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FECA1D952BFF00E4DD59 /* GraphChartAxis.m */; };
+		1AC4FECD1D952BFF00E4DD59 /* GraphChartAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FECA1D952BFF00E4DD59 /* GraphChartAxis.m */; };
+		1AC4FED01D952DCA00E4DD59 /* GraphAxisRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FECF1D952DCA00E4DD59 /* GraphAxisRenderer.m */; };
+		1AC4FED11D952DCA00E4DD59 /* GraphAxisRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FECF1D952DCA00E4DD59 /* GraphAxisRenderer.m */; };
+		1AC4FED21D952DCA00E4DD59 /* GraphAxisRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FECF1D952DCA00E4DD59 /* GraphAxisRenderer.m */; };
 		1AEBDE091CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
 		1AEBDE0A1CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
 		1AEBDE0B1CC7B57E00BE09E8 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */; };
@@ -1030,6 +1042,15 @@
 		1AC4FEB51D946C5300E4DD59 /* GraphDataEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphDataEntry.m; path = Views/Chart/GraphDataEntry.m; sourceTree = "<group>"; };
 		1AC4FEB91D946CA200E4DD59 /* GraphData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphData.h; path = Views/Chart/GraphData.h; sourceTree = "<group>"; };
 		1AC4FEBA1D946CA200E4DD59 /* GraphData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphData.m; path = Views/Chart/GraphData.m; sourceTree = "<group>"; };
+		1AC4FEBE1D952A9A00E4DD59 /* GraphTitleRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphTitleRenderer.h; path = Views/Chart/GraphTitleRenderer.h; sourceTree = "<group>"; };
+		1AC4FEBF1D952A9A00E4DD59 /* GraphTitleRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphTitleRenderer.m; path = Views/Chart/GraphTitleRenderer.m; sourceTree = "<group>"; };
+		1AC4FEC31D952B4700E4DD59 /* GraphChartRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GraphChartRenderer.h; path = Views/Chart/GraphChartRenderer.h; sourceTree = "<group>"; };
+		1AC4FEC41D952B7100E4DD59 /* GraphChartLineRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphChartLineRenderer.h; path = Views/Chart/GraphChartLineRenderer.h; sourceTree = "<group>"; };
+		1AC4FEC51D952B7100E4DD59 /* GraphChartLineRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphChartLineRenderer.m; path = Views/Chart/GraphChartLineRenderer.m; sourceTree = "<group>"; };
+		1AC4FEC91D952BFF00E4DD59 /* GraphChartAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphChartAxis.h; path = Views/Chart/GraphChartAxis.h; sourceTree = "<group>"; };
+		1AC4FECA1D952BFF00E4DD59 /* GraphChartAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphChartAxis.m; path = Views/Chart/GraphChartAxis.m; sourceTree = "<group>"; };
+		1AC4FECE1D952DCA00E4DD59 /* GraphAxisRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphAxisRenderer.h; path = Views/Chart/GraphAxisRenderer.h; sourceTree = "<group>"; };
+		1AC4FECF1D952DCA00E4DD59 /* GraphAxisRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphAxisRenderer.m; path = Views/Chart/GraphAxisRenderer.m; sourceTree = "<group>"; };
 		1AEBDE071CC7B57E00BE09E8 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateUtils.h; path = Util/DateUtils.h; sourceTree = "<group>"; };
 		1AEBDE081CC7B57E00BE09E8 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateUtils.m; path = Util/DateUtils.m; sourceTree = "<group>"; };
 		1AEE071B1D2389EB00E2D866 /* CombatBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatBoard.h; path = Game/CombatBoard.h; sourceTree = "<group>"; };
@@ -1675,6 +1696,15 @@
 				1AC4FEB51D946C5300E4DD59 /* GraphDataEntry.m */,
 				1AC4FEB91D946CA200E4DD59 /* GraphData.h */,
 				1AC4FEBA1D946CA200E4DD59 /* GraphData.m */,
+				1AC4FEBE1D952A9A00E4DD59 /* GraphTitleRenderer.h */,
+				1AC4FEBF1D952A9A00E4DD59 /* GraphTitleRenderer.m */,
+				1AC4FEC31D952B4700E4DD59 /* GraphChartRenderer.h */,
+				1AC4FEC41D952B7100E4DD59 /* GraphChartLineRenderer.h */,
+				1AC4FEC51D952B7100E4DD59 /* GraphChartLineRenderer.m */,
+				1AC4FEC91D952BFF00E4DD59 /* GraphChartAxis.h */,
+				1AC4FECA1D952BFF00E4DD59 /* GraphChartAxis.m */,
+				1AC4FECE1D952DCA00E4DD59 /* GraphAxisRenderer.h */,
+				1AC4FECF1D952DCA00E4DD59 /* GraphAxisRenderer.m */,
 			);
 			name = Chart;
 			sourceTree = "<group>";
@@ -2373,6 +2403,7 @@
 				1A613FFA1D2607260052A551 /* RETexture.m in Sources */,
 				1A5C22FE1C9C42E7007F324C /* UIImage+Sprite.m in Sources */,
 				1A613FC11D2607260052A551 /* RECache.m in Sources */,
+				1AC4FEC01D952A9A00E4DD59 /* GraphTitleRenderer.m in Sources */,
 				1AAEB59A1CB7C6EF00DA478B /* GamePersistance.m in Sources */,
 				1A2CB4A41D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */,
 				1A613FEE1D2607260052A551 /* REScheduler.m in Sources */,
@@ -2382,6 +2413,7 @@
 				1A57E7BE1C71C83700B3890E /* Map.m in Sources */,
 				1A2CB4A71D2BCD97005E9F9E /* CubeMesh.m in Sources */,
 				1A3C3A1D1C7F9DD7004009DA /* Area.m in Sources */,
+				1AC4FECB1D952BFF00E4DD59 /* GraphChartAxis.m in Sources */,
 				1A57E7841C71C3F200B3890E /* AppDelegate.m in Sources */,
 				1A84BB461CBFB60800CE7EDC /* GameViewController.m in Sources */,
 				1A61401C1D260D3E0052A551 /* ZoomManager.m in Sources */,
@@ -2437,10 +2469,12 @@
 				1A2EA3F91C98AFF700633417 /* MapGenerator.m in Sources */,
 				1AEE071D1D2389EB00E2D866 /* CombatBoard.m in Sources */,
 				1AFF700E1CD76EFB009C7203 /* Economy.m in Sources */,
+				1AC4FED01D952DCA00E4DD59 /* GraphAxisRenderer.m in Sources */,
 				1A613FBE1D2607260052A551 /* REBuffer.m in Sources */,
 				1A613FF11D2607260052A551 /* REShader.m in Sources */,
 				1A613FD31D2607260052A551 /* REKeyframedMeshNode.m in Sources */,
 				1ABE0E841D243ECD0009F3F2 /* CC3Foundation.m in Sources */,
+				1AC4FEC61D952B7100E4DD59 /* GraphChartLineRenderer.m in Sources */,
 				1AC4FEB61D946C5300E4DD59 /* GraphDataEntry.m in Sources */,
 				1A5C22F91C9C16D2007F324C /* ImageAtlas.m in Sources */,
 				1A2EA3D31C8F694F00633417 /* Situation.m in Sources */,
@@ -2477,8 +2511,10 @@
 				1A613F821D2607020052A551 /* TextureAtlas.m in Sources */,
 				1A3C3A051C7F2F75004009DA /* Leader.m in Sources */,
 				1A613FEF1D2607260052A551 /* REScheduler.m in Sources */,
+				1AC4FEC71D952B7100E4DD59 /* GraphChartLineRenderer.m in Sources */,
 				1AEF612B1D159E6500253DD6 /* LoadGameViewController.m in Sources */,
 				1A613FE31D2607260052A551 /* RENSValueAdditions.m in Sources */,
+				1AC4FEC11D952A9A00E4DD59 /* GraphTitleRenderer.m in Sources */,
 				1A613F711D2606E60052A551 /* GLViewController.m in Sources */,
 				1A2CB4B01D2BCEAF005E9F9E /* TerrainNode.m in Sources */,
 				1AFCE1891D6D68F00029A990 /* SimulationTableViewController.m in Sources */,
@@ -2496,6 +2532,7 @@
 				1AEF612C1D159E7B00253DD6 /* Map.m in Sources */,
 				1ABE0E8E1D243ECD0009F3F2 /* CC3Math.m in Sources */,
 				1AC4FEBC1D946CA200E4DD59 /* GraphData.m in Sources */,
+				1AC4FECC1D952BFF00E4DD59 /* GraphChartAxis.m in Sources */,
 				1A613FCB1D2607260052A551 /* REGLStateManager.m in Sources */,
 				1A2EA3841C89864800633417 /* Relation.m in Sources */,
 				1A2CB4A51D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */,
@@ -2570,6 +2607,7 @@
 				1A84BB471CBFB60800CE7EDC /* GameViewController.m in Sources */,
 				1A2EA3A11C8B860300633417 /* MinistryTableViewController.m in Sources */,
 				1A2EA4041C994FB700633417 /* Continent.m in Sources */,
+				1AC4FED11D952DCA00E4DD59 /* GraphAxisRenderer.m in Sources */,
 				1A2EA3E31C92D5A900633417 /* DebugViewController.m in Sources */,
 				1A35A99E1CA1A5090094F773 /* SetupGameTableViewController.m in Sources */,
 				1AC4FEB71D946C5300E4DD59 /* GraphDataEntry.m in Sources */,
@@ -2580,9 +2618,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC4FEC21D952A9A00E4DD59 /* GraphTitleRenderer.m in Sources */,
 				1A3C3A1F1C7F9DD7004009DA /* Area.m in Sources */,
 				1A2EA3FB1C98AFF700633417 /* MapGenerator.m in Sources */,
 				1A6140241D2613230052A551 /* CombatBoardNode.m in Sources */,
+				1AC4FECD1D952BFF00E4DD59 /* GraphChartAxis.m in Sources */,
 				1AFAF3A81D212C0500165808 /* BaseUITestCase.swift in Sources */,
 				1ABE0E861D243ECD0009F3F2 /* CC3Foundation.m in Sources */,
 				1A2EA4001C994AF300633417 /* NSArray+Util.m in Sources */,
@@ -2675,10 +2715,12 @@
 				1A3C3A2F1C80FCEA004009DA /* Simulation.m in Sources */,
 				1A35A9AC1CA1E9050094F773 /* SelectMapSizeTableViewController.m in Sources */,
 				1A3C3A441C84EDF1004009DA /* UIButton+Custom.m in Sources */,
+				1AC4FEC81D952B7100E4DD59 /* GraphChartLineRenderer.m in Sources */,
 				1AEE80BD1C7733F70028ACFF /* XMLReader.m in Sources */,
 				1A613FFC1D2607260052A551 /* RETexture.m in Sources */,
 				1A2EA3991C89B95C00633417 /* GroupType.m in Sources */,
 				1A6140081D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */,
+				1AC4FED21D952DCA00E4DD59 /* GraphAxisRenderer.m in Sources */,
 				1AEE80EF1C7BB20B0028ACFF /* Player.m in Sources */,
 				1A57E7E11C74700D00B3890E /* MapPoint.m in Sources */,
 				1A84BB481CBFB60800CE7EDC /* GameViewController.m in Sources */,

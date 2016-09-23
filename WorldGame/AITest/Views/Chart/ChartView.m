@@ -9,236 +9,15 @@
 #import "ChartView.h"
 
 #import "UIConstants.h"
-
-#pragma mark -
-#pragma mark GraphData
-
-
-#pragma mark -
-#pragma mark ChartRenderer
-
-@protocol ChartRenderer
-
-- (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect;
-
-@end
-
-#pragma mark -
-#pragma mark ChartLineRenderer
-
-@interface ChartLineRenderer : NSObject<ChartRenderer>
-
-@property (nonatomic) GraphData *data;
-
-@end
-
-@implementation ChartLineRenderer
-
-- (instancetype)initWithGraphData:(GraphData *)data
-{
-    self = [super init];
-    
-    if (self) {
-        self.data = data;
-    }
-    
-    return self;
-}
-
-- (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect
-{
-    CGPathRef path = CGPathCreateWithRect(rect, NULL);
-    
-    CGContextSetFillColorWithColor(ctx, [UIColor yellowColor].CGColor);
-    
-    CGContextAddPath(ctx, path);
-    CGContextDrawPath(ctx, kCGPathFill);
-    
-    CGPathRelease(path);
-    
-    
-    /*CGMutablePathRef path = CGPathCreateMutable();
-    
-    NSInteger values = [self.data.values count];
-    CGFloat graphWidth = rect.size.width;
-    CGFloat graphHeight = rect.size.height;
-    
-    CGPathMoveToPoint(path, nil, BU_HALF, BU_HALF + (1.0f - [[self.data.values firstObject] floatValue]) * graphHeight);
-    
-    for (int i = 1; i < self.values.count; i++) {
-        CGPathAddLineToPoint(path, NULL, BU_HALF + ((float)i / (float)self.values.count) * graphWidth, BU_HALF + (1.0f - [[self.values objectAtIndex:i] floatValue]) * graphHeight);
-    }
-    
-    CGContextAddPath(ctx, path);
-    CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
-    CGContextStrokePath(ctx);
-    
-    CGPathRelease(path);*/
-}
-
-@end
-
-#pragma mark -
-#pragma mark ChartAxis
-
-typedef NS_ENUM(NSInteger, ChartAxisOrientation) {
-    ChartAxisOrientationVertical,  // | y
-    ChartAxisOrientationHorizontal // - x
-};
-
-typedef NS_ENUM(NSInteger, ChartAxisPosition) {
-    ChartAxisPositionBottom,  // x
-    ChartAxisPositionLeft, // y
-    ChartAxisPositionRight // y
-};
-
-@interface ChartAxis : NSObject
-
-@property (nonatomic) ChartAxisOrientation orientation;
-@property (nonatomic) ChartAxisPosition position;
-
-@property (atomic) CGFloat minimumValue;
-@property (atomic) CGFloat maximumValue;
-
-@end
-
-@implementation ChartAxis
-
-- (instancetype)initWithOrientation:(ChartAxisOrientation)orientation andPosition:(ChartAxisPosition)position
-{
-    self = [super init];
-    
-    if (self) {
-        self.orientation = orientation;
-        self.position = position;
-    }
-    
-    return self;
-}
-
-- (void)calculateWithGraphData:(GraphData *)data
-{
-    self.minimumValue = CGFLOAT_MAX;
-    self.maximumValue = CGFLOAT_MIN;
-    
-    
-}
-
-@end
-
-#pragma mark -
-#pragma mark AxisRenderer
-
-@interface AxisRenderer : NSObject
-
-@property (atomic) ChartAxis *axis;
-
-@end
-
-@implementation AxisRenderer
-
-- (instancetype)initWithAxis:(ChartAxis *)axis
-{
-    self = [super init];
-    
-    if (self) {
-        self.axis = axis;
-    }
-    
-    return self;
-}
-
-- (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect
-{
-    CGPathRef path = CGPathCreateWithRect(rect, NULL);
-    
-    switch (self.axis.position) {
-        case ChartAxisPositionBottom:
-            CGContextSetFillColorWithColor(ctx, [UIColor redColor].CGColor);
-            break;
-        case ChartAxisPositionLeft:
-            CGContextSetFillColorWithColor(ctx, [UIColor greenColor].CGColor);
-            break;
-        case ChartAxisPositionRight:
-            CGContextSetFillColorWithColor(ctx, [UIColor blueColor].CGColor);
-            break;
-    }
-    
-    CGContextAddPath(ctx, path);
-    CGContextDrawPath(ctx, kCGPathFill);
-    
-    CGPathRelease(path);
-}
-
-@end
-
-#pragma mark -
-#pragma mark TitleRenderer
-
-@interface TitleRenderer : NSObject
-
-@property (nonatomic) NSString *title;
-
-@end
-
-@implementation TitleRenderer
-
-- (instancetype)initWithTitle:(NSString *)title
-{
-    self = [super init];
-    
-    if (self) {
-        self.title = title;
-    }
-    
-    return self;
-}
-
-- (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect
-{
-    [[UIColor blueColor] set];
-    CGContextFillRect(ctx, rect);
-    
-    [[UIColor whiteColor] set];
-    UIFont *font = [UIFont systemFontOfSize:14];
-    //[self.title drawInRect:rect withFont:font];
-    [self drawString:self.title withFont:font inRect:rect];
-}
-
-- (void) drawString: (NSString*) s
-           withFont: (UIFont*) font
-             inRect: (CGRect) contextRect {
-    
-    /// Make a copy of the default paragraph style
-    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    /// Set line break mode
-    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
-    /// Set text alignment
-    paragraphStyle.alignment = NSTextAlignmentCenter;
-    
-    NSDictionary *attributes = @{ NSFontAttributeName: font,
-                                  NSForegroundColorAttributeName: [UIColor whiteColor],
-                                  NSParagraphStyleAttributeName: paragraphStyle };
-    
-    CGSize size = [s sizeWithAttributes:attributes];
-    
-    CGRect textRect = CGRectMake(contextRect.origin.x + floorf((contextRect.size.width - size.width) / 2),
-                                 contextRect.origin.y + floorf((contextRect.size.height - size.height) / 2),
-                                 size.width,
-                                 size.height);
-    
-    [s drawInRect:textRect withAttributes:attributes];
-}
-
-@end
-
-#pragma mark -
-#pragma mark ChartView
+#import "GraphTitleRenderer.h"
+#import "GraphChartRenderer.h"
+#import "GraphAxisRenderer.h"
+#import "GraphChartLineRenderer.h"
 
 @interface ChartView()
 
 @property (nonatomic) NSString *title;
-@property (nonatomic) TitleRenderer *titleRenderer;
+@property (nonatomic) GraphTitleRenderer *titleRenderer;
 
 @property (nonatomic) NSMutableArray *graphs;
 @property (nonatomic) NSMutableArray *graphRenderer;
@@ -256,7 +35,7 @@ typedef NS_ENUM(NSInteger, ChartAxisPosition) {
     
     if (self) {
         self.title = title;
-        self.titleRenderer = [[TitleRenderer alloc] initWithTitle:title];
+        self.titleRenderer = [[GraphTitleRenderer alloc] initWithTitle:title];
         
         self.graphs = [[NSMutableArray alloc] init];
         self.graphRenderer = [[NSMutableArray alloc] init];
@@ -277,7 +56,7 @@ typedef NS_ENUM(NSInteger, ChartAxisPosition) {
     // Drawing code
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     
-    CGContextSetFillColorWithColor(ctx, [UIColor grayColor].CGColor);
+    CGContextSetFillColorWithColor(ctx, [UIColor whiteColor].CGColor);
     CGContextFillRect(ctx, self.bounds);
     
     if (!self.graphs) {
@@ -303,19 +82,19 @@ typedef NS_ENUM(NSInteger, ChartAxisPosition) {
     
     [self.titleRenderer drawWithContext:ctx andCanvasRect:titleRect];
     
-    for (id<ChartRenderer> renderer in self.graphRenderer) {
+    for (id<GraphChartRenderer> renderer in self.graphRenderer) {
         [renderer drawWithContext:ctx andCanvasRect:canvasRect];
     }
     
-    for (AxisRenderer *renderer in self.axisRenderer) {
+    for (GraphAxisRenderer *renderer in self.axisRenderer) {
         switch (renderer.axis.position) {
-            case ChartAxisPositionLeft:
+            case GraphChartAxisPositionLeft:
                 [renderer drawWithContext:ctx andCanvasRect:axisLeftRect];
                 break;
-            case ChartAxisPositionRight:
+            case GraphChartAxisPositionRight:
                 [renderer drawWithContext:ctx andCanvasRect:axisRightRect];
                 break;
-            case  ChartAxisPositionBottom:
+            case GraphChartAxisPositionBottom:
                 [renderer drawWithContext:ctx andCanvasRect:axisBottomRect];
                 break;
         }
@@ -330,15 +109,15 @@ typedef NS_ENUM(NSInteger, ChartAxisPosition) {
     switch (graphData.type) {
         case GraphTypeDefault:
         case GraphTypeLine: {
-            [self.graphRenderer addObject:[[ChartLineRenderer alloc] initWithGraphData:graphData]];
+            [self.graphRenderer addObject:[[GraphChartLineRenderer alloc] initWithGraphData:graphData]];
             
-            ChartAxis *bottomAxis = [[ChartAxis alloc] initWithOrientation:ChartAxisOrientationHorizontal andPosition:ChartAxisPositionBottom];
+            GraphChartAxis *bottomAxis = [[GraphChartAxis alloc] initWithOrientation:GraphChartAxisOrientationHorizontal andPosition:GraphChartAxisPositionBottom];
             [bottomAxis calculateWithGraphData:graphData];
-            [self.axisRenderer addObject:[[AxisRenderer alloc] initWithAxis:bottomAxis]];
+            [self.axisRenderer addObject:[[GraphAxisRenderer alloc] initWithAxis:bottomAxis]];
             
-            ChartAxis *leftAxis = [[ChartAxis alloc] initWithOrientation:ChartAxisOrientationVertical andPosition:ChartAxisPositionLeft];
+            GraphChartAxis *leftAxis = [[GraphChartAxis alloc] initWithOrientation:GraphChartAxisOrientationVertical andPosition:GraphChartAxisPositionLeft];
             [leftAxis calculateWithGraphData:graphData];
-            [self.axisRenderer addObject:[[AxisRenderer alloc] initWithAxis:leftAxis]];
+            [self.axisRenderer addObject:[[GraphAxisRenderer alloc] initWithAxis:leftAxis]];
         }
             break;
         case GraphTypeBar:

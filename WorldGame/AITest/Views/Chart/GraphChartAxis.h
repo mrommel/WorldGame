@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "GraphData.h"
+#import <CoreGraphics/CoreGraphics.h>
 
 typedef NS_ENUM(NSInteger, GraphChartAxisOrientation) {
     GraphChartAxisOrientationVertical,  // | y
@@ -29,10 +30,14 @@ typedef NS_ENUM(NSInteger, GraphChartAxisPosition) {
 @property (atomic) NSInteger numberOfTicks;
 @property (atomic) CGFloat startValue;
 @property (atomic) CGFloat endValue;
-@property (atomic) CGFloat tickValue;
+@property (atomic) CGFloat intervalValue;
 
 - (instancetype)initWithOrientation:(GraphChartAxisOrientation)orientation andPosition:(GraphChartAxisPosition)position;
 
 - (void)calculateWithGraphData:(GraphData *)data;
+
+- (NSInteger)tickCount;
+
+- (CGFloat)scaleValue:(CGFloat)value;
 
 @end

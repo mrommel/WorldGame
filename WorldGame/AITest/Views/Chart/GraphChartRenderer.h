@@ -9,6 +9,8 @@
 #ifndef GraphChartRenderer_h
 #define GraphChartRenderer_h
 
+#import <CoreGraphics/CoreGraphics.h>
+
 @protocol GraphChartRenderer
 
 - (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect;

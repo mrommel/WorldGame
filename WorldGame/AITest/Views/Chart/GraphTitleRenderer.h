@@ -6,9 +6,9 @@
 //  Copyright © 2016 Michael Rommel. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "GraphRenderer.h"
 
-@interface GraphTitleRenderer : NSObject
+@interface GraphTitleRenderer : GraphRenderer
 
 // properties
 @property (nonatomic) NSString *title;

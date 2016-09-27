@@ -9,8 +9,13 @@
 #import <Foundation/Foundation.h>
 
 #import "GraphChartAxis.h"
+#import "GraphRenderer.h"
+#import <UIKit/UIKit.h>
 
-@interface GraphAxisRenderer : NSObject
+/*!
+ * class that renders 
+ */
+@interface GraphAxisRenderer : GraphRenderer
 
 // properties
 @property (nonatomic) GraphChartAxis *axis;

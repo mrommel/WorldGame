@@ -11,6 +11,13 @@
 #import "UIConstants.h"
 #import "GraphTitleRenderer.h"
 #import "GraphChartRenderer.h"
+#import <UIKit/UIKit.h>
+
+@interface GraphAxisRenderer()
+
+@property (atomic) NSInteger intervals;
+
+@end
 
 @implementation GraphAxisRenderer
 
@@ -21,6 +28,7 @@
     if (self) {
         self.axis = axis;
         self.backgroundColor = [UIColor whiteColor];
+        self.intervals = 3;
     }
     
     return self;
@@ -28,8 +36,7 @@
 
 - (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect
 {
-    [self.backgroundColor set];
-    CGContextFillRect(ctx, rect);
+    [self fillContext:ctx withRect:rect andColor:self.backgroundColor];
     
     switch (self.axis.position) {
         case GraphChartAxisPositionBottom: {
@@ -47,8 +54,30 @@
             CGPathRelease(bottomLine);
             
             // ticks
-            NSString *txt = [NSString stringWithFormat:@"%.1f-%.1f", self.axis.startValue, self.axis.endValue];
-            [self drawString:txt withFont:[UIFont systemFontOfSize:10] andColor:[UIColor blueColor] inRect:rect];
+            NSInteger tickCount = [self.axis tickCount];
+            float x_label_height = 20;
+            
+            float div_width;
+            if (tickCount == 1) {
+                div_width = 0;
+            } else {
+                div_width = rect.size.width / (tickCount - 1);
+            }
+            
+            int power = floor(log10(self.axis.intervalValue));
+            NSString *formatString = [NSString stringWithFormat:@"%%.%if", (power < 0) ? -power : 0];
+            
+            for (NSUInteger i = 0; i < tickCount; i++) {
+                if (i % self.intervals == 0 || self.intervals == 1) {
+                    int dx = (int) (div_width * i);
+                    float x_axis = self.axis.startValue + i * self.axis.intervalValue;
+
+                    NSString *x_label = [NSString stringWithFormat:formatString, x_axis];
+                    CGRect textFrame = CGRectMake(rect.origin.x + dx - 100, rect.origin.y + rect.size.height - x_label_height, 200, x_label_height);
+                    
+                    [self drawString:x_label withFont:[UIFont systemFontOfSize:10] andColor:[UIColor blackColor] inRect:textFrame];
+                };
+            }
         }
             break;
         case GraphChartAxisPositionLeft:
@@ -70,33 +99,6 @@
             
             break;
     }
-}
-
-- (void)drawString:(NSString *)string
-          withFont:(UIFont *)font
-         andColor:(UIColor *)color
-            inRect:(CGRect)contextRect
-{
-    
-    /// Make a copy of the default paragraph style
-    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    /// Set line break mode
-    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
-    /// Set text alignment
-    paragraphStyle.alignment = NSTextAlignmentCenter;
-    
-    NSDictionary *attributes = @{ NSFontAttributeName: font,
-                                  NSForegroundColorAttributeName: color,
-                                  NSParagraphStyleAttributeName: paragraphStyle };
-    
-    CGSize size = [string sizeWithAttributes:attributes];
-    
-    CGRect textRect = CGRectMake(contextRect.origin.x + floorf((contextRect.size.width - size.width) / 2),
-                                 contextRect.origin.y + floorf((contextRect.size.height - size.height) / 2),
-                                 size.width,
-                                 size.height);
-    
-    [string drawInRect:textRect withAttributes:attributes];
 }
 
 @end

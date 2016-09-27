@@ -10,6 +10,7 @@
 
 #import "GraphData.h"
 #import "GraphDataEntry.h"
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface GraphChartAxis()
 
@@ -43,12 +44,12 @@
     
     CGFloat width = maximumValue - minimumValue;
     if (width == 0.0) {
-        self.tickValue = 0;
+        self.intervalValue = 0;
         self.startValue = minimumValue;
         self.endValue = maximumValue;
     } else {
         CGFloat niceRange = [self calculateNiceNumberFromValue:width];
-        self.tickValue = [self calculateNiceNumberFromValue:(niceRange / (self.numberOfTicks - 1)) andRound:YES];
+        self.intervalValue = [self calculateNiceNumberFromValue:(niceRange / (self.numberOfTicks - 1)) andRound:YES];
         self.startValue = floor(minimumValue / niceRange) * niceRange;
         self.endValue = ceil(maximumValue / niceRange) * niceRange;
     }
@@ -84,6 +85,27 @@
     }
                             
     return niceFraction * pow(10, exponent);
+}
+
+- (NSInteger)tickCount
+{
+    if (self.intervalValue == 0.0) {
+        return 1;
+    }
+    
+    NSInteger ticks = (self.endValue - self.startValue) / self.intervalValue + 1;
+    return ticks;
+}
+
+- (CGFloat)scaleValue:(CGFloat)value
+{
+    CGFloat range = self.endValue - self.startValue;
+    
+    if (range == 0.0) {
+        return 0.0;
+    }
+    
+    return (value - self.startValue) / range;
 }
 
 @end

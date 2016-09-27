@@ -109,8 +109,6 @@
     switch (graphData.type) {
         case GraphTypeDefault:
         case GraphTypeLine: {
-            [self.graphRenderer addObject:[[GraphChartLineRenderer alloc] initWithGraphData:graphData]];
-            
             GraphChartAxis *bottomAxis = [[GraphChartAxis alloc] initWithOrientation:GraphChartAxisOrientationHorizontal andPosition:GraphChartAxisPositionBottom];
             [bottomAxis calculateWithGraphData:graphData];
             [self.axisRenderer addObject:[[GraphAxisRenderer alloc] initWithAxis:bottomAxis]];
@@ -118,6 +116,8 @@
             GraphChartAxis *leftAxis = [[GraphChartAxis alloc] initWithOrientation:GraphChartAxisOrientationVertical andPosition:GraphChartAxisPositionLeft];
             [leftAxis calculateWithGraphData:graphData];
             [self.axisRenderer addObject:[[GraphAxisRenderer alloc] initWithAxis:leftAxis]];
+            
+            [self.graphRenderer addObject:[[GraphChartLineRenderer alloc] initWithGraphData:graphData andXAxis:bottomAxis andYAxis:leftAxis]];
         }
             break;
         case GraphTypeBar:

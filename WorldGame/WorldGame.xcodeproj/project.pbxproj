@@ -646,6 +646,7 @@
 		1AEF61341D159EB500253DD6 /* SelectMapTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C22B41C9B40A3007F324C /* SelectMapTypeTableViewController.m */; };
 		1AEF61351D159EB600253DD6 /* SelectMapTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C22B41C9B40A3007F324C /* SelectMapTypeTableViewController.m */; };
 		1AEF61371D159F8600253DD6 /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1A2EA3A51C8B8C3900633417 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AF035831D99C9A900CFFD45 /* GraphRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF035821D99C9A900CFFD45 /* GraphRenderer.m */; };
 		1AFAF3A81D212C0500165808 /* BaseUITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF3A71D212C0500165808 /* BaseUITestCase.swift */; };
 		1AFCE1881D6D68F00029A990 /* SimulationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */; };
 		1AFCE1891D6D68F00029A990 /* SimulationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */; };
@@ -1075,6 +1076,8 @@
 		1AEE80F11C7C5FB40028ACFF /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Unit.m; path = Game/Unit.m; sourceTree = "<group>"; };
 		1AEF61221D14168400253DD6 /* Hoplites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hoplites.png; path = Resources/Units/Hoplites.png; sourceTree = "<group>"; };
 		1AEF61231D14168400253DD6 /* Hoplites.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Hoplites.xml; path = Resources/Units/Hoplites.xml; sourceTree = "<group>"; };
+		1AF035811D99C9A900CFFD45 /* GraphRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphRenderer.h; path = Views/Chart/GraphRenderer.h; sourceTree = "<group>"; };
+		1AF035821D99C9A900CFFD45 /* GraphRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphRenderer.m; path = Views/Chart/GraphRenderer.m; sourceTree = "<group>"; };
 		1AFAF3A71D212C0500165808 /* BaseUITestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITestCase.swift; sourceTree = "<group>"; };
 		1AFCE1861D6D68F00029A990 /* SimulationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimulationTableViewController.h; path = Presentation/SimulationTableViewController.h; sourceTree = "<group>"; };
 		1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimulationTableViewController.m; path = Presentation/SimulationTableViewController.m; sourceTree = "<group>"; };
@@ -1705,6 +1708,8 @@
 				1AC4FECA1D952BFF00E4DD59 /* GraphChartAxis.m */,
 				1AC4FECE1D952DCA00E4DD59 /* GraphAxisRenderer.h */,
 				1AC4FECF1D952DCA00E4DD59 /* GraphAxisRenderer.m */,
+				1AF035811D99C9A900CFFD45 /* GraphRenderer.h */,
+				1AF035821D99C9A900CFFD45 /* GraphRenderer.m */,
 			);
 			name = Chart;
 			sourceTree = "<group>";
@@ -1889,7 +1894,7 @@
 					New,
 				);
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Michael Rommel";
 				TargetAttributes = {
 					1A57E77B1C71C3F200B3890E = {
@@ -1901,6 +1906,7 @@
 					};
 					1A57E7A51C71C3F200B3890E = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 1A57E77B1C71C3F200B3890E;
 					};
 				};
@@ -2488,6 +2494,7 @@
 				1A613F6A1D2606E60052A551 /* GLPlane.m in Sources */,
 				1A613FF71D2607260052A551 /* RESpriteBatchNode.m in Sources */,
 				1A613F841D2607020052A551 /* Transformations.m in Sources */,
+				1AF035831D99C9A900CFFD45 /* GraphRenderer.m in Sources */,
 				1A2EA3DD1C90702800633417 /* BitArray.m in Sources */,
 				1A6140001D2607260052A551 /* REWavefrontMesh.m in Sources */,
 				1A3C3A321C84EA8C004009DA /* OverlayView.m in Sources */,
@@ -2774,8 +2781,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2818,8 +2827,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2838,6 +2849,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2929,7 +2941,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13837E7261C4C2C87AFEF7CE /* Pods-WorldGameUITests.debug.xcconfig */;
 			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
@@ -2939,6 +2951,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.AITestUITests;
 				PRODUCT_NAME = WorldGame;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = WorldGame;
 				USES_XCTRUNNER = YES;
 			};
@@ -2948,7 +2961,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F1D7BC5C37EBB0E902E8BB35 /* Pods-WorldGameUITests.release.xcconfig */;
 			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
@@ -2958,6 +2971,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.AITestUITests;
 				PRODUCT_NAME = WorldGame;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = WorldGame;
 				USES_XCTRUNNER = YES;
 			};

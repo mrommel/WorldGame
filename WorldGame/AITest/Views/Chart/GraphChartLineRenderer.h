@@ -8,14 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+#import "GraphRenderer.h"
 #import "GraphChartRenderer.h"
 #import "GraphData.h"
+#import "GraphChartAxis.h"
+#import <UIKit/UIKit.h>
 
-@interface GraphChartLineRenderer : NSObject<GraphChartRenderer>
+@interface GraphChartLineRenderer : GraphRenderer<GraphChartRenderer>
 
 @property (nonatomic) GraphData *data;
+@property (nonatomic) UIColor *backgroundColor;
 
-- (instancetype)initWithGraphData:(GraphData *)data;
+- (instancetype)initWithGraphData:(GraphData *)data andXAxis:(GraphChartAxis *)xaxis andYAxis:(GraphChartAxis *)yaxis;
 
 - (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect;
 

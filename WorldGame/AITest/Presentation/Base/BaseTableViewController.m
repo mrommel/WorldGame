@@ -356,6 +356,7 @@
             
             ChartView *chartView = [[ChartView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 200) andTitle:@"def"];
             chartView.backgroundColor = [UIColor whiteColor];
+            chartView.backgroundRenderer.backgroundImage = [UIImage imageNamed:@"graph-backgrounds-15.jpg"];
             
             GraphData *data = [[GraphData alloc] initWithLabel:@"abc"];
             [data addValue:[NSNumber numberWithFloat:0.5f] atIndex:0];

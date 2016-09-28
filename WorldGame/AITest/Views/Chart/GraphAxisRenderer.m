@@ -68,15 +68,21 @@
             NSString *formatString = [NSString stringWithFormat:@"%%.%if", (power < 0) ? -power : 0];
             
             for (NSUInteger i = 0; i < tickCount; i++) {
+                int dx = (int) (div_width * i);
+                
                 if (i % self.intervals == 0 || self.intervals == 1) {
-                    int dx = (int) (div_width * i);
+                    
+                    [self drawContext:ctx withLine:[[Line alloc] initWithOriginX:rect.origin.x + dx andOriginY:rect.origin.y + BU_HALF andDestinationX:rect.origin.x + dx andDestinationY:rect.origin.y + BU_HALF + 5] andColor:[UIColor grayColor]];
+                    
                     float x_axis = self.axis.startValue + i * self.axis.intervalValue;
 
                     NSString *x_label = [NSString stringWithFormat:formatString, x_axis];
                     CGRect textFrame = CGRectMake(rect.origin.x + dx - 100, rect.origin.y + rect.size.height - x_label_height, 200, x_label_height);
                     
                     [self drawString:x_label withFont:[UIFont systemFontOfSize:10] andColor:[UIColor blackColor] inRect:textFrame];
-                };
+                } else {
+                    [self drawContext:ctx withLine:[[Line alloc] initWithOriginX:rect.origin.x + dx andOriginY:rect.origin.y + BU_HALF andDestinationX:rect.origin.x + dx andDestinationY:rect.origin.y + BU_HALF + 2] andColor:[UIColor grayColor]];
+                }
             }
         }
             break;

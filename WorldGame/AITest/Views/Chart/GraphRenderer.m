@@ -8,6 +8,34 @@
 
 #import "GraphRenderer.h"
 
+@implementation Line
+
+- (instancetype)initWithOrigin:(CGPoint)origin andDestination:(CGPoint)destination
+{
+    self = [super init];
+    
+    if (self) {
+        self.origin = origin;
+        self.destination = destination;
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithOriginX:(CGFloat)originX andOriginY:(CGFloat)originY andDestinationX:(CGFloat)destinationX andDestinationY:(CGFloat)destinationY
+{
+    self = [super init];
+    
+    if (self) {
+        self.origin = CGPointMake(originX, originY);
+        self.destination = CGPointMake(destinationX, destinationY);
+    }
+    
+    return self;
+}
+
+@end
+
 @implementation GraphRenderer
 
 - (void)drawString:(NSString *)string
@@ -41,6 +69,19 @@
 {
     [fillColor set];
     CGContextFillRect(ctx, rect);
+}
+
+- (void)drawContext:(CGContextRef)ctx withLine:(Line *)line andColor:(UIColor *)color
+{
+    CGPathRef pathLine = CGPathCreateMutable();
+    
+    CGContextMoveToPoint(ctx, line.origin.x, line.origin.y);
+    CGContextAddLineToPoint(ctx, line.destination.x, line.destination.y);
+    
+    CGContextAddPath(ctx, pathLine);
+    CGContextDrawPath(ctx, kCGPathStroke);
+    
+    CGPathRelease(pathLine);
 }
 
 @end

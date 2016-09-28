@@ -8,6 +8,7 @@
 
 #import "GraphData.h"
 #import "GraphDataEntry.h"
+#import "GraphBackgroundRenderer.h"
 
 /*!
  * color schemes
@@ -33,6 +34,8 @@ nil]
  *
  */
 @interface ChartView : UIView
+
+@property (nonatomic) GraphBackgroundRenderer *backgroundRenderer;
 
 - (instancetype)initWithFrame:(CGRect)frame andTitle:(NSString *)title;
 

@@ -13,6 +13,7 @@
 #import "GraphChartRenderer.h"
 #import "GraphAxisRenderer.h"
 #import "GraphChartLineRenderer.h"
+#import "GraphBackgroundRenderer.h"
 
 @interface ChartView()
 
@@ -24,6 +25,9 @@
 
 @property (nonatomic) NSMutableArray *axes;
 @property (nonatomic) NSMutableArray *axisRenderer;
+
+@property (atomic) NSInteger hundretMillisecondsToGo;
+@property (nonatomic) NSTimer *animationTimer;
 
 @end
 
@@ -37,15 +41,58 @@
         self.title = title;
         self.titleRenderer = [[GraphTitleRenderer alloc] initWithTitle:title];
         
+        self.backgroundRenderer = [[GraphBackgroundRenderer alloc] init];
+        
         self.graphs = [[NSMutableArray alloc] init];
         self.graphRenderer = [[NSMutableArray alloc] init];
         
         self.axes = [[NSMutableArray alloc] init];
         self.axisRenderer = [[NSMutableArray alloc] init];
+        
+        self.hundretMillisecondsToGo = 20; // 2 seconds
+        [self startTimer];
     }
     
     return self;
 }
+
+#pragma mark -
+#pragma mark animations
+
+-(void)startTimer
+{
+    self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimer) userInfo:nil repeats:NO];
+}
+
+-(void)updateTimer
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if(self.hundretMillisecondsToGo <= 0) {
+            self.hundretMillisecondsToGo = 0;
+            //[self setTimerText: @""];
+            
+            if(self.animationTimer) {
+                [self.animationTimer invalidate];
+                self.animationTimer = nil;
+            }
+        } else {
+            self.hundretMillisecondsToGo--;
+            //[self setTimerText: [NSString formatTimeDistance: self.secondsToGo]];
+            NSLog(@"tick: %ld00ms", (long)self.hundretMillisecondsToGo);
+            
+            if(self.animationTimer) {
+                [self.animationTimer invalidate];
+                self.animationTimer = nil;
+            }
+            
+            // start timer
+            [self startTimer];
+        }
+    });
+}
+
+#pragma mark -
+#pragma mark renderings
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -82,6 +129,8 @@
     
     [self.titleRenderer drawWithContext:ctx andCanvasRect:titleRect];
     
+    [self.backgroundRenderer drawWithContext:ctx andCanvasRect:canvasRect];
+    
     for (id<GraphChartRenderer> renderer in self.graphRenderer) {
         [renderer drawWithContext:ctx andCanvasRect:canvasRect];
     }
@@ -98,7 +147,6 @@
                 [renderer drawWithContext:ctx andCanvasRect:axisBottomRect];
                 break;
         }
-        
     }
 }
 

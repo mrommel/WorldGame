@@ -79,32 +79,33 @@
     };
     
     self.dataSource = [[TableViewContentDataSource alloc] init];
-    [self.dataSource setTitle:@"deff" forHeaderInSection:0];
+    
+    [self.dataSource setTitle:@"Graphs" forHeaderInSection:0];
+    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Graph"
+                                                            andSubtitle:@""
+                                                               andStyle:ContentStyleGraph
+                                                              andAction:nil]
+                      inSection:0];
+    
+    [self.dataSource setTitle:@"deff" forHeaderInSection:1];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"is river"
                                                             andSubtitle:@""
                                                                andStyle:ContentStyleSwitch
                                                               andAction:toggleIsRiverBlock]
-                      inSection:0];
+                      inSection:1];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:[NSString stringWithFormat:@"Turn %ld", (long)self.currentTurn]
                                                             andSubtitle:@""
                                                                andStyle:ContentStyleNormal
                                                               andAction:nil]
-                      inSection:0];
+                      inSection:1];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:[NSString stringWithFormat:@"Hunters %ld", (long)self.people.hunters]
                                                             andSubtitle:@""
                                                                andStyle:ContentStyleNormal
                                                               andAction:nil]
-                      inSection:0];
+                      inSection:1];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:[NSString stringWithFormat:@"Peasants %ld", (long)self.people.peasants]
                                                             andSubtitle:@""
                                                                andStyle:ContentStyleNormal
-                                                              andAction:nil]
-                      inSection:0];
-    
-    [self.dataSource setTitle:@"Graphs" forHeaderInSection:1];
-    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Graph"
-                                                            andSubtitle:@""
-                                                               andStyle:ContentStyleGraph
                                                               andAction:nil]
                       inSection:1];
 }
@@ -143,7 +144,7 @@
 {
     [super viewDidAppear:animated];
     
-    [self.tableView reloadData];
+    //[self.tableView reloadData];
 }
 
 @end

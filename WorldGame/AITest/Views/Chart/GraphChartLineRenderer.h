@@ -17,7 +17,7 @@
 @interface GraphChartLineRenderer : GraphRenderer<GraphChartRenderer>
 
 @property (nonatomic) GraphData *data;
-@property (nonatomic) UIColor *backgroundColor;
+@property (atomic) CGFloat scale;
 
 - (instancetype)initWithGraphData:(GraphData *)data andXAxis:(GraphChartAxis *)xaxis andYAxis:(GraphChartAxis *)yaxis;
 

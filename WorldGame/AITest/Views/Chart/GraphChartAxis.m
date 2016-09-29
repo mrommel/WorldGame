@@ -34,24 +34,30 @@
 
 - (void)calculateWithGraphData:(GraphData *)data
 {
-    CGFloat minimumValue = CGFLOAT_MAX;
-    CGFloat maximumValue = CGFLOAT_MIN;
-    
-    for (GraphDataEntry *entry in data.values) {
-        maximumValue = MAX(maximumValue, [entry.value floatValue]);
-        minimumValue = MIN(minimumValue, [entry.value floatValue]);
-    }
-    
-    CGFloat width = maximumValue - minimumValue;
-    if (width == 0.0) {
-        self.intervalValue = 0;
-        self.startValue = minimumValue;
-        self.endValue = maximumValue;
+    if (self.orientation == GraphChartAxisOrientationVertical) {
+        CGFloat minimumValue = CGFLOAT_MAX;
+        CGFloat maximumValue = CGFLOAT_MIN;
+        
+        for (GraphDataEntry *entry in data.values) {
+            maximumValue = MAX(maximumValue, [entry.value floatValue]);
+            minimumValue = MIN(minimumValue, [entry.value floatValue]);
+        }
+        
+        CGFloat width = maximumValue - minimumValue;
+        if (width == 0.0) {
+            self.intervalValue = 0;
+            self.startValue = minimumValue;
+            self.endValue = maximumValue;
+        } else {
+            CGFloat niceRange = [self calculateNiceNumberFromValue:width];
+            self.intervalValue = [self calculateNiceNumberFromValue:(niceRange / (self.numberOfTicks - 1)) andRound:YES];
+            self.startValue = floor(minimumValue / niceRange) * niceRange;
+            self.endValue = ceil(maximumValue / niceRange) * niceRange;
+        }
     } else {
-        CGFloat niceRange = [self calculateNiceNumberFromValue:width];
-        self.intervalValue = [self calculateNiceNumberFromValue:(niceRange / (self.numberOfTicks - 1)) andRound:YES];
-        self.startValue = floor(minimumValue / niceRange) * niceRange;
-        self.endValue = ceil(maximumValue / niceRange) * niceRange;
+        self.intervalValue = 1;
+        self.startValue = 0;
+        self.endValue = [data.values count];
     }
 }
 

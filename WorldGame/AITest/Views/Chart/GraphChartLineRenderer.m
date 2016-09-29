@@ -10,6 +10,8 @@
 
 #import "GraphDataEntry.h"
 
+#define SQR(x) ((x) * (x))
+
 @interface GraphChartLineRenderer()
 
 @property (nonatomic) GraphChartAxis *xAxis;
@@ -57,7 +59,7 @@
      
     for (int i = 1; i < self.data.values.count; i++) {
         dataEntry = [self.data.values objectAtIndex:i];
-        x = [self.xAxis scaleValue:i] / (self.data.values.count - 1);
+        x = [self.xAxis scaleValue:i];
         y = [self.yAxis scaleValue:[dataEntry.value floatValue]] * self._animationProgress;
  
         CGPathAddLineToPoint(unsmoothedPath, NULL, rect.origin.x + x * graphWidth, rect.origin.y + (1.0 - y ) * graphHeight);
@@ -82,9 +84,11 @@
     for (int rx = 0; rx < graphWidth; rx++) {
         x = rx;
         
-        int idx0 = rx / graphWidth;
-        int idx1 = idx0 + 1;
-        CGFloat ratio = 0.5;
+        int idx0 = ((CGFloat)rx / graphWidth) * [self.data.values count];
+        int idx1 = MIN(idx0 + 1, (int)[self.data.values count] - 1);
+        
+        CGFloat ratio = 1.0 - SQR(( ((CGFloat)rx / graphWidth) - ((CGFloat)idx0 / [self.data.values count]) ) * (CGFloat)[self.data.values count]);
+        NSLog(@"%d => %d / %.2f", idx0, idx1, ratio);
         GraphDataEntry *dataEntry1 = [self.data.values objectAtIndex:idx0];
         GraphDataEntry *dataEntry2 = [self.data.values objectAtIndex:idx1];
         CGFloat mixedValue = [self.yAxis scaleValue:[dataEntry1.value floatValue]] * ratio + [self.yAxis scaleValue:[dataEntry2.value floatValue]] * (1.0  - ratio);

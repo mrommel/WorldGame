@@ -13,9 +13,9 @@
 
 @protocol GraphChartRenderer
 
-@property (atomic) CGFloat scale;
-
 - (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect;
+
+- (void)setAnimationProgress:(CGFloat)animationProgress;
 
 @end
 

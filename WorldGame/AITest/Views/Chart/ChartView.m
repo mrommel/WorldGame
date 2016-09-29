@@ -27,6 +27,7 @@
 @property (nonatomic) NSMutableArray *axisRenderer;
 
 @property (atomic) NSInteger hundretMillisecondsToGo;
+@property (atomic) NSInteger hundretMillisecondsTotal;
 @property (nonatomic) NSTimer *animationTimer;
 
 @end
@@ -49,6 +50,7 @@
         self.axes = [[NSMutableArray alloc] init];
         self.axisRenderer = [[NSMutableArray alloc] init];
         
+        self.hundretMillisecondsTotal = 20; // 2 seconds
         self.hundretMillisecondsToGo = 20; // 2 seconds
         [self startTimer];
     }
@@ -69,7 +71,8 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         if(self.hundretMillisecondsToGo <= 0) {
             self.hundretMillisecondsToGo = 0;
-            //[self setTimerText: @""];
+            
+            [self updateAnimationWithProgress:1.0];
             
             if(self.animationTimer) {
                 [self.animationTimer invalidate];
@@ -79,6 +82,10 @@
             self.hundretMillisecondsToGo--;
             //[self setTimerText: [NSString formatTimeDistance: self.secondsToGo]];
             NSLog(@"tick: %ld00ms", (long)self.hundretMillisecondsToGo);
+            
+            CGFloat animationProgress = 1.0f - (CGFloat)self.hundretMillisecondsToGo / (CGFloat)self.hundretMillisecondsTotal;;
+            
+            [self updateAnimationWithProgress:animationProgress];
             
             if(self.animationTimer) {
                 [self.animationTimer invalidate];
@@ -91,6 +98,14 @@
     });
 }
 
+- (void)updateAnimationWithProgress:(CGFloat)animationProgress
+{
+    for (id<GraphChartRenderer> renderer in self.graphRenderer) {
+        [renderer setAnimationProgress:animationProgress];
+    }
+    [self setNeedsDisplay];
+}
+
 #pragma mark -
 #pragma mark renderings
 
@@ -100,6 +115,8 @@
  */
 - (void)drawRect:(CGRect)rect
 {
+    NSLog(@"draw graph");
+    
     // Drawing code
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     

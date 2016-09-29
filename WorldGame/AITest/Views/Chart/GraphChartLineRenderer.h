@@ -17,10 +17,11 @@
 @interface GraphChartLineRenderer : GraphRenderer<GraphChartRenderer>
 
 @property (nonatomic) GraphData *data;
-@property (atomic) CGFloat scale;
 
 - (instancetype)initWithGraphData:(GraphData *)data andXAxis:(GraphChartAxis *)xaxis andYAxis:(GraphChartAxis *)yaxis;
 
 - (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect;
+
+- (void)setAnimationProgress:(CGFloat)animationProgress;
 
 @end

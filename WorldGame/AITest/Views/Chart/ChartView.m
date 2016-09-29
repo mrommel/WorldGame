@@ -50,8 +50,8 @@
         self.axes = [[NSMutableArray alloc] init];
         self.axisRenderer = [[NSMutableArray alloc] init];
         
-        self.hundretMillisecondsTotal = 20; // 2 seconds
-        self.hundretMillisecondsToGo = 20; // 2 seconds
+        self.hundretMillisecondsTotal = 10; // 1 seconds
+        self.hundretMillisecondsToGo = 10; // 1 seconds
         [self startTimer];
     }
     
@@ -80,9 +80,7 @@
             }
         } else {
             self.hundretMillisecondsToGo--;
-            //[self setTimerText: [NSString formatTimeDistance: self.secondsToGo]];
-            NSLog(@"tick: %ld00ms", (long)self.hundretMillisecondsToGo);
-            
+
             CGFloat animationProgress = 1.0f - (CGFloat)self.hundretMillisecondsToGo / (CGFloat)self.hundretMillisecondsTotal;;
             
             [self updateAnimationWithProgress:animationProgress];
@@ -92,7 +90,7 @@
                 self.animationTimer = nil;
             }
             
-            // start timer
+            // re-start timer
             [self startTimer];
         }
     });

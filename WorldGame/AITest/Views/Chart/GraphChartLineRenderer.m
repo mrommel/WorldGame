@@ -29,6 +29,8 @@
         self.xAxis = xAxis;
         self.yAxis = yAxis;
         self._animationProgress = 1.0;
+        self.lineColor = [UIColor whiteColor];
+        self.smoothing = GraphChartLineSmoothingDefault;
     }
     
     return self;
@@ -41,8 +43,8 @@
 
 - (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect
 {
-    // line
-    CGMutablePathRef path = CGPathCreateMutable();
+    // unsmoothed line
+    CGMutablePathRef unsmoothedPath = CGPathCreateMutable();
      
     CGFloat graphWidth = rect.size.width;
     CGFloat graphHeight = rect.size.height;
@@ -50,24 +52,51 @@
     GraphDataEntry *dataEntry = [self.data.values objectAtIndex:0];
     CGFloat x = [self.xAxis scaleValue:0];
     CGFloat y = [self.yAxis scaleValue:[dataEntry.value floatValue]] * self._animationProgress;
-    //NSLog(@"f(%.2f) = %.2f  ==> (%.2f, %.2f)", 0.0, [dataEntry.value floatValue], x, y);
-    
-    CGPathMoveToPoint(path, nil, rect.origin.x + x * graphWidth, rect.origin.y + (1.0 - y ) * graphHeight);
+
+    CGPathMoveToPoint(unsmoothedPath, nil, rect.origin.x + x * graphWidth, rect.origin.y + (1.0 - y ) * graphHeight);
      
     for (int i = 1; i < self.data.values.count; i++) {
         dataEntry = [self.data.values objectAtIndex:i];
         x = [self.xAxis scaleValue:i] / (self.data.values.count - 1);
         y = [self.yAxis scaleValue:[dataEntry.value floatValue]] * self._animationProgress;
-        //NSLog(@"f(%.2f) = %.2f  ==> (%.2f, %.2f)", (CGFloat)i, [dataEntry.value floatValue], x, y);
-         
-        CGPathAddLineToPoint(path, NULL, rect.origin.x + x * graphWidth, rect.origin.y + (1.0 - y ) * graphHeight);
+ 
+        CGPathAddLineToPoint(unsmoothedPath, NULL, rect.origin.x + x * graphWidth, rect.origin.y + (1.0 - y ) * graphHeight);
     }
      
-    CGContextAddPath(ctx, path);
-    CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
+    CGContextAddPath(ctx, unsmoothedPath);
+    CGContextSetStrokeColorWithColor(ctx, self.lineColor.CGColor);
     CGContextStrokePath(ctx);
      
-    CGPathRelease(path);
+    CGPathRelease(unsmoothedPath);
+    
+    // smoothed line
+    CGMutablePathRef smoothedPath = CGPathCreateMutable();
+    
+    dataEntry = [self.data.values objectAtIndex:0];
+    x = [self.xAxis scaleValue:0];
+    y = [self.yAxis scaleValue:[dataEntry.value floatValue]] * self._animationProgress;
+    
+    CGPathMoveToPoint(smoothedPath, nil, rect.origin.x + x * graphWidth, rect.origin.y + (1.0 - y ) * graphHeight);
+    
+    // iterate for each x pixel
+    for (int rx = 0; rx < graphWidth; rx++) {
+        x = rx;
+        
+        int idx0 = rx / graphWidth;
+        int idx1 = idx0 + 1;
+        CGFloat ratio = 0.5;
+        GraphDataEntry *dataEntry1 = [self.data.values objectAtIndex:idx0];
+        GraphDataEntry *dataEntry2 = [self.data.values objectAtIndex:idx1];
+        CGFloat mixedValue = [self.yAxis scaleValue:[dataEntry1.value floatValue]] * ratio + [self.yAxis scaleValue:[dataEntry2.value floatValue]] * (1.0  - ratio);
+        y = mixedValue * self._animationProgress;
+        CGPathAddLineToPoint(smoothedPath, NULL, rect.origin.x + x, rect.origin.y + (1.0 - y ) * graphHeight);
+    }
+    
+    CGContextAddPath(ctx, smoothedPath);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor greenColor].CGColor);
+    CGContextStrokePath(ctx);
+    
+    CGPathRelease(smoothedPath);
 }
 
 @end

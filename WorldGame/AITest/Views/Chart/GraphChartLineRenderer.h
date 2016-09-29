@@ -14,9 +14,20 @@
 #import "GraphChartAxis.h"
 #import <UIKit/UIKit.h>
 
+/*!
+ *
+ */
+typedef NS_ENUM(NSInteger, GraphChartLineSmoothing) {
+    GraphChartLineSmoothingDefault = 0,
+    GraphChartLineSmoothingNone = 0,
+    GraphChartLineSmoothingAppealling = 1
+};
+
 @interface GraphChartLineRenderer : GraphRenderer<GraphChartRenderer>
 
 @property (nonatomic) GraphData *data;
+@property (nonatomic) UIColor *lineColor;
+@property (atomic) GraphChartLineSmoothing smoothing;
 
 - (instancetype)initWithGraphData:(GraphData *)data andXAxis:(GraphChartAxis *)xaxis andYAxis:(GraphChartAxis *)yaxis;
 

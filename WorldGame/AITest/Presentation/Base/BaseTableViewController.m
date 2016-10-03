@@ -31,6 +31,7 @@
         self.subtitle = subtitle;
         self.style = ContentStyleNormal;
         self.action = action;
+        self.graphData = nil;
     }
     
     return self;
@@ -46,6 +47,7 @@
         self.style = ContentStyleNormal;
         self.image = image;
         self.action = action;
+        self.graphData = nil;
     }
     
     return self;
@@ -60,6 +62,22 @@
         self.subtitle = subtitle;
         self.style = style;
         self.action = action;
+        self.graphData = nil;
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title andGraphData:(GraphDataBlock)graphDataBlock
+{
+    self = [super init];
+    
+    if (self) {
+        self.title = title;
+        self.subtitle = @"";
+        self.style = ContentStyleGraph;
+        self.action = nil;
+        self.graphData = graphDataBlock;
     }
     
     return self;
@@ -354,15 +372,11 @@
         case ContentStyleGraph: {
             cellBackView.image = [UIImage imageNamed:@"menu-item-normal.png"];
             
-            ChartView *chartView = [[ChartView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 200) andTitle:@"def"];
+            ChartView *chartView = [[ChartView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 200) andTitle:content.title];
             chartView.backgroundColor = [UIColor whiteColor];
             chartView.backgroundRenderer.backgroundImage = [UIImage imageNamed:@"graph-backgrounds-15.jpg"];
             
-            GraphData *data = [[GraphData alloc] initWithLabel:@"abc"];
-            [data addValue:[NSNumber numberWithFloat:0.5f] atIndex:0];
-            [data addValue:[NSNumber numberWithFloat:0.4f] atIndex:1];
-            [data addValue:[NSNumber numberWithFloat:0.6f] atIndex:2];
-            [data addValue:[NSNumber numberWithFloat:0.2f] atIndex:3];
+            GraphData *data = content.graphData(indexPath);
             
             [chartView addGraphData:data];
             

@@ -71,6 +71,7 @@
      
     CGPathRelease(unsmoothedPath);
     
+    // -----------------------------------
     // smoothed line
     CGMutablePathRef smoothedPath = CGPathCreateMutable();
     
@@ -84,16 +85,17 @@
     for (int rx = 0; rx < graphWidth; rx++) {
         x = rx;
         
-        int idx0 = ((CGFloat)rx / graphWidth) * [self.data.values count];
+        int idx0 = ((CGFloat)rx / graphWidth) * ([self.data.values count] - 1);
         int idx1 = MIN(idx0 + 1, (int)[self.data.values count] - 1);
         
-        CGFloat ratio = 1.0 - SQR(( ((CGFloat)rx / graphWidth) - ((CGFloat)idx0 / [self.data.values count]) ) * (CGFloat)[self.data.values count]);
+        //CGFloat ratio = 1.0 - ( ((CGFloat)rx / graphWidth) - ((CGFloat)idx0 / ([self.data.values count] - 1)) ) * (CGFloat)[self.data.values count];
+        CGFloat ratio = 1.0 - SQR( ( ((CGFloat)rx / graphWidth) - ((CGFloat)idx0 / ([self.data.values count] - 1)) ) * ((CGFloat)[self.data.values count] - 1));
         NSLog(@"%d => %d / %.2f", idx0, idx1, ratio);
         GraphDataEntry *dataEntry1 = [self.data.values objectAtIndex:idx0];
         GraphDataEntry *dataEntry2 = [self.data.values objectAtIndex:idx1];
         CGFloat mixedValue = [self.yAxis scaleValue:[dataEntry1.value floatValue]] * ratio + [self.yAxis scaleValue:[dataEntry2.value floatValue]] * (1.0  - ratio);
         y = mixedValue * self._animationProgress;
-        CGPathAddLineToPoint(smoothedPath, NULL, rect.origin.x + x, rect.origin.y + (1.0 - y ) * graphHeight);
+        CGPathAddLineToPoint(smoothedPath, NULL, rect.origin.x + x, rect.origin.y + (1.0 - y) * graphHeight);
     }
     
     CGContextAddPath(ctx, smoothedPath);

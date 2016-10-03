@@ -57,7 +57,7 @@
     } else {
         self.intervalValue = 1;
         self.startValue = 0;
-        self.endValue = [data.values count];
+        self.endValue = [data.values count] - 1;
     }
 }
 

@@ -9,6 +9,7 @@
 #import "SimulationTableViewController.h"
 
 #import "UIConstants.h"
+#import "GraphData.h"
 
 @interface PeopleDistribution : NSObject
 
@@ -80,12 +81,24 @@
     
     self.dataSource = [[TableViewContentDataSource alloc] init];
     
+    GraphDataBlock graphDataBlock = ^(NSIndexPath *path) {
+        GraphData *data = [[GraphData alloc] initWithLabel:@"abc"];
+        [data addValue:[NSNumber numberWithFloat:0.5f] atIndex:0];
+        [data addValue:[NSNumber numberWithFloat:0.4f] atIndex:1];
+        [data addValue:[NSNumber numberWithFloat:0.6f] atIndex:2];
+        [data addValue:[NSNumber numberWithFloat:0.2f] atIndex:3];
+        [data addValue:[NSNumber numberWithFloat:0.2f] atIndex:4];
+        [data addValue:[NSNumber numberWithFloat:0.8f] atIndex:5];
+        [data addValue:[NSNumber numberWithFloat:1.2f] atIndex:6];
+        [data addValue:[NSNumber numberWithFloat:0.5f] atIndex:7];
+        return data;
+    };
+    
     [self.dataSource setTitle:@"Graphs" forHeaderInSection:0];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Graph"
-                                                            andSubtitle:@""
-                                                               andStyle:ContentStyleGraph
-                                                              andAction:nil]
+                                                           andGraphData:graphDataBlock]
                       inSection:0];
+    
     
     [self.dataSource setTitle:@"deff" forHeaderInSection:1];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"is river"

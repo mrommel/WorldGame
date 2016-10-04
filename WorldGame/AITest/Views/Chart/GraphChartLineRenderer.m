@@ -10,7 +10,7 @@
 
 #import "GraphDataEntry.h"
 
-#define SQR(x) ((x) * (x))
+static CGFloat const kLineSmoothness = 0.1f;
 
 @interface GraphChartLineRenderer()
 
@@ -45,57 +45,89 @@
 
 - (void)drawWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect
 {
-    // unsmoothed line
+    if (self.smoothing == GraphChartLineSmoothingDefault ||
+        self.smoothing == GraphChartLineSmoothingNone) {
+        // unsmoothed line
+        [self drawUnsmoothedWithContext:ctx andCanvasRect:rect];
+    } else if (self.smoothing == GraphChartLineSmoothingAppealling) {
+        // smoothed line
+        [self drawSmoothedWithContext:ctx andCanvasRect:rect];
+    }
+}
+
+- (void)drawUnsmoothedWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect
+{
     CGMutablePathRef unsmoothedPath = CGPathCreateMutable();
-     
+    
     CGFloat graphWidth = rect.size.width;
     CGFloat graphHeight = rect.size.height;
     
     GraphDataEntry *dataEntry = [self.data.values objectAtIndex:0];
     CGFloat x = [self.xAxis scaleValue:0];
     CGFloat y = [self.yAxis scaleValue:[dataEntry.value floatValue]] * self._animationProgress;
-
+    
     CGPathMoveToPoint(unsmoothedPath, nil, rect.origin.x + x * graphWidth, rect.origin.y + (1.0 - y ) * graphHeight);
-     
+    
     for (int i = 1; i < self.data.values.count; i++) {
         dataEntry = [self.data.values objectAtIndex:i];
         x = [self.xAxis scaleValue:i];
         y = [self.yAxis scaleValue:[dataEntry.value floatValue]] * self._animationProgress;
- 
+        
         CGPathAddLineToPoint(unsmoothedPath, NULL, rect.origin.x + x * graphWidth, rect.origin.y + (1.0 - y ) * graphHeight);
     }
-     
+    
     CGContextAddPath(ctx, unsmoothedPath);
     CGContextSetStrokeColorWithColor(ctx, self.lineColor.CGColor);
     CGContextStrokePath(ctx);
-     
-    CGPathRelease(unsmoothedPath);
     
-    // -----------------------------------
-    // smoothed line
+    CGPathRelease(unsmoothedPath);
+}
+
+- (void)drawSmoothedWithContext:(CGContextRef)ctx andCanvasRect:(CGRect)rect
+{
     CGMutablePathRef smoothedPath = CGPathCreateMutable();
     
-    dataEntry = [self.data.values objectAtIndex:0];
-    x = [self.xAxis scaleValue:0];
-    y = [self.yAxis scaleValue:[dataEntry.value floatValue]] * self._animationProgress;
+    CGFloat graphWidth = rect.size.width;
+    CGFloat graphHeight = rect.size.height;
     
-    CGPathMoveToPoint(smoothedPath, nil, rect.origin.x + x * graphWidth, rect.origin.y + (1.0 - y ) * graphHeight);
+    CGPathMoveToPoint(smoothedPath, nil, rect.origin.x, rect.origin.y + graphHeight);
     
-    // iterate for each x pixel
-    for (int rx = 0; rx < graphWidth; rx++) {
-        x = rx;
+    GraphDataEntry *dataEntry = [self.data.values firstObject];
+    
+    CGPoint prePreviousPoint = CGPointMake([self.xAxis scaleValue:0], [self.yAxis scaleValue:[dataEntry.value floatValue]] * self._animationProgress);
+    CGPoint previousPoint = CGPointMake([self.xAxis scaleValue:0], [self.yAxis scaleValue:[dataEntry.value floatValue]] * self._animationProgress);
+    CGPoint currentPoint = CGPointMake([self.xAxis scaleValue:0], [self.yAxis scaleValue:[dataEntry.value floatValue]] * self._animationProgress);
+    CGPoint nextPoint = CGPointZero;
+    
+    for (int i = 1; i < self.data.values.count; i++) {
+        // limit
+        if (i < self.data.values.count - 1) {
+            // get next value
+            dataEntry = [self.data.values objectAtIndex:i + 1];
+            nextPoint = CGPointMake([self.xAxis scaleValue:i + 1], [self.yAxis scaleValue:[dataEntry.value floatValue]] * self._animationProgress);
+        } else {
+            nextPoint = currentPoint;
+        }
         
-        int idx0 = ((CGFloat)rx / graphWidth) * ([self.data.values count] - 1);
-        int idx1 = MIN(idx0 + 1, (int)[self.data.values count] - 1);
+        // Calculate control points.
+        CGFloat firstDiffX = (currentPoint.x - prePreviousPoint.x);
+        CGFloat firstDiffY = (currentPoint.y - prePreviousPoint.y);
+        CGFloat secondDiffX = (nextPoint.x - previousPoint.x);
+        CGFloat secondDiffY = (nextPoint.y - previousPoint.y);
+        CGFloat firstControlPointX = previousPoint.x + (kLineSmoothness * firstDiffX);
+        CGFloat firstControlPointY = previousPoint.y + (kLineSmoothness * firstDiffY);
+        CGFloat secondControlPointX = currentPoint.x - (kLineSmoothness * secondDiffX);
+        CGFloat secondControlPointY = currentPoint.y - (kLineSmoothness * secondDiffY);
         
-        //CGFloat ratio = 1.0 - ( ((CGFloat)rx / graphWidth) - ((CGFloat)idx0 / ([self.data.values count] - 1)) ) * (CGFloat)[self.data.values count];
-        CGFloat ratio = 1.0 - SQR( ( ((CGFloat)rx / graphWidth) - ((CGFloat)idx0 / ([self.data.values count] - 1)) ) * ((CGFloat)[self.data.values count] - 1));
-        NSLog(@"%d => %d / %.2f", idx0, idx1, ratio);
-        GraphDataEntry *dataEntry1 = [self.data.values objectAtIndex:idx0];
-        GraphDataEntry *dataEntry2 = [self.data.values objectAtIndex:idx1];
-        CGFloat mixedValue = [self.yAxis scaleValue:[dataEntry1.value floatValue]] * ratio + [self.yAxis scaleValue:[dataEntry2.value floatValue]] * (1.0  - ratio);
-        y = mixedValue * self._animationProgress;
-        CGPathAddLineToPoint(smoothedPath, NULL, rect.origin.x + x, rect.origin.y + (1.0 - y) * graphHeight);
+        // Draw the curve rect.origin.y + (1.0 - y ) * graphHeight
+        CGPathAddCurveToPoint(smoothedPath, nil,
+                              rect.origin.x + firstControlPointX * graphWidth, rect.origin.y + (1.0 - firstControlPointY ) * graphHeight,
+                              rect.origin.x + secondControlPointX * graphWidth, rect.origin.y + (1.0 - secondControlPointY ) * graphHeight,
+                              rect.origin.x + currentPoint.x * graphWidth, rect.origin.y + (1.0 - currentPoint.y ) * graphHeight);
+        
+        prePreviousPoint = previousPoint;
+        previousPoint = currentPoint;
+        currentPoint = nextPoint;
     }
     
     CGContextAddPath(ctx, smoothedPath);

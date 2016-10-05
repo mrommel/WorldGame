@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A022F7B1DA53443003D7D6C /* GraphChartBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A022F7A1DA53443003D7D6C /* GraphChartBarRenderer.m */; };
+		1A022F7C1DA53443003D7D6C /* GraphChartBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A022F7A1DA53443003D7D6C /* GraphChartBarRenderer.m */; };
+		1A022F7D1DA53443003D7D6C /* GraphChartBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A022F7A1DA53443003D7D6C /* GraphChartBarRenderer.m */; };
 		1A0FF26F1CA05E6200F64050 /* Grassland.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF26E1CA05E6200F64050 /* Grassland.png */; };
 		1A0FF2701CA05E6200F64050 /* Grassland.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF26E1CA05E6200F64050 /* Grassland.png */; };
 		1A0FF2711CA05E6200F64050 /* Grassland.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF26E1CA05E6200F64050 /* Grassland.png */; };
@@ -709,6 +712,8 @@
 /* Begin PBXFileReference section */
 		0967CE2F132D9B91D03A3BF9 /* Pods-WorldGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGame.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGame/Pods-WorldGame.debug.xcconfig"; sourceTree = "<group>"; };
 		13837E7261C4C2C87AFEF7CE /* Pods-WorldGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGameUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGameUITests/Pods-WorldGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A022F791DA53443003D7D6C /* GraphChartBarRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphChartBarRenderer.h; path = Views/Chart/GraphChartBarRenderer.h; sourceTree = "<group>"; };
+		1A022F7A1DA53443003D7D6C /* GraphChartBarRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphChartBarRenderer.m; path = Views/Chart/GraphChartBarRenderer.m; sourceTree = "<group>"; };
 		1A0FF26E1CA05E6200F64050 /* Grassland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grassland.png; path = Resources/Terrains/Grassland.png; sourceTree = "<group>"; };
 		1A0FF2721CA0617900F64050 /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Desert.png; path = Resources/Terrains/Desert.png; sourceTree = "<group>"; };
 		1A0FF2731CA0617900F64050 /* Ocean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ocean.png; path = Resources/Terrains/Ocean.png; sourceTree = "<group>"; };
@@ -1713,6 +1718,8 @@
 				1AC4FEC31D952B4700E4DD59 /* GraphChartRenderer.h */,
 				1AC4FEC41D952B7100E4DD59 /* GraphChartLineRenderer.h */,
 				1AC4FEC51D952B7100E4DD59 /* GraphChartLineRenderer.m */,
+				1A022F791DA53443003D7D6C /* GraphChartBarRenderer.h */,
+				1A022F7A1DA53443003D7D6C /* GraphChartBarRenderer.m */,
 				1AC4FEC91D952BFF00E4DD59 /* GraphChartAxis.h */,
 				1AC4FECA1D952BFF00E4DD59 /* GraphChartAxis.m */,
 				1AC4FECE1D952DCA00E4DD59 /* GraphAxisRenderer.h */,
@@ -2516,6 +2523,7 @@
 				1A2EA3FE1C994AF300633417 /* NSArray+Util.m in Sources */,
 				1AFCE1881D6D68F00029A990 /* SimulationTableViewController.m in Sources */,
 				1A613F6A1D2606E60052A551 /* GLPlane.m in Sources */,
+				1A022F7B1DA53443003D7D6C /* GraphChartBarRenderer.m in Sources */,
 				1A613FF71D2607260052A551 /* RESpriteBatchNode.m in Sources */,
 				1A613F841D2607020052A551 /* Transformations.m in Sources */,
 				1AF035831D99C9A900CFFD45 /* GraphRenderer.m in Sources */,
@@ -2574,6 +2582,7 @@
 				1A3C3A3E1C84ED9A004009DA /* UILabel+Custom.m in Sources */,
 				1A5C23041C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */,
 				1AEE071E1D2389EB00E2D866 /* CombatBoard.m in Sources */,
+				1A022F7C1DA53443003D7D6C /* GraphChartBarRenderer.m in Sources */,
 				1A8D66C21CA1306000284BB8 /* BaseTableViewController.m in Sources */,
 				1A613F521D2606D10052A551 /* ArcBallCamera.m in Sources */,
 				1A2EA3C41C8CD17A00633417 /* PolicyViewController.m in Sources */,
@@ -2698,6 +2707,7 @@
 				1A2CB4B11D2BCEAF005E9F9E /* TerrainNode.m in Sources */,
 				1A613F6C1D2606E60052A551 /* GLPlane.m in Sources */,
 				1A61400B1D2607260052A551 /* REWavefrontMeshNode.m in Sources */,
+				1A022F7D1DA53443003D7D6C /* GraphChartBarRenderer.m in Sources */,
 				1A2CB4A61D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */,
 				1A5C23001C9C42E7007F324C /* UIImage+Sprite.m in Sources */,
 				1A613FC31D2607260052A551 /* RECache.m in Sources */,

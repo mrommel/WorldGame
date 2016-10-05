@@ -13,6 +13,7 @@
 #import "GraphChartRenderer.h"
 #import "GraphAxisRenderer.h"
 #import "GraphChartLineRenderer.h"
+#import "GraphChartBarRenderer.h"
 #import "GraphBackgroundRenderer.h"
 
 @interface ChartView()
@@ -107,14 +108,8 @@
 #pragma mark -
 #pragma mark renderings
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
- */
 - (void)drawRect:(CGRect)rect
 {
-    NSLog(@"draw graph");
-    
     // Drawing code
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     
@@ -183,7 +178,17 @@
             [self.graphRenderer addObject:[[GraphChartLineRenderer alloc] initWithGraphData:graphData andXAxis:bottomAxis andYAxis:leftAxis]];
         }
             break;
-        case GraphTypeBar:
+        case GraphTypeBar: {
+            GraphChartAxis *bottomAxis = [[GraphChartAxis alloc] initWithOrientation:GraphChartAxisOrientationHorizontal andPosition:GraphChartAxisPositionBottom];
+            [bottomAxis calculateWithGraphData:graphData];
+            [self.axisRenderer addObject:[[GraphAxisRenderer alloc] initWithAxis:bottomAxis]];
+            
+            GraphChartAxis *leftAxis = [[GraphChartAxis alloc] initWithOrientation:GraphChartAxisOrientationVertical andPosition:GraphChartAxisPositionLeft];
+            [leftAxis calculateWithGraphData:graphData];
+            [self.axisRenderer addObject:[[GraphAxisRenderer alloc] initWithAxis:leftAxis]];
+            
+            [self.graphRenderer addObject:[[GraphChartBarRenderer alloc] initWithGraphData:graphData andXAxis:bottomAxis andYAxis:leftAxis]];
+        }
             break;
         case GraphTypePie:
             break;

@@ -10,6 +10,9 @@
 		1A022F7B1DA53443003D7D6C /* GraphChartBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A022F7A1DA53443003D7D6C /* GraphChartBarRenderer.m */; };
 		1A022F7C1DA53443003D7D6C /* GraphChartBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A022F7A1DA53443003D7D6C /* GraphChartBarRenderer.m */; };
 		1A022F7D1DA53443003D7D6C /* GraphChartBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A022F7A1DA53443003D7D6C /* GraphChartBarRenderer.m */; };
+		1A022F801DA648D7003D7D6C /* GraphChartPieRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A022F7F1DA648D7003D7D6C /* GraphChartPieRenderer.m */; };
+		1A022F811DA648D7003D7D6C /* GraphChartPieRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A022F7F1DA648D7003D7D6C /* GraphChartPieRenderer.m */; };
+		1A022F821DA648D7003D7D6C /* GraphChartPieRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A022F7F1DA648D7003D7D6C /* GraphChartPieRenderer.m */; };
 		1A0FF26F1CA05E6200F64050 /* Grassland.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF26E1CA05E6200F64050 /* Grassland.png */; };
 		1A0FF2701CA05E6200F64050 /* Grassland.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF26E1CA05E6200F64050 /* Grassland.png */; };
 		1A0FF2711CA05E6200F64050 /* Grassland.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FF26E1CA05E6200F64050 /* Grassland.png */; };
@@ -714,6 +717,8 @@
 		13837E7261C4C2C87AFEF7CE /* Pods-WorldGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldGameUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WorldGameUITests/Pods-WorldGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A022F791DA53443003D7D6C /* GraphChartBarRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphChartBarRenderer.h; path = Views/Chart/GraphChartBarRenderer.h; sourceTree = "<group>"; };
 		1A022F7A1DA53443003D7D6C /* GraphChartBarRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphChartBarRenderer.m; path = Views/Chart/GraphChartBarRenderer.m; sourceTree = "<group>"; };
+		1A022F7E1DA648D7003D7D6C /* GraphChartPieRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphChartPieRenderer.h; path = Views/Chart/GraphChartPieRenderer.h; sourceTree = "<group>"; };
+		1A022F7F1DA648D7003D7D6C /* GraphChartPieRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphChartPieRenderer.m; path = Views/Chart/GraphChartPieRenderer.m; sourceTree = "<group>"; };
 		1A0FF26E1CA05E6200F64050 /* Grassland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grassland.png; path = Resources/Terrains/Grassland.png; sourceTree = "<group>"; };
 		1A0FF2721CA0617900F64050 /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Desert.png; path = Resources/Terrains/Desert.png; sourceTree = "<group>"; };
 		1A0FF2731CA0617900F64050 /* Ocean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ocean.png; path = Resources/Terrains/Ocean.png; sourceTree = "<group>"; };
@@ -1720,6 +1725,8 @@
 				1AC4FEC51D952B7100E4DD59 /* GraphChartLineRenderer.m */,
 				1A022F791DA53443003D7D6C /* GraphChartBarRenderer.h */,
 				1A022F7A1DA53443003D7D6C /* GraphChartBarRenderer.m */,
+				1A022F7E1DA648D7003D7D6C /* GraphChartPieRenderer.h */,
+				1A022F7F1DA648D7003D7D6C /* GraphChartPieRenderer.m */,
 				1AC4FEC91D952BFF00E4DD59 /* GraphChartAxis.h */,
 				1AC4FECA1D952BFF00E4DD59 /* GraphChartAxis.m */,
 				1AC4FECE1D952DCA00E4DD59 /* GraphAxisRenderer.h */,
@@ -2444,6 +2451,7 @@
 				1A2CB4A41D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */,
 				1A613FEE1D2607260052A551 /* REScheduler.m in Sources */,
 				1A613FD91D2607260052A551 /* REMaterial.m in Sources */,
+				1A022F801DA648D7003D7D6C /* GraphChartPieRenderer.m in Sources */,
 				1A57E7DF1C74700D00B3890E /* MapPoint.m in Sources */,
 				1A6140171D260CCB0052A551 /* NSValue+CC3Types.m in Sources */,
 				1A57E7BE1C71C83700B3890E /* Map.m in Sources */,
@@ -2586,6 +2594,7 @@
 				1A8D66C21CA1306000284BB8 /* BaseTableViewController.m in Sources */,
 				1A613F521D2606D10052A551 /* ArcBallCamera.m in Sources */,
 				1A2EA3C41C8CD17A00633417 /* PolicyViewController.m in Sources */,
+				1A022F811DA648D7003D7D6C /* GraphChartPieRenderer.m in Sources */,
 				1A613FBF1D2607260052A551 /* REBuffer.m in Sources */,
 				1A6140231D2613230052A551 /* CombatBoardNode.m in Sources */,
 				1A2EA3E81C92D73200633417 /* AboutViewController.m in Sources */,
@@ -2762,6 +2771,7 @@
 				1AEE80BD1C7733F70028ACFF /* XMLReader.m in Sources */,
 				1A613FFC1D2607260052A551 /* RETexture.m in Sources */,
 				1A2EA3991C89B95C00633417 /* GroupType.m in Sources */,
+				1A022F821DA648D7003D7D6C /* GraphChartPieRenderer.m in Sources */,
 				1A6140081D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */,
 				1AC4FED21D952DCA00E4DD59 /* GraphAxisRenderer.m in Sources */,
 				1AEE80EF1C7BB20B0028ACFF /* Player.m in Sources */,

@@ -14,6 +14,7 @@
 #import "GraphAxisRenderer.h"
 #import "GraphChartLineRenderer.h"
 #import "GraphChartBarRenderer.h"
+#import "GraphChartPieRenderer.h"
 #import "GraphBackgroundRenderer.h"
 
 @interface ChartView()
@@ -191,6 +192,7 @@
         }
             break;
         case GraphTypePie:
+            [self.graphRenderer addObject:[[GraphChartPieRenderer alloc] initWithGraphData:graphData]];
             break;
     }
     

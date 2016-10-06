@@ -83,7 +83,7 @@
     
     GraphDataBlock graphDataBlock = ^(NSIndexPath *path) {
         GraphData *data = [[GraphData alloc] initWithLabel:@"abc"];
-        data.type = GraphTypeBar;
+        data.type = GraphTypePie;
         [data addValue:[NSNumber numberWithFloat:0.5f] atIndex:0];
         [data addValue:[NSNumber numberWithFloat:0.4f] atIndex:1];
         [data addValue:[NSNumber numberWithFloat:0.6f] atIndex:2];

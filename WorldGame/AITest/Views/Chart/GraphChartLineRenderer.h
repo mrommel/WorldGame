@@ -27,6 +27,7 @@ typedef NS_ENUM(NSInteger, GraphChartLineSmoothing) {
 
 @property (nonatomic) GraphData *data;
 @property (nonatomic) UIColor *lineColor;
+@property (nonatomic) UIColor *fillColor;
 @property (atomic) GraphChartLineSmoothing smoothing;
 
 - (instancetype)initWithGraphData:(GraphData *)data andXAxis:(GraphChartAxis *)xaxis andYAxis:(GraphChartAxis *)yaxis;

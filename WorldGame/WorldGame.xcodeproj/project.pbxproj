@@ -404,88 +404,88 @@
 		1A613F851D2607020052A551 /* Transformations.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F801D2607020052A551 /* Transformations.m */; };
 		1A613F861D2607020052A551 /* Transformations.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F801D2607020052A551 /* Transformations.m */; };
 		1A613FBE1D2607260052A551 /* REBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F881D2607260052A551 /* REBuffer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FBF1D2607260052A551 /* REBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F881D2607260052A551 /* REBuffer.m */; };
+		1A613FBF1D2607260052A551 /* REBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F881D2607260052A551 /* REBuffer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FC01D2607260052A551 /* REBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F881D2607260052A551 /* REBuffer.m */; };
 		1A613FC11D2607260052A551 /* RECache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8A1D2607260052A551 /* RECache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FC21D2607260052A551 /* RECache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8A1D2607260052A551 /* RECache.m */; };
+		1A613FC21D2607260052A551 /* RECache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8A1D2607260052A551 /* RECache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FC31D2607260052A551 /* RECache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8A1D2607260052A551 /* RECache.m */; };
 		1A613FC41D2607260052A551 /* RECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8C1D2607260052A551 /* RECamera.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FC51D2607260052A551 /* RECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8C1D2607260052A551 /* RECamera.m */; };
+		1A613FC51D2607260052A551 /* RECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8C1D2607260052A551 /* RECamera.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FC61D2607260052A551 /* RECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8C1D2607260052A551 /* RECamera.m */; };
 		1A613FC71D2607260052A551 /* REDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8E1D2607260052A551 /* REDirector.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FC81D2607260052A551 /* REDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8E1D2607260052A551 /* REDirector.m */; };
+		1A613FC81D2607260052A551 /* REDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8E1D2607260052A551 /* REDirector.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FC91D2607260052A551 /* REDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F8E1D2607260052A551 /* REDirector.m */; };
 		1A613FCA1D2607260052A551 /* REGLStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F901D2607260052A551 /* REGLStateManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FCB1D2607260052A551 /* REGLStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F901D2607260052A551 /* REGLStateManager.m */; };
+		1A613FCB1D2607260052A551 /* REGLStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F901D2607260052A551 /* REGLStateManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FCC1D2607260052A551 /* REGLStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F901D2607260052A551 /* REGLStateManager.m */; };
 		1A613FCD1D2607260052A551 /* REGLTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F921D2607260052A551 /* REGLTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FCE1D2607260052A551 /* REGLTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F921D2607260052A551 /* REGLTypes.m */; };
+		1A613FCE1D2607260052A551 /* REGLTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F921D2607260052A551 /* REGLTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FCF1D2607260052A551 /* REGLTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F921D2607260052A551 /* REGLTypes.m */; };
 		1A613FD01D2607260052A551 /* REGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F941D2607260052A551 /* REGLView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FD11D2607260052A551 /* REGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F941D2607260052A551 /* REGLView.m */; };
+		1A613FD11D2607260052A551 /* REGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F941D2607260052A551 /* REGLView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FD21D2607260052A551 /* REGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F941D2607260052A551 /* REGLView.m */; };
 		1A613FD31D2607260052A551 /* REKeyframedMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F961D2607260052A551 /* REKeyframedMeshNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FD41D2607260052A551 /* REKeyframedMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F961D2607260052A551 /* REKeyframedMeshNode.m */; };
+		1A613FD41D2607260052A551 /* REKeyframedMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F961D2607260052A551 /* REKeyframedMeshNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FD51D2607260052A551 /* REKeyframedMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F961D2607260052A551 /* REKeyframedMeshNode.m */; };
 		1A613FD61D2607260052A551 /* RELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F981D2607260052A551 /* RELight.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FD71D2607260052A551 /* RELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F981D2607260052A551 /* RELight.m */; };
+		1A613FD71D2607260052A551 /* RELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F981D2607260052A551 /* RELight.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FD81D2607260052A551 /* RELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F981D2607260052A551 /* RELight.m */; };
 		1A613FD91D2607260052A551 /* REMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9A1D2607260052A551 /* REMaterial.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FDA1D2607260052A551 /* REMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9A1D2607260052A551 /* REMaterial.m */; };
+		1A613FDA1D2607260052A551 /* REMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9A1D2607260052A551 /* REMaterial.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FDB1D2607260052A551 /* REMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9A1D2607260052A551 /* REMaterial.m */; };
 		1A613FDC1D2607260052A551 /* RENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9D1D2607260052A551 /* RENode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FDD1D2607260052A551 /* RENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9D1D2607260052A551 /* RENode.m */; };
+		1A613FDD1D2607260052A551 /* RENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9D1D2607260052A551 /* RENode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FDE1D2607260052A551 /* RENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9D1D2607260052A551 /* RENode.m */; };
 		1A613FDF1D2607260052A551 /* RENSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9F1D2607260052A551 /* RENSArrayAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FE01D2607260052A551 /* RENSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9F1D2607260052A551 /* RENSArrayAdditions.m */; };
+		1A613FE01D2607260052A551 /* RENSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9F1D2607260052A551 /* RENSArrayAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FE11D2607260052A551 /* RENSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613F9F1D2607260052A551 /* RENSArrayAdditions.m */; };
 		1A613FE21D2607260052A551 /* RENSValueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA11D2607260052A551 /* RENSValueAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FE31D2607260052A551 /* RENSValueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA11D2607260052A551 /* RENSValueAdditions.m */; };
+		1A613FE31D2607260052A551 /* RENSValueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA11D2607260052A551 /* RENSValueAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FE41D2607260052A551 /* RENSValueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA11D2607260052A551 /* RENSValueAdditions.m */; };
 		1A613FE51D2607260052A551 /* REProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA31D2607260052A551 /* REProgram.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FE61D2607260052A551 /* REProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA31D2607260052A551 /* REProgram.m */; };
+		1A613FE61D2607260052A551 /* REProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA31D2607260052A551 /* REProgram.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FE71D2607260052A551 /* REProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA31D2607260052A551 /* REProgram.m */; };
 		1A613FE81D2607260052A551 /* RERotator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA51D2607260052A551 /* RERotator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FE91D2607260052A551 /* RERotator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA51D2607260052A551 /* RERotator.m */; };
+		1A613FE91D2607260052A551 /* RERotator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA51D2607260052A551 /* RERotator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FEA1D2607260052A551 /* RERotator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA51D2607260052A551 /* RERotator.m */; };
 		1A613FEB1D2607260052A551 /* REScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA71D2607260052A551 /* REScene.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FEC1D2607260052A551 /* REScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA71D2607260052A551 /* REScene.m */; };
+		1A613FEC1D2607260052A551 /* REScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA71D2607260052A551 /* REScene.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FED1D2607260052A551 /* REScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA71D2607260052A551 /* REScene.m */; };
 		1A613FEE1D2607260052A551 /* REScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA91D2607260052A551 /* REScheduler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FEF1D2607260052A551 /* REScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA91D2607260052A551 /* REScheduler.m */; };
+		1A613FEF1D2607260052A551 /* REScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA91D2607260052A551 /* REScheduler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FF01D2607260052A551 /* REScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FA91D2607260052A551 /* REScheduler.m */; };
 		1A613FF11D2607260052A551 /* REShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAB1D2607260052A551 /* REShader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FF21D2607260052A551 /* REShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAB1D2607260052A551 /* REShader.m */; };
+		1A613FF21D2607260052A551 /* REShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAB1D2607260052A551 /* REShader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FF31D2607260052A551 /* REShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAB1D2607260052A551 /* REShader.m */; };
 		1A613FF41D2607260052A551 /* RESprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAD1D2607260052A551 /* RESprite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FF51D2607260052A551 /* RESprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAD1D2607260052A551 /* RESprite.m */; };
+		1A613FF51D2607260052A551 /* RESprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAD1D2607260052A551 /* RESprite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FF61D2607260052A551 /* RESprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAD1D2607260052A551 /* RESprite.m */; };
 		1A613FF71D2607260052A551 /* RESpriteBatchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAF1D2607260052A551 /* RESpriteBatchNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FF81D2607260052A551 /* RESpriteBatchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAF1D2607260052A551 /* RESpriteBatchNode.m */; };
+		1A613FF81D2607260052A551 /* RESpriteBatchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAF1D2607260052A551 /* RESpriteBatchNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FF91D2607260052A551 /* RESpriteBatchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FAF1D2607260052A551 /* RESpriteBatchNode.m */; };
 		1A613FFA1D2607260052A551 /* RETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB11D2607260052A551 /* RETexture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FFB1D2607260052A551 /* RETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB11D2607260052A551 /* RETexture.m */; };
+		1A613FFB1D2607260052A551 /* RETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB11D2607260052A551 /* RETexture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FFC1D2607260052A551 /* RETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB11D2607260052A551 /* RETexture.m */; };
 		1A613FFD1D2607260052A551 /* REVertexArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB31D2607260052A551 /* REVertexArrayObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A613FFE1D2607260052A551 /* REVertexArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB31D2607260052A551 /* REVertexArrayObject.m */; };
+		1A613FFE1D2607260052A551 /* REVertexArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB31D2607260052A551 /* REVertexArrayObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A613FFF1D2607260052A551 /* REVertexArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB31D2607260052A551 /* REVertexArrayObject.m */; };
 		1A6140001D2607260052A551 /* REWavefrontMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB51D2607260052A551 /* REWavefrontMesh.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A6140011D2607260052A551 /* REWavefrontMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB51D2607260052A551 /* REWavefrontMesh.m */; };
+		1A6140011D2607260052A551 /* REWavefrontMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB51D2607260052A551 /* REWavefrontMesh.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A6140021D2607260052A551 /* REWavefrontMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB51D2607260052A551 /* REWavefrontMesh.m */; };
 		1A6140031D2607260052A551 /* REWavefrontMeshElementIndexBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB71D2607260052A551 /* REWavefrontMeshElementIndexBatch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A6140041D2607260052A551 /* REWavefrontMeshElementIndexBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB71D2607260052A551 /* REWavefrontMeshElementIndexBatch.m */; };
+		1A6140041D2607260052A551 /* REWavefrontMeshElementIndexBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB71D2607260052A551 /* REWavefrontMeshElementIndexBatch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A6140051D2607260052A551 /* REWavefrontMeshElementIndexBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB71D2607260052A551 /* REWavefrontMeshElementIndexBatch.m */; };
 		1A6140061D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB91D2607260052A551 /* REWavefrontMeshGroupNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A6140071D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB91D2607260052A551 /* REWavefrontMeshGroupNode.m */; };
+		1A6140071D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB91D2607260052A551 /* REWavefrontMeshGroupNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A6140081D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FB91D2607260052A551 /* REWavefrontMeshGroupNode.m */; };
 		1A6140091D2607260052A551 /* REWavefrontMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBB1D2607260052A551 /* REWavefrontMeshNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A61400A1D2607260052A551 /* REWavefrontMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBB1D2607260052A551 /* REWavefrontMeshNode.m */; };
+		1A61400A1D2607260052A551 /* REWavefrontMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBB1D2607260052A551 /* REWavefrontMeshNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A61400B1D2607260052A551 /* REWavefrontMeshNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBB1D2607260052A551 /* REWavefrontMeshNode.m */; };
 		1A61400C1D2607260052A551 /* REWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBD1D2607260052A551 /* REWorld.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A61400D1D2607260052A551 /* REWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBD1D2607260052A551 /* REWorld.m */; };
+		1A61400D1D2607260052A551 /* REWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBD1D2607260052A551 /* REWorld.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A61400E1D2607260052A551 /* REWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A613FBD1D2607260052A551 /* REWorld.m */; };
 		1A6140111D2609850052A551 /* CC3GLMatrix+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6140101D2609850052A551 /* CC3GLMatrix+Extension.m */; };
-		1A6140121D2609850052A551 /* CC3GLMatrix+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6140101D2609850052A551 /* CC3GLMatrix+Extension.m */; };
+		1A6140121D2609850052A551 /* CC3GLMatrix+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6140101D2609850052A551 /* CC3GLMatrix+Extension.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A6140131D2609850052A551 /* CC3GLMatrix+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6140101D2609850052A551 /* CC3GLMatrix+Extension.m */; };
 		1A6140171D260CCB0052A551 /* NSValue+CC3Types.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6140161D260CCB0052A551 /* NSValue+CC3Types.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A6140181D260CCB0052A551 /* NSValue+CC3Types.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6140161D260CCB0052A551 /* NSValue+CC3Types.m */; };
@@ -561,16 +561,16 @@
 		1ABE0E761D243B420009F3F2 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0E741D243B420009F3F2 /* SimpleFragment.glsl */; };
 		1ABE0E771D243B420009F3F2 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0E741D243B420009F3F2 /* SimpleFragment.glsl */; };
 		1ABE0E841D243ECD0009F3F2 /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7B1D243ECD0009F3F2 /* CC3Foundation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1ABE0E851D243ECD0009F3F2 /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7B1D243ECD0009F3F2 /* CC3Foundation.m */; };
+		1ABE0E851D243ECD0009F3F2 /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7B1D243ECD0009F3F2 /* CC3Foundation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1ABE0E861D243ECD0009F3F2 /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7B1D243ECD0009F3F2 /* CC3Foundation.m */; };
 		1ABE0E871D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7D1D243ECD0009F3F2 /* CC3GLMatrix.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1ABE0E881D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7D1D243ECD0009F3F2 /* CC3GLMatrix.m */; };
+		1ABE0E881D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7D1D243ECD0009F3F2 /* CC3GLMatrix.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1ABE0E891D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7D1D243ECD0009F3F2 /* CC3GLMatrix.m */; };
 		1ABE0E8A1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7E1D243ECD0009F3F2 /* CC3Kazmath.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1ABE0E8B1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7E1D243ECD0009F3F2 /* CC3Kazmath.c */; };
+		1ABE0E8B1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7E1D243ECD0009F3F2 /* CC3Kazmath.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1ABE0E8C1D243ECD0009F3F2 /* CC3Kazmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E7E1D243ECD0009F3F2 /* CC3Kazmath.c */; };
 		1ABE0E8D1D243ECD0009F3F2 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E821D243ECD0009F3F2 /* CC3Math.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1ABE0E8E1D243ECD0009F3F2 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E821D243ECD0009F3F2 /* CC3Math.m */; };
+		1ABE0E8E1D243ECD0009F3F2 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E821D243ECD0009F3F2 /* CC3Math.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1ABE0E8F1D243ECD0009F3F2 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E821D243ECD0009F3F2 /* CC3Math.m */; };
 		1AC4FEB31D946BFF00E4DD59 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEB21D946BFF00E4DD59 /* ChartView.m */; };
 		1AC4FEB61D946C5300E4DD59 /* GraphDataEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FEB51D946C5300E4DD59 /* GraphDataEntry.m */; };
@@ -663,6 +663,12 @@
 		1AFCE1881D6D68F00029A990 /* SimulationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */; };
 		1AFCE1891D6D68F00029A990 /* SimulationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */; };
 		1AFCE18A1D6D68F00029A990 /* SimulationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */; };
+		1AFDEB451DC9A3D300547C8D /* AISimulationProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFDEB441DC9A3D300547C8D /* AISimulationProperty.m */; };
+		1AFDEB481DC9A55D00547C8D /* AISimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFDEB471DC9A55D00547C8D /* AISimulation.m */; };
+		1AFDEB4A1DC9A70B00547C8D /* AISimulationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFDEB491DC9A70B00547C8D /* AISimulationTests.m */; };
+		1AFDEB4B1DC9BD8800547C8D /* AISimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFDEB471DC9A55D00547C8D /* AISimulation.m */; };
+		1AFDEB4C1DC9BD8B00547C8D /* AISimulationProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFDEB441DC9A3D300547C8D /* AISimulationProperty.m */; };
+		1AFDEB4E1DC9C4F800547C8D /* AISimulationPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFDEB4D1DC9C4F800547C8D /* AISimulationPropertyTests.m */; };
 		1AFF700B1CD76EAE009C7203 /* MunicipalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700A1CD76EAE009C7203 /* MunicipalEntity.m */; };
 		1AFF700E1CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
 		1AFF700F1CD76EFB009C7203 /* Economy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF700D1CD76EFB009C7203 /* Economy.m */; };
@@ -1100,6 +1106,12 @@
 		1AFAF3A71D212C0500165808 /* BaseUITestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITestCase.swift; sourceTree = "<group>"; };
 		1AFCE1861D6D68F00029A990 /* SimulationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimulationTableViewController.h; path = Presentation/SimulationTableViewController.h; sourceTree = "<group>"; };
 		1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimulationTableViewController.m; path = Presentation/SimulationTableViewController.m; sourceTree = "<group>"; };
+		1AFDEB431DC9A3D300547C8D /* AISimulationProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AISimulationProperty.h; path = Simulation/AISimulationProperty.h; sourceTree = "<group>"; };
+		1AFDEB441DC9A3D300547C8D /* AISimulationProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AISimulationProperty.m; path = Simulation/AISimulationProperty.m; sourceTree = "<group>"; };
+		1AFDEB461DC9A55D00547C8D /* AISimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AISimulation.h; path = Simulation/AISimulation.h; sourceTree = "<group>"; };
+		1AFDEB471DC9A55D00547C8D /* AISimulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AISimulation.m; path = Simulation/AISimulation.m; sourceTree = "<group>"; };
+		1AFDEB491DC9A70B00547C8D /* AISimulationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AISimulationTests.m; path = Simulation/AISimulationTests.m; sourceTree = "<group>"; };
+		1AFDEB4D1DC9C4F800547C8D /* AISimulationPropertyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AISimulationPropertyTests.m; path = Simulation/AISimulationPropertyTests.m; sourceTree = "<group>"; };
 		1AFF70091CD76EAE009C7203 /* MunicipalEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MunicipalEntity.h; path = Map/MunicipalEntity.h; sourceTree = "<group>"; };
 		1AFF700A1CD76EAE009C7203 /* MunicipalEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MunicipalEntity.m; path = Map/MunicipalEntity.m; sourceTree = "<group>"; };
 		1AFF700C1CD76EFB009C7203 /* Economy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Economy.h; path = Map/Economy.h; sourceTree = "<group>"; };
@@ -1315,6 +1327,7 @@
 				1A57E7C31C71CBDD00B3890E /* Views */,
 				1ABE0E781D243EA40009F3F2 /* OpenGL */,
 				1A57E7BF1C71C88400B3890E /* Util */,
+				1AFDEB421DC9A37E00547C8D /* Simulation */,
 				1A57E7B81C71C44100B3890E /* Map */,
 				1A57E7821C71C3F200B3890E /* AppDelegate.h */,
 				1A57E7831C71C3F200B3890E /* AppDelegate.m */,
@@ -1824,6 +1837,19 @@
 				1AFAF3A71D212C0500165808 /* BaseUITestCase.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		1AFDEB421DC9A37E00547C8D /* Simulation */ = {
+			isa = PBXGroup;
+			children = (
+				1AFDEB431DC9A3D300547C8D /* AISimulationProperty.h */,
+				1AFDEB441DC9A3D300547C8D /* AISimulationProperty.m */,
+				1AFDEB4D1DC9C4F800547C8D /* AISimulationPropertyTests.m */,
+				1AFDEB461DC9A55D00547C8D /* AISimulation.h */,
+				1AFDEB471DC9A55D00547C8D /* AISimulation.m */,
+				1AFDEB491DC9A70B00547C8D /* AISimulationTests.m */,
+			);
+			name = Simulation;
 			sourceTree = "<group>";
 		};
 		2E294912C2975249D79A63A5 /* Frameworks */ = {
@@ -2489,6 +2515,7 @@
 				1A6140061D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */,
 				1A613FC71D2607260052A551 /* REDirector.m in Sources */,
 				1AF035861D9B048800CFFD45 /* GraphBackgroundRenderer.m in Sources */,
+				1AFDEB481DC9A55D00547C8D /* AISimulation.m in Sources */,
 				1A2EA3A01C8B860300633417 /* MinistryTableViewController.m in Sources */,
 				1A2EA3E21C92D5A900633417 /* DebugViewController.m in Sources */,
 				1A57E7BB1C71C45C00B3890E /* Plot.m in Sources */,
@@ -2533,6 +2560,7 @@
 				1A613F6A1D2606E60052A551 /* GLPlane.m in Sources */,
 				1A022F7B1DA53443003D7D6C /* GraphChartBarRenderer.m in Sources */,
 				1A613FF71D2607260052A551 /* RESpriteBatchNode.m in Sources */,
+				1AFDEB451DC9A3D300547C8D /* AISimulationProperty.m in Sources */,
 				1A613F841D2607020052A551 /* Transformations.m in Sources */,
 				1AF035831D99C9A900CFFD45 /* GraphRenderer.m in Sources */,
 				1A2EA3DD1C90702800633417 /* BitArray.m in Sources */,
@@ -2556,12 +2584,14 @@
 				1A613FCE1D2607260052A551 /* REGLTypes.m in Sources */,
 				1A2EA38E1C89872200633417 /* Policy.m in Sources */,
 				1A613F821D2607020052A551 /* TextureAtlas.m in Sources */,
+				1AFDEB4B1DC9BD8800547C8D /* AISimulation.m in Sources */,
 				1A3C3A051C7F2F75004009DA /* Leader.m in Sources */,
 				1A613FEF1D2607260052A551 /* REScheduler.m in Sources */,
 				1AC4FEC71D952B7100E4DD59 /* GraphChartLineRenderer.m in Sources */,
 				1AEF612B1D159E6500253DD6 /* LoadGameViewController.m in Sources */,
 				1A613FE31D2607260052A551 /* RENSValueAdditions.m in Sources */,
 				1AC4FEC11D952A9A00E4DD59 /* GraphTitleRenderer.m in Sources */,
+				1AFDEB4E1DC9C4F800547C8D /* AISimulationPropertyTests.m in Sources */,
 				1A613F711D2606E60052A551 /* GLViewController.m in Sources */,
 				1A2CB4B01D2BCEAF005E9F9E /* TerrainNode.m in Sources */,
 				1AFCE1891D6D68F00029A990 /* SimulationTableViewController.m in Sources */,
@@ -2606,6 +2636,7 @@
 				1ABE0E881D243ECD0009F3F2 /* CC3GLMatrix.m in Sources */,
 				1A3C3A331C84EA8C004009DA /* OverlayView.m in Sources */,
 				1A613FFB1D2607260052A551 /* RETexture.m in Sources */,
+				1AFDEB4A1DC9A70B00547C8D /* AISimulationTests.m in Sources */,
 				1AEE80F31C7C5FB40028ACFF /* Unit.m in Sources */,
 				1A613F771D2606E60052A551 /* OpenGLUtil.m in Sources */,
 				1AEF61321D159EA400253DD6 /* PlotEconomy.m in Sources */,
@@ -2659,6 +2690,7 @@
 				1A2EA4041C994FB700633417 /* Continent.m in Sources */,
 				1AC4FED11D952DCA00E4DD59 /* GraphAxisRenderer.m in Sources */,
 				1A2EA3E31C92D5A900633417 /* DebugViewController.m in Sources */,
+				1AFDEB4C1DC9BD8B00547C8D /* AISimulationProperty.m in Sources */,
 				1A35A99E1CA1A5090094F773 /* SetupGameTableViewController.m in Sources */,
 				1AC4FEB71D946C5300E4DD59 /* GraphDataEntry.m in Sources */,
 			);
@@ -2954,6 +2986,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
 				);
+				GCC_PREFIX_HEADER = AITest/WorldGame.pch;
 				INFOPLIST_FILE = AITestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.AITestTests;
@@ -2974,6 +3007,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
 				);
+				GCC_PREFIX_HEADER = AITest/WorldGame.pch;
 				INFOPLIST_FILE = AITestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.AITestTests;

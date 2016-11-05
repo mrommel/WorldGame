@@ -83,6 +83,21 @@
     return self;
 }
 
+- (instancetype)initWithTitle:(NSString *)title andValueData:(ValueDataBlock)valueDataBlock
+{
+    self = [super init];
+    
+    if (self) {
+        self.title = title;
+        self.subtitle = @"";
+        self.style = ContentStyleValue;
+        self.action = nil;
+        self.valueData = valueDataBlock;
+    }
+    
+    return self;
+}
+
 - (void)setBool:(BOOL)boolValue
 {
     self.payload = [NSNumber numberWithBool:boolValue];
@@ -381,6 +396,18 @@
             [chartView addGraphData:data];
             
             cell.backgroundView = chartView;
+        }
+            break;
+        case ContentStyleValue: {
+            cellBackView.image = [UIImage imageNamed:@"menu-item-normal.png"];
+            cell.textLabel.textColor = [UIColor whiteColor];
+            cell.detailTextLabel.textColor = [UIColor whiteColor];
+            
+            cell.backgroundView = cellBackView;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", content.title, content.valueData(indexPath)];
+            cell.detailTextLabel.text = content.subtitle;
+            cell.imageView.image = content.image;
         }
             break;
     }

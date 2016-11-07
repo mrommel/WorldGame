@@ -82,4 +82,6 @@
 
 #define STATUSBAR_HEIGHT        ([[UIApplication sharedApplication] statusBarFrame].size.height)
 
+#define weakify(object) __weak typeof(object) weakSelf = object
+
 #endif /* UIConstants_h */

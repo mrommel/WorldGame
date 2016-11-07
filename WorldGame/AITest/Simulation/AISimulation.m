@@ -48,6 +48,7 @@
         // don't forget to add new properties to the calculate step too
         
         // add relations
+        [self.foodSafety addStaticInputValue:0.8];
         [self.soilQuality addStaticInputValue:0.7];
         [self.health addInputProperty:self.foodSafety withFormula:@"0.9*x"];
     }

@@ -108,7 +108,7 @@
     CGFloat range = self.endValue - self.startValue;
     
     if (range == 0.0) {
-        return 0.0;
+        return value;
     }
     
     return (value - self.startValue) / range;

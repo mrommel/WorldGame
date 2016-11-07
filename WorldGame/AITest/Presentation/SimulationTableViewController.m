@@ -12,6 +12,8 @@
 #import "GraphData.h"
 #import "AISimulation.h"
 
+typedef CGFloat (^ValueBlock)(NSInteger delay);
+
 @interface SimulationTableViewController ()
 
 @property (nonatomic) AISimulation *simulation;
@@ -42,47 +44,16 @@
     
     self.dataSource = [[TableViewContentDataSource alloc] init];
     
-    GraphDataBlock soilQualityGraphDataBlock = ^(NSIndexPath *path) {
-        GraphData *data = [[GraphData alloc] initWithLabel:@"Soil Quality"];
-        data.type = GraphTypeLine;
-        
-        for (int i = 0; i < self.simulation.sampleCount; i++) {
-            [data addValue:[NSNumber numberWithFloat:[self.simulation.soilQuality valueWithDelay:self.simulation.sampleCount - i - 1]] atIndex:i];
-        }
-        
-        return data;
-    };
+    weakify(self);
     
-    [self.dataSource setTitle:@"Soil Quality" forHeaderInSection:0];
-    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Graph"
-                                                           andGraphData:soilQualityGraphDataBlock]
-                      inSection:0];
-    ValueDataBlock soilQualityValueBlock = ^(NSIndexPath *path) {
-        return [NSString stringWithFormat:@"%.2f", [self.simulation.soilQuality valueWithoutDelay]];
-    };
-    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Value" andValueData:soilQualityValueBlock]
-                      inSection:0];
-    
-    GraphDataBlock healthGraphDataBlock = ^(NSIndexPath *path) {
-        GraphData *data = [[GraphData alloc] initWithLabel:@"Health"];
-        data.type = GraphTypeLine;
-        
-        for (int i = 0; i < self.simulation.sampleCount; i++) {
-            [data addValue:[NSNumber numberWithFloat:[self.simulation.health valueWithDelay:self.simulation.sampleCount - i - 1]] atIndex:i];
-        }
-        
-        return data;
-    };
-    
-    [self.dataSource setTitle:@"Health" forHeaderInSection:0];
-    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Graph"
-                                                           andGraphData:healthGraphDataBlock]
-                      inSection:0];
-    ValueDataBlock healthValueBlock = ^(NSIndexPath *path) {
-        return [NSString stringWithFormat:@"%.2f", [self.simulation.health valueWithoutDelay]];
-    };
-    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Value" andValueData:healthValueBlock]
-                      inSection:0];
+    // ///////////////////
+    [self addGraphWithTitle:@"Soil Quality" andValueBlock:^(NSInteger delay) {
+        return [weakSelf.simulation.soilQuality valueWithDelay:delay];
+    } inSection:0];
+    [self addGraphWithTitle:@"Health" andValueBlock:^(NSInteger delay) {
+        return [weakSelf.simulation.health valueWithDelay:delay];
+    } inSection:1];
+    // ///////////////////
     
     [self.dataSource setTitle:@"deff" forHeaderInSection:2];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"is river"
@@ -97,9 +68,28 @@
                       inSection:2];
 }
 
-- (BOOL)hasScience:(NSString *)science
+- (void)addGraphWithTitle:(NSString *)title andValueBlock:(ValueBlock)valueBlock inSection:(NSInteger)section
 {
-    return NO;
+    GraphDataBlock healthGraphDataBlock = ^(NSIndexPath *path) {
+        GraphData *data = [[GraphData alloc] initWithLabel:title];
+        data.type = GraphTypeLine;
+        
+        for (int i = 0; i < self.simulation.sampleCount; i++) {
+            [data addValue:[NSNumber numberWithFloat:valueBlock(self.simulation.sampleCount - i - 1)] atIndex:i];
+        }
+        
+        return data;
+    };
+    
+    [self.dataSource setTitle:title forHeaderInSection:section];
+    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Graph"
+                                                           andGraphData:healthGraphDataBlock]
+                      inSection:section];
+    ValueDataBlock healthValueBlock = ^(NSIndexPath *path) {
+        return [NSString stringWithFormat:@"%.2f", valueBlock(0)];
+    };
+    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Value" andValueData:healthValueBlock]
+                      inSection:section];
 }
 
 - (BOOL)isRiver
@@ -112,11 +102,6 @@
     self.isRiverValue = isRiverValue;
 }
 
-- (NSString *)terrain
-{
-    return @"GRASSLAND";
-}
-
 - (void)handleRefreshNavigationBarItem:(UIBarButtonItem *)sender
 {
     NSLog(@"refresh");
@@ -124,13 +109,6 @@
     [self.simulation calculate];
     
     [self.tableView reloadData];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    //[self.tableView reloadData];
 }
 
 @end

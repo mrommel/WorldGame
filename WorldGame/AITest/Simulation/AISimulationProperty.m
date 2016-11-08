@@ -48,12 +48,16 @@
 
 @implementation AISimulationProperty
 
-- (instancetype)initWithName:(NSString *)name startingValue:(CGFloat)value andCategory:(AISimulationCategory)category
+- (instancetype)initWithName:(NSString *)name
+                 explanation:(NSString *)explanation
+               startingValue:(CGFloat)value
+                 andCategory:(AISimulationCategory)category
 {
     self = [super init];
     
     if (self) {
         self.name = name;
+        self.explanation = explanation;
         self.values = [NSMutableArray new];
         [self.values addObject:[NSNumber numberWithDouble:value]];
         self.inputs = [NSMutableArray new];

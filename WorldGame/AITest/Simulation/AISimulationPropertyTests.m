@@ -25,7 +25,7 @@ const static AISimulationCategory   kInitialCategory = AISimulationCategoryStati
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    self.property = [[AISimulationProperty alloc] initWithName:@"Test" startingValue:kInitialValue andCategory:kInitialCategory];
+    self.property = [[AISimulationProperty alloc] initWithName:@"Test" explanation:@"" startingValue:kInitialValue andCategory:kInitialCategory];
 }
 
 - (void)tearDown
@@ -63,7 +63,7 @@ const static AISimulationCategory   kInitialCategory = AISimulationCategoryStati
 
 - (void)testDynamicValueCalculation
 {
-    AISimulationProperty *secondProperty = [[AISimulationProperty alloc] initWithName:@"Test2" startingValue:1.0 andCategory:AISimulationCategoryProduction];
+    AISimulationProperty *secondProperty = [[AISimulationProperty alloc] initWithName:@"Test2" explanation:@"" startingValue:1.0 andCategory:AISimulationCategoryEconomy];
     [secondProperty addStaticInputValue:1.0];
     
     [self.property addInputProperty:secondProperty withFormula:@"0.0+0.5*x"];

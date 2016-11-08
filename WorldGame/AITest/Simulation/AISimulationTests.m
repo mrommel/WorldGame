@@ -59,4 +59,16 @@
     XCTAssertEqualWithAccuracy([self.simulation.foodSafety valueWithoutDelay], 0.4, 0.05, @"food not reset");
 }
 
+- (void)testVoters
+{
+    for (int i = 0; i < 10; i++) {
+        NSLog(@"Voter: %d", i);
+        NSArray *arr = [self.simulation voter];
+    
+        for (NSString *voter in arr) {
+            NSLog(@"Voter: %@", voter);
+        }
+    }
+}
+
 @end

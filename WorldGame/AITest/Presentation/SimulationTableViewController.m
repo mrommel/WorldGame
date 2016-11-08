@@ -47,25 +47,29 @@ typedef CGFloat (^ValueBlock)(NSInteger delay);
     weakify(self);
     
     // ///////////////////
+    [self.dataSource setTitle:@"Graphs" forHeaderInSection:0];
     [self addGraphWithTitle:@"Soil Quality" andValueBlock:^(NSInteger delay) {
         return [weakSelf.simulation.soilQuality valueWithDelay:delay];
     } inSection:0];
     [self addGraphWithTitle:@"Health" andValueBlock:^(NSInteger delay) {
         return [weakSelf.simulation.health valueWithDelay:delay];
-    } inSection:1];
+    } inSection:0];
+    [self addGraphWithTitle:@"Food safety" andValueBlock:^(NSInteger delay) {
+        return [weakSelf.simulation.foodSafety valueWithDelay:delay];
+    } inSection:0];
     // ///////////////////
     
-    [self.dataSource setTitle:@"deff" forHeaderInSection:2];
+    [self.dataSource setTitle:@"deff" forHeaderInSection:1];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"is river"
                                                             andSubtitle:@""
                                                                andStyle:ContentStyleSwitch
                                                               andAction:toggleIsRiverBlock]
-                      inSection:2];
+                      inSection:1];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:[NSString stringWithFormat:@"Turn %ld", (long)self.simulation.sampleCount]
                                                             andSubtitle:@""
                                                                andStyle:ContentStyleNormal
                                                               andAction:nil]
-                      inSection:2];
+                      inSection:1];
 }
 
 - (void)addGraphWithTitle:(NSString *)title andValueBlock:(ValueBlock)valueBlock inSection:(NSInteger)section
@@ -81,7 +85,6 @@ typedef CGFloat (^ValueBlock)(NSInteger delay);
         return data;
     };
     
-    [self.dataSource setTitle:title forHeaderInSection:section];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Graph"
                                                            andGraphData:healthGraphDataBlock]
                       inSection:section];

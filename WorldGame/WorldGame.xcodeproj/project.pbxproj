@@ -337,6 +337,9 @@
 		1A57E7E91C74ABB300B3890E /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7E71C74ABB300B3890E /* MainMenuViewController.m */; };
 		1A57E7EA1C74ABB300B3890E /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A57E7E71C74ABB300B3890E /* MainMenuViewController.m */; };
 		1A58E3711CBBB41A00AE7140 /* LoadGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A58E3701CBBB41A00AE7140 /* LoadGameViewController.m */; };
+		1A59ABBA1DD27F0500114444 /* AISimulationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A59ABB91DD27F0500114444 /* AISimulationGroup.m */; };
+		1A59ABBB1DD27F0500114444 /* AISimulationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A59ABB91DD27F0500114444 /* AISimulationGroup.m */; };
+		1A59ABBC1DD27F0500114444 /* AISimulationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A59ABB91DD27F0500114444 /* AISimulationGroup.m */; };
 		1A5C22B51C9B40A3007F324C /* SelectMapTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C22B41C9B40A3007F324C /* SelectMapTypeTableViewController.m */; };
 		1A5C22D71C9C164F007F324C /* BuildingAtlas.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1A5C22B71C9C164F007F324C /* BuildingAtlas.xml */; };
 		1A5C22D81C9C164F007F324C /* BuildingTiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A5C22B81C9C164F007F324C /* BuildingTiles.png */; };
@@ -897,6 +900,8 @@
 		1A57E7E71C74ABB300B3890E /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuViewController.m; path = Presentation/MainMenuViewController.m; sourceTree = "<group>"; };
 		1A58E36F1CBBB41A00AE7140 /* LoadGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadGameViewController.h; path = Presentation/LoadGameViewController.h; sourceTree = "<group>"; };
 		1A58E3701CBBB41A00AE7140 /* LoadGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadGameViewController.m; path = Presentation/LoadGameViewController.m; sourceTree = "<group>"; };
+		1A59ABB81DD27F0500114444 /* AISimulationGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AISimulationGroup.h; path = Simulation/AISimulationGroup.h; sourceTree = "<group>"; };
+		1A59ABB91DD27F0500114444 /* AISimulationGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AISimulationGroup.m; path = Simulation/AISimulationGroup.m; sourceTree = "<group>"; };
 		1A5C22B31C9B40A3007F324C /* SelectMapTypeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectMapTypeTableViewController.h; path = Presentation/SelectMapTypeTableViewController.h; sourceTree = "<group>"; };
 		1A5C22B41C9B40A3007F324C /* SelectMapTypeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectMapTypeTableViewController.m; path = Presentation/SelectMapTypeTableViewController.m; sourceTree = "<group>"; };
 		1A5C22B71C9C164F007F324C /* BuildingAtlas.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = BuildingAtlas.xml; path = Resources/Atlases/BuildingAtlas.xml; sourceTree = "<group>"; };
@@ -1845,6 +1850,8 @@
 				1AFDEB431DC9A3D300547C8D /* AISimulationProperty.h */,
 				1AFDEB441DC9A3D300547C8D /* AISimulationProperty.m */,
 				1AFDEB4D1DC9C4F800547C8D /* AISimulationPropertyTests.m */,
+				1A59ABB81DD27F0500114444 /* AISimulationGroup.h */,
+				1A59ABB91DD27F0500114444 /* AISimulationGroup.m */,
 				1AFDEB461DC9A55D00547C8D /* AISimulation.h */,
 				1AFDEB471DC9A55D00547C8D /* AISimulation.m */,
 				1AFDEB491DC9A70B00547C8D /* AISimulationTests.m */,
@@ -2530,6 +2537,7 @@
 				1A613FEB1D2607260052A551 /* REScene.m in Sources */,
 				1ABE0E631D2438250009F3F2 /* CombatViewController.m in Sources */,
 				1A57E7C61C71CBFD00B3890E /* MapView.m in Sources */,
+				1A59ABBA1DD27F0500114444 /* AISimulationGroup.m in Sources */,
 				1A5C22B51C9B40A3007F324C /* SelectMapTypeTableViewController.m in Sources */,
 				1A2EA38D1C89872200633417 /* Policy.m in Sources */,
 				1A3C3A421C84EDF1004009DA /* UIButton+Custom.m in Sources */,
@@ -2672,6 +2680,7 @@
 				1A2EA3931C89877C00633417 /* RelationsNetwork.m in Sources */,
 				1AEE80E91C7BA6450028ACFF /* Game.m in Sources */,
 				1A613FE01D2607260052A551 /* RENSArrayAdditions.m in Sources */,
+				1A59ABBB1DD27F0500114444 /* AISimulationGroup.m in Sources */,
 				1A613FF81D2607260052A551 /* RESpriteBatchNode.m in Sources */,
 				1A3C3A2E1C80FCEA004009DA /* Simulation.m in Sources */,
 				1A2CB4A81D2BCD97005E9F9E /* CubeMesh.m in Sources */,
@@ -2804,6 +2813,7 @@
 				1A613FFC1D2607260052A551 /* RETexture.m in Sources */,
 				1A2EA3991C89B95C00633417 /* GroupType.m in Sources */,
 				1A022F821DA648D7003D7D6C /* GraphChartPieRenderer.m in Sources */,
+				1A59ABBC1DD27F0500114444 /* AISimulationGroup.m in Sources */,
 				1A6140081D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */,
 				1AC4FED21D952DCA00E4DD59 /* GraphAxisRenderer.m in Sources */,
 				1AEE80EF1C7BB20B0028ACFF /* Player.m in Sources */,

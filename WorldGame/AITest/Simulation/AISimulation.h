@@ -9,17 +9,30 @@
 #import <Foundation/Foundation.h>
 
 #import "AISimulationProperty.h"
+#import "AISimulationGroup.h"
 
 @interface AISimulation : NSObject
 
 @property (nonatomic) AISimulationProperty *foodSafety;
 @property (nonatomic) AISimulationProperty *soilQuality;
 @property (nonatomic) AISimulationProperty *health;
+@property (nonatomic) AISimulationProperty *education;
+@property (nonatomic) AISimulationProperty *externalAttraction;
+@property (nonatomic) AISimulationProperty *poverty;
+@property (nonatomic) AISimulationProperty *equality;
+@property (nonatomic) AISimulationProperty *crimeRate;
+
+@property (nonatomic) AISimulationGroup *all;
+@property (nonatomic) AISimulationGroup *poor;
+@property (nonatomic) AISimulationGroup *middle;
+@property (nonatomic) AISimulationGroup *wealthy;
 
 - (instancetype)init;
 
 - (void)calculate;
 
 - (NSInteger)sampleCount;
+
+- (NSMutableArray *)voter;
 
 @end

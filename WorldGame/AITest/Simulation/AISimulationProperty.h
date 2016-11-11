@@ -37,6 +37,7 @@ typedef NS_ENUM(NSInteger, AISimulationCategory)
 
 - (void)calculate;
 
+- (void)setValue:(CGFloat)value;
 - (CGFloat)valueWithoutDelay;
 - (CGFloat)valueWithDelay:(NSInteger)delay;
 

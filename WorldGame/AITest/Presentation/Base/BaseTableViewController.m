@@ -112,7 +112,7 @@
     return NO;
 }
 
-- (void)setNumber:(NSInteger)integerValue
+- (void)setInteger:(NSInteger)integerValue
 {
     self.payload = [NSNumber numberWithInteger:integerValue];
 }
@@ -384,6 +384,28 @@
             cell.accessoryView = uiswitch;
         }
             break;
+        case ContentStyleSlider: {
+            cellBackView.image = [UIImage imageNamed:@"menu-item-normal.png"];
+            cell.textLabel.textColor = [UIColor whiteColor];
+            cell.detailTextLabel.textColor = [UIColor whiteColor];
+            
+            cell.backgroundView = cellBackView;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.textLabel.text = content.title;
+            cell.detailTextLabel.text = content.subtitle;
+            cell.imageView.image = content.image;
+            
+            UISlider *uislider = [[UISlider alloc] init];
+            [uislider setValue:[content integerValue]];
+            uislider.tintColor = [UIColor blackColor];
+            uislider.minimumValue = 0.0;
+            uislider.maximumValue = 5.0;
+            uislider.continuous = NO;
+            uislider.tag = indexPath.section * 1000 + indexPath.row;
+            [uislider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+            cell.accessoryView = uislider;
+        }
+            break;
         case ContentStyleGraph: {
             cellBackView.image = [UIImage imageNamed:@"menu-item-normal.png"];
             
@@ -413,6 +435,31 @@
     }
 
     return cell;
+}
+
+- (IBAction)sliderValueChanged:(UISlider *)slider
+{
+    NSLog(@"slider value = %f", slider.value);
+    NSUInteger index = (NSUInteger)(slider.value + 0.5);
+    [slider setValue:index animated:NO];
+    
+    NSInteger row = slider.tag % 1000;
+    NSInteger section = slider.tag / 1000;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+    
+    if ([self respondsToSelector:@selector(contentAtIndexPath:)]) {
+        TableViewContent *content = [self performSelector:@selector(contentAtIndexPath:) withObject:indexPath];
+        
+        if (content.action != nil) {
+            content.action(indexPath, [NSNumber numberWithInteger:index]);
+        }
+    } else if (self.dataSource) {
+        TableViewContent *content = [self.dataSource contentAtIndexPath:indexPath];
+        
+        if (content.action != nil) {
+            content.action(indexPath, [NSNumber numberWithInteger:index]);
+        }
+    }
 }
 
 - (void)toggleChanged:(UISwitch *)uiswitch

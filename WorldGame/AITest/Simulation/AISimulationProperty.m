@@ -113,7 +113,12 @@
     
     CGFloat weigthedValue = newValue * 0.5 + [self valueWithoutDelay] * 0.5;
     
-    [self.values insertObject:[NSNumber numberWithDouble:weigthedValue] atIndex:0];
+    [self setValue:weigthedValue];
+}
+
+- (void)setValue:(CGFloat)value
+{
+    [self.values insertObject:[NSNumber numberWithDouble:value] atIndex:0];
 }
 
 - (CGFloat)valueWithoutDelay

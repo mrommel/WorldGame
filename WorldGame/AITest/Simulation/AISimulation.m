@@ -9,6 +9,7 @@
 #import "AISimulation.h"
 
 #import "CC3Math.h"
+#import "Distribution.h"
 
 @interface AISimulation()
 
@@ -83,6 +84,13 @@
                                                         andCategory:AISimulationCategoryLawOrder];
         // don't forget to add new properties to the calculate step too
         
+        self.propertyTax = [[AISimulationInput alloc] initWithName:@"Property tax"
+                                                       explanation:@"Property tax is a tax levied on the value of homes. The valuation is often made by a government body, and the money is used to fund local government services (at least in part) such as the provision of street lighting and emergency services. Some see it as a fair tax which mostly affects those who own large homes and are wealthy, others see it as an unfair tax on retired people with large homes but little actual income.	"
+                                                     startingValue:0.6
+                                                       andCategory:AISimulationCategoryLawOrder];
+        
+        //
+        
         self.all = [[AISimulationGroup alloc] initWithName:@"All"
                                                explanation:@"A general group representing the interests of society as a whole, with opinions not related to a particular age group, gender or occupation.	"
                                          startingMoodValue:0.0
@@ -110,9 +118,12 @@
         [self.crimeRate addInputProperty:self.poverty withFormula:@"0.3*(x^2)" andDelay:4];
         [self.crimeRate addInputProperty:self.education withFormula:@"-0.12*(x^6)"];
         [self.externalAttraction addInputProperty:self.health withFormula:@"0.1*(x^6)"];
+        [self.equality addInputProperty:self.propertyTax withFormula:@"0+(0.15*x)"];
         
         [self.all.mood addInputProperty:self.crimeRate withFormula:@"0.13*x"];
         [self.poor.mood addInputProperty:self.poverty withFormula:@"0.3-(x^2)"];
+        [self.middle.mood addInputProperty:self.propertyTax withFormula:@"0-(0.32*x)"];
+        [self.wealthy.mood addInputProperty:self.propertyTax withFormula:@"0-(x^11)"];
     }
     
     return self;
@@ -126,6 +137,8 @@
     [self.poverty calculate];
     [self.crimeRate calculate];
     [self.equality calculate];
+    
+    [self.propertyTax calculate];
     
     [self.all calculate];
     [self.poor calculate];
@@ -147,20 +160,15 @@
     [voterArray addObject:@"All"];
     
     CGFloat wealthValue = RandomFloatBetween(0.0, 1.0);
-    CGFloat poorFreq = [self.poor.freq valueWithoutDelay];
-    CGFloat middleFreq = [self.middle.freq valueWithoutDelay];
-    CGFloat wealthyFreq = [self.wealthy.freq valueWithoutDelay];
     
-    // [ 0--poorFreq | poorFreq--middleFreq | middleFreq--wealthyFreq | wealthyFreq--1]
-    if (wealthValue <= poorFreq) {
-        [voterArray addObject:@"Poor"];
-    } else if (poorFreq < wealthValue && wealthValue <= poorFreq + middleFreq) {
-        [voterArray addObject:@"Middle"];
-    } else if (poorFreq + middleFreq < wealthValue && wealthValue <= poorFreq + middleFreq + wealthyFreq) {
-        [voterArray addObject:@"Wealthy"];
-    } else {
-        [voterArray addObject:@"-"];
-    }
+    Distribution *wealthDistribution = [Distribution new];
+    [wealthDistribution addObject:self.poor withPropability:[self.poor.freq valueWithoutDelay]];
+    [wealthDistribution addObject:self.middle withPropability:[self.middle.freq valueWithoutDelay]];
+    [wealthDistribution addObject:self.wealthy withPropability:[self.wealthy.freq valueWithoutDelay]];
+    [wealthDistribution distribute];
+    
+    AISimulationGroup *group = (AISimulationGroup *)[wealthDistribution objectFromPropability:wealthValue];
+    [voterArray addObject:group.name];
     
     return voterArray;
 }

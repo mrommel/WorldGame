@@ -552,6 +552,12 @@
 		1A8D66C31CA1306000284BB8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D66C01CA1306000284BB8 /* BaseTableViewController.m */; };
 		1AAE3F4B1CD93AB90016F861 /* PlotEconomy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3F4A1CD93AB90016F861 /* PlotEconomy.m */; };
 		1AAEB59A1CB7C6EF00DA478B /* GamePersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB5991CB7C6EF00DA478B /* GamePersistance.m */; };
+		1AB272FB1DD4A3FE00B7E409 /* Distribution.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB272FA1DD4A3FE00B7E409 /* Distribution.m */; };
+		1AB272FC1DD4A3FE00B7E409 /* Distribution.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB272FA1DD4A3FE00B7E409 /* Distribution.m */; };
+		1AB272FD1DD4A3FE00B7E409 /* Distribution.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB272FA1DD4A3FE00B7E409 /* Distribution.m */; };
+		1AB273001DD5195100B7E409 /* AISimulationInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB272FF1DD5195100B7E409 /* AISimulationInput.m */; };
+		1AB273011DD5195100B7E409 /* AISimulationInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB272FF1DD5195100B7E409 /* AISimulationInput.m */; };
+		1AB273021DD5195100B7E409 /* AISimulationInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB272FF1DD5195100B7E409 /* AISimulationInput.m */; };
 		1ABE0E631D2438250009F3F2 /* CombatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E621D2438250009F3F2 /* CombatViewController.m */; };
 		1ABE0E641D2438250009F3F2 /* CombatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E621D2438250009F3F2 /* CombatViewController.m */; };
 		1ABE0E651D2438250009F3F2 /* CombatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE0E621D2438250009F3F2 /* CombatViewController.m */; };
@@ -1047,6 +1053,10 @@
 		1AAE3F4A1CD93AB90016F861 /* PlotEconomy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlotEconomy.m; path = Map/PlotEconomy.m; sourceTree = "<group>"; };
 		1AAEB5981CB7C6EF00DA478B /* GamePersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePersistance.h; path = Game/GamePersistance.h; sourceTree = "<group>"; };
 		1AAEB5991CB7C6EF00DA478B /* GamePersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePersistance.m; path = Game/GamePersistance.m; sourceTree = "<group>"; };
+		1AB272F91DD4A3FE00B7E409 /* Distribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Distribution.h; path = Util/Distribution.h; sourceTree = "<group>"; };
+		1AB272FA1DD4A3FE00B7E409 /* Distribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Distribution.m; path = Util/Distribution.m; sourceTree = "<group>"; };
+		1AB272FE1DD5195100B7E409 /* AISimulationInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AISimulationInput.h; path = Simulation/AISimulationInput.h; sourceTree = "<group>"; };
+		1AB272FF1DD5195100B7E409 /* AISimulationInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AISimulationInput.m; path = Simulation/AISimulationInput.m; sourceTree = "<group>"; };
 		1ABE0E611D2438250009F3F2 /* CombatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatViewController.h; path = Presentation/CombatViewController.h; sourceTree = "<group>"; };
 		1ABE0E621D2438250009F3F2 /* CombatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatViewController.m; path = Presentation/CombatViewController.m; sourceTree = "<group>"; };
 		1ABE0E661D24394B0009F3F2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1440,6 +1450,8 @@
 				1A48FCC91CEE354000CFE558 /* KeyValueMap.m */,
 				1A61401A1D260D3E0052A551 /* ZoomManager.h */,
 				1A61401B1D260D3E0052A551 /* ZoomManager.m */,
+				1AB272F91DD4A3FE00B7E409 /* Distribution.h */,
+				1AB272FA1DD4A3FE00B7E409 /* Distribution.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -1855,6 +1867,8 @@
 				1AFDEB461DC9A55D00547C8D /* AISimulation.h */,
 				1AFDEB471DC9A55D00547C8D /* AISimulation.m */,
 				1AFDEB491DC9A70B00547C8D /* AISimulationTests.m */,
+				1AB272FE1DD5195100B7E409 /* AISimulationInput.h */,
+				1AB272FF1DD5195100B7E409 /* AISimulationInput.m */,
 			);
 			name = Simulation;
 			sourceTree = "<group>";
@@ -2503,6 +2517,7 @@
 				1A613F511D2606D10052A551 /* ArcBallCamera.m in Sources */,
 				1A57E7811C71C3F200B3890E /* main.m in Sources */,
 				1A613F6D1D2606E60052A551 /* GLRay.m in Sources */,
+				1AB272FB1DD4A3FE00B7E409 /* Distribution.m in Sources */,
 				1ABE0E8D1D243ECD0009F3F2 /* CC3Math.m in Sources */,
 				1A613FD01D2607260052A551 /* REGLView.m in Sources */,
 				1A2EA3921C89877C00633417 /* RelationsNetwork.m in Sources */,
@@ -2545,6 +2560,7 @@
 				1A2EA3971C89B95C00633417 /* GroupType.m in Sources */,
 				1AFF700B1CD76EAE009C7203 /* MunicipalEntity.m in Sources */,
 				1A2EA3E71C92D73200633417 /* AboutViewController.m in Sources */,
+				1AB273001DD5195100B7E409 /* AISimulationInput.m in Sources */,
 				1AEBDE091CC7B57E00BE09E8 /* DateUtils.m in Sources */,
 				1A2EA3F91C98AFF700633417 /* MapGenerator.m in Sources */,
 				1AEE071D1D2389EB00E2D866 /* CombatBoard.m in Sources */,
@@ -2625,6 +2641,7 @@
 				1AEF61341D159EB500253DD6 /* SelectMapTypeTableViewController.m in Sources */,
 				1A2EA3DE1C90702800633417 /* BitArray.m in Sources */,
 				1A3C39FB1C7EF5FA004009DA /* GrandStrategyAI.m in Sources */,
+				1AB273011DD5195100B7E409 /* AISimulationInput.m in Sources */,
 				1A3C3A3E1C84ED9A004009DA /* UILabel+Custom.m in Sources */,
 				1A5C23041C9DEEE8007F324C /* UINavigationController+BackButtonHandler.m in Sources */,
 				1AEE071E1D2389EB00E2D866 /* CombatBoard.m in Sources */,
@@ -2665,6 +2682,7 @@
 				1AEF612E1D159E9100253DD6 /* MapView.m in Sources */,
 				1A613F4F1D2606D10052A551 /* AbstractCamera.m in Sources */,
 				1A48FCCB1CEE354000CFE558 /* KeyValueMap.m in Sources */,
+				1AB272FC1DD4A3FE00B7E409 /* Distribution.m in Sources */,
 				1ABE0E851D243ECD0009F3F2 /* CC3Foundation.m in Sources */,
 				1AEF61261D159E2B00253DD6 /* Array2D.m in Sources */,
 				1A613FF51D2607260052A551 /* RESprite.m in Sources */,
@@ -2760,9 +2778,11 @@
 				1A022F7D1DA53443003D7D6C /* GraphChartBarRenderer.m in Sources */,
 				1A2CB4A61D2BCD97005E9F9E /* CombatBoardMesh.m in Sources */,
 				1A5C23001C9C42E7007F324C /* UIImage+Sprite.m in Sources */,
+				1AB272FD1DD4A3FE00B7E409 /* Distribution.m in Sources */,
 				1A613FC31D2607260052A551 /* RECache.m in Sources */,
 				1AEBDE0B1CC7B57E00BE09E8 /* DateUtils.m in Sources */,
 				1A613FD21D2607260052A551 /* REGLView.m in Sources */,
+				1AB273021DD5195100B7E409 /* AISimulationInput.m in Sources */,
 				1A3C3A341C84EA8C004009DA /* OverlayView.m in Sources */,
 				1A613F721D2606E60052A551 /* GLViewController.m in Sources */,
 				1AEE80F41C7C5FB40028ACFF /* Unit.m in Sources */,

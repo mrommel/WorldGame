@@ -36,40 +36,53 @@ typedef CGFloat (^ValueBlock)(NSInteger delay);
     
     [self setNavigationRightButtonWithImage:[UIImage imageNamed:@"sync"] action:@selector(handleRefreshNavigationBarItem:)];
     
-    ActionBlock toggleIsRiverBlock = ^(NSIndexPath *path, NSObject *payload) {
-        BOOL isRiverActive = [((NSNumber *)payload) boolValue];
-        self.isRiver = isRiverActive;
-        [[self.dataSource contentAtIndexPath:path] setBool:isRiverActive];
-    };
     
     self.dataSource = [[TableViewContentDataSource alloc] init];
     
     weakify(self);
     
     // ///////////////////
-    [self.dataSource setTitle:@"Graphs" forHeaderInSection:0];
+    [self.dataSource setTitle:@"Policies" forHeaderInSection:0];
+    ActionBlock propertyTaxBlock = ^(NSIndexPath *path, NSObject *payload) {
+        NSInteger sliderValue = [((NSNumber *)payload) integerValue];
+        [weakSelf.simulation.propertyTax setValue:sliderValue];
+        [[self.dataSource contentAtIndexPath:path] setInteger:sliderValue];
+    };
+    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Property Tax"
+                                                            andSubtitle:@""
+                                                               andStyle:ContentStyleSlider
+                                                              andAction:propertyTaxBlock]
+                      inSection:0];
+
+    // ///////////////////
+    [self.dataSource setTitle:@"Graphs" forHeaderInSection:1];
     [self addGraphWithTitle:@"Soil Quality" andValueBlock:^(NSInteger delay) {
         return [weakSelf.simulation.soilQuality valueWithDelay:delay];
-    } inSection:0];
+    } inSection:1];
     [self addGraphWithTitle:@"Health" andValueBlock:^(NSInteger delay) {
         return [weakSelf.simulation.health valueWithDelay:delay];
-    } inSection:0];
+    } inSection:1];
     [self addGraphWithTitle:@"Food safety" andValueBlock:^(NSInteger delay) {
         return [weakSelf.simulation.foodSafety valueWithDelay:delay];
-    } inSection:0];
+    } inSection:1];
     // ///////////////////
     
     [self.dataSource setTitle:@"deff" forHeaderInSection:1];
+     ActionBlock toggleIsRiverBlock = ^(NSIndexPath *path, NSObject *payload) {
+         BOOL isRiverActive = [((NSNumber *)payload) boolValue];
+         self.isRiver = isRiverActive;
+         [[self.dataSource contentAtIndexPath:path] setBool:isRiverActive];
+     };
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"is river"
                                                             andSubtitle:@""
                                                                andStyle:ContentStyleSwitch
                                                               andAction:toggleIsRiverBlock]
-                      inSection:1];
+                      inSection:2];
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:[NSString stringWithFormat:@"Turn %ld", (long)self.simulation.sampleCount]
                                                             andSubtitle:@""
                                                                andStyle:ContentStyleNormal
                                                               andAction:nil]
-                      inSection:1];
+                      inSection:2];
 }
 
 - (void)addGraphWithTitle:(NSString *)title andValueBlock:(ValueBlock)valueBlock inSection:(NSInteger)section

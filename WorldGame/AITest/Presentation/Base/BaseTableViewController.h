@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, ContentStyle) {
     ContentStyleHighlighted,
     ContentStyleDisabled,
     ContentStyleSwitch,
+    ContentStyleSlider,
     ContentStyleGraph,
     ContentStyleValue
 };
@@ -52,7 +53,7 @@ typedef NS_ENUM(NSInteger, ContentStyle) {
 - (instancetype)initWithTitle:(NSString *)title andValueData:(ValueDataBlock)valueDataBlock;
 
 - (void)setBool:(BOOL)boolValue;
-- (void)setNumber:(NSInteger)integerValue;
+- (void)setInteger:(NSInteger)integerValue;
 
 @end
 

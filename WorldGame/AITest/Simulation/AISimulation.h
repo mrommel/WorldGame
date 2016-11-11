@@ -10,6 +10,7 @@
 
 #import "AISimulationProperty.h"
 #import "AISimulationGroup.h"
+#import "AISimulationInput.h"
 
 @interface AISimulation : NSObject
 
@@ -21,6 +22,8 @@
 @property (nonatomic) AISimulationProperty *poverty;
 @property (nonatomic) AISimulationProperty *equality;
 @property (nonatomic) AISimulationProperty *crimeRate;
+
+@property (nonatomic) AISimulationInput *propertyTax;
 
 @property (nonatomic) AISimulationGroup *all;
 @property (nonatomic) AISimulationGroup *poor;

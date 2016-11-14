@@ -8,26 +8,6 @@
 
 #import "BaseTableViewController.h"
 
-/*!
- delegates
- */
-@protocol PeopleDistributionTerrainDelegate <NSObject>
-
-- (BOOL)isRiver;
-- (void)setIsRiver:(BOOL)isRiverValue;
-
-- (NSString *)terrain;
-
-@end
-
-@protocol PeopleDistributionScienceDelegate <NSObject>
-
-- (BOOL)hasScience:(NSString *)science;
-
-@end
-
-
-
-@interface SimulationTableViewController : BaseTableViewController<PeopleDistributionTerrainDelegate, PeopleDistributionScienceDelegate>
+@interface SimulationTableViewController : BaseTableViewController
 
 @end

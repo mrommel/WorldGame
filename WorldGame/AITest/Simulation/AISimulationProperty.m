@@ -94,6 +94,8 @@
 
 - (void)calculate
 {
+    NSAssert([self.inputs count] > 0, @"property %@ does not have any inputs", self.name);
+    
     CGFloat newValue = 0;
     
     for (AISimulationPropertyRelation *relation in self.inputs) {

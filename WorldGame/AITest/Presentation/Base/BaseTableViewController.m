@@ -418,6 +418,11 @@
             [chartView addGraphData:data];
             
             cell.backgroundView = chartView;
+            
+            cell.textLabel.text = @"";
+            cell.detailTextLabel.text = @"";
+            
+            cell.accessoryView = nil;
         }
             break;
         case ContentStyleValue: {
@@ -430,6 +435,8 @@
             cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", content.title, content.valueData(indexPath)];
             cell.detailTextLabel.text = content.subtitle;
             cell.imageView.image = content.image;
+            
+            cell.accessoryView = nil;
         }
             break;
     }

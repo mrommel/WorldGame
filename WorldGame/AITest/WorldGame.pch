@@ -19,4 +19,6 @@
 
 #import "Rend.h"
 
+#import "WorldGame-Swift.h"
+
 #endif /* WorldGame_pch */

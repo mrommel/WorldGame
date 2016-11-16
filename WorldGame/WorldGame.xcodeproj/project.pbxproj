@@ -276,6 +276,9 @@
 		1A3C3A571C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C3A4D1C84F280004009DA /* icon_spinning_circle~ipad.png */; };
 		1A3C3A581C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C3A4D1C84F280004009DA /* icon_spinning_circle~ipad.png */; };
 		1A3C3A591C84F280004009DA /* icon_spinning_circle~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C3A4D1C84F280004009DA /* icon_spinning_circle~ipad.png */; };
+		1A43AC2F1DDC9D06003A2482 /* StepSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43AC2E1DDC9D06003A2482 /* StepSlider.swift */; };
+		1A43AC301DDC9D06003A2482 /* StepSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43AC2E1DDC9D06003A2482 /* StepSlider.swift */; };
+		1A43AC311DDC9D06003A2482 /* StepSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43AC2E1DDC9D06003A2482 /* StepSlider.swift */; };
 		1A48FCC31CEE310B00CFE558 /* city.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCBE1CEE310B00CFE558 /* city.png */; };
 		1A48FCC41CEE310B00CFE558 /* metropol.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCBF1CEE310B00CFE558 /* metropol.png */; };
 		1A48FCC51CEE310B00CFE558 /* nomads.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCC01CEE310B00CFE558 /* nomads.png */; };
@@ -857,6 +860,7 @@
 		1A3C3A4B1C84F27F004009DA /* icon_spinning_circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_spinning_circle@2x.png"; path = "Resources/Images/icon_spinning_circle@2x.png"; sourceTree = "<group>"; };
 		1A3C3A4C1C84F27F004009DA /* icon_spinning_circle@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_spinning_circle@2x~ipad.png"; path = "Resources/Images/icon_spinning_circle@2x~ipad.png"; sourceTree = "<group>"; };
 		1A3C3A4D1C84F280004009DA /* icon_spinning_circle~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_spinning_circle~ipad.png"; path = "Resources/Images/icon_spinning_circle~ipad.png"; sourceTree = "<group>"; };
+		1A43AC2E1DDC9D06003A2482 /* StepSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepSlider.swift; path = Views/StepSlider.swift; sourceTree = "<group>"; };
 		1A48FCBE1CEE310B00CFE558 /* city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = city.png; path = Resources/Cities/city.png; sourceTree = "<group>"; };
 		1A48FCBF1CEE310B00CFE558 /* metropol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = metropol.png; path = Resources/Cities/metropol.png; sourceTree = "<group>"; };
 		1A48FCC01CEE310B00CFE558 /* nomads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nomads.png; path = Resources/Cities/nomads.png; sourceTree = "<group>"; };
@@ -1471,6 +1475,7 @@
 				1A3C3A411C84EDF1004009DA /* UIButton+Custom.m */,
 				1A6140371D261C240052A551 /* UIBlockButton.h */,
 				1A6140381D261C240052A551 /* UIBlockButton.m */,
+				1A43AC2E1DDC9D06003A2482 /* StepSlider.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -2574,6 +2579,7 @@
 				1AC4FEB61D946C5300E4DD59 /* GraphDataEntry.m in Sources */,
 				1A5C22F91C9C16D2007F324C /* ImageAtlas.m in Sources */,
 				1A2EA3D31C8F694F00633417 /* Situation.m in Sources */,
+				1A43AC2F1DDC9D06003A2482 /* StepSlider.swift in Sources */,
 				1A613FC41D2607260052A551 /* RECamera.m in Sources */,
 				1A2EA3EC1C95FD0500633417 /* DebugUtil.m in Sources */,
 				1A613F761D2606E60052A551 /* OpenGLUtil.m in Sources */,
@@ -2604,6 +2610,7 @@
 				1A2EA3FA1C98AFF700633417 /* MapGenerator.m in Sources */,
 				1A6140071D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */,
 				1A613FD41D2607260052A551 /* REKeyframedMeshNode.m in Sources */,
+				1A43AC301DDC9D06003A2482 /* StepSlider.swift in Sources */,
 				1A2EA3FF1C994AF300633417 /* NSArray+Util.m in Sources */,
 				1A613FCE1D2607260052A551 /* REGLTypes.m in Sources */,
 				1A2EA38E1C89872200633417 /* Policy.m in Sources */,
@@ -2769,6 +2776,7 @@
 				1A6140131D2609850052A551 /* CC3GLMatrix+Extension.m in Sources */,
 				1A613F781D2606E60052A551 /* OpenGLUtil.m in Sources */,
 				1A8D66C31CA1306000284BB8 /* BaseTableViewController.m in Sources */,
+				1A43AC311DDC9D06003A2482 /* StepSlider.swift in Sources */,
 				1A2EA3C51C8CD17A00633417 /* PolicyViewController.m in Sources */,
 				1A2EA3E91C92D73200633417 /* AboutViewController.m in Sources */,
 				1AEE80E41C78CE6E0028ACFF /* NSDictionary+Extension.m in Sources */,
@@ -2918,6 +2926,9 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "WorldGame-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "WorldGame-Swift.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2957,7 +2968,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "WorldGame-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "WorldGame-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -3010,6 +3024,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 472EC2631BFA423A6E1647C5 /* Pods-WorldGameTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3023,6 +3038,7 @@
 				PRODUCT_NAME = WorldGame;
 				SWIFT_OBJC_BRIDGING_HEADER = "AITest/WorldGameTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldGame.app/WorldGame";
 			};
 			name = Debug;
@@ -3031,6 +3047,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A395EDCF5E43F822B4E9DCD /* Pods-WorldGameTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3043,6 +3060,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.AITestTests;
 				PRODUCT_NAME = WorldGame;
 				SWIFT_OBJC_BRIDGING_HEADER = "AITest/WorldGameTests-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldGame.app/WorldGame";
 			};
 			name = Release;

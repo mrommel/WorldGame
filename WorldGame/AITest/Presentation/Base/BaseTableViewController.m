@@ -396,10 +396,10 @@
             cell.imageView.image = content.image;
             
             UISlider *uislider = [[UISlider alloc] init];
-            [uislider setValue:[content integerValue]];
             uislider.tintColor = [UIColor blackColor];
             uislider.minimumValue = 0.0;
-            uislider.maximumValue = 5.0;
+            uislider.maximumValue = 10.0;
+            [uislider setValue:[content integerValue]];
             uislider.continuous = NO;
             uislider.tag = indexPath.section * 1000 + indexPath.row;
             [uislider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
@@ -422,6 +422,7 @@
             cell.textLabel.text = @"";
             cell.detailTextLabel.text = @"";
             
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.accessoryView = nil;
         }
             break;
@@ -446,9 +447,10 @@
 
 - (IBAction)sliderValueChanged:(UISlider *)slider
 {
-    NSLog(@"slider value = %f", slider.value);
     NSUInteger index = (NSUInteger)(slider.value + 0.5);
     [slider setValue:index animated:NO];
+    
+    NSLog(@"slider value = %f => %lu", slider.value, (unsigned long)index);
     
     NSInteger row = slider.tag % 1000;
     NSInteger section = slider.tag / 1000;

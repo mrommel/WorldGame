@@ -45,7 +45,7 @@ typedef CGFloat (^ValueBlock)(NSInteger delay);
     [self.dataSource setTitle:@"Policies" forHeaderInSection:0];
     ActionBlock propertyTaxBlock = ^(NSIndexPath *path, NSObject *payload) {
         NSInteger sliderValue = [((NSNumber *)payload) integerValue];
-        [weakSelf.simulation.propertyTax setValue:sliderValue];
+        [weakSelf.simulation.propertyTax setValue:(CGFloat)sliderValue / 10];
         [[self.dataSource contentAtIndexPath:path] setInteger:sliderValue];
     };
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Property Tax"
@@ -53,9 +53,12 @@ typedef CGFloat (^ValueBlock)(NSInteger delay);
                                                                andStyle:ContentStyleSlider
                                                               andAction:propertyTaxBlock]
                       inSection:0];
+    [self addGraphWithTitle:@"Property Tax" andValueBlock:^(NSInteger delay) {
+        return [weakSelf.simulation.propertyTax valueWithDelay:delay];
+    } inSection:0];
 
     // ///////////////////
-    [self.dataSource setTitle:@"Graphs" forHeaderInSection:1];
+    [self.dataSource setTitle:@"Simulations" forHeaderInSection:1];
     [self addGraphWithTitle:@"Soil Quality" andValueBlock:^(NSInteger delay) {
         return [weakSelf.simulation.soilQuality valueWithDelay:delay];
     } inSection:1];
@@ -65,14 +68,17 @@ typedef CGFloat (^ValueBlock)(NSInteger delay);
     [self addGraphWithTitle:@"Food safety" andValueBlock:^(NSInteger delay) {
         return [weakSelf.simulation.foodSafety valueWithDelay:delay];
     } inSection:1];
+    [self addGraphWithTitle:@"Poverty" andValueBlock:^(NSInteger delay) {
+        return [weakSelf.simulation.poverty valueWithDelay:delay];
+    } inSection:1];
     // ///////////////////
     
-    [self.dataSource setTitle:@"deff" forHeaderInSection:1];
-     ActionBlock toggleIsRiverBlock = ^(NSIndexPath *path, NSObject *payload) {
-         BOOL isRiverActive = [((NSNumber *)payload) boolValue];
-         self.isRiver = isRiverActive;
-         [[self.dataSource contentAtIndexPath:path] setBool:isRiverActive];
-     };
+    [self.dataSource setTitle:@"Misc" forHeaderInSection:2];
+    ActionBlock toggleIsRiverBlock = ^(NSIndexPath *path, NSObject *payload) {
+        BOOL isRiverActive = [((NSNumber *)payload) boolValue];
+        self.isRiver = isRiverActive;
+        [[self.dataSource contentAtIndexPath:path] setBool:isRiverActive];
+    };
     [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"is river"
                                                             andSubtitle:@""
                                                                andStyle:ContentStyleSwitch
@@ -98,7 +104,7 @@ typedef CGFloat (^ValueBlock)(NSInteger delay);
         return data;
     };
     
-    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:@"Graph"
+    [self.dataSource addContent:[[TableViewContent alloc] initWithTitle:title
                                                            andGraphData:healthGraphDataBlock]
                       inSection:section];
     ValueDataBlock healthValueBlock = ^(NSIndexPath *path) {

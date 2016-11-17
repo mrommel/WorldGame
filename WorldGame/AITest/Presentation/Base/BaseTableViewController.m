@@ -396,6 +396,7 @@
             cell.imageView.image = content.image;
             
             StepSlider *uislider = [[StepSlider alloc] init];
+            [uislider setThumbImage:[UIImage imageNamed:@"slider20.png"] forState:UIControlStateNormal];
             uislider.customTrack = YES;
             uislider.minimumValue = 0.0;
             uislider.maximumValue = 10.0;

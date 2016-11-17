@@ -279,6 +279,24 @@
 		1A43AC2F1DDC9D06003A2482 /* StepSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43AC2E1DDC9D06003A2482 /* StepSlider.swift */; };
 		1A43AC301DDC9D06003A2482 /* StepSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43AC2E1DDC9D06003A2482 /* StepSlider.swift */; };
 		1A43AC311DDC9D06003A2482 /* StepSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43AC2E1DDC9D06003A2482 /* StepSlider.swift */; };
+		1A43AC371DDE54BB003A2482 /* slider24.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC331DDE54BB003A2482 /* slider24.png */; };
+		1A43AC381DDE54BB003A2482 /* slider24.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC331DDE54BB003A2482 /* slider24.png */; };
+		1A43AC391DDE54BB003A2482 /* slider24.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC331DDE54BB003A2482 /* slider24.png */; };
+		1A43AC3A1DDE54BB003A2482 /* slider32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC341DDE54BB003A2482 /* slider32.png */; };
+		1A43AC3B1DDE54BB003A2482 /* slider32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC341DDE54BB003A2482 /* slider32.png */; };
+		1A43AC3C1DDE54BB003A2482 /* slider32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC341DDE54BB003A2482 /* slider32.png */; };
+		1A43AC3D1DDE54BB003A2482 /* slider48.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC351DDE54BB003A2482 /* slider48.png */; };
+		1A43AC3E1DDE54BB003A2482 /* slider48.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC351DDE54BB003A2482 /* slider48.png */; };
+		1A43AC3F1DDE54BB003A2482 /* slider48.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC351DDE54BB003A2482 /* slider48.png */; };
+		1A43AC401DDE54BB003A2482 /* slider100.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC361DDE54BB003A2482 /* slider100.png */; };
+		1A43AC411DDE54BB003A2482 /* slider100.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC361DDE54BB003A2482 /* slider100.png */; };
+		1A43AC421DDE54BB003A2482 /* slider100.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC361DDE54BB003A2482 /* slider100.png */; };
+		1A43AC441DDE5518003A2482 /* slider16.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC431DDE5518003A2482 /* slider16.png */; };
+		1A43AC451DDE5518003A2482 /* slider16.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC431DDE5518003A2482 /* slider16.png */; };
+		1A43AC461DDE5518003A2482 /* slider16.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC431DDE5518003A2482 /* slider16.png */; };
+		1A43AC481DDE5561003A2482 /* slider20.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC471DDE5561003A2482 /* slider20.png */; };
+		1A43AC491DDE5561003A2482 /* slider20.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC471DDE5561003A2482 /* slider20.png */; };
+		1A43AC4A1DDE5561003A2482 /* slider20.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC471DDE5561003A2482 /* slider20.png */; };
 		1A48FCC31CEE310B00CFE558 /* city.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCBE1CEE310B00CFE558 /* city.png */; };
 		1A48FCC41CEE310B00CFE558 /* metropol.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCBF1CEE310B00CFE558 /* metropol.png */; };
 		1A48FCC51CEE310B00CFE558 /* nomads.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCC01CEE310B00CFE558 /* nomads.png */; };
@@ -861,6 +879,12 @@
 		1A3C3A4C1C84F27F004009DA /* icon_spinning_circle@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_spinning_circle@2x~ipad.png"; path = "Resources/Images/icon_spinning_circle@2x~ipad.png"; sourceTree = "<group>"; };
 		1A3C3A4D1C84F280004009DA /* icon_spinning_circle~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_spinning_circle~ipad.png"; path = "Resources/Images/icon_spinning_circle~ipad.png"; sourceTree = "<group>"; };
 		1A43AC2E1DDC9D06003A2482 /* StepSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepSlider.swift; path = Views/StepSlider.swift; sourceTree = "<group>"; };
+		1A43AC331DDE54BB003A2482 /* slider24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider24.png; path = Resources/Views/slider24.png; sourceTree = "<group>"; };
+		1A43AC341DDE54BB003A2482 /* slider32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider32.png; path = Resources/Views/slider32.png; sourceTree = "<group>"; };
+		1A43AC351DDE54BB003A2482 /* slider48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider48.png; path = Resources/Views/slider48.png; sourceTree = "<group>"; };
+		1A43AC361DDE54BB003A2482 /* slider100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider100.png; path = Resources/Views/slider100.png; sourceTree = "<group>"; };
+		1A43AC431DDE5518003A2482 /* slider16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider16.png; path = Resources/Views/slider16.png; sourceTree = "<group>"; };
+		1A43AC471DDE5561003A2482 /* slider20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider20.png; path = Resources/Views/slider20.png; sourceTree = "<group>"; };
 		1A48FCBE1CEE310B00CFE558 /* city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = city.png; path = Resources/Cities/city.png; sourceTree = "<group>"; };
 		1A48FCBF1CEE310B00CFE558 /* metropol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = metropol.png; path = Resources/Cities/metropol.png; sourceTree = "<group>"; };
 		1A48FCC01CEE310B00CFE558 /* nomads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nomads.png; path = Resources/Cities/nomads.png; sourceTree = "<group>"; };
@@ -1301,6 +1325,19 @@
 				1A2EA3D21C8F694F00633417 /* Situation.m */,
 			);
 			name = Simulation;
+			sourceTree = "<group>";
+		};
+		1A43AC321DDE549C003A2482 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A43AC431DDE5518003A2482 /* slider16.png */,
+				1A43AC471DDE5561003A2482 /* slider20.png */,
+				1A43AC331DDE54BB003A2482 /* slider24.png */,
+				1A43AC341DDE54BB003A2482 /* slider32.png */,
+				1A43AC351DDE54BB003A2482 /* slider48.png */,
+				1A43AC361DDE54BB003A2482 /* slider100.png */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		1A48FCBD1CEE30FC00CFE558 /* Cities */ = {
@@ -1790,6 +1827,7 @@
 				1A0FF28A1CA08EC300F64050 /* Features */,
 				1A35A9B31CADB1C90094F773 /* Policies */,
 				1AEF61211D14148F00253DD6 /* Units */,
+				1A43AC321DDE549C003A2482 /* Views */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1985,6 +2023,7 @@
 				TargetAttributes = {
 					1A57E77B1C71C3F200B3890E = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = CMUQ7NPWU8;
 					};
 					1A57E79A1C71C3F200B3890E = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -2041,6 +2080,7 @@
 				1A5701041CB2FC8600F346D9 /* StateSchools.xml in Resources */,
 				1A5C22DA1C9C164F007F324C /* CitizenTiles.png in Resources */,
 				1A48FCC41CEE310B00CFE558 /* metropol.png in Resources */,
+				1A43AC441DDE5518003A2482 /* slider16.png in Resources */,
 				1A5C22D81C9C164F007F324C /* BuildingTiles.png in Resources */,
 				1A29EFE61D47854300909426 /* SkyboxVertex.glsl in Resources */,
 				1A2EA39B1C8A2F2500633417 /* government.png in Resources */,
@@ -2064,8 +2104,10 @@
 				1A5C22EF1C9C164F007F324C /* TerrainAtlas.xml in Resources */,
 				1ABE0E751D243B420009F3F2 /* SimpleFragment.glsl in Resources */,
 				1A6140411D26289C0052A551 /* blueButton.png in Resources */,
+				1A43AC3D1DDE54BB003A2482 /* slider48.png in Resources */,
 				1A5C22ED1C9C164F007F324C /* TechnologyAtlas.xml in Resources */,
 				1A5700F11CB2F2D900F346D9 /* NationalService.png in Resources */,
+				1A43AC371DDE54BB003A2482 /* slider24.png in Resources */,
 				1A5C22E51C9C164F007F324C /* naturalwonders1024.png in Resources */,
 				1A2CB4C51D2CEA13005E9F9E /* rock512.png in Resources */,
 				1A5C22DF1C9C164F007F324C /* ImprovementAtlas.xml in Resources */,
@@ -2073,6 +2115,7 @@
 				1A35A9D91CAE8D150094F773 /* Government.xml in Resources */,
 				1A0FF2961CA0965500F64050 /* menu-footer.png in Resources */,
 				1A5C22D91C9C164F007F324C /* CitizenAtlas.xml in Resources */,
+				1A43AC481DDE5561003A2482 /* slider20.png in Resources */,
 				1A61404A1D26289C0052A551 /* blueButtonHighlight@2x.png in Resources */,
 				1A48FCC31CEE310B00CFE558 /* city.png in Resources */,
 				1A5C22F41C9C164F007F324C /* UnitTiles.png in Resources */,
@@ -2125,6 +2168,8 @@
 				1A5700FC1CB2FAE100F346D9 /* InheritanceTax.xml in Resources */,
 				1A5700F41CB2F2D900F346D9 /* NationalService.xml in Resources */,
 				1A0FF28C1CA08F2300F64050 /* Forest.xml in Resources */,
+				1A43AC3A1DDE54BB003A2482 /* slider32.png in Resources */,
+				1A43AC401DDE54BB003A2482 /* slider100.png in Resources */,
 				1A5C22EE1C9C164F007F324C /* TechnologyTiles.png in Resources */,
 				1A2CB4C21D2CEA13005E9F9E /* grass512.png in Resources */,
 				1A2CB4BF1D2CEA13005E9F9E /* dirt512.png in Resources */,
@@ -2159,6 +2204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A57011A1CB302AC00F346D9 /* SalesTax.png in Resources */,
+				1A43AC411DDE54BB003A2482 /* slider100.png in Resources */,
 				1A29EFF61D4A21EB00909426 /* skyboxFront256.png in Resources */,
 				1AEE80CF1C7735960028ACFF /* Grassland.xml in Resources */,
 				1AEE80DB1C7735960028ACFF /* Snow.xml in Resources */,
@@ -2174,6 +2220,7 @@
 				1ABE0E761D243B420009F3F2 /* SimpleFragment.glsl in Resources */,
 				1A0FF2881CA0617900F64050 /* Tundra.png in Resources */,
 				1A5701121CB2FE6B00F346D9 /* IncomeTax.png in Resources */,
+				1A43AC3B1DDE54BB003A2482 /* slider32.png in Resources */,
 				1A29F0141D4AAC0400909426 /* skyboxRight2048.png in Resources */,
 				1A6140481D26289C0052A551 /* blueButtonHighlight.png in Resources */,
 				1A5700FA1CB2FAE100F346D9 /* InheritanceTax.png in Resources */,
@@ -2189,6 +2236,8 @@
 				1A35A9D21CAE8B170094F773 /* Parliament.xml in Resources */,
 				1A0FF27F1CA0617900F64050 /* Plains.png in Resources */,
 				1A29EFF31D4A21EB00909426 /* skyboxBottom256.png in Resources */,
+				1A43AC491DDE5561003A2482 /* slider20.png in Resources */,
+				1A43AC451DDE5518003A2482 /* slider16.png in Resources */,
 				1A29F00E1D4AAC0400909426 /* skyboxFront2048.png in Resources */,
 				1A61402C1D26159F0052A551 /* rivers.png in Resources */,
 				1A5700F51CB2F2D900F346D9 /* NationalService.xml in Resources */,
@@ -2211,6 +2260,7 @@
 				1AF035901D9B090500CFFD45 /* graph-backgrounds-15.jpg in Resources */,
 				1A35A9DA1CAE8D150094F773 /* Government.xml in Resources */,
 				1A0FF2821CA0617900F64050 /* Shore.png in Resources */,
+				1A43AC3E1DDE54BB003A2482 /* slider48.png in Resources */,
 				1A2CB4C61D2CEA13005E9F9E /* rock512.png in Resources */,
 				1A35A9E61CAEF21A0094F773 /* Feudalism.xml in Resources */,
 				1A0FF28D1CA08F2300F64050 /* Forest.xml in Resources */,
@@ -2238,6 +2288,7 @@
 				1A3C3A521C84F280004009DA /* icon_spinning_circle@2x.png in Resources */,
 				1A2CB4C91D2CEA13005E9F9E /* sand512.png in Resources */,
 				1A0FF2701CA05E6200F64050 /* Grassland.png in Resources */,
+				1A43AC381DDE54BB003A2482 /* slider24.png in Resources */,
 				1A35A9A61CA1E7720094F773 /* MapSizeTiles.png in Resources */,
 				1A84BB4B1CC029E500CE7EDC /* menu-item-disabled.png in Resources */,
 				1A6140451D26289C0052A551 /* blueButton@2x.png in Resources */,
@@ -2253,6 +2304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A57011B1CB302AC00F346D9 /* SalesTax.png in Resources */,
+				1A43AC421DDE54BB003A2482 /* slider100.png in Resources */,
 				1A29EFF71D4A21EB00909426 /* skyboxFront256.png in Resources */,
 				1AEE80D01C7735960028ACFF /* Grassland.xml in Resources */,
 				1AEE80DC1C7735960028ACFF /* Snow.xml in Resources */,
@@ -2268,6 +2320,7 @@
 				1ABE0E771D243B420009F3F2 /* SimpleFragment.glsl in Resources */,
 				1A0FF2891CA0617900F64050 /* Tundra.png in Resources */,
 				1A5701131CB2FE6B00F346D9 /* IncomeTax.png in Resources */,
+				1A43AC3C1DDE54BB003A2482 /* slider32.png in Resources */,
 				1A29F0151D4AAC0400909426 /* skyboxRight2048.png in Resources */,
 				1A6140491D26289C0052A551 /* blueButtonHighlight.png in Resources */,
 				1A5700FB1CB2FAE100F346D9 /* InheritanceTax.png in Resources */,
@@ -2283,6 +2336,8 @@
 				1A35A9D31CAE8B170094F773 /* Parliament.xml in Resources */,
 				1A0FF2801CA0617900F64050 /* Plains.png in Resources */,
 				1A29EFF41D4A21EB00909426 /* skyboxBottom256.png in Resources */,
+				1A43AC4A1DDE5561003A2482 /* slider20.png in Resources */,
+				1A43AC461DDE5518003A2482 /* slider16.png in Resources */,
 				1A29F00F1D4AAC0400909426 /* skyboxFront2048.png in Resources */,
 				1A61402D1D26159F0052A551 /* rivers.png in Resources */,
 				1A5700F61CB2F2D900F346D9 /* NationalService.xml in Resources */,
@@ -2305,6 +2360,7 @@
 				1AF035911D9B090500CFFD45 /* graph-backgrounds-15.jpg in Resources */,
 				1A35A9DB1CAE8D150094F773 /* Government.xml in Resources */,
 				1A0FF2831CA0617900F64050 /* Shore.png in Resources */,
+				1A43AC3F1DDE54BB003A2482 /* slider48.png in Resources */,
 				1A2CB4C71D2CEA13005E9F9E /* rock512.png in Resources */,
 				1A35A9E71CAEF21A0094F773 /* Feudalism.xml in Resources */,
 				1A0FF28E1CA08F2300F64050 /* Forest.xml in Resources */,
@@ -2332,6 +2388,7 @@
 				1A3C3A531C84F280004009DA /* icon_spinning_circle@2x.png in Resources */,
 				1A2CB4CA1D2CEA13005E9F9E /* sand512.png in Resources */,
 				1A0FF2711CA05E6200F64050 /* Grassland.png in Resources */,
+				1A43AC391DDE54BB003A2482 /* slider24.png in Resources */,
 				1A35A9A71CA1E7720094F773 /* MapSizeTiles.png in Resources */,
 				1A84BB4C1CC029E500CE7EDC /* menu-item-disabled.png in Resources */,
 				1A6140461D26289C0052A551 /* blueButton@2x.png in Resources */,
@@ -2984,6 +3041,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CMUQ7NPWU8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
@@ -3006,6 +3064,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CMUQ7NPWU8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AITest/Frameworks",
@@ -3079,6 +3138,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.AITestUITests;
 				PRODUCT_NAME = WorldGame;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AITest/WorldGame-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = WorldGame;
 				USES_XCTRUNNER = YES;
@@ -3099,6 +3159,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MiRo.AITestUITests;
 				PRODUCT_NAME = WorldGame;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AITest/WorldGame-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = WorldGame;
 				USES_XCTRUNNER = YES;

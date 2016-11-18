@@ -395,7 +395,7 @@
             cell.detailTextLabel.text = content.subtitle;
             cell.imageView.image = content.image;
             
-            StepSlider *uislider = [[StepSlider alloc] init];
+            StepSlider *uislider = [[StepSlider alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
             [uislider setThumbImage:[UIImage imageNamed:@"slider20.png"] forState:UIControlStateNormal];
             uislider.customTrack = YES;
             uislider.minimumValue = 0.0;
@@ -403,7 +403,7 @@
             [uislider setValue:[content integerValue]];
             uislider.continuous = NO;
             uislider.trackColor = [UIColor blueColor];
-            uislider.stepTickColor = [UIColor redColor];
+            uislider.stepTickColor = [UIColor grayColor];
             uislider.tag = indexPath.section * 1000 + indexPath.row;
             [uislider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
             cell.accessoryView = uislider;

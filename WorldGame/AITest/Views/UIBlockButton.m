@@ -11,7 +11,7 @@
 @implementation UIBlockButton
 
 -(void) handleControlEvent:(UIControlEvents)event
-                 withBlock:(ActionBlock) action
+                 withBlock:(ButtonActionBlock) action
 {
     _actionBlock = action;
     [self addTarget:self action:@selector(callActionBlock:) forControlEvents:event];

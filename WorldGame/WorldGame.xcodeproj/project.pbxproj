@@ -297,6 +297,9 @@
 		1A43AC481DDE5561003A2482 /* slider20.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC471DDE5561003A2482 /* slider20.png */; };
 		1A43AC491DDE5561003A2482 /* slider20.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC471DDE5561003A2482 /* slider20.png */; };
 		1A43AC4A1DDE5561003A2482 /* slider20.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43AC471DDE5561003A2482 /* slider20.png */; };
+		1A43AC4C1DE1089D003A2482 /* AgentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43AC4B1DE1089D003A2482 /* AgentsViewController.swift */; };
+		1A43AC4D1DE1089D003A2482 /* AgentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43AC4B1DE1089D003A2482 /* AgentsViewController.swift */; };
+		1A43AC4E1DE1089D003A2482 /* AgentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43AC4B1DE1089D003A2482 /* AgentsViewController.swift */; };
 		1A48FCC31CEE310B00CFE558 /* city.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCBE1CEE310B00CFE558 /* city.png */; };
 		1A48FCC41CEE310B00CFE558 /* metropol.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCBF1CEE310B00CFE558 /* metropol.png */; };
 		1A48FCC51CEE310B00CFE558 /* nomads.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A48FCC01CEE310B00CFE558 /* nomads.png */; };
@@ -885,6 +888,7 @@
 		1A43AC361DDE54BB003A2482 /* slider100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider100.png; path = Resources/Views/slider100.png; sourceTree = "<group>"; };
 		1A43AC431DDE5518003A2482 /* slider16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider16.png; path = Resources/Views/slider16.png; sourceTree = "<group>"; };
 		1A43AC471DDE5561003A2482 /* slider20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider20.png; path = Resources/Views/slider20.png; sourceTree = "<group>"; };
+		1A43AC4B1DE1089D003A2482 /* AgentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AgentsViewController.swift; path = Presentation/AgentsViewController.swift; sourceTree = "<group>"; };
 		1A48FCBE1CEE310B00CFE558 /* city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = city.png; path = Resources/Cities/city.png; sourceTree = "<group>"; };
 		1A48FCBF1CEE310B00CFE558 /* metropol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = metropol.png; path = Resources/Cities/metropol.png; sourceTree = "<group>"; };
 		1A48FCC01CEE310B00CFE558 /* nomads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nomads.png; path = Resources/Cities/nomads.png; sourceTree = "<group>"; };
@@ -1545,6 +1549,7 @@
 				1A2EA3E11C92D5A900633417 /* DebugViewController.m */,
 				1AFCE1861D6D68F00029A990 /* SimulationTableViewController.h */,
 				1AFCE1871D6D68F00029A990 /* SimulationTableViewController.m */,
+				1A43AC4B1DE1089D003A2482 /* AgentsViewController.swift */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
@@ -2539,6 +2544,7 @@
 				1A2EA3F41C98AC4000633417 /* HeightMap.m in Sources */,
 				1A613FE81D2607260052A551 /* RERotator.m in Sources */,
 				1A6140091D2607260052A551 /* REWavefrontMeshNode.m in Sources */,
+				1A43AC4C1DE1089D003A2482 /* AgentsViewController.swift in Sources */,
 				1AEE80F21C7C5FB40028ACFF /* Unit.m in Sources */,
 				1A613F701D2606E60052A551 /* GLViewController.m in Sources */,
 				1A35A9AA1CA1E9050094F773 /* SelectMapSizeTableViewController.m in Sources */,
@@ -2747,6 +2753,7 @@
 				1A613F4F1D2606D10052A551 /* AbstractCamera.m in Sources */,
 				1A48FCCB1CEE354000CFE558 /* KeyValueMap.m in Sources */,
 				1AB272FC1DD4A3FE00B7E409 /* Distribution.m in Sources */,
+				1A43AC4D1DE1089D003A2482 /* AgentsViewController.swift in Sources */,
 				1ABE0E851D243ECD0009F3F2 /* CC3Foundation.m in Sources */,
 				1AEF61261D159E2B00253DD6 /* Array2D.m in Sources */,
 				1A613FF51D2607260052A551 /* RESprite.m in Sources */,
@@ -2898,6 +2905,7 @@
 				1A613FFC1D2607260052A551 /* RETexture.m in Sources */,
 				1A2EA3991C89B95C00633417 /* GroupType.m in Sources */,
 				1A022F821DA648D7003D7D6C /* GraphChartPieRenderer.m in Sources */,
+				1A43AC4E1DE1089D003A2482 /* AgentsViewController.swift in Sources */,
 				1A59ABBC1DD27F0500114444 /* AISimulationGroup.m in Sources */,
 				1A6140081D2607260052A551 /* REWavefrontMeshGroupNode.m in Sources */,
 				1AC4FED21D952DCA00E4DD59 /* GraphAxisRenderer.m in Sources */,

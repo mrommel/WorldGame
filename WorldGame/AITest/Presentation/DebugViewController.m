@@ -43,7 +43,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-    return 10;
+    return 11;
 }
 
 - (TableViewContent *)contentAtIndexPath:(NSIndexPath *)indexPath
@@ -115,6 +115,14 @@
                                                  andAction:^(NSIndexPath *path, NSObject *payload) {
                                                      SimulationTableViewController *simulationViewController = [[SimulationTableViewController alloc] init];
                                                      [self.navigationController pushViewController:simulationViewController animated:YES];
+                                                 }];
+        case 10:
+            return [[TableViewContent alloc] initWithTitle:@"Agents"
+                                               andSubtitle:@"open"
+                                                  andStyle:ContentStyleNormal
+                                                 andAction:^(NSIndexPath *path, NSObject *payload) {
+                                                     AgentsViewController *agentsViewController = [AgentsViewController new];
+                                                     [self.navigationController pushViewController:agentsViewController animated:YES];
                                                  }];
             
     }

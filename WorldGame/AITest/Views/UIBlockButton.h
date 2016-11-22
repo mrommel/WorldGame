@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^ActionBlock)();
+typedef void (^ButtonActionBlock)();
 
 @interface UIBlockButton : UIButton {
-    ActionBlock _actionBlock;
+    ButtonActionBlock _actionBlock;
 }
 
 -(void) handleControlEvent:(UIControlEvents)event
-                 withBlock:(ActionBlock) action;
+                 withBlock:(ButtonActionBlock) action;
 
 @end

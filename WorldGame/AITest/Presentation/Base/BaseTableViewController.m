@@ -400,9 +400,10 @@
             uislider.customTrack = YES;
             uislider.minimumValue = 0.0;
             uislider.maximumValue = 10.0;
+            uislider.steps = 11;
             [uislider setValue:[content integerValue]];
             uislider.continuous = NO;
-            uislider.trackColor = [UIColor blueColor];
+            uislider.trackColor = [UIColor whiteColor];
             uislider.stepTickColor = [UIColor grayColor];
             uislider.tag = indexPath.section * 1000 + indexPath.row;
             [uislider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
